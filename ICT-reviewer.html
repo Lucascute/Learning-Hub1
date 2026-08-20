@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,106 +10,378 @@
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #eef4ff, #f8fbff);
             color: #1f2937;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+        /* =========================
+           HEADER
+        ========================= */
 
         .header {
             background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
-            padding: 35px;
-            border-radius: 20px;
+            padding: 45px 20px;
             text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
         .header h1 {
-            margin: 0;
-            font-size: 38px;
+            font-size: 42px;
+            margin-bottom: 8px;
         }
 
         .header p {
-            margin-top: 10px;
+            font-size: 17px;
         }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        /* =========================
+           REVIEWER INDEX
+        ========================= */
+
+        .index {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .index h2 {
+            color: #2563eb;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .index a {
+            display: block;
+            background: #eaf2ff;
+            color: #2563eb;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .index a:hover {
+            background: #dbeafe;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           LESSON CARDS
+        ========================= */
 
         .lesson {
             background: white;
-            padding: 22px;
-            margin-bottom: 20px;
+            padding: 28px;
+            margin-bottom: 22px;
             border-radius: 16px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #2563eb;
+            scroll-margin-top: 20px;
         }
 
         .lesson h2 {
             color: #2563eb;
-            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 25px;
         }
+
+        .lesson p {
+            margin-bottom: 12px;
+        }
+
+        .lesson ul {
+            margin: 12px 0 15px 25px;
+        }
+
+        .lesson li {
+            margin-bottom: 6px;
+        }
+
+        /* =========================
+           ANSWER BOX
+        ========================= */
 
         .answer {
             background: #eff6ff;
-            padding: 14px;
+            padding: 15px;
             border-radius: 10px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
+
+        /* =========================
+           REMEMBER BOX
+        ========================= */
 
         .remember {
             background: #ecfdf5;
             border-left: 5px solid #10b981;
             padding: 15px;
             border-radius: 10px;
+            margin-top: 15px;
         }
 
-    
+        /* =========================
+           QUICK REVIEW
+        ========================= */
+
+        .quick-review {
+            background: white;
+            padding: 28px;
+            margin-bottom: 22px;
+            border-radius: 16px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #7c3aed;
+            scroll-margin-top: 20px;
+        }
+
+        .quick-review h2 {
+            color: #7c3aed;
+            margin-bottom: 18px;
+        }
+
+        .quick-box {
+            background: #f3e8ff;
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           STUDY TIPS
+        ========================= */
+
+        .study-tips {
+            background: white;
+            padding: 28px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #f59e0b;
+            scroll-margin-top: 20px;
+        }
+
+        .study-tips h2 {
+            color: #d97706;
+            margin-bottom: 15px;
+        }
+
+        .study-tips ul {
+            margin-left: 25px;
+        }
+
+        .study-tips li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           BACK TO TOP
+        ========================= */
+
+        .top-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .top-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             text-align: center;
-            color: #64748b;
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
             margin-top: 30px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .index-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header h1 {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .container {
+                padding: 0 12px;
+            }
+
+            .header {
+                padding: 35px 15px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .index {
+                padding: 20px;
+            }
+
+            .index-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .index a {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .lesson,
+            .quick-review,
+            .study-tips {
+                padding: 20px;
+            }
+
+            .lesson h2 {
+                font-size: 21px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
+<div class="header">
+
+    <h1>💻 ICT 10 Reviewer</h1>
+
+    <p>
+        Quick Review • Lessons 1–10
+    </p>
+
+</div>
+
+
 <div class="container">
 
-    <div class="header">
-        <h1>💻 ICT 10 Reviewer</h1>
-        <p>Quick Review • Lessons 1–10</p>
+    <!-- =========================
+         REVIEWER INDEX
+    ========================= -->
+
+    <div class="index">
+
+        <h2>📖 Reviewer Index</h2>
+
+        <div class="index-grid">
+
+            <a href="#lesson1">💻 Lesson 1</a>
+
+            <a href="#lesson2">🪑 Lesson 2</a>
+
+            <a href="#lesson3">🌐 Lesson 3</a>
+
+            <a href="#lesson4">📝 Lesson 4</a>
+
+            <a href="#lesson5">📄 Lesson 5</a>
+
+            <a href="#lesson6">🎬 Lesson 6</a>
+
+            <a href="#lesson7">🎨 Lesson 7</a>
+
+            <a href="#lesson8">🎨 Lesson 8</a>
+
+            <a href="#lesson9">📐 Lesson 9</a>
+
+            <a href="#lesson10">🌐 Lesson 10</a>
+
+            <a href="#quick-review">⭐ Quick Review</a>
+
+            <a href="#study-tips">💡 Study Tips</a>
+
+        </div>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>1. Introduction to Computer Programming</h2>
+    <!-- =========================
+         LESSON 1
+    ========================= -->
 
-        <p><b>Programming</b> – creating instructions that a computer can execute.</p>
+    <div class="lesson" id="lesson1">
+
+        <h2>💻 Lesson 1: Introduction to Computer Programming</h2>
+
+        <p>
+            <b>Programming</b> – creating instructions that a computer can execute.
+        </p>
 
         <div class="answer">
+
             <b>Examples of programming languages:</b>
+
             Python, Java, C++, JavaScript
+
         </div>
 
         <div class="remember">
+
             ⭐ Programming = giving instructions to a computer.
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>2. Computer Ergonomics</h2>
+    <!-- =========================
+         LESSON 2
+    ========================= -->
+
+    <div class="lesson" id="lesson2">
+
+        <h2>🪑 Lesson 2: Computer Ergonomics</h2>
 
         <p>
             Ergonomics focuses on safe and comfortable computer use.
@@ -122,13 +395,23 @@
         </ul>
 
         <div class="remember">
+
             ⭐ Remember: Comfort + Safety + Proper Posture
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>3. HTML</h2>
+    <!-- =========================
+         LESSON 3
+    ========================= -->
+
+    <div class="lesson" id="lesson3">
+
+        <h2>🌐 Lesson 3: HTML</h2>
 
         <p>
             <b>HTML</b> = Hypertext Markup Language.
@@ -142,30 +425,51 @@
         </ul>
 
         <div class="remember">
+
             ⭐ HTML creates the structure of a webpage.
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>4. HTML Editor</h2>
+    <!-- =========================
+         LESSON 4
+    ========================= -->
+
+    <div class="lesson" id="lesson4">
+
+        <h2>📝 Lesson 4: HTML Editor</h2>
 
         <p>
             An HTML editor is used to create and edit HTML files.
         </p>
 
         <p>
-            Examples: <b>Visual Studio Code, Notepad, Notepad++</b>
+            Examples:
+            <b>Visual Studio Code, Notepad, Notepad++</b>
         </p>
 
         <div class="remember">
+
             ⭐ HTML files use the <code>.html</code> extension.
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>5. HTML Headings, Paragraphs and Styles</h2>
+    <!-- =========================
+         LESSON 5
+    ========================= -->
+
+    <div class="lesson" id="lesson5">
+
+        <h2>📄 Lesson 5: HTML Headings, Paragraphs and Styles</h2>
 
         <ul>
             <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> = headings</li>
@@ -176,15 +480,27 @@
         </ul>
 
         <div class="remember">
+
             ⭐ HTML = content and structure.
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>6. Embedding Multimedia</h2>
+    <!-- =========================
+         LESSON 6
+    ========================= -->
 
-        <p>Webpages can contain:</p>
+    <div class="lesson" id="lesson6">
+
+        <h2>🎬 Lesson 6: Embedding Multimedia</h2>
+
+        <p>
+            Webpages can contain:
+        </p>
 
         <ul>
             <li>Images</li>
@@ -193,15 +509,27 @@
         </ul>
 
         <div class="answer">
+
             <b>Image:</b> <code>&lt;img&gt;</code><br>
+
             <b>Audio:</b> <code>&lt;audio&gt;</code><br>
+
             <b>Video:</b> <code>&lt;video&gt;</code>
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>7. Basic Webpage Design</h2>
+    <!-- =========================
+         LESSON 7
+    ========================= -->
+
+    <div class="lesson" id="lesson7">
+
+        <h2>🎨 Lesson 7: Basic Webpage Design</h2>
 
         <p>
             Good webpage design should be organized, readable,
@@ -209,14 +537,25 @@
         </p>
 
         <div class="answer">
+
             <b>Important:</b>
+
             Colors • Spacing • Fonts • Layout • Navigation
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>8. CSS</h2>
+    <!-- =========================
+         LESSON 8
+    ========================= -->
+
+    <div class="lesson" id="lesson8">
+
+        <h2>🎨 Lesson 8: CSS</h2>
 
         <p>
             <b>CSS</b> = Cascading Style Sheets.
@@ -236,15 +575,27 @@
         </ul>
 
         <div class="remember">
+
             ⭐ CSS = Design
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>9. CSS Styling and Layout</h2>
+    <!-- =========================
+         LESSON 9
+    ========================= -->
 
-        <p>Common CSS properties:</p>
+    <div class="lesson" id="lesson9">
+
+        <h2>📐 Lesson 9: CSS Styling and Layout</h2>
+
+        <p>
+            Common CSS properties:
+        </p>
 
         <ul>
             <li><code>color</code></li>
@@ -256,14 +607,25 @@
         </ul>
 
         <div class="remember">
+
             ⭐ Padding = inside spacing<br>
+
             ⭐ Margin = outside spacing
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>10. Website Development</h2>
+    <!-- =========================
+         LESSON 10
+    ========================= -->
+
+    <div class="lesson" id="lesson10">
+
+        <h2>🌐 Lesson 10: Website Development</h2>
 
         <p>
             Website development is the process of creating and
@@ -271,40 +633,108 @@
         </p>
 
         <div class="answer">
+
             <b>HTML</b> → Structure<br>
+
             <b>CSS</b> → Design<br>
+
             <b>JavaScript</b> → Behavior
+
         </div>
 
         <div class="remember">
+
             ⭐ Basic process:
+
             Plan → HTML → Content → CSS → Test → Publish
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <div class="lesson">
-        <h2>🧠 Quick ICT Memory Guide</h2>
+    <!-- =========================
+         QUICK REVIEW
+    ========================= -->
 
-        <div class="answer">
+    <div class="quick-review" id="quick-review">
+
+        <h2>⭐ Quick ICT Memory Guide</h2>
+
+        <div class="quick-box">
+
             <b>HTML</b> = Structure<br><br>
+
             <b>CSS</b> = Style / Design<br><br>
+
             <b>JavaScript</b> = Interaction / Behavior<br><br>
+
             <b>.html</b> = HTML file extension<br><br>
+
             <b>&lt;h1&gt;</b> = Heading<br><br>
+
             <b>&lt;p&gt;</b> = Paragraph<br><br>
+
             <b>&lt;img&gt;</b> = Image<br><br>
+
             <b>&lt;audio&gt;</b> = Audio<br><br>
+
             <b>&lt;video&gt;</b> = Video
+
         </div>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
     </div>
 
 
-    <footer>
-        <p>💻 ICT 10 Reviewer • Lessons 1–10</p>
-    </footer>
+    <!-- =========================
+         STUDY TIPS
+    ========================= -->
+
+    <div class="study-tips" id="study-tips">
+
+        <h2>💡 Study Tips</h2>
+
+        <ul>
+
+            <li>Review the meaning of HTML, CSS, and JavaScript.</li>
+
+            <li>Memorize the basic HTML tags.</li>
+
+            <li>Remember that HTML provides structure while CSS provides design.</li>
+
+            <li>Practice identifying common CSS properties.</li>
+
+            <li>Review the steps in basic website development.</li>
+
+            <li>Take short breaks while studying.</li>
+
+        </ul>
+
+        <a href="#top" class="top-button">↑ Back to Top</a>
+
+    </div>
 
 </div>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        💻 ICT 10 Reviewer • Lessons 1–10
+    </p>
+
+</footer>
+
+
 </body>
 </html>
+```
+

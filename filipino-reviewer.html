@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filipino Reviewer | Grade 10</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #f7eeee, #f2e4e4);
+            color: #2d2424;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #6b1111, #a52a2a);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        /* INDEX */
+        .index {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .index h2 {
+            color: #6b1111;
+            margin-top: 0;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+        }
+
+        .index a {
+            display: block;
+            padding: 13px 15px;
+            background: #f7e8e8;
+            color: #6b1111;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .index a:hover {
+            background: #6b1111;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            margin: 25px 0;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 6px solid #8b1a1a;
+        }
+
+        .card h2 {
+            color: #6b1111;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .card h3 {
+            color: #8b1a1a;
+            margin-top: 25px;
+        }
+
+        /* TOPIC BOX */
+        .topic {
+            background: #fff8f8;
+            padding: 18px;
+            margin: 15px 0;
+            border-left: 5px solid #a52a2a;
+            border-radius: 10px;
+        }
+
+        .topic strong {
+            color: #6b1111;
+        }
+
+        .topic p {
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* IMPORTANT */
+        .important {
+            background: #f7e8e8;
+            border-left: 5px solid #6b1111;
+            padding: 15px 18px;
+            margin: 18px 0;
+            border-radius: 10px;
+        }
+
+        .important strong {
+            color: #6b1111;
+        }
+
+        /* QUICK REVIEW */
+        .quick {
+            background: linear-gradient(135deg, #fff4f4, #f9e3e3);
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 6px solid #8b1a1a;
+        }
+
+        .quick h2 {
+            color: #6b1111;
+            margin-top: 0;
+        }
+
+        .quick li {
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        /* STUDY TIPS */
+        .tips {
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 6px solid #d39b00;
+        }
+
+        .tips h2 {
+            color: #8a6500;
+            margin-top: 0;
+        }
+
+        .tips li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        /* BACK TO TOP */
+        .top {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 16px;
+            background: #8b1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .top:hover {
+            background: #6b1111;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            padding: 30px;
+            text-align: center;
+            background: #6b1111;
+            color: white;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .topic {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<header>
+
+    <h1>📖 Filipino Reviewer</h1>
+
+    <p>
+        Filipino 10 | El Filibusterismo
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- INDEX -->
+
+    <section class="index">
+
+        <h2>📑 Reviewer Index</h2>
+
+        <div class="index-grid">
+
+            <a href="#nobela">
+                📚 Tungkol sa Nobela
+            </a>
+
+            <a href="#tauhan">
+                👥 Mahahalagang Tauhan
+            </a>
+
+            <a href="#tema">
+                💡 Pangunahing Tema
+            </a>
+
+            <a href="#pangyayari">
+                📌 Mahahalagang Pangyayari
+            </a>
+
+            <a href="#simbolismo">
+                🔎 Mga Simbolismo
+            </a>
+
+            <a href="#aral">
+                📖 Aral ng Nobela
+            </a>
+
+            <a href="#quick">
+                ⭐ Quick Review
+            </a>
+
+            <a href="#tips">
+                🎯 Study Tips
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TUNGKOL SA NOBELA -->
+
+    <section class="card" id="nobela">
+
+        <h2>📚 Tungkol sa Nobela</h2>
+
+        <div class="topic">
+
+            <strong>Ano ang El Filibusterismo?</strong>
+
+            <p>
+                Ang <strong>El Filibusterismo</strong> ay ikalawang
+                nobela ni <strong>Dr. Jose Rizal</strong> at
+                karugtong ng <em>Noli Me Tangere</em>.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>May-akda</strong>
+
+            <p>
+                Dr. Jose Rizal
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Orihinal na Wika</strong>
+
+            <p>
+                Kastila
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Uri</strong>
+
+            <p>
+                Nobela
+            </p>
+
+        </div>
+
+        <div class="important">
+
+            <strong>📌 Tandaan:</strong>
+
+            Tinalakay sa nobela ang mga suliraning panlipunan
+            tulad ng pang-aabuso sa kapangyarihan, kawalan
+            ng katarungan, korapsyon, at paghahangad ng pagbabago.
+
+        </div>
+
+        <a class="top" href="#top">↑ Back to Top</a>
+
+    </section>
+
+
+
+    <!-- TAUHAN -->
+
+    <section class="card" id="tauhan">
+
+        <h2>👥 Mahahalagang Tauhan</h2>
+
+        <div class="topic">
+
+            <strong>Simoun</strong>
+
+            <p>
+                Tunay na si Crisostomo Ibarra.
+                Nagbalik siya bilang isang mayamang alahero
+                upang maghiganti.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Basilio</strong>
+
+            <p>
+                Dating sakristan na naging mag-aaral ng medisina.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Isagani</strong>
+
+            <p>
+                Makata at makabayang mag-aaral na naniniwala
+                sa mapayapang pagbabago.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Kabesang Tales</strong>
+
+            <p>
+                Magsasakang nakaranas ng pang-aagaw
+                sa kanyang lupain.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Juli</strong>
+
+            <p>
+                Anak ni Kabesang Tales at kasintahan ni Basilio.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Padre Florentino</strong>
+
+            <p>
+                Paring Pilipino na kumupkop kay Isagani
+                at tumulong kay Simoun sa kanyang huling sandali.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Paulita Gomez</strong>
+
+            <p>
+                Dating kasintahan ni Isagani na nagpakasal
+                kay Juanito Pelaez.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Juanito Pelaez</strong>
+
+            <p>
+                Mayamang mag-aaral at karibal ni Isagani.
+            </p>
+
+        </div>
+
+        <a class="top" href="#top">↑ Back to Top</a>
+
+    </section>
+
+
+
+    <!-- TEMA -->
+
+    <section class="card" id="tema">
+
+        <h2>💡 Pangunahing Tema</h2>
+
+        <div class="topic">
+
+            <ul>
+
+                <li>Pagmamahal sa bayan</li>
+
+                <li>Paghahangad ng kalayaan</li>
+
+                <li>Kawalan ng katarungan</li>
+
+                <li>Pang-aabuso sa kapangyarihan</li>
+
+                <li>Paghihiganti</li>
+
+                <li>Edukasyon</li>
+
+                <li>Korapsyon at katiwalian</li>
+
+                <li>Pakikibaka para sa pagbabago</li>
+
+            </ul>
+
+        </div>
+
+        <div class="important">
+
+            <strong>📌 Tandaan:</strong>
+
+            Maraming tema sa nobela ang nagpapakita ng
+            mga problemang panlipunan noong panahon ni Rizal
+            na maaari ring maiugnay sa lipunan.
+
+        </div>
+
+        <a class="top" href="#top">↑ Back to Top</a>
+
+    </section>
+
+
+
+    <!-- PANGYAYARI -->
+
+    <section class="card" id="pangyayari">
+
+        <h2>📌 Mahahalagang Pangyayari</h2>
+
+        <div class="topic">
+
+            <ol>
+
+                <li>
+                    Nagbalik si Crisostomo Ibarra bilang
+                    <strong>Simoun</strong>, isang mayamang alahero.
+                </li>
+
+                <li>
+                    Tinangka ng mga mag-aaral na magkaroon ng
+                    <strong>Akademya ng Wikang Kastila</strong>.
+                </li>
+
+                <li>
+                    Naranasan ni <strong>Kabesang Tales</strong>
+                    ang kawalan ng katarungan dahil sa kanyang lupain.
+                </li>
+
+                <li>
+                    Gumawa si Simoun ng mga plano upang maghiganti
+                    at pabagsakin ang pamahalaan.
+                </li>
+
+                <li>
+                    Nabigo ang kanyang mga plano at napilitan
+                    siyang tumakas.
+                </li>
+
+                <li>
+                    Humingi ng tulong si Simoun kay
+                    <strong>Padre Florentino</strong>.
+                </li>
+
+                <li>
+                    Ipinakita sa wakas ng nobela na ang pagbabago
+                    ay hindi dapat nakabatay lamang sa paghihiganti
+                    at karahasan.
+                </li>
+
+            </ol>
+
+        </div>
+
+        <a class="top" href="#top">↑ Back to Top</a>
+
+    </section>
+
+
+
+    <!-- SIMBOLISMO -->
+
+    <section class="card" id="simbolismo">
+
+        <h2>🔎 Mga Simbolismo</h2>
+
+        <div class="topic">
+
+            <strong>Lampara</strong>
+
+            <p>
+                Sumasagisag sa plano ni Simoun
+                at sa kanyang paghihiganti.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Kayamanan</strong>
+
+            <p>
+                Nagpapakita ng kapangyarihan
+                at impluwensiya ni Simoun.
+            </p>
+
+        </div>
+
+        <div class="topic">
+
+            <strong>Alahas</strong>
+
+            <p>
+                Sumasagisag sa yaman, kapangyarihan,
+                at mga lihim na layunin ni Simoun.
+            </p>
+
+        </div>
+
+        <a class="top" href="#top">↑ Back to Top</a>
+
+    </section>
+
+
+
+    <!-- ARAL -->
+
+    <section class="card" id="aral">
+
+        <h2>📖 Aral ng Nobela</h2>
+
+        <div class="topic">
+
+            <p>
+                Itinuturo ng <strong>El Filibusterismo</strong>
+                na ang tunay na pagbabago ay hindi dapat
+                nakabatay sa galit at paghihiganti.
+            </p>
+
+            <p>
+                Mahalaga ang edukasyon, pagkakaisa,
+                katarungan, at pagmamahal sa bayan upang
+                makamit ang isang mas mabuting lipunan.
+            </p>
+
+        </div>
+
+        <div class="important">
+
+            <strong>⭐ Pangunahing Mensahe:</strong>
+
+            <p>
+                Ang pagbabago ay nangangailangan ng tapang,
+                pagkakaisa, edukasyon, at pagmamahal sa bayan.
+            </p>
+
+        </div>
+
+        <a class="top" href="#top">↑ Back to Top</a>
+
+    </section>
+
+
+
+    <!-- QUICK REVIEW -->
+
+    <section class="quick" id="quick">
+
+        <h2>⭐ Filipino Quick Review</h2>
+
+        <ul>
+
+            <li>
+                📖 <strong>El Filibusterismo</strong> –
+                ikalawang nobela ni Dr. Jose Rizal.
+            </li>
+
+            <li>
+                👤 <strong>Simoun</strong> –
+                tunay na si Crisostomo Ibarra.
+            </li>
+
+            <li>
+                👨‍⚕️ <strong>Basilio</strong> –
+                dating sakristan at nag-aaral ng medisina.
+            </li>
+
+            <li>
+                ✍️ <strong>Isagani</strong> –
+                makata at makabayang mag-aaral.
+            </li>
+
+            <li>
+                🌾 <strong>Kabesang Tales</strong> –
+                magsasakang nakaranas ng pang-aagaw sa lupain.
+            </li>
+
+            <li>
+                💍 <strong>Paulita Gomez</strong> –
+                dating kasintahan ni Isagani.
+            </li>
+
+            <li>
+                🕯️ <strong>Lampara</strong> –
+                simbolo ng plano at paghihiganti ni Simoun.
+            </li>
+
+            <li>
+                ⚖️ <strong>Pangunahing isyu</strong> –
+                kawalan ng katarungan at pang-aabuso sa kapangyarihan.
+            </li>
+
+            <li>
+                ❤️ <strong>Pangunahing aral</strong> –
+                ang tunay na pagbabago ay hindi dapat nakabatay
+                lamang sa paghihiganti at karahasan.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- STUDY TIPS -->
+
+    <section class="tips" id="tips">
+
+        <h2>🎯 Filipino Study Tips</h2>
+
+        <ol>
+
+            <li>
+                <strong>Alamin ang mga tauhan.</strong>
+                Tandaan ang pangalan, papel, at relasyon
+                ng bawat mahalagang tauhan.
+            </li>
+
+            <li>
+                <strong>Gumawa ng character connections.</strong>
+                Halimbawa:
+                Simoun → Ibarra,
+                Basilio → Juli,
+                Isagani → Paulita.
+            </li>
+
+            <li>
+                <strong>Tandaan ang mga simbolismo.</strong>
+                Iugnay ang lampara, alahas, at kayamanan
+                sa kanilang kahulugan sa nobela.
+            </li>
+
+            <li>
+                <strong>Unawain ang tema.</strong>
+                Huwag lamang kabisaduhin ang listahan.
+                Alamin kung paano ipinakita ang mga tema
+                sa kuwento.
+            </li>
+
+            <li>
+                <strong>Review the important events.</strong>
+                Tandaan ang mahahalagang pangyayari
+                at ang kanilang pagkakasunod-sunod.
+            </li>
+
+            <li>
+                <strong>Connect the lesson to society.</strong>
+                Isipin kung paano nauugnay ang mga suliranin
+                sa nobela sa mga isyu ng lipunan.
+            </li>
+
+            <li>
+                <strong>Explain the story in your own words.</strong>
+                Kung kaya mong ikuwento ang aralin nang hindi
+                tumitingin sa notes, mas malamang na naiintindihan mo ito.
+            </li>
+
+        </ol>
+
+    </section>
+
+</div>
+
+
+
+<footer>
+
+    <p>📖 Filipino Reviewer | Grade 10</p>
+
+    <p>
+        Magbasa • Mag-isip • Umunawa • Matuto
+    </p>
+
+</footer>
+
+</body>
+</html>

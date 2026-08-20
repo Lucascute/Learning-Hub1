@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subjects - Learning Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #2563eb;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #dbeafe;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* SUBJECT SECTION */
+        .subjects {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .subjects h2 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        /* SUBJECT CARDS */
+        .subject-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .subject-card {
+            background-color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .subject-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .subject-card h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .subject-card p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .subject-card a {
+            display: inline-block;
+
+            background-color: #2563eb;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 10px 20px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .subject-card a:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .subjects h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="subjects.html">Subjects</a>
+
+        <a href="resources.html">Learning Resources</a>
+
+        <a href="studytips.html">Study Tips</a>
+
+        <a href="contact.html">Contact Us</a>
+
+    </nav>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>📚 Subjects</h1>
+
+        <p>
+            Explore our subjects and improve your knowledge!
+        </p>
+
+    </header>
+
+
+    <!-- SUBJECTS -->
+    <section class="subjects">
+
+        <h2>Our Subjects</h2>
+
+
+        <div class="subject-container">
+
+
+            <!-- MATHEMATICS -->
+            <div class="subject-card">
+
+                <div class="subject-icon">📐</div>
+
+                <h3>Mathematics</h3>
+
+                <p>
+                    Learn formulas, equations,
+                    geometry, and problem solving.
+                </p>
+
+                <a href="mathematics.html">
+                    View Subject
+                </a>
+
+            </div>
+
+
+            <!-- SCIENCE -->
+            <div class="subject-card">
+
+                <div class="subject-icon">🔬</div>
+
+                <h3>Science</h3>
+
+                <p>
+                    Explore science concepts,
+                    experiments, and discoveries.
+                </p>
+
+                <a href="science.html">
+                    View Subject
+                </a>
+
+            </div>
+
+
+            <!-- ENGLISH -->
+            <div class="subject-card">
+
+                <div class="subject-icon">📖</div>
+
+                <h3>English</h3>
+
+                <p>
+                    Improve grammar, vocabulary,
+                    reading, and writing skills.
+                </p>
+
+                <a href="english.html">
+                    View Subject
+                </a>
+
+            </div>
+
+
+            <!-- FILIPINO -->
+            <div class="subject-card">
+
+                <div class="subject-icon">🇵🇭</div>
+
+                <h3>Filipino</h3>
+
+                <p>
+                    Learn Filipino language,
+                    literature, and communication.
+                </p>
+
+                <a href="filipino.html">
+                    View Subject
+                </a>
+
+            </div>
+
+
+            <!-- ICT -->
+            <div class="subject-card">
+
+                <div class="subject-icon">💻</div>
+
+                <h3>ICT</h3>
+
+                <p>
+                    Learn about computers,
+                    technology, and digital skills.
+                </p>
+
+                <a href="ict.html">
+                    View Subject
+                </a>
+
+            </div>
+
+
+            <!-- ARALING PANLIPUNAN -->
+            <div class="subject-card">
+
+                <div class="subject-icon">🌏</div>
+
+                <h3>Araling Panlipunan</h3>
+
+                <p>
+                    Learn about Philippine history,
+                    geography, culture, and society.
+                </p>
+
+                <a href="ap.html">
+                    View Subject
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Learning Hub | Learn • Explore • Succeed
+        </p>
+
+    </footer>
+
+</body>
+</html>

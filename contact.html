@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub | Contact Us</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📚 Learning Hub</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="resources.html">Learning Resources</a>
+        <a href="studytips.html">Study Tips</a>
+        <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-header">
+        <h1>📞 Contact Us</h1>
+        <p>We would love to hear your questions and feedback.</p>
+    </section>
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <h2>Get in Touch</h2>
+
+            <div class="contact-item">
+                <span>📧</span>
+                <div>
+                    <h3>Email Address</h3>
+                    <p>learninghub@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>📱</span>
+                <div>
+                    <h3>Phone Number</h3>
+                    <p>0912-345-6789</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>🏫</span>
+                <div>
+                    <h3>School Address</h3>
+                    <p>Don Bosco High School, Paranaque City,Metro-manila,Philippines</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+
+            <h2>Feedback Form</h2>
+
+            <form onsubmit="sendMessage(event)">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Learning Hub. All Rights Reserved.</p>
+</footer>
+
+<script>
+function sendMessage(event) {
+    event.preventDefault();
+
+    alert("Thank you for your feedback!");
+
+    document.querySelector("form").reset();
+}
+</script>
+
+</body>
+</html>

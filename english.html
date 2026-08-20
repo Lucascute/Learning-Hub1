@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>English 10 Notes</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef4ff, #f8faff);
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #2563eb;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563eb;
+        }
+
+        .intro h2 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        /* LESSON CARD */
+
+        .lesson {
+            background: white;
+            padding: 28px;
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-top: 5px solid #4f46e5;
+        }
+
+        .lesson h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .lesson h3 {
+            color: #4f46e5;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .lesson p {
+            margin-bottom: 12px;
+        }
+
+        /* NOTE BOX */
+
+        .note-box {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #22c55e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* LISTS */
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        /* STEAL GRID */
+
+        .steal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .steal-card {
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .steal-card h4 {
+            color: #2563eb;
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        /* CONCEPT CARDS */
+
+        .concept {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 12px 0;
+            border-left: 4px solid #6366f1;
+        }
+
+        .concept h4 {
+            color: #4f46e5;
+            margin-bottom: 5px;
+        }
+
+        /* STEPS */
+
+        .step {
+            display: flex;
+            gap: 15px;
+            margin: 13px 0;
+            align-items: flex-start;
+        }
+
+        .number {
+            min-width: 35px;
+            height: 35px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* TABLE */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #dbe3f0;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .lesson {
+                padding: 20px;
+            }
+
+            .steal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>📘 English 10 Notes</h1>
+
+    <p>Term 1 • Lessons 1–10</p>
+
+    <nav>
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="subjects.html">📚 Subjects</a>
+
+        <a href="resources.html">📖 Resources</a>
+
+        <a href="study-tips.html">💡 Study Tips</a>
+
+        <a href="contact.html">📩 Contact Us</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <a href="resources.html" class="back-button">
+        ← Back to Resources
+    </a>
+
+
+    <!-- INTRO -->
+
+    <div class="intro">
+
+        <h2>📖 English 10 — Term 1</h2>
+
+        <p>
+            These notes cover the English 10 lessons from
+            <b>Lesson 1 to Lesson 10</b>.
+        </p>
+
+        <p>
+            The topics focus on drama, literary contexts,
+            short film writing and production, characterization,
+            and literary concepts used in short films.
+        </p>
+
+    </div>
+
+
+    <!-- LESSON 1 -->
+
+    <section class="lesson">
+
+        <h2>🎭 Lesson 1: Structural Context of Drama as a Film</h2>
+
+        <p>
+            The <b>structural context</b> refers to how the different
+            parts of a drama are organized and connected to create
+            a complete story.
+        </p>
+
+        <h3>Important Elements</h3>
+
+        <ul>
+
+            <li>
+                <b>Characters</b> – the people or figures involved
+                in the story.
+            </li>
+
+            <li>
+                <b>Setting</b> – the time and place where the story
+                happens.
+            </li>
+
+            <li>
+                <b>Plot</b> – the sequence of events in the story.
+            </li>
+
+            <li>
+                <b>Conflict</b> – the main struggle or problem
+                faced by the characters.
+            </li>
+
+            <li>
+                <b>Dialogue</b> – the spoken words of characters.
+            </li>
+
+            <li>
+                <b>Theme</b> – the central idea or message of
+                the drama.
+            </li>
+
+        </ul>
+
+        <h3>Basic Plot Structure</h3>
+
+        <ol>
+
+            <li><b>Exposition</b> – introduces the characters,
+                setting, and situation.</li>
+
+            <li><b>Rising Action</b> – problems and conflicts
+                begin to develop.</li>
+
+            <li><b>Climax</b> – the most intense or important
+                point of the story.</li>
+
+            <li><b>Falling Action</b> – events begin to move
+                toward the conclusion.</li>
+
+            <li><b>Resolution</b> – the conflict is resolved
+                or the story comes to an ending.</li>
+
+        </ol>
+
+        <div class="note-box">
+
+            <b>Remember:</b>
+
+            <p>
+                A film uses visual elements such as scenes,
+                camera shots, actions, and dialogue to show
+                the structure of a drama.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 2 -->
+
+    <section class="lesson">
+
+        <h2>📚 Lesson 2: Understanding Literary Context</h2>
+
+        <p>
+            <b>Literary context</b> refers to the circumstances
+            surrounding a literary work that help readers understand
+            its meaning.
+        </p>
+
+        <h3>Types of Context</h3>
+
+        <div class="concept">
+
+            <h4>Historical Context</h4>
+
+            <p>
+                The historical events and conditions that existed
+                when the work was written or takes place.
+            </p>
+
+        </div>
+
+        <div class="concept">
+
+            <h4>Cultural Context</h4>
+
+            <p>
+                The beliefs, traditions, values, customs, and
+                practices of a society.
+            </p>
+
+        </div>
+
+        <div class="concept">
+
+            <h4>Social Context</h4>
+
+            <p>
+                The social conditions and relationships that
+                influence the characters and story.
+            </p>
+
+        </div>
+
+        <div class="concept">
+
+            <h4>Political Context</h4>
+
+            <p>
+                Political situations, systems, or events that
+                influence the literary work.
+            </p>
+
+        </div>
+
+        <div class="important">
+
+            <b>Why is context important?</b>
+
+            <p>
+                Understanding context helps readers understand
+                why characters behave in certain ways and why
+                certain events happen in the story.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 3 -->
+
+    <section class="lesson">
+
+        <h2>🧠 Lesson 3: Frayer's Method</h2>
+
+        <p>
+            The <b>Frayer Method</b> is a strategy used to
+            understand and remember vocabulary and concepts.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Part</th>
+                <th>Meaning</th>
+            </tr>
+
+            <tr>
+                <td><b>Definition</b></td>
+                <td>The meaning of the word or concept.</td>
+            </tr>
+
+            <tr>
+                <td><b>Characteristics</b></td>
+                <td>Important qualities or features.</td>
+            </tr>
+
+            <tr>
+                <td><b>Examples</b></td>
+                <td>Things that demonstrate the concept.</td>
+            </tr>
+
+            <tr>
+                <td><b>Non-examples</b></td>
+                <td>Things that do not demonstrate the concept.</td>
+            </tr>
+
+        </table>
+
+        <div class="example">
+
+            <b>Example: Conflict</b>
+
+            <p>
+                <b>Definition:</b> A struggle between opposing
+                forces.
+            </p>
+
+            <p>
+                <b>Characteristics:</b> Creates tension and
+                problems in a story.
+            </p>
+
+            <p>
+                <b>Example:</b> Two characters disagree about
+                an important decision.
+            </p>
+
+            <p>
+                <b>Non-example:</b> Two characters peacefully
+                agreeing.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 4 -->
+
+    <section class="lesson">
+
+        <h2>
+            🔎 Lesson 4: Evaluating Literary Texts Through
+            the Psychological Context of a Drama
+        </h2>
+
+        <p>
+            The <b>psychological context</b> focuses on the
+            thoughts, feelings, motivations, emotions, and
+            behavior of characters.
+        </p>
+
+        <h3>What to Examine</h3>
+
+        <ul>
+
+            <li>
+                <b>Thoughts</b> – What is the character thinking?
+            </li>
+
+            <li>
+                <b>Emotions</b> – What does the character feel?
+            </li>
+
+            <li>
+                <b>Motivation</b> – Why does the character act
+                that way?
+            </li>
+
+            <li>
+                <b>Behavior</b> – How does the character respond
+                to situations?
+            </li>
+
+            <li>
+                <b>Relationships</b> – How do other characters
+                affect the character?
+            </li>
+
+        </ul>
+
+        <h3>Questions to Ask</h3>
+
+        <ol>
+
+            <li>What is the character feeling?</li>
+
+            <li>What motivates the character?</li>
+
+            <li>What experiences influence the character?</li>
+
+            <li>How does the character change?</li>
+
+            <li>How do emotions affect the plot?</li>
+
+        </ol>
+
+        <div class="note-box">
+
+            <b>Quick idea:</b>
+
+            <p>
+                Psychological analysis asks:
+                <b>"What is happening inside the character?"</b>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 5 -->
+
+    <section class="lesson">
+
+        <h2>
+            🎬 Lesson 5: Conceptualizing and Writing
+            a Short Film Script
+        </h2>
+
+        <p>
+            A short film script is a written plan for a film.
+            It describes the characters, scenes, actions,
+            dialogue, and events.
+        </p>
+
+        <h3>Important Parts of a Script</h3>
+
+        <ul>
+
+            <li><b>Title</b> – name of the film.</li>
+
+            <li><b>Characters</b> – people involved in the story.</li>
+
+            <li><b>Setting</b> – where and when the scene happens.</li>
+
+            <li><b>Scene</b> – a specific part of the film.</li>
+
+            <li><b>Action</b> – what the characters do.</li>
+
+            <li><b>Dialogue</b> – what the characters say.</li>
+
+        </ul>
+
+        <h3>Writing Process</h3>
+
+        <div class="step">
+            <div class="number">1</div>
+            <p><b>Brainstorm ideas</b> – think of possible story ideas.</p>
+        </div>
+
+        <div class="step">
+            <div class="number">2</div>
+            <p><b>Choose a concept</b> – select the strongest idea.</p>
+        </div>
+
+        <div class="step">
+            <div class="number">3</div>
+            <p><b>Develop characters</b> – create believable characters.</p>
+        </div>
+
+        <div class="step">
+            <div class="number">4</div>
+            <p><b>Develop the plot</b> – organize the events.</p>
+        </div>
+
+        <div class="step">
+            <div class="number">5</div>
+            <p><b>Write the script</b> – combine scenes, actions,
+            and dialogue.</p>
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 6 -->
+
+    <section class="lesson">
+
+        <h2>
+            ✏️ Lesson 6: Revising, Editing, and Publishing
+            a Short Film Script
+        </h2>
+
+        <h3>Revising</h3>
+
+        <p>
+            Revising means improving the content, structure,
+            and overall quality of the script.
+        </p>
+
+        <ul>
+
+            <li>Improve the plot.</li>
+
+            <li>Make scenes clearer.</li>
+
+            <li>Improve character development.</li>
+
+            <li>Strengthen dialogue.</li>
+
+            <li>Remove unnecessary parts.</li>
+
+        </ul>
+
+        <h3>Editing</h3>
+
+        <p>
+            Editing focuses on correcting errors in the script.
+        </p>
+
+        <ul>
+
+            <li>Grammar</li>
+
+            <li>Spelling</li>
+
+            <li>Punctuation</li>
+
+            <li>Capitalization</li>
+
+            <li>Sentence structure</li>
+
+        </ul>
+
+        <h3>Publishing</h3>
+
+        <p>
+            Publishing means preparing the final version
+            of the script for presentation or production.
+        </p>
+
+        <div class="important">
+
+            <b>Easy way to remember:</b>
+
+            <p>
+                <b>Revising = Improve</b><br>
+                <b>Editing = Correct</b><br>
+                <b>Publishing = Finalize and Present</b>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 7 -->
+
+    <section class="lesson">
+
+        <h2>
+            🎥 Lesson 7: Basics of Filming and Film Production
+        </h2>
+
+        <p>
+            Film production is the process of planning,
+            recording, and creating a finished film.
+        </p>
+
+        <h3>Three Main Stages</h3>
+
+        <table>
+
+            <tr>
+                <th>Stage</th>
+                <th>Description</th>
+            </tr>
+
+            <tr>
+                <td><b>Pre-production</b></td>
+                <td>
+                    Planning, scripting, casting, preparing
+                    locations, and organizing equipment.
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Production</b></td>
+                <td>
+                    The actual filming or recording of scenes.
+                </td>
+            </tr>
+
+            <tr>
+                <td><b>Post-production</b></td>
+                <td>
+                    Editing video and audio and completing
+                    the final film.
+                </td>
+            </tr>
+
+        </table>
+
+        <h3>Basic Filming Elements</h3>
+
+        <ul>
+
+            <li>Camera</li>
+
+            <li>Lighting</li>
+
+            <li>Sound</li>
+
+            <li>Actors</li>
+
+            <li>Location</li>
+
+            <li>Props</li>
+
+            <li>Costumes</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- LESSON 8 -->
+
+    <section class="lesson">
+
+        <h2>
+            🎥 Lesson 8: Dos and Don'ts in Filming a Short Film
+        </h2>
+
+        <h3>✅ DOs</h3>
+
+        <ul>
+
+            <li>Plan your scenes before filming.</li>
+
+            <li>Keep the camera steady.</li>
+
+            <li>Use proper lighting.</li>
+
+            <li>Record clear audio.</li>
+
+            <li>Check the camera angle.</li>
+
+            <li>Practice scenes before recording.</li>
+
+            <li>Keep the filming location organized.</li>
+
+            <li>Review footage after recording.</li>
+
+        </ul>
+
+        <h3>❌ DON'Ts</h3>
+
+        <ul>
+
+            <li>Don't record with extremely poor lighting.</li>
+
+            <li>Don't allow unnecessary background noise.</li>
+
+            <li>Don't shake the camera unnecessarily.</li>
+
+            <li>Don't ignore the script.</li>
+
+            <li>Don't forget to check the audio.</li>
+
+            <li>Don't record without planning the shot.</li>
+
+            <li>Don't leave important equipment unattended.</li>
+
+        </ul>
+
+        <div class="note-box">
+
+            <b>Remember:</b>
+
+            <p>
+                Good preparation makes filming easier and
+                helps produce better-quality scenes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 9 -->
+
+    <section class="lesson">
+
+        <h2>
+            👤 Lesson 9: STEAL Format for Characterization
+        </h2>
+
+        <p>
+            <b>STEAL</b> is a method for analyzing and describing
+            characterization by examining how a character is
+            presented in a story.
+        </p>
+
+        <div class="steal-grid">
+
+            <div class="steal-card">
+
+                <h4>S — Speech</h4>
+
+                <p>
+                    What does the character say?
+                    What does the character's way of speaking
+                    tell us about them?
+                </p>
+
+            </div>
+
+            <div class="steal-card">
+
+                <h4>T — Thoughts</h4>
+
+                <p>
+                    What does the character think?
+                    What do their thoughts reveal about them?
+                </p>
+
+            </div>
+
+            <div class="steal-card">
+
+                <h4>E — Effect on Others</h4>
+
+                <p>
+                    How do other characters react to or respond
+                    to this character?
+                </p>
+
+            </div>
+
+            <div class="steal-card">
+
+                <h4>A — Actions</h4>
+
+                <p>
+                    What does the character do?
+                    What do their actions reveal?
+                </p>
+
+            </div>
+
+            <div class="steal-card">
+
+                <h4>L — Looks</h4>
+
+                <p>
+                    What does the character look like?
+                    Consider appearance, clothing, and physical
+                    characteristics.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="example">
+
+            <b>Quick Example:</b>
+
+            <p>
+                If a character constantly helps others,
+                their <b>Actions</b> can show that they are
+                caring or generous.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 10 -->
+
+    <section class="lesson">
+
+        <h2>
+            🎞️ Lesson 10: Organic Unity, Binary Opposition,
+            Co-text, and Collocation in Short Films
+        </h2>
+
+
+        <div class="concept">
+
+            <h4>🌱 Organic Unity</h4>
+
+            <p>
+                Organic unity means that the different parts
+                of a literary work or film work together as
+                one complete and meaningful whole.
+            </p>
+
+            <p>
+                Characters, setting, plot, dialogue, visuals,
+                and theme should support one another.
+            </p>
+
+        </div>
+
+
+        <div class="concept">
+
+            <h4>⚖️ Binary Opposition</h4>
+
+            <p>
+                Binary opposition refers to two contrasting
+                ideas, characters, forces, or concepts.
+            </p>
+
+            <p>
+                Examples include:
+            </p>
+
+            <ul>
+
+                <li>Good vs. Evil</li>
+
+                <li>Light vs. Darkness</li>
+
+                <li>Freedom vs. Oppression</li>
+
+                <li>Rich vs. Poor</li>
+
+                <li>Love vs. Hate</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="concept">
+
+            <h4>📝 Co-text</h4>
+
+            <p>
+                Co-text refers to the words, sentences, scenes,
+                or surrounding elements that help us understand
+                the meaning of something within a text or film.
+            </p>
+
+            <p>
+                The meaning of a line or action can change
+                depending on what happens around it.
+            </p>
+
+        </div>
+
+
+        <div class="concept">
+
+            <h4>🔗 Collocation</h4>
+
+            <p>
+                Collocation refers to words that commonly occur
+                together or have a natural relationship in language.
+            </p>
+
+            <p>
+                Examples:
+            </p>
+
+            <ul>
+
+                <li><b>make</b> a decision</li>
+
+                <li><b>strong</b> argument</li>
+
+                <li><b>heavy</b> rain</li>
+
+                <li><b>take</b> responsibility</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="important">
+
+            <b>Quick Review:</b>
+
+            <p>
+                <b>Organic Unity</b> → Parts work together as one.
+            </p>
+
+            <p>
+                <b>Binary Opposition</b> → Contrasting ideas.
+            </p>
+
+            <p>
+                <b>Co-text</b> → Surrounding text or elements
+                that help explain meaning.
+            </p>
+
+            <p>
+                <b>Collocation</b> → Words that commonly go together.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK REVIEW -->
+
+    <section class="lesson">
+
+        <h2>⚡ English 10 Quick Review</h2>
+
+        <table>
+
+            <tr>
+                <th>Lesson</th>
+                <th>Topic</th>
+                <th>Key Idea</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Structural Context of Drama as a Film</td>
+                <td>Structure and elements of drama</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Understanding Literary Context</td>
+                <td>Context helps explain meaning</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Frayer's Method</td>
+                <td>Definition, characteristics, examples, non-examples</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Psychological Context</td>
+                <td>Thoughts, feelings, motivations, behavior</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Writing a Short Film Script</td>
+                <td>Characters, plot, scenes, action, dialogue</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Revising, Editing, Publishing</td>
+                <td>Improve, correct, finalize</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Basics of Filming and Film Production</td>
+                <td>Pre-production, production, post-production</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Dos and Don'ts in Filming</td>
+                <td>Good filming practices</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>STEAL Characterization</td>
+                <td>Speech, Thoughts, Effect, Actions, Looks</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Organic Unity, Binary Opposition, Co-text, Collocation</td>
+                <td>How elements and meanings work together</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>📘 English 10 Notes • Term 1 • Lessons 1–10</p>
+
+    <p>Keep studying and good luck! 💙</p>
+
+</footer>
+
+
+</body>
+
+</html>

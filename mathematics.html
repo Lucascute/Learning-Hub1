@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics Notes</title>
+
+    <style>
+
+        /* =========================
+           GENERAL DESIGN
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: linear-gradient(135deg, #173b6c, #2563a6);
+            color: white;
+            text-align: center;
+            padding: 40px 20px 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            margin: 8px 0 25px;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #173b6c;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #2563a6;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #173b6c;
+            transform: translateX(-3px);
+        }
+
+
+        /* =========================
+           WEEK CARDS
+        ========================= */
+
+        .lesson {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #2563a6;
+            transition: 0.3s;
+        }
+
+        .lesson:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================
+           HEADINGS
+        ========================= */
+
+        .lesson h2 {
+            color: #173b6c;
+            margin-top: 0;
+            font-size: 26px;
+            border-bottom: 2px solid #e4edf7;
+            padding-bottom: 10px;
+        }
+
+        .lesson h3 {
+            color: #2563a6;
+            margin-top: 25px;
+        }
+
+
+        /* =========================
+           FORMULA BOX
+        ========================= */
+
+        .formula {
+            background: #eaf3ff;
+            border-left: 5px solid #2563a6;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #173b6c;
+            overflow-x: auto;
+        }
+
+
+        /* =========================
+           ANSWERS
+        ========================= */
+
+        .answer {
+            background: #e9f8ef;
+            border-left: 5px solid #16803c;
+            padding: 12px 18px;
+            border-radius: 8px;
+            color: #126b32;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           LISTS
+        ========================= */
+
+        .lesson ul,
+        .lesson ol {
+            padding-left: 30px;
+        }
+
+        .lesson li {
+            margin-bottom: 6px;
+        }
+
+
+        /* =========================
+           REMEMBER BOX
+        ========================= */
+
+        .remember {
+            background: #fff8df;
+            border-left: 5px solid #e0a800;
+            padding: 15px 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .remember strong {
+            color: #9a7000;
+        }
+
+
+        /* =========================
+           WEEK NUMBER LABEL
+        ========================= */
+
+        .week-label {
+            display: inline-block;
+            background: #2563a6;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #173b6c;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           MOBILE DESIGN
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            nav a {
+                text-align: center;
+            }
+
+            main {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .lesson {
+                padding: 20px;
+            }
+
+            .lesson h2 {
+                font-size: 22px;
+            }
+
+            .formula {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>➗ Mathematics Notes</h1>
+
+    <p>Weeks 1–10</p>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="subjects.html">Subjects</a>
+        <a href="resources.html">Learning Resources</a>
+        <a href="studytips.html">Study Tips</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main>
+
+    <a href="subjects.html" class="back-button">
+        ← Back to Subjects
+    </a>
+
+
+    <!-- =========================
+         WEEK 1
+    ========================= -->
+
+    <section class="lesson" id="week1">
+
+        <span class="week-label">WEEK 1</span>
+
+        <h2>Law of Sines and Ambiguous Case</h2>
+
+        <p>
+            The Law of Sines is used to solve oblique triangles
+            when certain sides and angles are known.
+        </p>
+
+        <h3>Formula</h3>
+
+        <p class="formula">
+            a / sin(A) = b / sin(B) = c / sin(C)
+        </p>
+
+        <h3>Example</h3>
+
+        <p>
+            Given A = 30°, B = 45°, and a = 10.
+        </p>
+
+        <p><strong>Find b.</strong></p>
+
+        <p>
+            b / sin(45°) = 10 / sin(30°)
+        </p>
+
+        <p>
+            b = 10(sin45° / sin30°)
+        </p>
+
+        <p class="answer">
+            b ≈ 14.14
+        </p>
+
+        <h3>Ambiguous Case</h3>
+
+        <p>
+            The ambiguous case occurs when two sides and a
+            non-included angle are known. This is called SSA.
+        </p>
+
+        <ul>
+            <li>No triangle</li>
+            <li>One triangle</li>
+            <li>Two triangles</li>
+        </ul>
+
+        <div class="remember">
+            <strong>Remember:</strong>
+            The ambiguous case is associated with SSA.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 2
+    ========================= -->
+
+    <section class="lesson" id="week2">
+
+        <span class="week-label">WEEK 2</span>
+
+        <h2>Law of Cosines</h2>
+
+        <p>
+            The Law of Cosines is used to solve oblique triangles.
+            It is commonly used with SAS and SSS.
+        </p>
+
+        <h3>Formula</h3>
+
+        <p class="formula">
+            c² = a² + b² - 2ab cos(C)
+        </p>
+
+        <h3>Example</h3>
+
+        <p>
+            Given a = 5, b = 7, and C = 60°.
+        </p>
+
+        <p>
+            c² = 5² + 7² - 2(5)(7)cos60°
+        </p>
+
+        <p>
+            c² = 25 + 49 - 70(0.5)
+        </p>
+
+        <p>
+            c² = 39
+        </p>
+
+        <p class="answer">
+            c ≈ 6.24
+        </p>
+
+        <div class="remember">
+            <strong>Remember:</strong>
+            SAS or SSS usually means Law of Cosines.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 3
+    ========================= -->
+
+    <section class="lesson" id="week3">
+
+        <span class="week-label">WEEK 3</span>
+
+        <h2>
+            Word Problems with Sines, Cosines and Bearings
+        </h2>
+
+        <h3>Bearings</h3>
+
+        <p>
+            A bearing describes direction measured clockwise from North.
+        </p>
+
+        <ul>
+            <li>North = 000°</li>
+            <li>East = 090°</li>
+            <li>South = 180°</li>
+            <li>West = 270°</li>
+        </ul>
+
+        <h3>Example</h3>
+
+        <p>
+            A boat travels 10 km east. Another boat travels
+            10 km north.
+        </p>
+
+        <p>
+            The angle between the paths is 90°.
+        </p>
+
+        <p>
+            c² = 10² + 10² - 2(10)(10)cos90°
+        </p>
+
+        <p>
+            c² = 200
+        </p>
+
+        <p class="answer">
+            c ≈ 14.14 km
+        </p>
+
+        <h3>Steps</h3>
+
+        <ol>
+            <li>Read the problem.</li>
+            <li>Draw a diagram.</li>
+            <li>Mark the bearings.</li>
+            <li>Find the required angle.</li>
+            <li>Choose Law of Sines or Law of Cosines.</li>
+            <li>Solve and include the correct unit.</li>
+        </ol>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 4
+    ========================= -->
+
+    <section class="lesson" id="week4">
+
+        <span class="week-label">WEEK 4</span>
+
+        <h2>Transformations on the Cartesian Plane</h2>
+
+        <h3>Translation</h3>
+
+        <p class="formula">
+            (x, y) → (x + a, y + b)
+        </p>
+
+        <h3>Example</h3>
+
+        <p>
+            Move (2, 3) four units right and two units down.
+        </p>
+
+        <p>
+            (2, 3) → (2 + 4, 3 - 2)
+        </p>
+
+        <p class="answer">
+            Answer: (6, 1)
+        </p>
+
+        <h3>Reflection</h3>
+
+        <p>
+            Across x-axis:
+            <strong>(x,y) → (x,-y)</strong>
+        </p>
+
+        <p>
+            Across y-axis:
+            <strong>(x,y) → (-x,y)</strong>
+        </p>
+
+        <p>
+            Across origin:
+            <strong>(x,y) → (-x,-y)</strong>
+        </p>
+
+        <h3>Rotation</h3>
+
+        <p>
+            90° counterclockwise:
+            <strong>(x,y) → (-y,x)</strong>
+        </p>
+
+        <p>
+            180°:
+            <strong>(x,y) → (-x,-y)</strong>
+        </p>
+
+        <p>
+            270° counterclockwise:
+            <strong>(x,y) → (y,-x)</strong>
+        </p>
+
+        <h3>Dilation</h3>
+
+        <p class="formula">
+            (x,y) → (kx,ky)
+        </p>
+
+        <p>
+            Example: Dilate (3,4) by a scale factor of 2.
+        </p>
+
+        <p class="answer">
+            (3,4) → (6,8)
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 5
+    ========================= -->
+
+    <section class="lesson" id="week5">
+
+        <span class="week-label">WEEK 5</span>
+
+        <h2>Solving Quadratic Inequalities</h2>
+
+        <p>
+            A quadratic inequality contains a variable raised
+            to the second power and an inequality symbol.
+        </p>
+
+        <h3>Example</h3>
+
+        <p><strong>Solve:</strong></p>
+
+        <p class="formula">
+            x² - 5x + 6 &gt; 0
+        </p>
+
+        <p><strong>Factor:</strong></p>
+
+        <p>
+            (x - 2)(x - 3) &gt; 0
+        </p>
+
+        <p>
+            Critical numbers:
+            x = 2 and x = 3
+        </p>
+
+        <p class="answer">
+            Answer: x &lt; 2 OR x &gt; 3
+        </p>
+
+        <h3>Steps</h3>
+
+        <ol>
+            <li>Move everything to one side.</li>
+            <li>Factor the quadratic.</li>
+            <li>Find the critical numbers.</li>
+            <li>Make a number line.</li>
+            <li>Test the intervals.</li>
+            <li>Write the solution.</li>
+        </ol>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 6
+    ========================= -->
+
+    <section class="lesson" id="week6">
+
+        <span class="week-label">WEEK 6</span>
+
+        <h2>Quadratic Inequalities with One Variable</h2>
+
+        <h3>Example</h3>
+
+        <p><strong>Solve:</strong></p>
+
+        <p class="formula">
+            x² + x - 6 ≤ 0
+        </p>
+
+        <p><strong>Factor:</strong></p>
+
+        <p>
+            (x + 3)(x - 2) ≤ 0
+        </p>
+
+        <p>
+            Critical numbers:
+            x = -3 and x = 2
+        </p>
+
+        <p class="answer">
+            Answer: -3 ≤ x ≤ 2
+        </p>
+
+        <div class="remember">
+            For ≤ or ≥, include the critical numbers.
+            For &lt; or &gt;, do not include them.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 7
+    ========================= -->
+
+    <section class="lesson" id="week7">
+
+        <span class="week-label">WEEK 7</span>
+
+        <h2>Absolute Value Equations</h2>
+
+        <p>
+            Absolute value represents distance from zero.
+        </p>
+
+        <h3>Basic Rule</h3>
+
+        <p class="formula">
+            |x| = a
+        </p>
+
+        <p>
+            x = a OR x = -a
+        </p>
+
+        <h3>Example</h3>
+
+        <p><strong>Solve:</strong></p>
+
+        <p class="formula">
+            |x - 3| = 5
+        </p>
+
+        <p>
+            x - 3 = 5
+        </p>
+
+        <p>
+            x = 8
+        </p>
+
+        <p><strong>OR</strong></p>
+
+        <p>
+            x - 3 = -5
+        </p>
+
+        <p>
+            x = -2
+        </p>
+
+        <p class="answer">
+            Answer: x = 8 or x = -2
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 8
+    ========================= -->
+
+    <section class="lesson" id="week8">
+
+        <span class="week-label">WEEK 8</span>
+
+        <h2>Absolute Value Inequalities</h2>
+
+        <h3>Important Rules</h3>
+
+        <p class="formula">
+            |x| &lt; a → -a &lt; x &lt; a
+        </p>
+
+        <p class="formula">
+            |x| ≤ a → -a ≤ x ≤ a
+        </p>
+
+        <p class="formula">
+            |x| &gt; a → x &lt; -a OR x &gt; a
+        </p>
+
+        <p class="formula">
+            |x| ≥ a → x ≤ -a OR x ≥ a
+        </p>
+
+        <h3>Example</h3>
+
+        <p><strong>Solve:</strong></p>
+
+        <p>
+            |x - 2| &lt; 4
+        </p>
+
+        <p>
+            -4 &lt; x - 2 &lt; 4
+        </p>
+
+        <p><strong>Add 2:</strong></p>
+
+        <p class="answer">
+            -2 &lt; x &lt; 6
+        </p>
+
+        <div class="remember">
+            Less than means the solution is between the values.
+            Greater than means the solution is outside the values.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 9
+    ========================= -->
+
+    <section class="lesson" id="week9">
+
+        <span class="week-label">WEEK 9</span>
+
+        <h2>Measures of Position</h2>
+
+        <p>
+            Measures of position tell us where a value is located
+            within a data set.
+        </p>
+
+        <h3>Quartiles</h3>
+
+        <ul>
+            <li>Q1 = 25th percentile</li>
+            <li>Q2 = 50th percentile</li>
+            <li>Q3 = 75th percentile</li>
+        </ul>
+
+        <h3>Example</h3>
+
+        <p><strong>Data:</strong></p>
+
+        <p class="formula">
+            2, 4, 5, 7, 8, 10, 12, 15
+        </p>
+
+        <p><strong>Lower half:</strong></p>
+
+        <p>
+            2, 4, 5, 7
+        </p>
+
+        <p>
+            Q1 = (4 + 5) / 2
+        </p>
+
+        <p class="answer">
+            Q1 = 4.5
+        </p>
+
+        <p><strong>Upper half:</strong></p>
+
+        <p>
+            8, 10, 12, 15
+        </p>
+
+        <p>
+            Q3 = (10 + 12) / 2
+        </p>
+
+        <p class="answer">
+            Q3 = 11
+        </p>
+
+        <div class="remember">
+            Always arrange the data from smallest to largest first.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WEEK 10
+    ========================= -->
+
+    <section class="lesson" id="week10">
+
+        <span class="week-label">WEEK 10</span>
+
+        <h2>Percentile Rank</h2>
+
+        <p>
+            Percentile rank tells us the relative position of a score
+            compared with other scores.
+        </p>
+
+        <h3>Formula</h3>
+
+        <p class="formula">
+            Percentile Rank =
+            (Number of values below the score /
+            Total number of values) × 100
+        </p>
+
+        <h3>Example</h3>
+
+        <p>
+            There are 20 students.
+        </p>
+
+        <p>
+            A student scored higher than 15 students.
+        </p>
+
+        <p><strong>Percentile Rank:</strong></p>
+
+        <p>
+            (15 / 20) × 100
+        </p>
+
+        <p>
+            = 75%
+        </p>
+
+        <p class="answer">
+            Therefore, the student is approximately at the
+            75th percentile.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        Mathematics Reviewer - Weeks 1 to 10
+    </p>
+
+    <p>
+        © 2026 Mathematics Reviewer
+    </p>
+
+</footer>
+
+
+</body>
+</html>

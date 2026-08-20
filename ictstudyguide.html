@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICT Study Guide | Grade 10</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef3f8, #dfe9f3);
+            color: #263238;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #17365d, #2563a6);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        /* INDEX */
+
+        .index {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            margin-bottom: 30px;
+        }
+
+        .index h2 {
+            margin-top: 0;
+            color: #17365d;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px;
+        }
+
+        .index-item {
+            padding: 13px 15px;
+            background: #eaf2f8;
+            color: #17365d;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* CARDS */
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin: 25px 0;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            border-left: 6px solid #2563a6;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #17365d;
+            font-size: 28px;
+        }
+
+        .card h3 {
+            color: #2563a6;
+            margin-top: 25px;
+        }
+
+        /* GUIDE BOX */
+
+        .guide {
+            background: #f7faff;
+            padding: 18px;
+            margin: 15px 0;
+
+            border-left: 5px solid #2563a6;
+            border-radius: 10px;
+
+            line-height: 1.7;
+        }
+
+        .guide strong {
+            color: #17365d;
+        }
+
+        /* IMPORTANT */
+
+        .important {
+            background: #eef6ff;
+
+            border-left: 5px solid #17365d;
+
+            padding: 16px 18px;
+
+            margin: 18px 0;
+
+            border-radius: 10px;
+
+            line-height: 1.7;
+        }
+
+        /* EXAMPLE */
+
+        .example {
+            background: #f8f8f8;
+
+            padding: 18px;
+
+            margin: 15px 0;
+
+            border-radius: 10px;
+
+            border-left: 5px solid #6b8eb5;
+
+            line-height: 1.7;
+        }
+
+        /* CODE BOX */
+
+        .code-box {
+            background: #17202a;
+            color: #e8f6ff;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            margin: 15px 0;
+
+            font-family: Consolas, monospace;
+
+            overflow-x: auto;
+
+            line-height: 1.6;
+        }
+
+        /* TIPS */
+
+        .tips {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8e1,
+                    #fff3cd
+                );
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            margin-top: 30px;
+
+            border-left: 6px solid #d39b00;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .tips h2 {
+            color: #8a6500;
+            margin-top: 0;
+        }
+
+        .tips li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        /* TOP BUTTON */
+
+        .top {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 10px 16px;
+
+            background: #2563a6;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .top:hover {
+            background: #17365d;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background: #17365d;
+
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 31px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>💻 ICT Study Guide</h1>
+
+    <p>
+        Grade 10 ICT | Study Smart • Practice More
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- INDEX -->
+
+    <section class="index">
+
+        <h2>📑 ICT Study Guide</h2>
+
+        <div class="index-grid">
+
+            <div class="index-item">
+                💻 Lesson 1 — Introduction to Computer Programming
+            </div>
+
+            <div class="index-item">
+                🪑 Lesson 2 — Computer Ergonomics
+            </div>
+
+            <div class="index-item">
+                ⌨️ Lesson 3 — Programming Basics
+            </div>
+
+            <div class="index-item">
+                🔢 Lesson 4 — Variables and Data
+            </div>
+
+            <div class="index-item">
+                🔀 Lesson 5 — Conditional Statements
+            </div>
+
+            <div class="index-item">
+                🔁 Lesson 6 — Loops
+            </div>
+
+            <div class="index-item">
+                📦 Lesson 7 — Functions
+            </div>
+
+            <div class="index-item">
+                🐞 Lesson 8 — Debugging
+            </div>
+
+            <div class="index-item">
+                🛡️ Lesson 9 — Computer Safety
+            </div>
+
+            <div class="index-item">
+                🌐 Lesson 10 — Responsible ICT Use
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LESSON 1 -->
+
+    <section class="card">
+
+        <h2>💻 Lesson 1 — Introduction to Computer Programming</h2>
+
+        <div class="guide">
+
+            <strong>What is computer programming?</strong>
+
+            <p>
+                Computer programming is the process of creating
+                instructions that a computer can follow to perform
+                a specific task or solve a problem.
+            </p>
+
+        </div>
+
+        <h3>Important Terms</h3>
+
+        <ul>
+
+            <li>
+                <strong>Program</strong> – a set of instructions
+                given to a computer.
+            </li>
+
+            <li>
+                <strong>Programming Language</strong> – a language
+                used to communicate instructions to a computer.
+            </li>
+
+            <li>
+                <strong>Programmer</strong> – a person who writes
+                and develops computer programs.
+            </li>
+
+            <li>
+                <strong>Algorithm</strong> – a step-by-step procedure
+                for solving a problem.
+            </li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Remember:</strong>
+
+            A computer follows instructions. Programming
+            allows people to give those instructions clearly
+            and logically.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 2 -->
+
+    <section class="card">
+
+        <h2>🪑 Lesson 2 — Computer Ergonomics</h2>
+
+        <div class="guide">
+
+            <strong>What is computer ergonomics?</strong>
+
+            <p>
+                Computer ergonomics is the practice of arranging
+                and using computer equipment in a way that promotes
+                comfort, safety, and efficiency.
+            </p>
+
+        </div>
+
+        <h3>Proper Computer Ergonomics</h3>
+
+        <ul>
+
+            <li>Sit with your back properly supported.</li>
+
+            <li>Keep your feet comfortably on the floor.</li>
+
+            <li>Keep the monitor at an appropriate height.</li>
+
+            <li>Keep your wrists in a comfortable position.</li>
+
+            <li>Take regular breaks from the screen.</li>
+
+            <li>Maintain proper distance from the monitor.</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>⚠️ Why is it important?</strong>
+
+            <p>
+                Good ergonomics can help prevent discomfort,
+                eye strain, back pain, neck pain, and repetitive
+                strain injuries.
+            </p>
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 3 -->
+
+    <section class="card">
+
+        <h2>⌨️ Lesson 3 — Programming Basics</h2>
+
+        <div class="guide">
+
+            <strong>Basic programming concepts</strong>
+
+            <p>
+                Programming requires logical thinking and
+                understanding how instructions are organized.
+            </p>
+
+        </div>
+
+        <h3>Common Concepts</h3>
+
+        <ul>
+
+            <li>Input</li>
+
+            <li>Process</li>
+
+            <li>Output</li>
+
+            <li>Sequence</li>
+
+            <li>Decision</li>
+
+            <li>Repetition</li>
+
+        </ul>
+
+        <div class="example">
+
+            <strong>Example:</strong>
+
+            <p>
+                A simple calculator receives numbers as
+                <strong>input</strong>, performs a calculation
+                as the <strong>process</strong>, and displays
+                the answer as the <strong>output</strong>.
+            </p>
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 4 -->
+
+    <section class="card">
+
+        <h2>🔢 Lesson 4 — Variables and Data</h2>
+
+        <div class="guide">
+
+            <strong>What is a variable?</strong>
+
+            <p>
+                A variable is a named location used to store
+                information that a program can use.
+            </p>
+
+        </div>
+
+        <h3>Common Data Types</h3>
+
+        <ul>
+
+            <li>
+                <strong>Integer</strong> – whole numbers.
+            </li>
+
+            <li>
+                <strong>Float</strong> – numbers containing decimals.
+            </li>
+
+            <li>
+                <strong>String</strong> – text or characters.
+            </li>
+
+            <li>
+                <strong>Boolean</strong> – True or False values.
+            </li>
+
+        </ul>
+
+        <div class="code-box">
+
+            name = "John"<br>
+            age = 16<br>
+            score = 95.5<br>
+            passed = True
+
+        </div>
+
+        <div class="important">
+
+            <strong>💡 Remember:</strong>
+
+            Variables allow programs to store and work with
+            information.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 5 -->
+
+    <section class="card">
+
+        <h2>🔀 Lesson 5 — Conditional Statements</h2>
+
+        <div class="guide">
+
+            <strong>What are conditional statements?</strong>
+
+            <p>
+                Conditional statements allow a program to make
+                decisions based on whether a condition is true
+                or false.
+            </p>
+
+        </div>
+
+        <div class="code-box">
+
+            if score >= 75:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Passed")<br>
+            else:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Failed")
+
+        </div>
+
+        <h3>Common Conditional Statements</h3>
+
+        <ul>
+
+            <li>if</li>
+
+            <li>if-else</li>
+
+            <li>if-elif-else</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Study Tip:</strong>
+
+            Look carefully at the condition before deciding
+            what the program will do.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 6 -->
+
+    <section class="card">
+
+        <h2>🔁 Lesson 6 — Loops</h2>
+
+        <div class="guide">
+
+            <strong>What is a loop?</strong>
+
+            <p>
+                A loop repeatedly executes a block of code
+                while a particular condition is met.
+            </p>
+
+        </div>
+
+        <h3>Common Types</h3>
+
+        <ul>
+
+            <li>
+                <strong>For Loop</strong> – repeats a specific
+                number of times or over a sequence.
+            </li>
+
+            <li>
+                <strong>While Loop</strong> – continues while
+                a condition remains true.
+            </li>
+
+        </ul>
+
+        <div class="code-box">
+
+            for i in range(5):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+
+        </div>
+
+        <div class="important">
+
+            <strong>⚠️ Watch Out:</strong>
+
+            A loop must eventually reach a condition that
+            stops it when using a condition-controlled loop.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 7 -->
+
+    <section class="card">
+
+        <h2>📦 Lesson 7 — Functions</h2>
+
+        <div class="guide">
+
+            <strong>What is a function?</strong>
+
+            <p>
+                A function is a reusable block of code designed
+                to perform a particular task.
+            </p>
+
+        </div>
+
+        <div class="code-box">
+
+            def greet():<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("Hello!")<br><br>
+
+            greet()
+
+        </div>
+
+        <h3>Advantages of Functions</h3>
+
+        <ul>
+
+            <li>Reduce repeated code.</li>
+
+            <li>Make programs easier to organize.</li>
+
+            <li>Make code easier to understand.</li>
+
+            <li>Allow code to be reused.</li>
+
+        </ul>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 8 -->
+
+    <section class="card">
+
+        <h2>🐞 Lesson 8 — Debugging</h2>
+
+        <div class="guide">
+
+            <strong>What is debugging?</strong>
+
+            <p>
+                Debugging is the process of finding and fixing
+                errors in a computer program.
+            </p>
+
+        </div>
+
+        <h3>Common Types of Errors</h3>
+
+        <ul>
+
+            <li>
+                <strong>Syntax Error</strong> – an error in
+                the structure or rules of the code.
+            </li>
+
+            <li>
+                <strong>Runtime Error</strong> – an error that
+                occurs while the program is running.
+            </li>
+
+            <li>
+                <strong>Logic Error</strong> – the program runs,
+                but produces an incorrect result.
+            </li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Debugging Tip:</strong>
+
+            Read the error message carefully and check the
+            code around the line where the error occurred.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 9 -->
+
+    <section class="card">
+
+        <h2>🛡️ Lesson 9 — Computer Safety</h2>
+
+        <div class="guide">
+
+            <strong>Why is computer safety important?</strong>
+
+            <p>
+                Computer safety protects both the user and
+                computer equipment from accidents, damage,
+                and unsafe practices.
+            </p>
+
+        </div>
+
+        <h3>Safety Practices</h3>
+
+        <ul>
+
+            <li>Keep liquids away from computers.</li>
+
+            <li>Handle devices carefully.</li>
+
+            <li>Keep cables organized.</li>
+
+            <li>Do not overload electrical outlets.</li>
+
+            <li>Use proper posture.</li>
+
+            <li>Keep software updated.</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>⚠️ Remember:</strong>
+
+            Physical safety and digital safety are both
+            important when using computers.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LESSON 10 -->
+
+    <section class="card">
+
+        <h2>🌐 Lesson 10 — Responsible ICT Use</h2>
+
+        <div class="guide">
+
+            <strong>What is responsible ICT use?</strong>
+
+            <p>
+                Responsible ICT use means using technology
+                safely, ethically, respectfully, and legally.
+            </p>
+
+        </div>
+
+        <h3>Responsible Practices</h3>
+
+        <ul>
+
+            <li>Respect other people's privacy.</li>
+
+            <li>Use strong passwords.</li>
+
+            <li>Do not share personal information carelessly.</li>
+
+            <li>Give credit to original creators.</li>
+
+            <li>Avoid cyberbullying.</li>
+
+            <li>Think before posting online.</li>
+
+            <li>Use reliable sources of information.</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Digital Citizenship:</strong>
+
+            Good digital citizens use technology responsibly
+            and treat other people with respect online.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- STUDY TIPS -->
+
+    <section class="tips">
+
+        <h2>⭐ ICT Study Tips</h2>
+
+        <ol>
+
+            <li>
+                <strong>Understand the concept first.</strong>
+                Don't just memorize programming terms.
+            </li>
+
+            <li>
+                <strong>Practice writing code.</strong>
+                Reading code is different from actually
+                creating it.
+            </li>
+
+            <li>
+                <strong>Learn from errors.</strong>
+                Errors are a normal part of programming.
+            </li>
+
+            <li>
+                <strong>Memorize important terminology.</strong>
+                Know the difference between variables,
+                functions, loops, and conditions.
+            </li>
+
+            <li>
+                <strong>Practice step-by-step.</strong>
+                Break complicated problems into smaller tasks.
+            </li>
+
+            <li>
+                <strong>Review computer safety.</strong>
+                Don't focus only on programming.
+            </li>
+
+            <li>
+                <strong>Be a responsible digital citizen.</strong>
+                Use technology safely and respectfully.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        💻 Grade 10 ICT Study Guide
+    </p>
+
+    <p>
+        Learn • Practice • Code • Improve
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

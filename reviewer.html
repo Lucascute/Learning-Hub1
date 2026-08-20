@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subject Reviewers</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 0 0 20px;
+            font-size: 17px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.15);
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #1e3a5f;
+            transform: translateY(-2px);
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: #1e3a5f;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* SUBJECT GRID */
+
+        .subjects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* SUBJECT CARD */
+
+        .subject-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+            border-top: 5px solid #2563eb;
+            transition: 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .subject-icon {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subject-card h3 {
+            text-align: center;
+            color: #1e3a5f;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .subject-card p {
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* BUTTON */
+
+        .review-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 0;
+
+            padding: 10px 22px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .review-button:hover {
+            background: #1e3a5f;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 50px;
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .intro h2 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>📖 Subject Reviewers</h1>
+
+    <p>Choose a subject and start reviewing.</p>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="subjects.html">Subjects</a>
+
+        <a href="resources.html">Learning Resources</a>
+
+        <a href="study-tips.html">Study Tips</a>
+
+        <a href="contact.html">Contact Us</a>
+
+    </nav>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main>
+
+    <div class="intro">
+
+        <h2>📚 Review by Subject</h2>
+
+        <p>
+            Select a subject below to open its reviewer.
+        </p>
+
+    </div>
+
+
+    <div class="subjects">
+
+
+        <!-- MATHEMATICS -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">➗</div>
+
+            <h3>Mathematics</h3>
+
+            <p>
+                Review Mathematics lessons including
+                trigonometry, transformations,
+                inequalities, absolute value,
+                and measures of position.
+            </p>
+
+            <a href="math-reviewer.html" class="review-button">
+                Open Math Reviewer →
+            </a>
+
+        </div>
+
+
+        <!-- ICT -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">💻</div>
+
+            <h3>ICT</h3>
+
+            <p>
+                Review ICT lessons including
+                computer programming, computer
+                ergonomics, and other ICT topics.
+            </p>
+
+            <a href="ICT-reviewer.html" class="review-button">
+                Open ICT Reviewer →
+            </a>
+
+        </div>
+
+
+        <!-- SCIENCE -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🔬</div>
+
+            <h3>Science</h3>
+
+            <p>
+                Review important Science concepts
+                and lessons from your Grade 10
+                curriculum.
+            </p>
+
+            <a href="science-reviewer.html" class="review-button">
+                Open Science Reviewer →
+            </a>
+
+        </div>
+
+
+        <!-- ENGLISH -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">📘</div>
+
+            <h3>English</h3>
+
+            <p>
+                Review literary context, drama,
+                short film production, characterization,
+                and other English lessons.
+            </p>
+
+            <a href="english-reviewer.html" class="review-button">
+                Open English Reviewer →
+            </a>
+
+        </div>
+
+
+        <!-- AP -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">🌏</div>
+
+            <h3>Araling Panlipunan</h3>
+
+            <p>
+                Review important AP topics for
+                Grades 7–10 including geography,
+                history, economics, and contemporary issues.
+            </p>
+
+            <a href="ap-reviewer.html" class="review-button">
+                Open AP Reviewer →
+            </a>
+
+        </div>
+
+
+        <!-- FILIPINO -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">📖</div>
+
+            <h3>Filipino</h3>
+
+            <p>
+                Review Filipino literature including
+                El Filibusterismo, important characters,
+                themes, events, and literary elements.
+            </p>
+
+            <a href="filipino-reviewer.html" class="review-button">
+                Open Filipino Reviewer →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>📚 Student Learning Hub</p>
+
+    <p>Study • Review • Practice • Improve</p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematics Study Guide | Grade 10</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef3f8, #dfe9f3);
+            color: #263238;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #17365d, #2563a6);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        /* INDEX */
+
+        .index {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            margin-bottom: 30px;
+        }
+
+        .index h2 {
+            margin-top: 0;
+            color: #17365d;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px;
+        }
+
+        .index-item {
+            padding: 13px 15px;
+            background: #eaf2f8;
+            color: #17365d;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* TOPIC CARDS */
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin: 25px 0;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            border-left: 6px solid #2563a6;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #17365d;
+            font-size: 28px;
+        }
+
+        .card h3 {
+            color: #2563a6;
+            margin-top: 25px;
+        }
+
+        /* GUIDE BOX */
+
+        .guide {
+            background: #f7faff;
+            padding: 18px;
+            margin: 15px 0;
+
+            border-left: 5px solid #2563a6;
+            border-radius: 10px;
+
+            line-height: 1.7;
+        }
+
+        .guide strong {
+            color: #17365d;
+        }
+
+        /* FORMULA */
+
+        .formula {
+            background: #e8f0fa;
+            padding: 18px;
+
+            margin: 15px 0;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            color: #17365d;
+
+            border: 1px solid #cbdceb;
+        }
+
+        /* IMPORTANT */
+
+        .important {
+            background: #eef6ff;
+
+            border-left: 5px solid #17365d;
+
+            padding: 16px 18px;
+
+            margin: 18px 0;
+
+            border-radius: 10px;
+
+            line-height: 1.7;
+        }
+
+        /* EXAMPLE */
+
+        .example {
+            background: #f8f8f8;
+
+            padding: 18px;
+
+            margin: 15px 0;
+
+            border-radius: 10px;
+
+            border-left: 5px solid #6b8eb5;
+
+            line-height: 1.7;
+        }
+
+        /* TIPS */
+
+        .tips {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8e1,
+                    #fff3cd
+                );
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            margin-top: 30px;
+
+            border-left: 6px solid #d39b00;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .tips h2 {
+            color: #8a6500;
+            margin-top: 0;
+        }
+
+        .tips li {
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+
+        /* BACK TO TOP */
+
+        .top {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 10px 16px;
+
+            background: #2563a6;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .top:hover {
+            background: #17365d;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background: #17365d;
+
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 31px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🧮 Mathematics Study Guide</h1>
+
+    <p>
+        Grade 10 Mathematics | Study Smart
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- INTRO -->
+
+    <section class="index">
+
+        <h2>📑 Mathematics Guide</h2>
+
+        <div class="index-grid">
+
+            <div class="index-item">
+                📐 Law of Sines
+            </div>
+
+            <div class="index-item">
+                🔺 Ambiguous Case
+            </div>
+
+            <div class="index-item">
+                📏 Law of Cosines
+            </div>
+
+            <div class="index-item">
+                🧭 Bearings
+            </div>
+
+            <div class="index-item">
+                🔄 Transformations
+            </div>
+
+            <div class="index-item">
+                📊 Quadratic Inequalities
+            </div>
+
+            <div class="index-item">
+                ➗ Absolute Value
+            </div>
+
+            <div class="index-item">
+                📈 Measures of Position
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LAW OF SINES -->
+
+    <section class="card">
+
+        <h2>📐 Law of Sines</h2>
+
+        <div class="guide">
+
+            <strong>What is it?</strong>
+
+            <p>
+                The Law of Sines is used to find unknown
+                sides or angles of a triangle when you know
+                enough information about the triangle.
+            </p>
+
+        </div>
+
+        <div class="formula">
+
+            a / sin A = b / sin B = c / sin C
+
+        </div>
+
+        <h3>When to Use It</h3>
+
+        <ul>
+
+            <li>When you know two angles and one side.</li>
+
+            <li>When you know two sides and an opposite angle.</li>
+
+            <li>When the triangle is not necessarily a right triangle.</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Remember:</strong>
+
+            The side and its opposite angle must be
+            paired correctly.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- AMBIGUOUS CASE -->
+
+    <section class="card">
+
+        <h2>🔺 Ambiguous Case</h2>
+
+        <div class="guide">
+
+            <strong>What is it?</strong>
+
+            <p>
+                The ambiguous case occurs when using the
+                Law of Sines with two sides and a non-included
+                angle (SSA).
+            </p>
+
+        </div>
+
+        <h3>Possible Results</h3>
+
+        <ul>
+
+            <li>No triangle</li>
+
+            <li>One triangle</li>
+
+            <li>Two possible triangles</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Study Tip:</strong>
+
+            Always check whether the given measurements
+            can form a triangle before assuming there is
+            only one answer.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- LAW OF COSINES -->
+
+    <section class="card">
+
+        <h2>📏 Law of Cosines</h2>
+
+        <div class="guide">
+
+            <strong>What is it?</strong>
+
+            <p>
+                The Law of Cosines is useful for finding
+                an unknown side or angle when the triangle
+                does not fit the easiest Law of Sines cases.
+            </p>
+
+        </div>
+
+        <div class="formula">
+
+            c² = a² + b² − 2ab cos C
+
+        </div>
+
+        <h3>When to Use It</h3>
+
+        <ul>
+
+            <li>When you know two sides and the included angle (SAS).</li>
+
+            <li>When you know all three sides (SSS).</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Remember:</strong>
+
+            The angle in the formula must be opposite
+            the side represented by c.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- BEARINGS -->
+
+    <section class="card">
+
+        <h2>🧭 Bearings</h2>
+
+        <div class="guide">
+
+            <strong>What are bearings?</strong>
+
+            <p>
+                Bearings describe direction using angles
+                measured clockwise from North.
+            </p>
+
+        </div>
+
+        <h3>Important Rules</h3>
+
+        <ul>
+
+            <li>North = 000°</li>
+
+            <li>East = 090°</li>
+
+            <li>South = 180°</li>
+
+            <li>West = 270°</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Remember:</strong>
+
+            Bearings are normally written using
+            three digits, such as 045°, 120°, or 315°.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- TRANSFORMATIONS -->
+
+    <section class="card">
+
+        <h2>🔄 Transformations</h2>
+
+        <div class="guide">
+
+            <strong>What are transformations?</strong>
+
+            <p>
+                Transformations change the position,
+                size, or orientation of a figure.
+            </p>
+
+        </div>
+
+        <h3>Four Main Transformations</h3>
+
+        <ul>
+
+            <li>
+                <strong>Translation</strong> –
+                moves a figure.
+            </li>
+
+            <li>
+                <strong>Reflection</strong> –
+                flips a figure over a line.
+            </li>
+
+            <li>
+                <strong>Rotation</strong> –
+                turns a figure around a point.
+            </li>
+
+            <li>
+                <strong>Dilation</strong> –
+                changes the size of a figure.
+            </li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Study Tip:</strong>
+
+            Practice identifying the transformation
+            before trying to calculate the new coordinates.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- QUADRATIC INEQUALITIES -->
+
+    <section class="card">
+
+        <h2>📊 Quadratic Inequalities</h2>
+
+        <div class="guide">
+
+            <strong>What are they?</strong>
+
+            <p>
+                Quadratic inequalities involve expressions
+                such as x² and use inequality symbols:
+                &lt;, &gt;, ≤, or ≥.
+            </p>
+
+        </div>
+
+        <h3>Common Method</h3>
+
+        <ol>
+
+            <li>Move everything to one side.</li>
+
+            <li>Factor the quadratic if possible.</li>
+
+            <li>Find the critical values.</li>
+
+            <li>Test intervals.</li>
+
+            <li>Choose the interval that satisfies the inequality.</li>
+
+        </ol>
+
+        <div class="example">
+
+            <strong>Example:</strong>
+
+            <p>
+                x² − 5x + 6 &gt; 0
+            </p>
+
+            <p>
+                Factor:
+                (x − 2)(x − 3) &gt; 0
+            </p>
+
+            <p>
+                Critical values:
+                x = 2 and x = 3
+            </p>
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- ABSOLUTE VALUE -->
+
+    <section class="card">
+
+        <h2>➗ Absolute Value Equations</h2>
+
+        <div class="guide">
+
+            <strong>What is absolute value?</strong>
+
+            <p>
+                Absolute value represents the distance
+                of a number from zero on the number line.
+            </p>
+
+        </div>
+
+        <div class="formula">
+
+            |x| = a → x = a or x = −a
+
+        </div>
+
+        <div class="example">
+
+            <strong>Example:</strong>
+
+            <p>
+                |x| = 5
+            </p>
+
+            <p>
+                Therefore:
+            </p>
+
+            <p>
+                x = 5 or x = −5
+            </p>
+
+        </div>
+
+        <div class="important">
+
+            <strong>💡 Remember:</strong>
+
+            Absolute value is never negative.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- ABSOLUTE VALUE INEQUALITIES -->
+
+    <section class="card">
+
+        <h2>📈 Absolute Value Inequalities</h2>
+
+        <div class="guide">
+
+            <strong>Important Rules</strong>
+
+            <p>
+                Absolute value inequalities can be rewritten
+                as compound inequalities.
+            </p>
+
+        </div>
+
+        <div class="formula">
+
+            |x| &lt; a → −a &lt; x &lt; a
+
+        </div>
+
+        <div class="formula">
+
+            |x| &gt; a → x &lt; −a or x &gt; a
+
+        </div>
+
+        <div class="important">
+
+            <strong>💡 Easy Way to Remember:</strong>
+
+            <br><br>
+
+            "Less than" → BETWEEN
+
+            <br>
+
+            "Greater than" → OUTSIDE
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- MEASURES OF POSITION -->
+
+    <section class="card">
+
+        <h2>📊 Measures of Position</h2>
+
+        <div class="guide">
+
+            <strong>What are measures of position?</strong>
+
+            <p>
+                Measures of position describe where a
+                particular value is located within a dataset.
+            </p>
+
+        </div>
+
+        <h3>Important Measures</h3>
+
+        <ul>
+
+            <li>Quartiles</li>
+
+            <li>Percentiles</li>
+
+            <li>Deciles</li>
+
+            <li>Percentile Rank</li>
+
+        </ul>
+
+        <div class="important">
+
+            <strong>💡 Study Tip:</strong>
+
+            Always arrange the data from smallest to largest
+            before finding measures of position.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- PERCENTILE RANK -->
+
+    <section class="card">
+
+        <h2>📌 Percentile Rank</h2>
+
+        <div class="guide">
+
+            <strong>What does it mean?</strong>
+
+            <p>
+                Percentile rank tells you the percentage
+                of scores that are at or below a particular
+                score.
+            </p>
+
+        </div>
+
+        <div class="important">
+
+            <strong>💡 Example:</strong>
+
+            If your score is at the 80th percentile,
+            you performed as well as or better than
+            approximately 80% of the group.
+
+        </div>
+
+        <a class="top" href="#top">
+            ↑ Back to Top
+        </a>
+
+    </section>
+
+
+    <!-- GENERAL STUDY TIPS -->
+
+    <section class="tips">
+
+        <h2>⭐ Mathematics Study Tips</h2>
+
+        <ol>
+
+            <li>
+                <strong>Understand the formula.</strong>
+                Don't just memorize it. Know what each
+                variable represents.
+            </li>
+
+            <li>
+                <strong>Write down the given information.</strong>
+                This makes word problems much easier.
+            </li>
+
+            <li>
+                <strong>Draw a diagram.</strong>
+                This is especially useful for triangles,
+                bearings, and geometry problems.
+            </li>
+
+            <li>
+                <strong>Show your solution.</strong>
+                Don't skip steps even if you can solve
+                the problem mentally.
+            </li>
+
+            <li>
+                <strong>Check your answer.</strong>
+                Make sure the answer makes sense.
+            </li>
+
+            <li>
+                <strong>Practice difficult problems.</strong>
+                Don't only practice the easy examples.
+            </li>
+
+            <li>
+                <strong>Review mistakes.</strong>
+                Your mistakes can show you exactly
+                what you need to study.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        🧮 Grade 10 Mathematics Study Guide
+    </p>
+
+    <p>
+        Practice • Understand • Solve • Improve
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

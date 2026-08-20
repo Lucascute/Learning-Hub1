@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Guides | Grade 10</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef3f8, #dfe9f3);
+            color: #263238;
+        }
+
+        /* HEADER */
+
+        header {
+            background: linear-gradient(135deg, #17365d, #2563a6);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+
+        /* TITLE CARD */
+
+        .intro {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            margin-bottom: 30px;
+
+            border-left: 6px solid #2563a6;
+        }
+
+        .intro h2 {
+            margin-top: 0;
+            color: #17365d;
+            font-size: 28px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+            color: #5f6b75;
+        }
+
+
+        /* SUBJECT GRID */
+
+        .subject-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        /* SUBJECT CARD */
+
+        .subject-card {
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 23px;
+
+            min-height: 145px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f1f6fb
+                );
+
+            border: 1px solid #d6e2ed;
+
+            border-radius: 18px;
+
+            text-decoration: none;
+
+            color: #263238;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.08);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+
+            overflow: hidden;
+        }
+
+
+        .subject-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.14);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #e5eff9
+                );
+        }
+
+
+        /* ICON */
+
+        .subject-icon {
+
+            width: 70px;
+            height: 70px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #17365d,
+                    #2563a6
+                );
+
+            color: white;
+
+            border-radius: 17px;
+
+            font-size: 32px;
+
+            box-shadow:
+                0 6px 15px
+                rgba(23,54,93,0.25);
+
+            transition:
+                transform 0.25s ease;
+        }
+
+
+        .subject-card:hover .subject-icon {
+
+            transform: scale(1.08)
+                       rotate(-3deg);
+
+        }
+
+
+        /* CONTENT */
+
+        .subject-content {
+
+            flex: 1;
+
+        }
+
+
+        .subject-content h3 {
+
+            margin: 0 0 7px;
+
+            color: #17365d;
+
+            font-size: 21px;
+
+        }
+
+
+        .subject-content p {
+
+            margin: 0;
+
+            color: #66727d;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* ARROW */
+
+        .arrow {
+
+            font-size: 27px;
+
+            font-weight: bold;
+
+            color: #2563a6;
+
+            transition:
+                transform 0.25s ease;
+
+        }
+
+
+        .subject-card:hover .arrow {
+
+            transform:
+                translateX(7px);
+
+        }
+
+
+        /* STUDY TIP */
+
+        .tip {
+
+            margin-top: 30px;
+
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8e1,
+                    #fff3cd
+                );
+
+            border-left:
+                6px solid #d39b00;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.07);
+        }
+
+
+        .tip h2 {
+
+            margin-top: 0;
+
+            color: #8a6500;
+
+        }
+
+
+        .tip p {
+
+            line-height: 1.7;
+
+            color: #665a35;
+
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            margin-top: 40px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background: #17365d;
+
+            color: white;
+
+        }
+
+
+        footer p {
+
+            margin: 6px;
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+
+                font-size: 31px;
+
+            }
+
+            .subject-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .container {
+
+                width: 94%;
+
+            }
+
+            .subject-card {
+
+                min-height: 125px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>📘 Study Guides</h1>
+
+    <p>
+        Grade 10 • Choose a subject to start studying
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <h2>📚 Choose Your Subject</h2>
+
+        <p>
+            Select a subject below to open its individual
+            study guide. Each guide contains important topics,
+            study strategies, and helpful reminders.
+        </p>
+
+    </section>
+
+
+    <!-- SUBJECTS -->
+
+    <div class="subject-grid">
+
+
+        <!-- MATHEMATICS -->
+
+        <a
+            href="mathstudyguide.html"
+            class="subject-card"
+        >
+
+            <div class="subject-icon">
+                🧮
+            </div>
+
+            <div class="subject-content">
+
+                <h3>
+                    Mathematics
+                </h3>
+
+                <p>
+                    Formulas, problem-solving strategies,
+                    and important math concepts.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+        <!-- ICT -->
+
+        <a
+            href="ictstudyguide.html"
+            class="subject-card"
+        >
+
+            <div class="subject-icon">
+                💻
+            </div>
+
+            <div class="subject-content">
+
+                <h3>
+                    ICT
+                </h3>
+
+                <p>
+                    Computer programming, ergonomics,
+                    and other ICT concepts.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+        <!-- SCIENCE -->
+
+        <a
+            href="sciencestudyguide.html"
+            class="subject-card"
+        >
+
+            <div class="subject-icon">
+                🔬
+            </div>
+
+            <div class="subject-content">
+
+                <h3>
+                    Science
+                </h3>
+
+                <p>
+                    Scientific concepts, processes,
+                    terms, and applications.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+        <!-- ENGLISH -->
+
+        <a
+            href="englishstudyguide.html"
+            class="subject-card"
+        >
+
+            <div class="subject-icon">
+                📚
+            </div>
+
+            <div class="subject-content">
+
+                <h3>
+                    English
+                </h3>
+
+                <p>
+                    Literary context, film, characterization,
+                    and short-film concepts.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+        <!-- AP -->
+
+        <a
+            href="apstudyguide.html"
+            class="subject-card"
+        >
+
+            <div class="subject-icon">
+                🌏
+            </div>
+
+            <div class="subject-content">
+
+                <h3>
+                    Araling Panlipunan
+                </h3>
+
+                <p>
+                    History, geography, economics,
+                    and contemporary issues.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+        <!-- FILIPINO -->
+
+        <a
+            href="Filipinostudyguide.html"
+            class="subject-card"
+        >
+
+            <div class="subject-icon">
+                📖
+            </div>
+
+            <div class="subject-content">
+
+                <h3>
+                    Filipino
+                </h3>
+
+                <p>
+                    El Filibusterismo, literary concepts,
+                    characters, themes, and symbols.
+                </p>
+
+            </div>
+
+            <div class="arrow">
+                →
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- STUDY TIP -->
+
+    <section class="tip">
+
+        <h2>⭐ Quick Study Tip</h2>
+
+        <p>
+            Don't try to memorize everything at once.
+            Choose one subject, study the important concepts,
+            test yourself, then move on to the next subject.
+        </p>
+
+    </section>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        📘 Grade 10 Study Guides
+    </p>
+
+    <p>
+        Study Smart • Stay Consistent • Keep Learning
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

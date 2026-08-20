@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>El Filibusterismo Reviewer</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fc;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: linear-gradient(135deg, #5b21b6, #7c3aed);
+            color: white;
+            padding: 35px 20px 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            margin: 8px 0 20px;
+            font-size: 17px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.15);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #5b21b6;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 35px auto;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #5b21b6;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #7c3aed;
+            transform: translateX(-3px);
+        }
+
+        /* =========================
+           INTRO CARD
+        ========================= */
+
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #5b21b6;
+            margin-top: 0;
+        }
+
+        .intro p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* =========================
+           CONTENT SECTIONS
+        ========================= */
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-top: 5px solid #7c3aed;
+        }
+
+        .section h2 {
+            color: #5b21b6;
+            margin-top: 0;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: #f8f7ff;
+            padding: 18px;
+            margin: 15px 0;
+            border-left: 5px solid #7c3aed;
+            border-radius: 8px;
+        }
+
+        .card:hover {
+            background: #f1edff;
+        }
+
+        .card strong {
+            color: #5b21b6;
+        }
+
+        /* =========================
+           LISTS
+        ========================= */
+
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        /* =========================
+           HIGHLIGHT BOX
+        ========================= */
+
+        .highlight {
+            background: #ede9fe;
+            border-left: 5px solid #5b21b6;
+            padding: 18px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        .highlight strong {
+            color: #4c1d95;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* =========================
+           MOBILE DESIGN
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                width: 90%;
+                text-align: center;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .section,
+            .intro {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>📖 El Filibusterismo</h1>
+
+    <p>Grade 10 Filipino Notes</p>
+
+    <nav>
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="subjects.html">📚 Subjects</a>
+
+        <a href="resources.html">📖 Learning Resources</a>
+
+        <a href="study-tips.html">💡 Study Tips</a>
+
+        <a href="contact.html">📩 Contact Us</a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="container">
+
+
+    <a href="subjects.html" class="back-button">
+        ← Back to Subjects
+    </a>
+
+
+    <!-- INTRO -->
+
+    <div class="intro">
+
+        <h2>📖 El Filibusterismo Reviewer</h2>
+
+        <p>
+            A quick reviewer for Grade 10 Filipino covering
+            the important characters, themes, events,
+            symbols, lessons, and messages of
+            <strong>El Filibusterismo</strong>.
+        </p>
+
+    </div>
+
+
+    <!-- TUNGKOL SA NOBELA -->
+
+    <section class="section">
+
+        <h2>📚 Tungkol sa Nobela</h2>
+
+        <div class="card">
+
+            <p>
+                Ang <strong>El Filibusterismo</strong> ay ikalawang
+                nobela ni <strong>Dr. Jose Rizal</strong> at karugtong
+                ng <em>Noli Me Tangere</em>.
+            </p>
+
+            <p>
+                Tinalakay sa nobela ang mga suliraning panlipunan
+                tulad ng pang-aabuso sa kapangyarihan, kawalan
+                ng katarungan, korapsyon, at paghahangad
+                ng pagbabago.
+            </p>
+
+            <p><strong>May-akda:</strong> Dr. Jose Rizal</p>
+
+            <p><strong>Orihinal na Wika:</strong> Kastila</p>
+
+            <p><strong>Uri:</strong> Nobela</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TAUHAN -->
+
+    <section class="section">
+
+        <h2>👥 Mahahalagang Tauhan</h2>
+
+        <div class="card">
+
+            <ul>
+
+                <li>
+                    <strong>Simoun</strong> – tunay na si
+                    Crisostomo Ibarra. Nagbalik siya bilang
+                    isang mayamang alahero upang maghiganti.
+                </li>
+
+                <li>
+                    <strong>Basilio</strong> – dating sakristan
+                    na naging mag-aaral ng medisina.
+                </li>
+
+                <li>
+                    <strong>Isagani</strong> – makata at
+                    makabayang mag-aaral na naniniwala
+                    sa mapayapang pagbabago.
+                </li>
+
+                <li>
+                    <strong>Kabesang Tales</strong> –
+                    magsasakang nakaranas ng pang-aagaw
+                    sa kanyang lupain.
+                </li>
+
+                <li>
+                    <strong>Juli</strong> – anak ni
+                    Kabesang Tales at kasintahan ni Basilio.
+                </li>
+
+                <li>
+                    <strong>Padre Florentino</strong> –
+                    paring Pilipino na kumupkop kay Isagani
+                    at tumulong kay Simoun sa kanyang
+                    huling sandali.
+                </li>
+
+                <li>
+                    <strong>Paulita Gomez</strong> –
+                    dating kasintahan ni Isagani na
+                    nagpakasal kay Juanito Pelaez.
+                </li>
+
+                <li>
+                    <strong>Juanito Pelaez</strong> –
+                    mayamang mag-aaral at karibal ni Isagani.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEMA -->
+
+    <section class="section">
+
+        <h2>💡 Pangunahing Tema</h2>
+
+        <div class="card">
+
+            <ul>
+
+                <li>Pagmamahal sa bayan</li>
+
+                <li>Paghahangad ng kalayaan</li>
+
+                <li>Kawalan ng katarungan</li>
+
+                <li>Pang-aabuso sa kapangyarihan</li>
+
+                <li>Paghihiganti</li>
+
+                <li>Edukasyon</li>
+
+                <li>Korapsyon at katiwalian</li>
+
+                <li>Pakikibaka para sa pagbabago</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAHAHALAGANG PANGYAYARI -->
+
+    <section class="section">
+
+        <h2>📌 Mahahalagang Pangyayari</h2>
+
+        <div class="card">
+
+            <ol>
+
+                <li>
+                    Nagbalik si Crisostomo Ibarra bilang
+                    <strong>Simoun</strong>, isang mayamang alahero.
+                </li>
+
+                <li>
+                    Tinangka ng mga mag-aaral na magkaroon
+                    ng <strong>Akademya ng Wikang Kastila</strong>.
+                </li>
+
+                <li>
+                    Naranasan ni <strong>Kabesang Tales</strong>
+                    ang kawalan ng katarungan dahil sa kanyang lupain.
+                </li>
+
+                <li>
+                    Gumawa si Simoun ng mga plano upang
+                    maghiganti at pabagsakin ang pamahalaan.
+                </li>
+
+                <li>
+                    Nabigo ang kanyang mga plano at
+                    napilitan siyang tumakas.
+                </li>
+
+                <li>
+                    Sa huli, humingi ng tulong si Simoun
+                    kay <strong>Padre Florentino</strong>.
+                </li>
+
+                <li>
+                    Ipinakita sa wakas ng nobela na ang
+                    pagbabago ay hindi dapat nakabatay lamang
+                    sa paghihiganti at karahasan.
+                </li>
+
+            </ol>
+
+        </div>
+
+    </section>
+
+
+    <!-- SIMBOLISMO -->
+
+    <section class="section">
+
+        <h2>🔎 Mga Simbolismo</h2>
+
+        <div class="card">
+
+            <p>
+                <strong>Lampara</strong> –
+                sumisimbolo sa plano ni Simoun
+                at sa kanyang paghihiganti.
+            </p>
+
+            <p>
+                <strong>Kayamanan</strong> –
+                nagpapakita ng kapangyarihan
+                at impluwensiya ni Simoun.
+            </p>
+
+            <p>
+                <strong>Alahas</strong> –
+                sumisimbolo sa yaman, kapangyarihan,
+                at mga lihim na layunin ni Simoun.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ARAL -->
+
+    <section class="section">
+
+        <h2>📖 Aral ng Nobela</h2>
+
+        <div class="highlight">
+
+            <p>
+                Itinuturo ng <strong>El Filibusterismo</strong>
+                na ang tunay na pagbabago ay hindi dapat
+                nakabatay sa galit at paghihiganti.
+            </p>
+
+            <p>
+                Mahalaga ang edukasyon, pagkakaisa,
+                katarungan, at pagmamahal sa bayan upang
+                makamit ang isang mas mabuting lipunan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PANGUNAHING MENSAHE -->
+
+    <section class="section">
+
+        <h2>⭐ Pangunahing Mensahe</h2>
+
+        <div class="highlight">
+
+            <p>
+                <strong>
+                    Ang pagbabago ay nangangailangan ng tapang,
+                    pagkakaisa, edukasyon, at pagmamahal sa bayan.
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>📚 Grade 10 Learning Center</p>
+
+    <p>El Filibusterismo notes</p>
+
+    <p>© 2026 Student Learning Website</p>
+
+</footer>
+
+
+</body>
+
+</html>

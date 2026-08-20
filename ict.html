@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ICT 10 Notes</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #eef4ff, #f8fbff);
             color: #1f2937;
+            line-height: 1.7;
         }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: white;
+            text-align: center;
+            padding: 35px 20px 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+
+        nav {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 17px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
 
         .container {
             max-width: 1000px;
@@ -23,26 +83,30 @@
             padding: 20px;
         }
 
-        .header {
-            background: linear-gradient(135deg, #2563eb, #4f46e5);
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            background: #2563eb;
             color: white;
-            padding: 35px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
-            margin-bottom: 30px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 38px;
+        .back:hover {
+            background: #1d4ed8;
+            transform: translateX(-3px);
         }
 
-        .header p {
-            margin-top: 10px;
-            font-size: 17px;
-            opacity: 0.9;
-        }
+        /* =========================
+           LESSON
+        ========================= */
 
         .lesson {
             background: white;
@@ -56,6 +120,7 @@
         .lesson h2 {
             color: #2563eb;
             margin-top: 0;
+            margin-bottom: 15px;
         }
 
         .lesson h3 {
@@ -63,31 +128,15 @@
             margin-bottom: 8px;
         }
 
+        /* =========================
+           BOXES
+        ========================= */
+
         .box {
             background: #f1f5ff;
             padding: 15px;
             border-radius: 12px;
             margin: 12px 0;
-        }
-
-        code {
-            background: #111827;
-            color: #ffffff;
-            padding: 3px 7px;
-            border-radius: 5px;
-            font-family: Consolas, monospace;
-        }
-
-        pre {
-            background: #111827;
-            color: #e5e7eb;
-            padding: 18px;
-            border-radius: 12px;
-            overflow-x: auto;
-        }
-
-        ul, ol {
-            line-height: 1.8;
         }
 
         .important {
@@ -106,42 +155,139 @@
             margin-top: 15px;
         }
 
+        /* =========================
+           CODE
+        ========================= */
+
+        code {
+            background: #111827;
+            color: #ffffff;
+            padding: 3px 7px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+        }
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 18px;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        /* =========================
+           LISTS
+        ========================= */
+
+        ul,
+        ol {
+            line-height: 1.8;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
-            text-align: center;
-            margin-top: 35px;
-            color: #64748b;
-        }
-
-        .back {
-            display: inline-block;
-            margin-bottom: 20px;
-            text-decoration: none;
-            background: #2563eb;
+            background: #1e293b;
             color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
+            text-align: center;
+            padding: 25px;
+            margin-top: 35px;
         }
 
-        .back:hover {
-            background: #1d4ed8;
+        footer p {
+            margin: 5px;
         }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                width: 90%;
+                text-align: center;
+            }
+
+            .container {
+                width: 94%;
+                padding: 10px;
+            }
+
+            .lesson {
+                padding: 20px;
+            }
+
+            pre {
+                font-size: 13px;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>💻 ICT 10 Notes</h1>
+
+    <p>Lessons 1–10 • Computer Programming & Web Development</p>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="subjects.html">📚 Subjects</a>
+
+        <a href="resources.html">📖 Learning Resources</a>
+
+        <a href="studytips.html">💡 Study Tips</a>
+
+        <a href="contact.html">📩 Contact Us</a>
+
+    </nav>
+
+</header>
+
+
 <div class="container">
 
-    <a href="resources.html" class="back">← Back to Resources</a>
 
-    <div class="header">
-        <h1>💻 ICT 10 Notes</h1>
-        <p>Lessons 1–10 • Computer Programming & Web Development</p>
-    </div>
+    <!-- BACK TO SUBJECTS -->
+
+    <a href="subjects.html" class="back">
+        ← Back to Subjects
+    </a>
 
 
-    <!-- LESSON 1 -->
+    <!-- =========================
+         LESSON 1
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 1: Introduction to Computer Programming</h2>
 
         <p>
@@ -150,49 +296,79 @@
         </p>
 
         <h3>What is Programming?</h3>
+
         <p>
             Programming involves writing a set of instructions called
             <b>code</b> to make a computer perform a specific task.
         </p>
 
         <h3>Programming Language</h3>
+
         <p>
             A programming language is a formal language used to communicate
             instructions to a computer.
         </p>
 
         <div class="box">
+
             <b>Examples:</b>
+
             <ul>
+
                 <li>Python</li>
+
                 <li>Java</li>
+
                 <li>C++</li>
+
                 <li>JavaScript</li>
+
                 <li>HTML</li>
+
                 <li>CSS</li>
+
             </ul>
+
         </div>
 
         <h3>Basic Programming Concepts</h3>
+
         <ul>
+
             <li>Variables</li>
+
             <li>Data</li>
+
             <li>Operators</li>
+
             <li>Input</li>
+
             <li>Output</li>
+
             <li>Conditions</li>
+
             <li>Loops</li>
+
         </ul>
 
         <div class="important">
-            <b>Remember:</b> A program is a set of instructions designed
+
+            <b>Remember:</b>
+
+            A program is a set of instructions designed
             to solve a problem or perform a task.
+
         </div>
+
     </div>
 
 
-    <!-- LESSON 2 -->
+    <!-- =========================
+         LESSON 2
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 2: Computer Ergonomics</h2>
 
         <p>
@@ -201,31 +377,53 @@
         </p>
 
         <h3>Proper Computer Posture</h3>
+
         <ul>
+
             <li>Keep your back straight.</li>
+
             <li>Keep your feet flat on the floor.</li>
+
             <li>Relax your shoulders.</li>
+
             <li>Keep your wrists in a comfortable position.</li>
+
             <li>Keep the monitor at a comfortable eye level.</li>
+
         </ul>
 
         <h3>Healthy Computer Habits</h3>
+
         <ul>
+
             <li>Take regular breaks.</li>
+
             <li>Avoid staring at the screen for too long.</li>
+
             <li>Keep proper distance from the monitor.</li>
+
             <li>Keep your workspace organized.</li>
+
         </ul>
 
         <div class="tip">
-            💡 <b>Study Tip:</b> Remember the goal of ergonomics:
+
+            💡 <b>Study Tip:</b>
+
+            Remember the goal of ergonomics:
             <b>comfort, safety, and proper posture.</b>
+
         </div>
+
     </div>
 
 
-    <!-- LESSON 3 -->
+    <!-- =========================
+         LESSON 3
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 3: Hypertext Markup Language (HTML)</h2>
 
         <p>
@@ -251,20 +449,58 @@
         <h3>Common HTML Elements</h3>
 
         <ul>
-            <li><code>&lt;html&gt;</code> – root of the webpage</li>
-            <li><code>&lt;head&gt;</code> – contains webpage information</li>
-            <li><code>&lt;title&gt;</code> – webpage title</li>
-            <li><code>&lt;body&gt;</code> – visible content</li>
-            <li><code>&lt;h1&gt;</code> – heading</li>
-            <li><code>&lt;p&gt;</code> – paragraph</li>
-            <li><code>&lt;a&gt;</code> – hyperlink</li>
-            <li><code>&lt;img&gt;</code> – image</li>
+
+            <li>
+                <code>&lt;html&gt;</code>
+                – root of the webpage
+            </li>
+
+            <li>
+                <code>&lt;head&gt;</code>
+                – contains webpage information
+            </li>
+
+            <li>
+                <code>&lt;title&gt;</code>
+                – webpage title
+            </li>
+
+            <li>
+                <code>&lt;body&gt;</code>
+                – visible content
+            </li>
+
+            <li>
+                <code>&lt;h1&gt;</code>
+                – heading
+            </li>
+
+            <li>
+                <code>&lt;p&gt;</code>
+                – paragraph
+            </li>
+
+            <li>
+                <code>&lt;a&gt;</code>
+                – hyperlink
+            </li>
+
+            <li>
+                <code>&lt;img&gt;</code>
+                – image
+            </li>
+
         </ul>
+
     </div>
 
 
-    <!-- LESSON 4 -->
+    <!-- =========================
+         LESSON 4
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 4: HTML Editor</h2>
 
         <p>
@@ -275,39 +511,62 @@
         <h3>Examples of Editors</h3>
 
         <ul>
+
             <li>Visual Studio Code</li>
+
             <li>Notepad</li>
+
             <li>Notepad++</li>
+
             <li>Sublime Text</li>
+
         </ul>
 
         <h3>Basic Workflow</h3>
 
         <ol>
+
             <li>Open an HTML editor.</li>
+
             <li>Create an HTML file.</li>
+
             <li>Write the HTML code.</li>
+
             <li>Save the file using <code>.html</code>.</li>
+
             <li>Open the file using a web browser.</li>
+
             <li>Check and edit the webpage.</li>
+
         </ol>
 
         <div class="important">
-            <b>Important:</b> HTML files normally use the
+
+            <b>Important:</b>
+
+            HTML files normally use the
             <code>.html</code> file extension.
+
         </div>
+
     </div>
 
 
-    <!-- LESSON 5 -->
+    <!-- =========================
+         LESSON 5
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 5: HTML Headings, Paragraphs, and Styles</h2>
 
         <h3>Headings</h3>
 
         <p>
-            HTML provides headings from <code>&lt;h1&gt;</code>
-            to <code>&lt;h6&gt;</code>.
+            HTML provides headings from
+            <code>&lt;h1&gt;</code>
+            to
+            <code>&lt;h6&gt;</code>.
         </p>
 
         <pre>&lt;h1&gt;Main Heading&lt;/h1&gt;
@@ -321,9 +580,22 @@
         <h3>Text Formatting</h3>
 
         <ul>
-            <li><code>&lt;b&gt;</code> – bold text</li>
-            <li><code>&lt;i&gt;</code> – italic text</li>
-            <li><code>&lt;u&gt;</code> – underlined text</li>
+
+            <li>
+                <code>&lt;b&gt;</code>
+                – bold text
+            </li>
+
+            <li>
+                <code>&lt;i&gt;</code>
+                – italic text
+            </li>
+
+            <li>
+                <code>&lt;u&gt;</code>
+                – underlined text
+            </li>
+
         </ul>
 
         <h3>Inline Styling</h3>
@@ -331,11 +603,16 @@
         <pre>&lt;p style="color: blue;"&gt;
 Blue text
 &lt;/p&gt;</pre>
+
     </div>
 
 
-    <!-- LESSON 6 -->
+    <!-- =========================
+         LESSON 6
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 6: Embedding Multimedia Elements in a Webpage</h2>
 
         <p>
@@ -360,14 +637,22 @@ Blue text
 &lt;/video&gt;</pre>
 
         <div class="tip">
-            💡 Always use <code>alt</code> text for images to improve
-            accessibility.
+
+            💡 Always use
+            <code>alt</code>
+            text for images to improve accessibility.
+
         </div>
+
     </div>
 
 
-    <!-- LESSON 7 -->
+    <!-- =========================
+         LESSON 7
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 7: Basic Webpage Design</h2>
 
         <p>
@@ -378,12 +663,19 @@ Blue text
         <h3>Important Design Principles</h3>
 
         <ul>
+
             <li>Good organization</li>
+
             <li>Readable text</li>
+
             <li>Consistent colors</li>
+
             <li>Proper spacing</li>
+
             <li>Clear navigation</li>
+
             <li>Responsive layout</li>
+
         </ul>
 
         <h3>Example</h3>
@@ -398,11 +690,16 @@ h1 {
     color: navy;
 }
 &lt;/style&gt;</pre>
+
     </div>
 
 
-    <!-- LESSON 8 -->
+    <!-- =========================
+         LESSON 8
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 8: Introduction to CSS</h2>
 
         <p>
@@ -413,13 +710,21 @@ h1 {
         <h3>CSS Can Change</h3>
 
         <ul>
+
             <li>Colors</li>
+
             <li>Fonts</li>
+
             <li>Spacing</li>
+
             <li>Backgrounds</li>
+
             <li>Borders</li>
+
             <li>Element sizes</li>
+
             <li>Page layout</li>
+
         </ul>
 
         <h3>Example</h3>
@@ -432,11 +737,16 @@ h1 {
 h1 {
     color: blue;
 }</pre>
+
     </div>
 
 
-    <!-- LESSON 9 -->
+    <!-- =========================
+         LESSON 9
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 9: CSS Styling and Layout</h2>
 
         <p>
@@ -447,14 +757,47 @@ h1 {
         <h3>Common CSS Properties</h3>
 
         <ul>
-            <li><code>color</code> – text color</li>
-            <li><code>background-color</code> – background color</li>
-            <li><code>font-size</code> – text size</li>
-            <li><code>margin</code> – outside spacing</li>
-            <li><code>padding</code> – inside spacing</li>
-            <li><code>border</code> – element border</li>
-            <li><code>width</code> – element width</li>
-            <li><code>height</code> – element height</li>
+
+            <li>
+                <code>color</code>
+                – text color
+            </li>
+
+            <li>
+                <code>background-color</code>
+                – background color
+            </li>
+
+            <li>
+                <code>font-size</code>
+                – text size
+            </li>
+
+            <li>
+                <code>margin</code>
+                – outside spacing
+            </li>
+
+            <li>
+                <code>padding</code>
+                – inside spacing
+            </li>
+
+            <li>
+                <code>border</code>
+                – element border
+            </li>
+
+            <li>
+                <code>width</code>
+                – element width
+            </li>
+
+            <li>
+                <code>height</code>
+                – element height
+            </li>
+
         </ul>
 
         <h3>Simple Card</h3>
@@ -465,11 +808,16 @@ h1 {
     margin: 10px;
     border-radius: 10px;
 }</pre>
+
     </div>
 
 
-    <!-- LESSON 10 -->
+    <!-- =========================
+         LESSON 10
+    ========================= -->
+
     <div class="lesson">
+
         <h2>Lesson 10: Website Development</h2>
 
         <p>
@@ -480,38 +828,78 @@ h1 {
         <h3>Basic Parts of a Website</h3>
 
         <ul>
-            <li><b>HTML</b> – structure and content</li>
-            <li><b>CSS</b> – design and appearance</li>
-            <li><b>JavaScript</b> – interaction and behavior</li>
+
+            <li>
+                <b>HTML</b>
+                – structure and content
+            </li>
+
+            <li>
+                <b>CSS</b>
+                – design and appearance
+            </li>
+
+            <li>
+                <b>JavaScript</b>
+                – interaction and behavior
+            </li>
+
         </ul>
 
         <h3>Website Development Process</h3>
 
         <ol>
+
             <li>Plan the website.</li>
+
             <li>Create the HTML structure.</li>
+
             <li>Add content.</li>
+
             <li>Apply CSS styling.</li>
+
             <li>Add interactive features when needed.</li>
+
             <li>Test the website.</li>
+
             <li>Publish the website.</li>
+
         </ol>
 
         <div class="important">
-            💻 <b>Remember:</b><br><br>
-            HTML = Structure<br>
-            CSS = Design<br>
+
+            💻 <b>Remember:</b>
+
+            <br><br>
+
+            HTML = Structure
+            <br>
+
+            CSS = Design
+            <br>
+
             JavaScript = Behavior
+
         </div>
+
     </div>
 
 
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
+
         <p>💻 ICT 10 Notes • Lessons 1–10</p>
+
         <p>Made for study and review</p>
+
     </footer>
 
+
 </div>
+
 
 </body>
 </html>

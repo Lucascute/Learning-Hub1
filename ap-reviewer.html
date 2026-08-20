@@ -1,15 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AP 10 Reviewer</title>
+    <title>Araling Panlipunan 10 Reviewer</title>
 
     <style>
         * {
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -21,9 +24,11 @@
 
         .container {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 20px;
         }
+
+        /* HEADER */
 
         .header {
             background: linear-gradient(135deg, #2563eb, #4f46e5);
@@ -31,26 +36,62 @@
             padding: 35px;
             border-radius: 20px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
         }
 
         .header h1 {
             margin: 0;
-            font-size: 38px;
+            font-size: 36px;
         }
 
         .header p {
             margin-top: 10px;
         }
 
+        /* WEEK NAVIGATION */
+
+        .week-nav {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+
+            position: sticky;
+            top: 10px;
+            z-index: 10;
+        }
+
+        .week-nav a {
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 9px 13px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .week-nav a:hover {
+            background: #1d4ed8;
+        }
+
+        /* LESSON CARDS */
+
         .lesson {
             background: white;
             padding: 22px;
             margin-bottom: 20px;
             border-radius: 16px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #2563eb;
+            scroll-margin-top: 100px;
         }
 
         .lesson h2 {
@@ -58,11 +99,15 @@
             margin-top: 0;
         }
 
+        .lesson h3 {
+            color: #1e40af;
+        }
+
         .answer {
             background: #eff6ff;
             padding: 14px;
             border-radius: 10px;
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .remember {
@@ -73,26 +118,47 @@
             margin-top: 12px;
         }
 
-        .review-question {
-            font-weight: bold;
-            color: #1e40af;
-            margin-bottom: 8px;
+        ul {
+            line-height: 1.8;
         }
+
+        /* FOOTER */
 
         footer {
             text-align: center;
             color: #64748b;
             margin-top: 30px;
+            padding: 20px;
         }
 
+        /* MOBILE */
+
         @media (max-width: 600px) {
+
             .container {
-                margin: 20px auto;
-                padding: 15px;
+                margin: 15px auto;
+                padding: 12px;
+            }
+
+            .header {
+                padding: 25px 15px;
             }
 
             .header h1 {
-                font-size: 30px;
+                font-size: 28px;
+            }
+
+            .week-nav {
+                position: static;
+            }
+
+            .week-nav a {
+                font-size: 13px;
+                padding: 8px 10px;
+            }
+
+            .lesson {
+                padding: 18px;
             }
         }
     </style>
@@ -102,353 +168,407 @@
 
 <div class="container">
 
+    <!-- HEADER -->
+
     <div class="header">
-        <h1>🌏 AP 10 Reviewer</h1>
-        <p>Quick Review • First Quarter</p>
+        <h1>🌏 Araling Panlipunan 10 Reviewer</h1>
+        <p>Quick Review • Weeks 1–10</p>
     </div>
 
 
-    <!-- LESSON 1 -->
+    <!-- WEEK NAVIGATION -->
 
-    <div class="lesson">
-        <h2>1. Mga Kontemporaryong Isyu</h2>
+    <nav class="week-nav">
 
-        <div class="review-question">
-            Ano ang kontemporaryong isyu?
-        </div>
+        <a href="#week1">Week 1</a>
+        <a href="#week2">Week 2</a>
+        <a href="#week3">Week 3</a>
+        <a href="#week4">Week 4</a>
+        <a href="#week5">Week 5</a>
+        <a href="#week6">Week 6</a>
+        <a href="#week7">Week 7</a>
+        <a href="#week8">Week 8</a>
+        <a href="#week9">Week 9</a>
+        <a href="#week10">Week 10</a>
+
+    </nav>
+
+
+    <!-- WEEK 1 -->
+
+    <div class="lesson" id="week1">
+
+        <h2>📚 Week 1 – Ekonomiks</h2>
+
+        <p>
+            Ang <b>Ekonomiks</b> ay pag-aaral kung paano ginagamit
+            at pinamamahalaan ang limitadong pinagkukunang-yaman
+            upang matugunan ang walang hanggang pangangailangan
+            at kagustuhan ng tao.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            Ang kontemporaryong isyu ay mga napapanahong usapin
-            o suliranin na may epekto sa lipunan.
+
+            <b>Mahahalagang Konsepto:</b>
+
+            <ul>
+                <li>Kakapusan</li>
+                <li>Pangangailangan</li>
+                <li>Kagustuhan</li>
+                <li>Pinagkukunang-yaman</li>
+                <li>Pagpili</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Kontemporaryong Isyu = Napapanahong usapin o problema.
+            ⭐ Tandaan: Limitado ang resources ngunit walang hanggan ang pangangailangan at kagustuhan ng tao.
         </div>
+
     </div>
 
 
-    <!-- LESSON 2 -->
+    <!-- WEEK 2 -->
 
-    <div class="lesson">
-        <h2>2. Isyung Pangkapaligiran</h2>
+    <div class="lesson" id="week2">
 
-        <div class="review-question">
-            Ano ang mga halimbawa ng isyung pangkapaligiran?
-        </div>
+        <h2>📊 Week 2 – Kakapusan</h2>
+
+        <p>
+            Ang <b>kakapusan</b> ay kalagayan kung saan limitado
+            ang pinagkukunang-yaman kumpara sa dami ng pangangailangan
+            at kagustuhan ng tao.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            Kabilang dito ang polusyon, problema sa basura,
-            pagkasira ng kapaligiran, at pagkawala ng likas na yaman.
+
+            <b>Dahilan ng Kakapusan:</b>
+
+            <ul>
+                <li>Limitadong likas na yaman</li>
+                <li>Pagdami ng populasyon</li>
+                <li>Pagbabago ng pangangailangan</li>
+                <li>Mga kalamidad</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Ang pangangalaga sa kapaligiran ay responsibilidad
-            ng bawat mamamayan.
+            ⭐ Kakapusan = Limited resources + Unlimited wants
         </div>
+
     </div>
 
 
-    <!-- LESSON 3 -->
+    <!-- WEEK 3 -->
 
-    <div class="lesson">
-        <h2>3. Solid Waste Management</h2>
+    <div class="lesson" id="week3">
 
-        <div class="review-question">
-            Ano ang Solid Waste Management?
-        </div>
+        <h2>💰 Week 3 – Pangangailangan at Kagustuhan</h2>
+
+        <p>
+            Ang <b>pangangailangan</b> ay mga bagay na mahalaga
+            upang mabuhay ang isang tao.
+        </p>
+
+        <p>
+            Ang <b>kagustuhan</b> naman ay mga bagay na nais magkaroon
+            ang isang tao ngunit hindi kinakailangan para mabuhay.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            Ito ay wastong pamamahala, paghihiwalay,
-            pagbabawas, paggamit muli, pagrerecycle,
-            at pagtatapon ng solidong basura.
+
+            <b>Pangangailangan:</b>
+            Pagkain, tubig, damit, tirahan
+
+            <br><br>
+
+            <b>Kagustuhan:</b>
+            Gadget, mamahaling damit, luxury items
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b><br>
-            Reduce → Reuse → Recycle
+            ⭐ Unahin ang pangangailangan bago ang kagustuhan.
         </div>
+
     </div>
 
 
-    <!-- LESSON 4 -->
+    <!-- WEEK 4 -->
 
-    <div class="lesson">
-        <h2>4. Likas na Yaman</h2>
+    <div class="lesson" id="week4">
 
-        <div class="review-question">
-            Ano ang likas na yaman?
-        </div>
+        <h2>🏭 Week 4 – Produksiyon</h2>
 
-        <div class="answer">
-            <b>Sagot:</b><br>
-            Ang likas na yaman ay mga yamang nagmumula
-            sa kalikasan na ginagamit ng tao.
-        </div>
+        <p>
+            Ang <b>produksiyon</b> ay proseso ng paglikha ng mga
+            produkto at serbisyo upang matugunan ang pangangailangan
+            ng mga tao.
+        </p>
 
         <div class="answer">
-            <b>Mga halimbawa:</b><br>
-            🌱 Yamang lupa<br>
-            💧 Yamang tubig<br>
-            🌳 Yamang gubat<br>
-            ⛏️ Yamang mineral
+
+            <b>Salik ng Produksiyon:</b>
+
+            <ul>
+                <li>Lupa</li>
+                <li>Paggawa</li>
+                <li>Kapital</li>
+                <li>Entrepreneur</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Gamitin nang responsable ang likas na yaman.
+            ⭐ Lupa + Paggawa + Kapital + Entrepreneur = Salik ng Produksiyon
         </div>
+
     </div>
 
 
-    <!-- LESSON 5 -->
+    <!-- WEEK 5 -->
 
-    <div class="lesson">
-        <h2>5. Climate Change</h2>
+    <div class="lesson" id="week5">
 
-        <div class="review-question">
-            Ano ang climate change?
-        </div>
+        <h2>🛒 Week 5 – Pagkonsumo</h2>
 
-        <div class="answer">
-            <b>Sagot:</b><br>
-            Ang climate change ay pangmatagalang pagbabago
-            sa karaniwang kondisyon ng klima.
-        </div>
-
-        <div class="review-question">
-            Ano ang maaaring epekto ng climate change?
-        </div>
+        <p>
+            Ang <b>pagkonsumo</b> ay paggamit ng produkto at serbisyo
+            upang matugunan ang pangangailangan at kagustuhan.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            Maaari itong magdulot ng pagbabago sa temperatura,
-            matitinding kondisyon ng panahon, pagbaha,
-            at epekto sa agrikultura at kabuhayan.
+
+            <b>Responsableng Mamimili:</b>
+
+            <ul>
+                <li>Naghahambing ng presyo</li>
+                <li>Sinusuri ang kalidad</li>
+                <li>Binabasa ang label</li>
+                <li>Inaalam ang pangangailangan</li>
+                <li>Iniiwasan ang impulsive buying</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Climate Change = Pangmatagalang pagbabago sa klima.
+            ⭐ Maging matalino at responsable sa paggastos.
         </div>
+
     </div>
 
 
-    <!-- LESSON 6 -->
+    <!-- WEEK 6 -->
 
-    <div class="lesson">
-        <h2>6. Disaster Risk Reduction and Management</h2>
+    <div class="lesson" id="week6">
 
-        <div class="review-question">
-            Ano ang DRRM?
-        </div>
+        <h2>🏦 Week 6 – Sistema ng Pananalapi</h2>
 
-        <div class="answer">
-            <b>Sagot:</b><br>
-            DRRM means Disaster Risk Reduction and Management.
-            Ito ay mga hakbang upang mabawasan ang panganib
-            at epekto ng mga sakuna.
-        </div>
-
-        <div class="review-question">
-            Ano ang mahahalagang bahagi ng disaster management?
-        </div>
+        <p>
+            Ang sistema ng pananalapi ay tumutulong sa pag-iimpok,
+            pagpapautang, pamumuhunan, at pagdaloy ng pera sa ekonomiya.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            • Paghahanda<br>
-            • Pag-iwas at pagbabawas ng panganib<br>
-            • Pagtugon sa sakuna<br>
-            • Pagbangon pagkatapos ng sakuna
+
+            <b>Halimbawa:</b>
+
+            <ul>
+                <li>Bangko</li>
+                <li>Kooperatiba</li>
+                <li>Insurance companies</li>
+                <li>Iba pang institusyong pinansyal</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Prepare → Respond → Recover
+            ⭐ Ang mga institusyong pinansyal ay tumutulong sa pagdaloy ng pera sa ekonomiya.
         </div>
+
     </div>
 
 
-    <!-- LESSON 7 -->
+    <!-- WEEK 7 -->
 
-    <div class="lesson">
-        <h2>7. Community-Based Disaster Risk Reduction</h2>
+    <div class="lesson" id="week7">
 
-        <div class="review-question">
-            Ano ang Community-Based Disaster Risk Reduction?
-        </div>
+        <h2>📈 Week 7 – Pamilihan</h2>
 
-        <div class="answer">
-            <b>Sagot:</b><br>
-            Ito ay paraan kung saan aktibong nakikilahok
-            ang mga miyembro ng komunidad sa paghahanda,
-            pagtugon, at pagbangon mula sa mga sakuna.
-        </div>
+        <p>
+            Ang <b>pamilihan</b> ay lugar o sistema kung saan
+            nagkakaroon ng ugnayan ang mga mamimili at nagbebenta.
+        </p>
 
         <div class="answer">
-            <b>Mga halimbawa:</b><br>
-            • Disaster drills<br>
-            • Evacuation plans<br>
-            • Community preparedness<br>
-            • Pagtutulungan ng mga residente
+
+            <b>Mahahalagang Konsepto:</b>
+
+            <ul>
+                <li>Demand</li>
+                <li>Supply</li>
+                <li>Presyo</li>
+                <li>Equilibrium</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Community = Sama-samang paghahanda at pagtutulungan.
+            ⭐ Demand = kagustuhan at kakayahang bumili.
+            <br>
+            ⭐ Supply = dami ng produktong handang ipagbili.
         </div>
+
     </div>
 
 
-    <!-- LESSON 8 -->
+    <!-- WEEK 8 -->
 
-    <div class="lesson">
-        <h2>8. Biodiversity</h2>
+    <div class="lesson" id="week8">
 
-        <div class="review-question">
-            Ano ang biodiversity?
-        </div>
+        <h2>🌱 Week 8 – Pag-unlad ng Ekonomiya</h2>
 
-        <div class="answer">
-            <b>Sagot:</b><br>
-            Ang biodiversity ay tumutukoy sa pagkakaiba-iba
-            ng mga organismo at buhay na matatagpuan sa isang lugar.
-        </div>
+        <p>
+            Ang pag-unlad ng ekonomiya ay tumutukoy sa pagpapabuti
+            ng kalagayan ng ekonomiya at kalidad ng buhay ng mga tao.
+        </p>
 
         <div class="answer">
-            <b>Kabilang dito ang:</b><br>
-            🌱 Mga halaman<br>
-            🐾 Mga hayop<br>
-            🦠 Mga mikroorganismo<br>
-            🌳 Iba't ibang ecosystem
+
+            <b>Mga Palatandaan:</b>
+
+            <ul>
+                <li>Pagtaas ng kita</li>
+                <li>Pagdami ng trabaho</li>
+                <li>Mas magandang serbisyo</li>
+                <li>Pagbaba ng kahirapan</li>
+                <li>Pag-unlad ng imprastraktura</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Biodiversity = Pagkakaiba-iba ng buhay.
+            ⭐ Ang tunay na pag-unlad ay dapat maramdaman ng mga mamamayan.
         </div>
+
     </div>
 
 
-    <!-- LESSON 9 -->
+    <!-- WEEK 9 -->
 
-    <div class="lesson">
-        <h2>9. Pangangalaga sa Kapaligiran</h2>
+    <div class="lesson" id="week9">
 
-        <div class="review-question">
-            Paano natin mapangangalagaan ang kapaligiran?
-        </div>
+        <h2>🌍 Week 9 – Globalisasyon</h2>
+
+        <p>
+            Ang <b>globalisasyon</b> ay proseso ng mas mabilis na
+            ugnayan at pakikipagpalitan ng mga bansa sa buong mundo.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            • Tamang pagtatapon ng basura<br>
-            • Pagbabawas ng paggamit ng plastik<br>
-            • Pagtitipid ng tubig at kuryente<br>
-            • Pagtatanim ng mga halaman<br>
-            • Pagpapanatili ng kalinisan
+
+            <b>Epekto ng Globalisasyon:</b>
+
+            <ul>
+                <li>Mas mabilis na komunikasyon</li>
+                <li>Paglawak ng kalakalan</li>
+                <li>Pagkakaroon ng bagong teknolohiya</li>
+                <li>Mas maraming oportunidad</li>
+                <li>Mas matinding kompetisyon</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Maliit na gawain ng bawat tao = malaking tulong sa kalikasan.
+            ⭐ Globalisasyon = Mas malawak na koneksyon ng mga bansa.
         </div>
+
     </div>
 
 
-    <!-- LESSON 10 -->
+    <!-- WEEK 10 -->
 
-    <div class="lesson">
-        <h2>10. Globalisasyon</h2>
+    <div class="lesson" id="week10">
 
-        <div class="review-question">
-            Ano ang globalisasyon?
-        </div>
+        <h2>🇵🇭 Week 10 – Ekonomiya ng Pilipinas</h2>
 
-        <div class="answer">
-            <b>Sagot:</b><br>
-            Ang globalisasyon ay proseso kung saan mas nagiging
-            magkakaugnay ang mga bansa, ekonomiya, kultura,
-            teknolohiya, at mga mamamayan.
-        </div>
-
-        <div class="review-question">
-            Ano ang mga halimbawa ng globalisasyon?
-        </div>
+        <p>
+            Ang ekonomiya ng Pilipinas ay binubuo ng iba't ibang
+            sektor na tumutulong sa paglikha ng produkto,
+            serbisyo, trabaho, at kita.
+        </p>
 
         <div class="answer">
-            <b>Sagot:</b><br>
-            • International trade<br>
-            • Paglaganap ng teknolohiya<br>
-            • Pandaigdigang komunikasyon<br>
-            • Pagpapalitan ng kultura
+
+            <b>Mahahalagang Sektor:</b>
+
+            <ul>
+                <li>Agrikultura</li>
+                <li>Industriya</li>
+                <li>Serbisyo</li>
+            </ul>
+
         </div>
 
         <div class="remember">
-            ⭐ <b>Remember:</b>
-            Globalisasyon = Mas malawak na koneksyon ng mga bansa.
+            ⭐ Ang bawat sektor ay may mahalagang papel sa pag-unlad ng ekonomiya ng bansa.
         </div>
+
     </div>
 
 
     <!-- QUICK MEMORY GUIDE -->
 
     <div class="lesson">
+
         <h2>🧠 Quick AP Memory Guide</h2>
 
         <div class="answer">
 
-            <b>Kontemporaryong Isyu</b><br>
-            → Napapanahong usapin o problema
+            <b>Ekonomiks</b> = Pag-aaral ng paggamit ng limitadong resources
+
             <br><br>
 
-            <b>Solid Waste Management</b><br>
-            → Wastong pamamahala ng basura
+            <b>Kakapusan</b> = Limitadong resources
+
             <br><br>
 
-            <b>Likas na Yaman</b><br>
-            → Yamang nagmumula sa kalikasan
+            <b>Pangangailangan</b> = Kailangan para mabuhay
+
             <br><br>
 
-            <b>Climate Change</b><br>
-            → Pangmatagalang pagbabago sa klima
+            <b>Kagustuhan</b> = Nais ngunit hindi pangunahing kailangan
+
             <br><br>
 
-            <b>DRRM</b><br>
-            → Pagbabawas ng panganib at epekto ng sakuna
+            <b>Produksiyon</b> = Paglikha ng produkto at serbisyo
+
             <br><br>
 
-            <b>Community-Based DRRM</b><br>
-            → Pakikilahok ng komunidad sa disaster preparedness
+            <b>Pagkonsumo</b> = Paggamit ng produkto at serbisyo
+
             <br><br>
 
-            <b>Biodiversity</b><br>
-            → Pagkakaiba-iba ng buhay
+            <b>Demand</b> = Kagustuhan at kakayahang bumili
+
             <br><br>
 
-            <b>Pangangalaga sa Kapaligiran</b><br>
-            → Responsableng pangangalaga sa kalikasan
+            <b>Supply</b> = Dami ng produktong handang ipagbili
+
             <br><br>
 
-            <b>Globalisasyon</b><br>
-            → Mas malawak na ugnayan ng mga bansa
+            <b>Globalisasyon</b> = Mas malawak na ugnayan ng mga bansa
 
         </div>
 
-        <div class="remember">
-            ⭐ <b>FINAL REMINDER:</b><br><br>
-            Understand the concept, remember the key terms,
-            and connect each topic to real-life situations.
-        </div>
     </div>
 
 
+    <!-- FOOTER -->
+
     <footer>
-        <p>🌏 AP 10 Reviewer • First Quarter</p>
+        <p>🌏 Araling Panlipunan 10 Reviewer • Weeks 1–10</p>
     </footer>
 
 </div>

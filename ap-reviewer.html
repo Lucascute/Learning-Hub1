@@ -1,662 +1,240 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AP Reviewer | Grades 7-10</title>
+    <title>Araling Panlipunan 10 Reviewer</title>
 
     <style>
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #eef2f7, #e8eef6);
-            color: #263238;
-        }
-
-        /* HEADER */
-        header {
-            background: linear-gradient(135deg, #17365d, #2563a6);
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 17px;
-        }
-
-        /* CONTAINER */
-        .container {
-            width: 92%;
-            max-width: 1050px;
-            margin: 35px auto;
-        }
-
-        /* INDEX */
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
-
-        .index h2 {
-            color: #17365d;
-            margin-top: 0;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-        }
-
-        .index a {
-            display: block;
-            padding: 13px 15px;
-            background: #e8f0fa;
-            color: #17365d;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-
-        .index a:hover {
-            background: #17365d;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* GRADE CARDS */
-        .grade {
-            background: white;
-            margin: 25px 0;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-left: 6px solid #2563a6;
-        }
-
-        .grade h2 {
-            color: #17365d;
-            margin-top: 0;
-            font-size: 28px;
-        }
-
-        .grade h3 {
-            color: #2563a6;
-            margin-top: 25px;
-        }
-
-        /* TOPIC */
-        .topic {
-            background: #f7faff;
-            padding: 18px;
-            margin: 15px 0;
-            border-left: 5px solid #2563a6;
-            border-radius: 10px;
-        }
-
-        .topic strong {
-            color: #17365d;
-        }
-
-        .topic p {
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-        /* IMPORTANT BOX */
-        .important {
-            background: #e8f0fa;
-            border-left: 5px solid #17365d;
-            padding: 15px 18px;
-            margin: 18px 0;
-            border-radius: 10px;
-        }
-
-        .important strong {
-            color: #17365d;
-        }
-
-        /* QUICK REVIEW */
-        .quick {
-            background: linear-gradient(135deg, #eef6ff, #e0ecff);
-            padding: 30px;
-            border-radius: 18px;
-            margin-top: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-left: 6px solid #2563a6;
-        }
-
-        .quick h2 {
-            color: #17365d;
-            margin-top: 0;
-        }
-
-        .quick li {
-            margin: 12px 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef4ff, #f8fbff);
+            color: #1f2937;
             line-height: 1.6;
         }
 
-        /* STUDY TIPS */
-        .tips {
-            background: linear-gradient(135deg, #fff8e1, #fff3cd);
-            padding: 30px;
-            border-radius: 18px;
-            margin-top: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-left: 6px solid #e0a800;
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
         }
 
-        .tips h2 {
-            color: #9a6700;
+        .header {
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 38px;
+        }
+
+        .review {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563eb;
+        }
+
+        .review h2 {
+            color: #2563eb;
             margin-top: 0;
         }
 
-        .tips li {
-            margin: 12px 0;
-            line-height: 1.7;
+        .answer {
+            background: #eff6ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 12px;
         }
 
-        /* BACK TO TOP */
-        .top {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 16px;
-            background: #2563a6;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+        .remember {
+            background: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 12px;
         }
 
-        .top:hover {
-            background: #17365d;
-        }
-
-        /* FOOTER */
         footer {
-            margin-top: 40px;
-            padding: 30px;
             text-align: center;
-            background: #17365d;
-            color: white;
+            color: #64748b;
+            margin-top: 30px;
         }
 
-        /* MOBILE */
         @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            .grade {
-                padding: 20px;
-            }
-
-            .topic {
+            .container {
+                margin: 20px auto;
                 padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 30px;
             }
         }
     </style>
 </head>
 
-<body id="top">
-
-<header>
-
-    <h1>📚 AP Reviewer</h1>
-
-    <p>
-        Araling Panlipunan | Grades 7–10
-    </p>
-
-</header>
-
+<body>
 
 <div class="container">
 
+    <div class="header">
+        <h1>🌏 AP 10 Reviewer</h1>
+        <p>Quick Review • First Quarter</p>
+    </div>
 
-    <!-- INDEX -->
 
-    <section class="index">
+    <div class="review">
+        <h2>1. Ano ang Kontemporaryong Isyu?</h2>
 
-        <h2>📖 Reviewer Index</h2>
+        <div class="answer">
+            <b>Sagot:</b>
+            Mga napapanahong usapin o suliraning may epekto sa lipunan.
+        </div>
+    </div>
 
-        <div class="index-grid">
 
-            <a href="#grade7">
-                🗺️ Grade 7 – Heograpiya
-            </a>
+    <div class="review">
+        <h2>2. Ano ang Solid Waste Management?</h2>
 
-            <a href="#grade8">
-                🏛️ Grade 8 – Kasaysayan ng Daigdig
-            </a>
-
-            <a href="#grade9">
-                💰 Grade 9 – Ekonomiks
-            </a>
-
-            <a href="#grade10">
-                ⚖️ Grade 10 – Mga Kontemporaryong Isyu
-            </a>
-
-            <a href="#quickreview">
-                ⭐ Quick Review
-            </a>
-
-            <a href="#tips">
-                💡 Study Tips
-            </a>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Wastong pamamahala at pagtatapon ng solidong basura.
         </div>
 
-    </section>
-
-
-
-    <!-- GRADE 7 -->
-
-    <section class="grade" id="grade7">
-
-        <h2>🗺️ Grade 7 – Heograpiya</h2>
-
-        <div class="topic">
-
-            <strong>1. Ano ang Heograpiya?</strong>
-
-            <p>
-                Ang heograpiya ay pag-aaral ng mga lugar,
-                tao, kapaligiran, at ugnayan ng mga ito.
-            </p>
-
+        <div class="remember">
+            ⭐ Reduce • Reuse • Recycle
         </div>
+    </div>
 
 
-        <div class="topic">
+    <div class="review">
+        <h2>3. Ano ang Likas na Yaman?</h2>
 
-            <strong>2. Ano ang Limang Tema ng Heograpiya?</strong>
-
-            <p>
-                Ang limang tema ng heograpiya ay:
-                Lokasyon, Lugar, Rehiyon, Movement,
-                at Interaction.
-            </p>
-
-            <ul>
-                <li><strong>Lokasyon</strong> – kung saan matatagpuan ang isang lugar.</li>
-                <li><strong>Lugar</strong> – pisikal at pantao na katangian ng isang lugar.</li>
-                <li><strong>Rehiyon</strong> – mga lugar na may magkakatulad na katangian.</li>
-                <li><strong>Movement</strong> – paggalaw ng tao, produkto, ideya, at impormasyon.</li>
-                <li><strong>Interaction</strong> – ugnayan ng tao at kapaligiran.</li>
-            </ul>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Mga yamang nagmumula sa kalikasan na ginagamit ng tao.
         </div>
+    </div>
 
 
-        <div class="topic">
+    <div class="review">
+        <h2>4. Ano ang Climate Change?</h2>
 
-            <strong>3. Ano ang Likas na Yaman?</strong>
-
-            <p>
-                Ang likas na yaman ay mga yamang nagmumula
-                sa kalikasan tulad ng tubig, lupa, kagubatan,
-                at mineral.
-            </p>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Pangmatagalang pagbabago sa karaniwang kondisyon ng klima.
         </div>
+    </div>
 
 
-        <div class="important">
+    <div class="review">
+        <h2>5. Ano ang DRRM?</h2>
 
-            <strong>📌 Tandaan:</strong>
-
-            Mahalaga ang heograpiya upang maunawaan kung paano
-            nakaaapekto ang lokasyon at kapaligiran sa pamumuhay
-            ng mga tao.
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Disaster Risk Reduction and Management — mga hakbang
+            upang mabawasan ang panganib at epekto ng sakuna.
         </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
+    </div>
 
 
+    <div class="review">
+        <h2>6. Ano ang Community-Based Disaster Risk Reduction?</h2>
 
-    <!-- GRADE 8 -->
-
-    <section class="grade" id="grade8">
-
-        <h2>🏛️ Grade 8 – Kasaysayan ng Daigdig</h2>
-
-
-        <div class="topic">
-
-            <strong>1. Ano ang Kabihasnan?</strong>
-
-            <p>
-                Ang kabihasnan ay isang organisadong lipunan
-                na may pamahalaan, ekonomiya, kultura,
-                at sistema ng pamumuhay.
-            </p>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Pakikilahok ng komunidad sa paghahanda,
+            pagtugon, at pagbangon mula sa mga sakuna.
         </div>
+    </div>
 
 
-        <div class="topic">
+    <div class="review">
+        <h2>7. Ano ang Biodiversity?</h2>
 
-            <strong>2. Ano ang Renaissance?</strong>
-
-            <p>
-                Ang Renaissance ay panahon ng muling pagsilang
-                ng interes sa sining, agham, kultura,
-                at kaalaman sa Europe.
-            </p>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Pagkakaiba-iba ng mga organismo at buhay sa isang lugar.
         </div>
+    </div>
 
 
-        <div class="topic">
+    <div class="review">
+        <h2>8. Bakit mahalaga ang biodiversity?</h2>
 
-            <strong>3. Ano ang Rebolusyong Industriyal?</strong>
-
-            <p>
-                Ang Rebolusyong Industriyal ay panahon ng malaking
-                pagbabago sa produksyon dahil sa paggamit ng mga makina.
-            </p>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Mahalaga ito sa pagpapanatili ng balanse ng kalikasan
+            at ng mga ecosystem.
         </div>
+    </div>
 
 
-        <div class="important">
+    <div class="review">
+        <h2>9. Paano mapangangalagaan ang kapaligiran?</h2>
 
-            <strong>📌 Tandaan:</strong>
-
-            Ang mga pagbabago sa teknolohiya, ekonomiya,
-            at ideya ay malaki ang naging epekto sa pag-unlad
-            ng mga lipunan.
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Sa tamang pagtatapon ng basura, pagtitipid ng resources,
+            pagbabawas ng plastik, at pakikilahok sa mga gawaing
+            pangkapaligiran.
         </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
+    </div>
 
 
+    <div class="review">
+        <h2>10. Ano ang Globalisasyon?</h2>
 
-    <!-- GRADE 9 -->
-
-    <section class="grade" id="grade9">
-
-        <h2>💰 Grade 9 – Ekonomiks</h2>
-
-
-        <div class="topic">
-
-            <strong>1. Ano ang Ekonomiks?</strong>
-
-            <p>
-                Ang ekonomiks ay pag-aaral kung paano ginagamit
-                ang limitadong resources upang matugunan ang
-                pangangailangan at kagustuhan ng tao.
-            </p>
-
+        <div class="answer">
+            <b>Sagot:</b>
+            Proseso kung saan mas nagiging magkakaugnay ang mga bansa,
+            ekonomiya, kultura, teknolohiya, at mamamayan.
         </div>
+    </div>
 
 
-        <div class="topic">
+    <div class="review">
+        <h2>🧠 AP Memory Guide</h2>
 
-            <strong>2. Ano ang Demand?</strong>
+        <div class="remember">
+            <b>Kontemporaryong Isyu</b> → Napapanahong usapin<br><br>
 
-            <p>
-                Ang demand ay dami ng produkto o serbisyo
-                na nais at kayang bilhin ng mamimili.
-            </p>
+            <b>Solid Waste Management</b> → Basura<br><br>
 
+            <b>Likas na Yaman</b> → Kalikasan<br><br>
+
+            <b>Climate Change</b> → Pagbabago ng klima<br><br>
+
+            <b>DRRM</b> → Sakuna at paghahanda<br><br>
+
+            <b>Biodiversity</b> → Pagkakaiba-iba ng buhay<br><br>
+
+            <b>Globalisasyon</b> → Ugnayan ng mga bansa
         </div>
+    </div>
 
 
-        <div class="topic">
-
-            <strong>3. Ano ang Supply?</strong>
-
-            <p>
-                Ang supply ay dami ng produkto o serbisyo
-                na nais at kayang ipagbili ng producer.
-            </p>
-
-        </div>
-
-
-        <div class="important">
-
-            <strong>📌 Tandaan:</strong>
-
-            Ang demand ay nakatuon sa mamimili,
-            samantalang ang supply ay nakatuon sa producer.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-
-    <!-- GRADE 10 -->
-
-    <section class="grade" id="grade10">
-
-        <h2>⚖️ Grade 10 – Mga Kontemporaryong Isyu</h2>
-
-
-        <div class="topic">
-
-            <strong>1. Ano ang Globalisasyon?</strong>
-
-            <p>
-                Ang globalisasyon ay proseso ng mas mabilis
-                na ugnayan at palitan ng mga bansa sa mundo.
-            </p>
-
-        </div>
-
-
-        <div class="topic">
-
-            <strong>2. Ano ang Climate Change?</strong>
-
-            <p>
-                Ang climate change ay matagalang pagbabago
-                sa karaniwang kondisyon ng klima ng mundo.
-            </p>
-
-        </div>
-
-
-        <div class="topic">
-
-            <strong>3. Ano ang Human Rights?</strong>
-
-            <p>
-                Ang human rights ay mga pangunahing karapatan
-                at kalayaan na taglay ng bawat tao.
-            </p>
-
-        </div>
-
-
-        <div class="important">
-
-            <strong>📌 Tandaan:</strong>
-
-            Ang mga kontemporaryong isyu ay nangangailangan
-            ng kritikal na pag-iisip at pag-unawa sa epekto
-            nito sa mga tao at lipunan.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-
-    <!-- QUICK REVIEW -->
-
-    <section class="quick" id="quickreview">
-
-        <h2>⭐ AP Quick Review</h2>
-
-        <ul>
-
-            <li>
-                🗺️ <strong>Heograpiya</strong> –
-                pag-aaral ng lugar, tao, kapaligiran,
-                at kanilang ugnayan.
-            </li>
-
-            <li>
-                🌎 <strong>Limang Tema ng Heograpiya</strong> –
-                Lokasyon, Lugar, Rehiyon, Movement, Interaction.
-            </li>
-
-            <li>
-                🏛️ <strong>Kabihasnan</strong> –
-                organisadong lipunan na may pamahalaan,
-                ekonomiya, at kultura.
-            </li>
-
-            <li>
-                🎨 <strong>Renaissance</strong> –
-                muling pagsilang ng interes sa sining,
-                agham, kultura, at kaalaman.
-            </li>
-
-            <li>
-                🏭 <strong>Rebolusyong Industriyal</strong> –
-                malaking pagbabago sa produksyon dahil sa makina.
-            </li>
-
-            <li>
-                💰 <strong>Ekonomiks</strong> –
-                pag-aaral ng paggamit ng limitadong resources.
-            </li>
-
-            <li>
-                📈 <strong>Demand</strong> –
-                nais at kayang bilhin ng mamimili.
-            </li>
-
-            <li>
-                📦 <strong>Supply</strong> –
-                nais at kayang ipagbili ng producer.
-            </li>
-
-            <li>
-                🌐 <strong>Globalisasyon</strong> –
-                mas mabilis na ugnayan at palitan ng mga bansa.
-            </li>
-
-            <li>
-                🌡️ <strong>Climate Change</strong> –
-                pangmatagalang pagbabago sa klima.
-            </li>
-
-            <li>
-                ⚖️ <strong>Human Rights</strong> –
-                pangunahing karapatan at kalayaan ng bawat tao.
-            </li>
-
-        </ul>
-
-    </section>
-
-
-
-    <!-- STUDY TIPS -->
-
-    <section class="tips" id="tips">
-
-        <h2>💡 AP Study Tips</h2>
-
-        <ol>
-
-            <li>
-                <strong>Memorize important definitions.</strong>
-                Unahin ang mga terminong madalas lumabas sa pagsusulit.
-            </li>
-
-            <li>
-                <strong>Understand the concept.</strong>
-                Huwag puro memorization. Alamin kung bakit mahalaga
-                ang bawat konsepto.
-            </li>
-
-            <li>
-                <strong>Use comparisons.</strong>
-                Halimbawa:
-                Demand = Mamimili,
-                Supply = Producer.
-            </li>
-
-            <li>
-                <strong>Review historical events in order.</strong>
-                Mas madaling tandaan ang kasaysayan kapag alam mo
-                ang pagkakasunod-sunod ng mga pangyayari.
-            </li>
-
-            <li>
-                <strong>Connect issues to real life.</strong>
-                Iugnay ang globalisasyon, climate change,
-                at human rights sa mga totoong pangyayari.
-            </li>
-
-            <li>
-                <strong>Practice explaining.</strong>
-                Subukang ipaliwanag ang isang topic gamit
-                ang sarili mong salita.
-            </li>
-
-            <li>
-                <strong>Review a little every day.</strong>
-                Mas effective ang regular na review kaysa
-                isang bagsakang pag-aaral bago ang exam.
-            </li>
-
-        </ol>
-
-    </section>
+    <footer>
+        <p>🌏 AP 10 Reviewer • First Quarter</p>
+    </footer>
 
 </div>
-
-
-
-<footer>
-
-    <p>📚 AP Reviewer | Araling Panlipunan</p>
-
-    <p>
-        Study smart • Understand history • Think critically
-    </p>
-
-</footer>
 
 </body>
 </html>

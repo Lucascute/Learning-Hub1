@@ -15,6 +15,11 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 20px;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #eef4ff, #f8faff);
@@ -22,13 +27,15 @@
             line-height: 1.7;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
             text-align: center;
-            padding: 35px 20px;
+            padding: 35px 20px 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
@@ -42,7 +49,9 @@
             opacity: 0.9;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           MAIN NAVIGATION
+        ========================= */
 
         nav {
             margin-top: 22px;
@@ -60,6 +69,7 @@
             border-radius: 8px;
             transition: 0.3s;
             font-size: 14px;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -67,7 +77,53 @@
             color: #2563eb;
         }
 
-        /* MAIN */
+        /* =========================
+           LESSON NAVIGATION
+        ========================= */
+
+        .lesson-nav {
+            background: white;
+            padding: 18px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-left: 6px solid #4f46e5;
+        }
+
+        .lesson-nav h3 {
+            color: #2563eb;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .lesson-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lesson-links a {
+            text-decoration: none;
+            color: #2563eb;
+            background: #eef4ff;
+            border: 1px solid #c7d2fe;
+            padding: 8px 13px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .lesson-links a:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
 
         main {
             max-width: 1050px;
@@ -75,15 +131,30 @@
             padding: 0 20px;
         }
 
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
         .back-button {
             display: inline-block;
             text-decoration: none;
-            color: #2563eb;
+            color: white;
+            background: #2563eb;
             font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 8px;
             margin-bottom: 20px;
+            transition: 0.3s;
         }
 
-        /* INTRO */
+        .back-button:hover {
+            background: #4f46e5;
+            transform: translateX(-3px);
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
 
         .intro {
             background: white;
@@ -99,7 +170,9 @@
             margin-bottom: 10px;
         }
 
-        /* LESSON CARD */
+        /* =========================
+           LESSON CARD
+        ========================= */
 
         .lesson {
             background: white;
@@ -108,6 +181,7 @@
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
             border-top: 5px solid #4f46e5;
+            scroll-margin-top: 20px;
         }
 
         .lesson h2 {
@@ -126,7 +200,9 @@
             margin-bottom: 12px;
         }
 
-        /* NOTE BOX */
+        /* =========================
+           NOTE BOXES
+        ========================= */
 
         .note-box {
             background: #eef4ff;
@@ -152,9 +228,12 @@
             margin: 15px 0;
         }
 
-        /* LISTS */
+        /* =========================
+           LISTS
+        ========================= */
 
-        ul, ol {
+        ul,
+        ol {
             margin-left: 25px;
             margin-bottom: 15px;
         }
@@ -163,7 +242,9 @@
             margin: 7px 0;
         }
 
-        /* STEAL GRID */
+        /* =========================
+           STEAL GRID
+        ========================= */
 
         .steal-grid {
             display: grid;
@@ -185,7 +266,9 @@
             margin-bottom: 5px;
         }
 
-        /* CONCEPT CARDS */
+        /* =========================
+           CONCEPT CARDS
+        ========================= */
 
         .concept {
             background: #f8fafc;
@@ -200,7 +283,9 @@
             margin-bottom: 5px;
         }
 
-        /* STEPS */
+        /* =========================
+           STEPS
+        ========================= */
 
         .step {
             display: flex;
@@ -221,7 +306,9 @@
             font-weight: bold;
         }
 
-        /* TABLE */
+        /* =========================
+           TABLE
+        ========================= */
 
         table {
             width: 100%;
@@ -229,7 +316,8 @@
             margin: 15px 0;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #dbe3f0;
             padding: 12px;
             text-align: left;
@@ -244,7 +332,9 @@
             background: #f8fafc;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #1e293b;
@@ -254,7 +344,9 @@
             margin-top: 50px;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -276,6 +368,23 @@
 
             nav a {
                 display: block;
+                width: 90%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .lesson-links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lesson-links a {
+                text-align: center;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
             }
         }
 
@@ -286,6 +395,10 @@
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -312,12 +425,54 @@
 
 <main>
 
-    <a href="resources.html" class="back-button">
-        ← Back to Resources
+
+    <!-- BACK TO SUBJECTS -->
+
+    <a href="subjects.html" class="back-button">
+        ← Back to Subjects
     </a>
 
 
-    <!-- INTRO -->
+    <!-- =========================
+         LESSON NAVIGATION
+    ========================= -->
+
+    <div class="lesson-nav">
+
+        <h3>📚 English 10 Lessons</h3>
+
+        <div class="lesson-links">
+
+            <a href="#lesson1">Lesson 1</a>
+
+            <a href="#lesson2">Lesson 2</a>
+
+            <a href="#lesson3">Lesson 3</a>
+
+            <a href="#lesson4">Lesson 4</a>
+
+            <a href="#lesson5">Lesson 5</a>
+
+            <a href="#lesson6">Lesson 6</a>
+
+            <a href="#lesson7">Lesson 7</a>
+
+            <a href="#lesson8">Lesson 8</a>
+
+            <a href="#lesson9">Lesson 9</a>
+
+            <a href="#lesson10">Lesson 10</a>
+
+            <a href="#quick-review">⚡ Quick Review</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
 
     <div class="intro">
 
@@ -337,9 +492,11 @@
     </div>
 
 
-    <!-- LESSON 1 -->
+    <!-- =========================
+         LESSON 1
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson1">
 
         <h2>🎭 Lesson 1: Structural Context of Drama as a Film</h2>
 
@@ -352,76 +509,41 @@
         <h3>Important Elements</h3>
 
         <ul>
-
-            <li>
-                <b>Characters</b> – the people or figures involved
-                in the story.
-            </li>
-
-            <li>
-                <b>Setting</b> – the time and place where the story
-                happens.
-            </li>
-
-            <li>
-                <b>Plot</b> – the sequence of events in the story.
-            </li>
-
-            <li>
-                <b>Conflict</b> – the main struggle or problem
-                faced by the characters.
-            </li>
-
-            <li>
-                <b>Dialogue</b> – the spoken words of characters.
-            </li>
-
-            <li>
-                <b>Theme</b> – the central idea or message of
-                the drama.
-            </li>
-
+            <li><b>Characters</b> – the people or figures involved in the story.</li>
+            <li><b>Setting</b> – the time and place where the story happens.</li>
+            <li><b>Plot</b> – the sequence of events in the story.</li>
+            <li><b>Conflict</b> – the main struggle or problem faced by the characters.</li>
+            <li><b>Dialogue</b> – the spoken words of characters.</li>
+            <li><b>Theme</b> – the central idea or message of the drama.</li>
         </ul>
 
         <h3>Basic Plot Structure</h3>
 
         <ol>
-
-            <li><b>Exposition</b> – introduces the characters,
-                setting, and situation.</li>
-
-            <li><b>Rising Action</b> – problems and conflicts
-                begin to develop.</li>
-
-            <li><b>Climax</b> – the most intense or important
-                point of the story.</li>
-
-            <li><b>Falling Action</b> – events begin to move
-                toward the conclusion.</li>
-
-            <li><b>Resolution</b> – the conflict is resolved
-                or the story comes to an ending.</li>
-
+            <li><b>Exposition</b> – introduces the characters, setting, and situation.</li>
+            <li><b>Rising Action</b> – problems and conflicts begin to develop.</li>
+            <li><b>Climax</b> – the most intense or important point of the story.</li>
+            <li><b>Falling Action</b> – events begin to move toward the conclusion.</li>
+            <li><b>Resolution</b> – the conflict is resolved or the story comes to an ending.</li>
         </ol>
 
         <div class="note-box">
-
             <b>Remember:</b>
-
             <p>
                 A film uses visual elements such as scenes,
                 camera shots, actions, and dialogue to show
                 the structure of a drama.
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 2 -->
+    <!-- =========================
+         LESSON 2
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson2">
 
         <h2>📚 Lesson 2: Understanding Literary Context</h2>
 
@@ -434,67 +556,54 @@
         <h3>Types of Context</h3>
 
         <div class="concept">
-
             <h4>Historical Context</h4>
-
             <p>
                 The historical events and conditions that existed
                 when the work was written or takes place.
             </p>
-
         </div>
 
         <div class="concept">
-
             <h4>Cultural Context</h4>
-
             <p>
                 The beliefs, traditions, values, customs, and
                 practices of a society.
             </p>
-
         </div>
 
         <div class="concept">
-
             <h4>Social Context</h4>
-
             <p>
                 The social conditions and relationships that
                 influence the characters and story.
             </p>
-
         </div>
 
         <div class="concept">
-
             <h4>Political Context</h4>
-
             <p>
                 Political situations, systems, or events that
                 influence the literary work.
             </p>
-
         </div>
 
         <div class="important">
-
             <b>Why is context important?</b>
-
             <p>
                 Understanding context helps readers understand
                 why characters behave in certain ways and why
                 certain events happen in the story.
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 3 -->
+    <!-- =========================
+         LESSON 3
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson3">
 
         <h2>🧠 Lesson 3: Frayer's Method</h2>
 
@@ -533,37 +642,33 @@
         </table>
 
         <div class="example">
-
             <b>Example: Conflict</b>
 
             <p>
-                <b>Definition:</b> A struggle between opposing
-                forces.
+                <b>Definition:</b> A struggle between opposing forces.
             </p>
 
             <p>
-                <b>Characteristics:</b> Creates tension and
-                problems in a story.
+                <b>Characteristics:</b> Creates tension and problems in a story.
             </p>
 
             <p>
-                <b>Example:</b> Two characters disagree about
-                an important decision.
+                <b>Example:</b> Two characters disagree about an important decision.
             </p>
 
             <p>
-                <b>Non-example:</b> Two characters peacefully
-                agreeing.
+                <b>Non-example:</b> Two characters peacefully agreeing.
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 4 -->
+    <!-- =========================
+         LESSON 4
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson4">
 
         <h2>
             🔎 Lesson 4: Evaluating Literary Texts Through
@@ -579,65 +684,39 @@
         <h3>What to Examine</h3>
 
         <ul>
-
-            <li>
-                <b>Thoughts</b> – What is the character thinking?
-            </li>
-
-            <li>
-                <b>Emotions</b> – What does the character feel?
-            </li>
-
-            <li>
-                <b>Motivation</b> – Why does the character act
-                that way?
-            </li>
-
-            <li>
-                <b>Behavior</b> – How does the character respond
-                to situations?
-            </li>
-
-            <li>
-                <b>Relationships</b> – How do other characters
-                affect the character?
-            </li>
-
+            <li><b>Thoughts</b> – What is the character thinking?</li>
+            <li><b>Emotions</b> – What does the character feel?</li>
+            <li><b>Motivation</b> – Why does the character act that way?</li>
+            <li><b>Behavior</b> – How does the character respond to situations?</li>
+            <li><b>Relationships</b> – How do other characters affect the character?</li>
         </ul>
 
         <h3>Questions to Ask</h3>
 
         <ol>
-
             <li>What is the character feeling?</li>
-
             <li>What motivates the character?</li>
-
             <li>What experiences influence the character?</li>
-
             <li>How does the character change?</li>
-
             <li>How do emotions affect the plot?</li>
-
         </ol>
 
         <div class="note-box">
-
             <b>Quick idea:</b>
-
             <p>
                 Psychological analysis asks:
                 <b>"What is happening inside the character?"</b>
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 5 -->
+    <!-- =========================
+         LESSON 5
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson5">
 
         <h2>
             🎬 Lesson 5: Conceptualizing and Writing
@@ -653,19 +732,12 @@
         <h3>Important Parts of a Script</h3>
 
         <ul>
-
             <li><b>Title</b> – name of the film.</li>
-
             <li><b>Characters</b> – people involved in the story.</li>
-
             <li><b>Setting</b> – where and when the scene happens.</li>
-
             <li><b>Scene</b> – a specific part of the film.</li>
-
             <li><b>Action</b> – what the characters do.</li>
-
             <li><b>Dialogue</b> – what the characters say.</li>
-
         </ul>
 
         <h3>Writing Process</h3>
@@ -692,16 +764,17 @@
 
         <div class="step">
             <div class="number">5</div>
-            <p><b>Write the script</b> – combine scenes, actions,
-            and dialogue.</p>
+            <p><b>Write the script</b> – combine scenes, actions, and dialogue.</p>
         </div>
 
     </section>
 
 
-    <!-- LESSON 6 -->
+    <!-- =========================
+         LESSON 6
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson6">
 
         <h2>
             ✏️ Lesson 6: Revising, Editing, and Publishing
@@ -716,17 +789,11 @@
         </p>
 
         <ul>
-
             <li>Improve the plot.</li>
-
             <li>Make scenes clearer.</li>
-
             <li>Improve character development.</li>
-
             <li>Strengthen dialogue.</li>
-
             <li>Remove unnecessary parts.</li>
-
         </ul>
 
         <h3>Editing</h3>
@@ -736,17 +803,11 @@
         </p>
 
         <ul>
-
             <li>Grammar</li>
-
             <li>Spelling</li>
-
             <li>Punctuation</li>
-
             <li>Capitalization</li>
-
             <li>Sentence structure</li>
-
         </ul>
 
         <h3>Publishing</h3>
@@ -757,7 +818,6 @@
         </p>
 
         <div class="important">
-
             <b>Easy way to remember:</b>
 
             <p>
@@ -765,15 +825,16 @@
                 <b>Editing = Correct</b><br>
                 <b>Publishing = Finalize and Present</b>
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 7 -->
+    <!-- =========================
+         LESSON 7
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson7">
 
         <h2>
             🎥 Lesson 7: Basics of Filming and Film Production
@@ -821,29 +882,23 @@
         <h3>Basic Filming Elements</h3>
 
         <ul>
-
             <li>Camera</li>
-
             <li>Lighting</li>
-
             <li>Sound</li>
-
             <li>Actors</li>
-
             <li>Location</li>
-
             <li>Props</li>
-
             <li>Costumes</li>
-
         </ul>
 
     </section>
 
 
-    <!-- LESSON 8 -->
+    <!-- =========================
+         LESSON 8
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson8">
 
         <h2>
             🎥 Lesson 8: Dos and Don'ts in Filming a Short Film
@@ -852,62 +907,44 @@
         <h3>✅ DOs</h3>
 
         <ul>
-
             <li>Plan your scenes before filming.</li>
-
             <li>Keep the camera steady.</li>
-
             <li>Use proper lighting.</li>
-
             <li>Record clear audio.</li>
-
             <li>Check the camera angle.</li>
-
             <li>Practice scenes before recording.</li>
-
             <li>Keep the filming location organized.</li>
-
             <li>Review footage after recording.</li>
-
         </ul>
 
         <h3>❌ DON'Ts</h3>
 
         <ul>
-
             <li>Don't record with extremely poor lighting.</li>
-
             <li>Don't allow unnecessary background noise.</li>
-
             <li>Don't shake the camera unnecessarily.</li>
-
             <li>Don't ignore the script.</li>
-
             <li>Don't forget to check the audio.</li>
-
             <li>Don't record without planning the shot.</li>
-
             <li>Don't leave important equipment unattended.</li>
-
         </ul>
 
         <div class="note-box">
-
             <b>Remember:</b>
-
             <p>
                 Good preparation makes filming easier and
                 helps produce better-quality scenes.
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 9 -->
+    <!-- =========================
+         LESSON 9
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson9">
 
         <h2>
             👤 Lesson 9: STEAL Format for Characterization
@@ -922,88 +959,71 @@
         <div class="steal-grid">
 
             <div class="steal-card">
-
                 <h4>S — Speech</h4>
-
                 <p>
                     What does the character say?
                     What does the character's way of speaking
                     tell us about them?
                 </p>
-
             </div>
 
             <div class="steal-card">
-
                 <h4>T — Thoughts</h4>
-
                 <p>
                     What does the character think?
                     What do their thoughts reveal about them?
                 </p>
-
             </div>
 
             <div class="steal-card">
-
                 <h4>E — Effect on Others</h4>
-
                 <p>
                     How do other characters react to or respond
                     to this character?
                 </p>
-
             </div>
 
             <div class="steal-card">
-
                 <h4>A — Actions</h4>
-
                 <p>
                     What does the character do?
                     What do their actions reveal?
                 </p>
-
             </div>
 
             <div class="steal-card">
-
                 <h4>L — Looks</h4>
-
                 <p>
                     What does the character look like?
                     Consider appearance, clothing, and physical
                     characteristics.
                 </p>
-
             </div>
 
         </div>
 
         <div class="example">
-
             <b>Quick Example:</b>
-
             <p>
                 If a character constantly helps others,
                 their <b>Actions</b> can show that they are
                 caring or generous.
             </p>
-
         </div>
 
     </section>
 
 
-    <!-- LESSON 10 -->
+    <!-- =========================
+         LESSON 10
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="lesson10">
 
         <h2>
             🎞️ Lesson 10: Organic Unity, Binary Opposition,
             Co-text, and Collocation in Short Films
         </h2>
-
 
         <div class="concept">
 
@@ -1022,7 +1042,6 @@
 
         </div>
 
-
         <div class="concept">
 
             <h4>⚖️ Binary Opposition</h4>
@@ -1032,26 +1051,17 @@
                 ideas, characters, forces, or concepts.
             </p>
 
-            <p>
-                Examples include:
-            </p>
+            <p>Examples include:</p>
 
             <ul>
-
                 <li>Good vs. Evil</li>
-
                 <li>Light vs. Darkness</li>
-
                 <li>Freedom vs. Oppression</li>
-
                 <li>Rich vs. Poor</li>
-
                 <li>Love vs. Hate</li>
-
             </ul>
 
         </div>
-
 
         <div class="concept">
 
@@ -1070,7 +1080,6 @@
 
         </div>
 
-
         <div class="concept">
 
             <h4>🔗 Collocation</h4>
@@ -1080,36 +1089,24 @@
                 together or have a natural relationship in language.
             </p>
 
-            <p>
-                Examples:
-            </p>
+            <p>Examples:</p>
 
             <ul>
-
                 <li><b>make</b> a decision</li>
-
                 <li><b>strong</b> argument</li>
-
                 <li><b>heavy</b> rain</li>
-
                 <li><b>take</b> responsibility</li>
-
             </ul>
 
         </div>
-
 
         <div class="important">
 
             <b>Quick Review:</b>
 
-            <p>
-                <b>Organic Unity</b> → Parts work together as one.
-            </p>
+            <p><b>Organic Unity</b> → Parts work together as one.</p>
 
-            <p>
-                <b>Binary Opposition</b> → Contrasting ideas.
-            </p>
+            <p><b>Binary Opposition</b> → Contrasting ideas.</p>
 
             <p>
                 <b>Co-text</b> → Surrounding text or elements
@@ -1125,9 +1122,11 @@
     </section>
 
 
-    <!-- QUICK REVIEW -->
+    <!-- =========================
+         QUICK REVIEW
+    ========================= -->
 
-    <section class="lesson">
+    <section class="lesson" id="quick-review">
 
         <h2>⚡ English 10 Quick Review</h2>
 
@@ -1206,6 +1205,10 @@
 
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 

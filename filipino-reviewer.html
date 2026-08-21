@@ -1,17 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="fil">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Filipino 10 Reviewer</title>
+    <title>Filipino Reviewer | Grade 10</title>
 
     <style>
+
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -20,6 +20,8 @@
             background: linear-gradient(135deg, #f7eeee, #f2e4e4);
             color: #2d2424;
         }
+
+        /* HEADER */
 
         header {
             background: linear-gradient(135deg, #6b1111, #a52a2a);
@@ -39,47 +41,30 @@
             font-size: 17px;
         }
 
+        /* MAIN CONTAINER */
+
         .container {
             width: 92%;
             max-width: 1050px;
             margin: 35px auto;
         }
 
-        /* INDEX */
+        /* BACK TO REVIEWER */
 
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
-
-        .index h2 {
-            color: #6b1111;
-            margin-top: 0;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-        }
-
-        .index a {
-            display: block;
-            padding: 13px 15px;
-            background: #f7e8e8;
-            color: #6b1111;
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 16px;
+            background: #8b1a1a;
+            color: white;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 8px;
             font-weight: bold;
             transition: 0.2s;
         }
 
-        .index a:hover {
+        .back:hover {
             background: #6b1111;
-            color: white;
             transform: translateY(-2px);
         }
 
@@ -105,6 +90,17 @@
             margin-top: 25px;
         }
 
+        .card p {
+            line-height: 1.7;
+        }
+
+        .card ul,
+        .card ol {
+            line-height: 1.7;
+        }
+
+        /* TOPIC BOX */
+
         .topic {
             background: #fff8f8;
             padding: 18px;
@@ -122,12 +118,15 @@
             margin-bottom: 0;
         }
 
+        /* IMPORTANT */
+
         .important {
             background: #f7e8e8;
             border-left: 5px solid #6b1111;
             padding: 15px 18px;
             margin: 18px 0;
             border-radius: 10px;
+            line-height: 1.7;
         }
 
         .important strong {
@@ -176,23 +175,6 @@
             line-height: 1.7;
         }
 
-        /* BACK TO TOP */
-
-        .top {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 16px;
-            background: #8b1a1a;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .top:hover {
-            background: #6b1111;
-        }
-
         /* FOOTER */
 
         footer {
@@ -218,11 +200,16 @@
             .topic {
                 padding: 15px;
             }
+
         }
+
     </style>
+
 </head>
 
-<body id="top">
+
+<body>
+
 
 <header>
 
@@ -234,39 +221,20 @@
 
 </header>
 
+
 <div class="container">
 
-    <!-- INDEX -->
 
-    <section class="index">
+    <!-- BACK TO REVIEWER -->
 
-        <h2>📑 Reviewer Index</h2>
+    <a class="back" href="reviewer.html">
+        ← Back to Reviewer
+    </a>
 
-        <div class="index-grid">
-
-            <a href="#nobela">📚 Tungkol sa Nobela</a>
-
-            <a href="#tauhan">👥 Mahahalagang Tauhan</a>
-
-            <a href="#tema">💡 Pangunahing Tema</a>
-
-            <a href="#pangyayari">📌 Mahahalagang Pangyayari</a>
-
-            <a href="#simbolismo">🔎 Mga Simbolismo</a>
-
-            <a href="#aral">📖 Aral ng Nobela</a>
-
-            <a href="#quick">⭐ Quick Review</a>
-
-            <a href="#tips">🎯 Study Tips</a>
-
-        </div>
-
-    </section>
 
     <!-- TUNGKOL SA NOBELA -->
 
-    <section class="card" id="nobela">
+    <section class="card">
 
         <h2>📚 Tungkol sa Nobela</h2>
 
@@ -322,13 +290,12 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
     </section>
+
 
     <!-- TAUHAN -->
 
-    <section class="card" id="tauhan">
+    <section class="card">
 
         <h2>👥 Mahahalagang Tauhan</h2>
 
@@ -418,13 +385,12 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
     </section>
+
 
     <!-- TEMA -->
 
-    <section class="card" id="tema">
+    <section class="card">
 
         <h2>💡 Pangunahing Tema</h2>
 
@@ -455,13 +421,12 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
     </section>
+
 
     <!-- PANGYAYARI -->
 
-    <section class="card" id="pangyayari">
+    <section class="card">
 
         <h2>📌 Mahahalagang Pangyayari</h2>
 
@@ -509,13 +474,12 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
     </section>
+
 
     <!-- SIMBOLISMO -->
 
-    <section class="card" id="simbolismo">
+    <section class="card">
 
         <h2>🔎 Mga Simbolismo</h2>
 
@@ -552,13 +516,12 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
     </section>
+
 
     <!-- ARAL -->
 
-    <section class="card" id="aral">
+    <section class="card">
 
         <h2>📖 Aral ng Nobela</h2>
 
@@ -589,13 +552,12 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
     </section>
+
 
     <!-- QUICK REVIEW -->
 
-    <section class="quick" id="quick">
+    <section class="quick">
 
         <h2>⭐ Filipino Quick Review</h2>
 
@@ -651,9 +613,10 @@
 
     </section>
 
+
     <!-- STUDY TIPS -->
 
-    <section class="tips" id="tips">
+    <section class="tips">
 
         <h2>🎯 Filipino Study Tips</h2>
 
@@ -708,7 +671,9 @@
 
     </section>
 
+
 </div>
+
 
 <footer>
 
@@ -720,6 +685,7 @@
 
 </footer>
 
-</body>
-</html>
 
+</body>
+
+</html>

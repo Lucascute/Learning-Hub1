@@ -44,41 +44,24 @@
             margin: 35px auto;
         }
 
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
+        /* BACK TO REVIEWER */
 
-        .index h2 {
-            color: #6d28d9;
-            margin-top: 0;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
-        }
-
-        .index a {
-            display: block;
-            padding: 12px 15px;
-            background: #f3e8ff;
-            color: #6d28d9;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-
-        .index a:hover {
-            background: #6d28d9;
+        .back-reviewer {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 16px;
+            background: #7c3aed;
             color: white;
-            transform: translateY(-2px);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
         }
+
+        .back-reviewer:hover {
+            background: #5b21b6;
+        }
+
+        /* LESSON CARDS */
 
         .lesson {
             background: white;
@@ -129,6 +112,8 @@
             margin: 15px 0;
         }
 
+        /* STUDY TIPS */
+
         .tips {
             background: linear-gradient(135deg, #fff7ed, #ffedd5);
             padding: 30px;
@@ -143,6 +128,8 @@
             margin-top: 0;
         }
 
+        /* QUICK REVIEW */
+
         .quick {
             background: linear-gradient(135deg, #eff6ff, #eef2ff);
             padding: 30px;
@@ -156,22 +143,7 @@
             margin-top: 0;
         }
 
-        /* BACK TO REVIEWER */
-
-        .back-reviewer {
-            display: inline-block;
-            margin-bottom: 25px;
-            padding: 10px 16px;
-            background: #7c3aed;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .back-reviewer:hover {
-            background: #5b21b6;
-        }
+        /* FOOTER */
 
         footer {
             margin-top: 40px;
@@ -181,7 +153,10 @@
             color: white;
         }
 
+        /* MOBILE */
+
         @media (max-width: 600px) {
+
             header h1 {
                 font-size: 30px;
             }
@@ -196,43 +171,28 @@
 <body>
 
 <header>
+
     <h1>📚 English 10 Reviewer</h1>
-    <p>Grade 10 English • Term 1 • Lessons 1–10</p>
+
+    <p>
+        Grade 10 English • Term 1 • Lessons 1–10
+    </p>
+
 </header>
+
 
 <div class="container">
 
-    <!-- BACK TO REVIEWER -->
+    <!-- ONLY BUTTON -->
 
-    <a class="back-reviewer" href="reviewer.html">← Back to Reviewer</a>
-
-    <!-- INDEX -->
-
-    <section class="index">
-
-        <h2>📖 Reviewer Index</h2>
-
-        <div class="index-grid">
-            <a href="#lesson1">🎭 Lesson 1</a>
-            <a href="#lesson2">📖 Lesson 2</a>
-            <a href="#lesson3">🧠 Lesson 3</a>
-            <a href="#lesson4">🔎 Lesson 4</a>
-            <a href="#lesson5">✍️ Lesson 5</a>
-            <a href="#lesson6">📝 Lesson 6</a>
-            <a href="#lesson7">🎬 Lesson 7</a>
-            <a href="#lesson8">🎥 Lesson 8</a>
-            <a href="#lesson9">👤 Lesson 9</a>
-            <a href="#lesson10">🔗 Lesson 10</a>
-            <a href="#quickreview">⭐ Quick Review</a>
-            <a href="#tips">💡 Study Tips</a>
-        </div>
-
-    </section>
+    <a class="back-reviewer" href="reviewer.html">
+        ← Back to Reviewer
+    </a>
 
 
     <!-- LESSON 1 -->
 
-    <section class="lesson" id="lesson1">
+    <section class="lesson">
 
         <h2>🎭 Lesson 1: Structural Context of Drama as a Film</h2>
 
@@ -272,7 +232,7 @@
 
     <!-- LESSON 2 -->
 
-    <section class="lesson" id="lesson2">
+    <section class="lesson">
 
         <h2>📖 Lesson 2: Understanding Literary Context</h2>
 
@@ -301,7 +261,7 @@
 
     <!-- LESSON 3 -->
 
-    <section class="lesson" id="lesson3">
+    <section class="lesson">
 
         <h2>🧠 Lesson 3: Frayer's Method</h2>
 
@@ -320,23 +280,29 @@
         </ol>
 
         <div class="example">
+
             <strong>Example: Conflict</strong>
 
             <p>
-                <b>Definition:</b> A struggle or problem between opposing forces.
+                <b>Definition:</b>
+                A struggle or problem between opposing forces.
             </p>
 
             <p>
-                <b>Characteristics:</b> Creates tension and moves the story forward.
+                <b>Characteristics:</b>
+                Creates tension and moves the story forward.
             </p>
 
             <p>
-                <b>Example:</b> A character struggles against an antagonist.
+                <b>Example:</b>
+                A character struggles against an antagonist.
             </p>
 
             <p>
-                <b>Non-example:</b> Two characters agreeing about everything.
+                <b>Non-example:</b>
+                Two characters agreeing about everything.
             </p>
+
         </div>
 
     </section>
@@ -344,7 +310,7 @@
 
     <!-- LESSON 4 -->
 
-    <section class="lesson" id="lesson4">
+    <section class="lesson">
 
         <h2>🔎 Lesson 4: Psychological Context of a Drama</h2>
 
@@ -364,9 +330,12 @@
         </ul>
 
         <div class="important">
+
             <strong>Remember:</strong>
+
             Do not only describe what a character does.
             Explain the possible reasons behind the character's actions.
+
         </div>
 
     </section>
@@ -374,7 +343,7 @@
 
     <!-- LESSON 5 -->
 
-    <section class="lesson" id="lesson5">
+    <section class="lesson">
 
         <h2>✍️ Lesson 5: Conceptualizing and Writing a Short Film Script</h2>
 
@@ -413,7 +382,7 @@
 
     <!-- LESSON 6 -->
 
-    <section class="lesson" id="lesson6">
+    <section class="lesson">
 
         <h2>📝 Lesson 6: Revising, Editing, and Publishing a Short Film Script</h2>
 
@@ -444,10 +413,15 @@
         </p>
 
         <div class="important">
+
             <strong>Easy way to remember:</strong>
-            Revise = improve ideas.
-            Edit = correct errors.
+
+            <br><br>
+
+            Revise = improve ideas.<br>
+            Edit = correct errors.<br>
             Publish = present the finished work.
+
         </div>
 
     </section>
@@ -455,7 +429,7 @@
 
     <!-- LESSON 7 -->
 
-    <section class="lesson" id="lesson7">
+    <section class="lesson">
 
         <h2>🎬 Lesson 7: Basics of Filming and Film Production</h2>
 
@@ -485,9 +459,12 @@
         </ul>
 
         <div class="important">
+
             <strong>Remember:</strong>
+
             Good planning during pre-production can make filming
             much easier.
+
         </div>
 
     </section>
@@ -495,7 +472,7 @@
 
     <!-- LESSON 8 -->
 
-    <section class="lesson" id="lesson8">
+    <section class="lesson">
 
         <h2>🎥 Lesson 8: Dos and Don'ts in Filming a Short Film</h2>
 
@@ -521,8 +498,11 @@
         </ul>
 
         <div class="important">
+
             <strong>Tip:</strong>
+
             Always review your footage before moving to the next scene.
+
         </div>
 
     </section>
@@ -530,7 +510,7 @@
 
     <!-- LESSON 9 -->
 
-    <section class="lesson" id="lesson9">
+    <section class="lesson">
 
         <h2>👤 Lesson 9: STEAL Format for Characterization</h2>
 
@@ -542,6 +522,7 @@
         <h3>STEAL Means:</h3>
 
         <ul>
+
             <li>
                 <strong>S – Speech</strong><br>
                 What the character says.
@@ -566,12 +547,16 @@
                 <strong>L – Looks</strong><br>
                 Appearance, expressions, or body language.
             </li>
+
         </ul>
 
         <div class="important">
+
             <strong>Remember:</strong>
+
             STEAL helps you support your interpretation of a character
             using evidence from the text or film.
+
         </div>
 
     </section>
@@ -579,9 +564,12 @@
 
     <!-- LESSON 10 -->
 
-    <section class="lesson" id="lesson10">
+    <section class="lesson">
 
-        <h2>🔗 Lesson 10: Organic Unity, Binary Opposition, Co-text, and Collocation</h2>
+        <h2>
+            🔗 Lesson 10: Organic Unity, Binary Opposition,
+            Co-text, and Collocation
+        </h2>
 
         <h3>Organic Unity</h3>
 
@@ -591,9 +579,12 @@
         </p>
 
         <div class="example">
+
             <strong>Example:</strong>
+
             The characters, setting, conflict, theme, and ending all
             contribute to the overall message of the film.
+
         </div>
 
         <h3>Binary Opposition</h3>
@@ -625,6 +616,7 @@
         </p>
 
         <div class="example">
+
             <strong>Examples:</strong>
 
             <ul>
@@ -633,14 +625,20 @@
                 <li>heavy rain</li>
                 <li>deep emotion</li>
             </ul>
+
         </div>
 
         <div class="important">
-            <strong>Quick Memory Trick:</strong><br>
+
+            <strong>Quick Memory Trick:</strong>
+
+            <br><br>
+
             Organic Unity = parts work together.<br>
             Binary Opposition = contrasting ideas.<br>
             Co-text = surrounding words/text.<br>
             Collocation = words commonly used together.
+
         </div>
 
     </section>
@@ -648,21 +646,59 @@
 
     <!-- QUICK REVIEW -->
 
-    <section class="quick" id="quickreview">
+    <section class="quick">
 
         <h2>⭐ English Quick Review</h2>
 
         <ul>
-            <li>🎭 Structural context looks at how a drama is organized.</li>
-            <li>📖 Literary context considers the background surrounding a work.</li>
-            <li>🧠 Frayer's Method has definition, characteristics, examples, and non-examples.</li>
-            <li>🔎 Psychological context examines character thoughts, emotions, and motivations.</li>
-            <li>✍️ A script contains characters, scenes, dialogue, actions, and conflict.</li>
-            <li>📝 Revising improves ideas; editing corrects errors.</li>
-            <li>🎬 Film production has pre-production, production, and post-production.</li>
-            <li>🎥 Good filming requires planning, proper lighting, stable shots, and clear audio.</li>
-            <li>👤 STEAL means Speech, Thoughts, Effect on Others, Actions, and Looks.</li>
-            <li>🔗 Organic unity, binary opposition, co-text, and collocation help analyze texts and films.</li>
+
+            <li>
+                🎭 Structural context looks at how a drama is organized.
+            </li>
+
+            <li>
+                📖 Literary context considers the background surrounding a work.
+            </li>
+
+            <li>
+                🧠 Frayer's Method has definition, characteristics,
+                examples, and non-examples.
+            </li>
+
+            <li>
+                🔎 Psychological context examines character thoughts,
+                emotions, and motivations.
+            </li>
+
+            <li>
+                ✍️ A script contains characters, scenes, dialogue,
+                actions, and conflict.
+            </li>
+
+            <li>
+                📝 Revising improves ideas; editing corrects errors.
+            </li>
+
+            <li>
+                🎬 Film production has pre-production, production,
+                and post-production.
+            </li>
+
+            <li>
+                🎥 Good filming requires planning, proper lighting,
+                stable shots, and clear audio.
+            </li>
+
+            <li>
+                👤 STEAL means Speech, Thoughts, Effect on Others,
+                Actions, and Looks.
+            </li>
+
+            <li>
+                🔗 Organic unity, binary opposition, co-text,
+                and collocation help analyze texts and films.
+            </li>
+
         </ul>
 
     </section>
@@ -670,7 +706,7 @@
 
     <!-- STUDY TIPS -->
 
-    <section class="tips" id="tips">
+    <section class="tips">
 
         <h2>💡 English Study Tips</h2>
 
@@ -727,10 +763,12 @@
 <footer>
 
     <p>📚 English 10 Reviewer</p>
-    <p>Study smart • Understand the text • Create with purpose</p>
+
+    <p>
+        Study smart • Understand the text • Create with purpose
+    </p>
 
 </footer>
 
 </body>
 </html>
-

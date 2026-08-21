@@ -2,903 +2,551 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Science Study Guide | Grade 10</title>
+    <title>Science 10 Study Guide</title>
 
     <style>
-
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #eef3f8, #dfe9f3);
+            background: linear-gradient(135deg, #eef4ff, #f8faff);
             color: #263238;
+            line-height: 1.7;
         }
 
-        /* HEADER */
-
         header {
-            background: linear-gradient(135deg, #17365d, #2563a6);
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
             text-align: center;
-            padding: 45px 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            padding: 35px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 42px;
+            font-size: 38px;
+            margin-bottom: 8px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 17px;
             opacity: 0.9;
         }
 
-        /* CONTAINER */
-
-        .container {
-            width: 92%;
-            max-width: 1050px;
-            margin: 35px auto;
-        }
-
-        /* INDEX */
-
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
-
-        .index h2 {
-            margin-top: 0;
-            color: #17365d;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        nav {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
-        .index-item {
-            padding: 13px 15px;
-            background: #eaf2f8;
-            color: #17365d;
-            border-radius: 10px;
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 14px;
             font-weight: bold;
         }
 
-        /* CARDS */
-
-        .card {
+        nav a:hover {
             background: white;
-            padding: 30px;
+            color: #2563eb;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563eb;
+        }
+
+        .intro h2 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .topic {
+            background: white;
+            padding: 25px;
             margin: 25px 0;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-left: 6px solid #2563a6;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-top: 5px solid #4f46e5;
         }
 
-        .card h2 {
-            margin-top: 0;
-            color: #17365d;
-            font-size: 28px;
+        .topic h2 {
+            color: #2563eb;
+            margin-bottom: 12px;
         }
 
-        .card h3 {
-            color: #2563a6;
-            margin-top: 25px;
+        .topic h3 {
+            color: #4f46e5;
+            margin-top: 18px;
+            margin-bottom: 7px;
         }
 
-        /* GUIDE BOX */
-
-        .guide {
-            background: #f7faff;
-            padding: 18px;
-            margin: 15px 0;
-            border-left: 5px solid #2563a6;
-            border-radius: 10px;
-            line-height: 1.7;
+        ul {
+            margin-left: 25px;
         }
 
-        .guide strong {
-            color: #17365d;
+        li {
+            margin: 6px 0;
         }
 
-        /* IMPORTANT */
+        .box {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
 
         .important {
-            background: #eef6ff;
-            border-left: 5px solid #17365d;
-            padding: 16px 18px;
-            margin: 18px 0;
-            border-radius: 10px;
-            line-height: 1.7;
-        }
-
-        /* FORMULA */
-
-        .formula {
-            background: #e8f0fa;
-            padding: 18px;
-            margin: 15px 0;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            color: #17365d;
-            border: 1px solid #cbdceb;
-        }
-
-        /* EXAMPLE */
-
-        .example {
-            background: #f8f8f8;
-            padding: 18px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-left: 5px solid #6b8eb5;
-            line-height: 1.7;
-        }
-
-        /* STUDY TIPS */
-
-        .tips {
-            background: linear-gradient(135deg, #fff8e1, #fff3cd);
-            padding: 30px;
-            border-radius: 18px;
-            margin-top: 30px;
-            border-left: 6px solid #d39b00;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
-
-        .tips h2 {
-            color: #8a6500;
-            margin-top: 0;
-        }
-
-        .tips li {
-            margin: 12px 0;
-            line-height: 1.7;
-        }
-
-        /* TOP BUTTON */
-
-        .top {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 16px;
-            background: #2563a6;
-            color: white;
-            text-decoration: none;
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
             border-radius: 8px;
-            font-weight: bold;
+            margin-top: 15px;
         }
 
-        .top:hover {
-            background: #17365d;
+        .review {
+            background: #f0fdf4;
+            border-left: 5px solid #22c55e;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
         }
-
-        /* FOOTER */
 
         footer {
-            margin-top: 40px;
-            padding: 30px;
-            text-align: center;
-            background: #17365d;
+            background: #1e293b;
             color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
         }
 
-        /* MOBILE */
-
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
             header h1 {
-                font-size: 31px;
+                font-size: 28px;
             }
 
-            .card {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+            }
+
+            .topic {
                 padding: 20px;
             }
-
         }
-
     </style>
-
 </head>
 
-
-<body id="top">
-
-
-<!-- HEADER -->
+<body>
 
 <header>
 
-    <h1>🔬 Science Study Guide</h1>
+    <h1>🔬 Science 10 Study Guide</h1>
 
-    <p>
-        Grade 10 Science | Study Smart • Understand More
-    </p>
+    <p>Weeks 1 to 10 • Chemistry, Homeostasis, and Evolution</p>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="subjects.html">📚 Subjects</a>
+        <a href="resources.html">📖 Learning Resources</a>
+        <a href="studytips.html">💡 Study Tips</a>
+        <a href="contact.html">📩 Contact Us</a>
+    </nav>
 
 </header>
 
+<main>
 
-<div class="container">
+    <a href="resources.html" class="back-button">
+        ← Back to Learning Resources
+    </a>
 
+    <div class="intro">
 
-    <!-- INDEX -->
-
-    <section class="index">
-
-        <h2>📑 Science Study Guide</h2>
-
-        <div class="index-grid">
-
-            <div class="index-item">
-                🧬 Lesson 1 — DNA and Heredity
-            </div>
-
-            <div class="index-item">
-                🧬 Lesson 2 — Genetics
-            </div>
-
-            <div class="index-item">
-                🧫 Lesson 3 — Cell Division
-            </div>
-
-            <div class="index-item">
-                🌱 Lesson 4 — Evolution
-            </div>
-
-            <div class="index-item">
-                🌍 Lesson 5 — Biodiversity
-            </div>
-
-            <div class="index-item">
-                ⚛️ Lesson 6 — Atomic Structure
-            </div>
-
-            <div class="index-item">
-                🧪 Lesson 7 — Chemical Reactions
-            </div>
-
-            <div class="index-item">
-                ⚡ Lesson 8 — Electricity
-            </div>
-
-            <div class="index-item">
-                🌊 Lesson 9 — Waves
-            </div>
-
-            <div class="index-item">
-                🌎 Lesson 10 — Earth and Space
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- LESSON 1 -->
-
-    <section class="card">
-
-        <h2>🧬 Lesson 1 — DNA and Heredity</h2>
-
-        <div class="guide">
-
-            <strong>What is DNA?</strong>
-
-            <p>
-                DNA or deoxyribonucleic acid is the molecule
-                that contains the genetic instructions used
-                by living organisms.
-            </p>
-
-        </div>
-
-        <h3>Important Terms</h3>
-
-        <ul>
-
-            <li>
-                <strong>DNA</strong> – carries genetic information.
-            </li>
-
-            <li>
-                <strong>Gene</strong> – a segment of DNA that
-                contains information for a particular trait.
-            </li>
-
-            <li>
-                <strong>Chromosome</strong> – a structure made
-                of DNA and proteins that contains genes.
-            </li>
-
-            <li>
-                <strong>Heredity</strong> – the passing of traits
-                from parents to offspring.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>💡 Remember:</strong>
-
-            Genes are found on chromosomes, and chromosomes
-            contain DNA.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 2 -->
-
-    <section class="card">
-
-        <h2>🧬 Lesson 2 — Genetics</h2>
-
-        <div class="guide">
-
-            <strong>What is genetics?</strong>
-
-            <p>
-                Genetics is the study of heredity and how
-                traits are passed from parents to offspring.
-            </p>
-
-        </div>
-
-        <h3>Important Terms</h3>
-
-        <ul>
-
-            <li>
-                <strong>Allele</strong> – an alternative form
-                of a gene.
-            </li>
-
-            <li>
-                <strong>Dominant</strong> – an allele that can
-                be expressed when present.
-            </li>
-
-            <li>
-                <strong>Recessive</strong> – an allele that is
-                generally expressed only when two copies are present.
-            </li>
-
-            <li>
-                <strong>Genotype</strong> – the genetic makeup
-                of an organism.
-            </li>
-
-            <li>
-                <strong>Phenotype</strong> – the observable
-                characteristics of an organism.
-            </li>
-
-        </ul>
-
-        <div class="example">
-
-            <strong>Example:</strong>
-
-            <p>
-                If T represents a dominant allele and t
-                represents a recessive allele:
-            </p>
-
-            <p>
-                TT = homozygous dominant<br>
-                Tt = heterozygous<br>
-                tt = homozygous recessive
-            </p>
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 3 -->
-
-    <section class="card">
-
-        <h2>🧫 Lesson 3 — Cell Division</h2>
-
-        <div class="guide">
-
-            <strong>What is cell division?</strong>
-
-            <p>
-                Cell division is the process by which a cell
-                divides to produce new cells.
-            </p>
-
-        </div>
-
-        <h3>Mitosis</h3>
+        <h2>📘 Science 10 Study Guide</h2>
 
         <p>
-            Mitosis produces two genetically similar daughter
-            cells and is important for growth and repair.
+            This study guide gives a short review of the main Science 10
+            topics from Week 1 to Week 10.
         </p>
 
-        <h3>Meiosis</h3>
+        <div class="review">
+            <b>Study Focus:</b>
+            Understand the important concepts, remember the key terms,
+            and practice applying them to examples.
+        </div>
+
+    </div>
+
+
+    <!-- WEEK 1 -->
+
+    <section class="topic">
+
+        <h2>🧪 Week 1: Chemical Reactions, Acids, Bases, and Salts</h2>
 
         <p>
-            Meiosis produces reproductive cells and results
-            in cells with half the usual number of chromosomes.
+            A chemical reaction happens when substances change into
+            new substances with different properties.
         </p>
 
-        <div class="important">
+        <h3>Acids</h3>
 
-            <strong>💡 Remember:</strong>
+        <ul>
+            <li>Usually have a sour taste.</li>
+            <li>Have a pH below 7.</li>
+            <li>Examples include vinegar and lemon juice.</li>
+        </ul>
 
-            Mitosis → growth and repair<br>
-            Meiosis → production of reproductive cells
+        <h3>Bases</h3>
 
-        </div>
+        <ul>
+            <li>Often feel slippery.</li>
+            <li>Have a pH above 7.</li>
+            <li>Examples include soap and baking soda.</li>
+        </ul>
 
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 4 -->
-
-    <section class="card">
-
-        <h2>🌱 Lesson 4 — Evolution</h2>
-
-        <div class="guide">
-
-            <strong>What is evolution?</strong>
-
-            <p>
-                Evolution refers to changes in inherited
-                characteristics of populations over generations.
-            </p>
-
-        </div>
-
-        <h3>Natural Selection</h3>
+        <h3>Salts</h3>
 
         <p>
-            Natural selection is a process in which organisms
-            with traits that help them survive and reproduce
-            are more likely to pass those traits to future
-            generations.
+            Salts are compounds that can form when an acid reacts
+            with a base.
         </p>
 
-        <div class="important">
-
-            <strong>💡 Key Idea:</strong>
-
-            Individuals do not evolve because they "need" to.
-            Populations change over generations as inherited
-            traits become more or less common.
-
+        <div class="box">
+            <b>Remember:</b> Acid + Base → Salt + Water
         </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
 
     </section>
 
 
-    <!-- LESSON 5 -->
+    <!-- WEEK 2 -->
 
-    <section class="card">
+    <section class="topic">
 
-        <h2>🌍 Lesson 5 — Biodiversity</h2>
-
-        <div class="guide">
-
-            <strong>What is biodiversity?</strong>
-
-            <p>
-                Biodiversity refers to the variety of living
-                organisms in a particular area or on Earth.
-            </p>
-
-        </div>
-
-        <h3>Levels of Biodiversity</h3>
-
-        <ul>
-
-            <li>
-                <strong>Genetic diversity</strong>
-            </li>
-
-            <li>
-                <strong>Species diversity</strong>
-            </li>
-
-            <li>
-                <strong>Ecosystem diversity</strong>
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>🌱 Remember:</strong>
-
-            Biodiversity is important because ecosystems
-            depend on interactions among many different
-            organisms.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 6 -->
-
-    <section class="card">
-
-        <h2>⚛️ Lesson 6 — Atomic Structure</h2>
-
-        <div class="guide">
-
-            <strong>What is an atom?</strong>
-
-            <p>
-                An atom is the basic unit of an element that
-                retains the chemical properties of that element.
-            </p>
-
-        </div>
-
-        <h3>Subatomic Particles</h3>
-
-        <ul>
-
-            <li>
-                <strong>Proton</strong> – positively charged.
-            </li>
-
-            <li>
-                <strong>Neutron</strong> – has no electrical charge.
-            </li>
-
-            <li>
-                <strong>Electron</strong> – negatively charged.
-            </li>
-
-        </ul>
-
-        <div class="formula">
-
-            Atomic Number = Number of Protons
-
-        </div>
-
-        <div class="important">
-
-            <strong>💡 Remember:</strong>
-
-            Protons and neutrons are found in the nucleus,
-            while electrons occupy regions around the nucleus.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 7 -->
-
-    <section class="card">
-
-        <h2>🧪 Lesson 7 — Chemical Reactions</h2>
-
-        <div class="guide">
-
-            <strong>What is a chemical reaction?</strong>
-
-            <p>
-                A chemical reaction is a process in which
-                substances are transformed into new substances.
-            </p>
-
-        </div>
-
-        <h3>Important Terms</h3>
-
-        <ul>
-
-            <li>
-                <strong>Reactants</strong> – substances present
-                at the beginning of a reaction.
-            </li>
-
-            <li>
-                <strong>Products</strong> – substances formed
-                by the reaction.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>⚖️ Law of Conservation of Mass:</strong>
-
-            Matter is not created or destroyed in a chemical
-            reaction. The atoms are rearranged.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 8 -->
-
-    <section class="card">
-
-        <h2>⚡ Lesson 8 — Electricity</h2>
-
-        <div class="guide">
-
-            <strong>What is electricity?</strong>
-
-            <p>
-                Electricity involves the movement or presence
-                of electric charge.
-            </p>
-
-        </div>
-
-        <h3>Important Concepts</h3>
-
-        <ul>
-
-            <li>
-                <strong>Current</strong> – rate of flow of electric charge.
-            </li>
-
-            <li>
-                <strong>Voltage</strong> – potential difference
-                that drives current.
-            </li>
-
-            <li>
-                <strong>Resistance</strong> – opposition to the
-                flow of electric current.
-            </li>
-
-        </ul>
-
-        <div class="formula">
-
-            V = IR
-
-        </div>
+        <h2>⚗️ Week 2: Types of Chemical Reactions</h2>
 
         <p>
-            Where:
+            Chemical reactions can be classified according to how
+            substances combine or change.
         </p>
 
         <ul>
-
-            <li>V = voltage</li>
-            <li>I = current</li>
-            <li>R = resistance</li>
-
+            <li><b>Synthesis</b> → substances combine to form a new substance.</li>
+            <li><b>Decomposition</b> → one compound breaks into simpler substances.</li>
+            <li><b>Single Replacement</b> → one element replaces another element.</li>
+            <li><b>Double Replacement</b> → parts of two compounds exchange places.</li>
+            <li><b>Combustion</b> → a substance reacts with oxygen and releases energy.</li>
         </ul>
-
-        <a class="top" href="#top">↑ Back to Top</a>
 
     </section>
 
 
-    <!-- LESSON 9 -->
+    <!-- WEEK 2.1 -->
 
-    <section class="card">
+    <section class="topic">
 
-        <h2>🌊 Lesson 9 — Waves</h2>
-
-        <div class="guide">
-
-            <strong>What is a wave?</strong>
-
-            <p>
-                A wave is a disturbance that transfers energy
-                from one place to another.
-            </p>
-
-        </div>
-
-        <h3>Important Terms</h3>
-
-        <ul>
-
-            <li>
-                <strong>Wavelength</strong> – distance between
-                corresponding points on consecutive waves.
-            </li>
-
-            <li>
-                <strong>Frequency</strong> – number of complete
-                waves passing a point per unit of time.
-            </li>
-
-            <li>
-                <strong>Amplitude</strong> – maximum displacement
-                from the equilibrium position.
-            </li>
-
-        </ul>
-
-        <div class="formula">
-
-            v = fλ
-
-        </div>
+        <h2>🧾 Week 2.1: Naming Compounds</h2>
 
         <p>
-            Wave speed = frequency × wavelength
+            Chemical compounds are named using rules that identify
+            the elements or ions present.
         </p>
 
-        <a class="top" href="#top">↑ Back to Top</a>
+        <h3>Important Ideas</h3>
+
+        <ul>
+            <li>Identify the elements in the compound.</li>
+            <li>Determine whether the compound is ionic or molecular.</li>
+            <li>Use the appropriate naming rules.</li>
+            <li>Remember common prefixes for molecular compounds.</li>
+        </ul>
+
+        <div class="box">
+            <b>Common prefixes:</b>
+            mono, di, tri, tetra, penta, hexa, hepta, octa, nona, deca
+        </div>
 
     </section>
 
 
-    <!-- LESSON 10 -->
+    <!-- WEEK 3 TO 5 -->
 
-    <section class="card">
+    <section class="topic">
 
-        <h2>🌎 Lesson 10 — Earth and Space</h2>
+        <h2>⚖️ Weeks 3 to 5: Chemical Equations</h2>
 
-        <div class="guide">
+        <p>
+            A chemical equation represents a chemical reaction using
+            chemical formulas and symbols.
+        </p>
 
-            <strong>Earth and the Solar System</strong>
-
-            <p>
-                Earth is part of the Solar System, which includes
-                the Sun and the objects that orbit it.
-            </p>
-
-        </div>
-
-        <h3>Important Concepts</h3>
+        <h3>Parts of an Equation</h3>
 
         <ul>
+            <li><b>Reactants</b> are the substances that start the reaction.</li>
+            <li><b>Products</b> are the substances formed by the reaction.</li>
+            <li>The arrow shows the direction of the reaction.</li>
+        </ul>
 
-            <li>
-                <strong>Rotation</strong> – Earth's spinning
-                on its axis.
-            </li>
+        <h3>Balancing Chemical Equations</h3>
 
-            <li>
-                <strong>Revolution</strong> – Earth's movement
-                around the Sun.
-            </li>
+        <p>
+            A chemical equation is balanced when the number of atoms
+            of each element is the same on both sides.
+        </p>
 
-            <li>
-                <strong>Gravity</strong> – force of attraction
-                between objects with mass.
-            </li>
+        <div class="important">
+            <b>Why balance equations?</b>
 
-            <li>
-                <strong>Orbit</strong> – the path an object
-                follows around another object.
-            </li>
+            <p>
+                Chemical equations must be balanced because of the
+                Law of Conservation of Mass. Matter is not created
+                or destroyed during a chemical reaction.
+            </p>
+        </div>
 
+        <div class="box">
+            <b>Tip:</b> Change coefficients to balance an equation.
+            Do not change the subscripts of chemical formulas.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 6 TO 7 -->
+
+    <section class="topic">
+
+        <h2>⏱️ Weeks 6 to 7: How Chemical Reactions Occur</h2>
+
+        <p>
+            Chemical reactions occur when particles collide with
+            enough energy and with the proper orientation.
+        </p>
+
+        <h3>Reaction Rate</h3>
+
+        <p>
+            Reaction rate describes how quickly reactants are changed
+            into products.
+        </p>
+
+        <h3>Factors Affecting Reaction Rate</h3>
+
+        <ul>
+            <li><b>Temperature</b> → higher temperature can increase reaction rate.</li>
+            <li><b>Concentration</b> → more particles can cause more collisions.</li>
+            <li><b>Surface Area</b> → greater surface area can increase collisions.</li>
+            <li><b>Catalyst</b> → can speed up a reaction without being consumed.</li>
+            <li><b>Nature of Reactants</b> → different substances react at different rates.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- WEEK 8 -->
+
+    <section class="topic">
+
+        <h2>🏠 Week 8: Homeostasis</h2>
+
+        <p>
+            Homeostasis is the ability of an organism to maintain
+            stable internal conditions despite changes in the environment.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+            <li>Maintaining body temperature.</li>
+            <li>Controlling blood sugar levels.</li>
+            <li>Maintaining proper water balance.</li>
+        </ul>
+
+        <div class="review">
+            <b>Remember:</b> Homeostasis means maintaining internal balance.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 9 -->
+
+    <section class="topic">
+
+        <h2>❤️ Week 9: Homeostasis in the Human Body</h2>
+
+        <p>
+            The human body uses different systems and mechanisms
+            to keep its internal environment stable.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+            <li>Sweating helps cool the body.</li>
+            <li>Shivering helps produce body heat.</li>
+            <li>Insulin helps regulate blood glucose.</li>
+            <li>The kidneys help regulate water and waste.</li>
+        </ul>
+
+        <div class="box">
+            <b>Key Idea:</b> The body continuously responds to
+            changes to keep internal conditions within a suitable range.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 10 -->
+
+    <section class="topic">
+
+        <h2>🧬 Week 10: Mechanism of Evolution</h2>
+
+        <p>
+            Evolution is the change in inherited characteristics
+            of populations over generations.
+        </p>
+
+        <h3>Important Mechanisms</h3>
+
+        <ul>
+            <li>Natural selection</li>
+            <li>Mutation</li>
+            <li>Genetic variation</li>
+            <li>Gene flow</li>
+            <li>Genetic drift</li>
+        </ul>
+
+    </section>
+
+
+    <!-- WEEK 10.1 -->
+
+    <section class="topic">
+
+        <h2>🌱 Week 10.1: Principles of Evolution</h2>
+
+        <ul>
+            <li>Populations contain variation.</li>
+            <li>Some variations can be inherited.</li>
+            <li>Organisms compete for limited resources.</li>
+            <li>Individuals with advantageous traits may survive and reproduce more successfully.</li>
+            <li>Over many generations, populations can change.</li>
         </ul>
 
         <div class="important">
-
-            <strong>🌎 Remember:</strong>
-
-            Earth's rotation is associated with day and night,
-            while its revolution around the Sun is related to
-            the yearly cycle.
-
+            <b>Natural Selection:</b>
+            Organisms with traits that help them survive and reproduce
+            are more likely to pass those traits to future generations.
         </div>
 
-        <a class="top" href="#top">↑ Back to Top</a>
+    </section>
+
+
+    <!-- WEEK 10.2 -->
+
+    <section class="topic">
+
+        <h2>🔎 Week 10.2: Evidence Supporting Evolution</h2>
+
+        <p>
+            Scientists use different types of evidence to support
+            the theory of evolution.
+        </p>
+
+        <ul>
+            <li><b>Fossils</b> show organisms that lived in the past.</li>
+            <li><b>Comparative Anatomy</b> compares body structures of organisms.</li>
+            <li><b>Embryology</b> compares the development of organisms.</li>
+            <li><b>Biogeography</b> studies the distribution of organisms.</li>
+            <li><b>Molecular Evidence</b> compares DNA and other biological molecules.</li>
+        </ul>
+
+        <div class="review">
+            <b>Key Idea:</b>
+            Different lines of evidence support the idea that organisms
+            have changed and diversified over time.
+        </div>
 
     </section>
 
 
-    <!-- STUDY TIPS -->
+    <!-- FINAL REVIEW -->
 
-    <section class="tips">
+    <section class="topic">
 
-        <h2>⭐ Science Study Tips</h2>
+        <h2>⭐ Final Science 10 Review</h2>
 
-        <ol>
+        <ul>
+            <li>Chemical reactions produce new substances.</li>
+            <li>Acids have a pH below 7 and bases have a pH above 7.</li>
+            <li>Chemical reactions have different types.</li>
+            <li>Chemical compounds follow naming rules.</li>
+            <li>Chemical equations must be balanced.</li>
+            <li>Reaction rates are affected by several factors.</li>
+            <li>Homeostasis maintains internal balance.</li>
+            <li>Evolution describes changes in populations over generations.</li>
+            <li>Natural selection is an important mechanism of evolution.</li>
+            <li>Fossils, anatomy, embryology, biogeography, and molecular evidence support evolution.</li>
+        </ul>
 
-            <li>
-                <strong>Understand before memorizing.</strong>
-                Try to explain a concept in your own words.
-            </li>
-
-            <li>
-                <strong>Learn the vocabulary.</strong>
-                Science exams often use important technical terms.
-            </li>
-
-            <li>
-                <strong>Draw diagrams.</strong>
-                Use diagrams for cells, atoms, waves, and other
-                processes whenever possible.
-            </li>
-
-            <li>
-                <strong>Connect concepts.</strong>
-                Ask yourself how one scientific idea relates
-                to another.
-            </li>
-
-            <li>
-                <strong>Practice calculations.</strong>
-                Don't just memorize formulas such as V = IR
-                or v = fλ.
-            </li>
-
-            <li>
-                <strong>Review mistakes.</strong>
-                Write down concepts you got wrong and review them.
-            </li>
-
-            <li>
-                <strong>Teach the topic.</strong>
-                Try explaining the lesson to someone else.
-                If you can explain it clearly, you probably
-                understand it well.
-            </li>
-
-        </ol>
+        <div class="important">
+            <b>Study Tip:</b>
+            Focus on understanding the ideas instead of only memorizing
+            definitions. Practice balancing equations and explaining
+            concepts in your own words.
+        </div>
 
     </section>
 
+</main>
 
-</div>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-    <p>
-        🔬 Grade 10 Science Study Guide
-    </p>
+    <p>🔬 Science 10 Study Guide</p>
 
-    <p>
-        Observe • Understand • Discover • Learn
-    </p>
+    <p>Weeks 1 to 10 • Keep studying and good luck! 📚</p>
 
 </footer>
 
-
 </body>
-
 </html>

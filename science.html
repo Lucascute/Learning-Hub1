@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,43 +11,41 @@
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #eef7f5;
+            background: linear-gradient(135deg, #eef4ff, #f8faff);
             color: #263238;
             line-height: 1.7;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
-            background: linear-gradient(135deg, #087f5b, #12b886);
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
             text-align: center;
-            padding: 35px 20px 25px;
+            padding: 35px 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         header h1 {
-            margin: 0;
             font-size: 38px;
+            margin-bottom: 8px;
         }
 
         header p {
-            margin: 8px 0 20px;
             font-size: 17px;
+            opacity: 0.9;
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
+            margin-top: 22px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -59,207 +56,190 @@
             text-decoration: none;
             color: white;
             background: rgba(255,255,255,0.15);
-            padding: 10px 18px;
+            padding: 9px 15px;
             border-radius: 8px;
-            font-weight: bold;
             transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         nav a:hover {
             background: white;
-            color: #087f5b;
-            transform: translateY(-2px);
+            color: #2563eb;
         }
 
-        /* =========================
-           MAIN
-        ========================= */
+        /* MAIN */
 
-        .container {
-            width: 92%;
-            max-width: 1000px;
+        main {
+            max-width: 1050px;
             margin: 35px auto;
+            padding: 0 20px;
         }
-
-        /* =========================
-           BACK BUTTON
-        ========================= */
 
         .back-button {
             display: inline-block;
             text-decoration: none;
-            color: white;
-            background: #087f5b;
-            padding: 10px 18px;
-            border-radius: 8px;
-            margin-bottom: 25px;
+            color: #2563eb;
             font-weight: bold;
-            transition: 0.3s;
+            margin-bottom: 20px;
         }
 
-        .back-button:hover {
-            background: #12b886;
-            transform: translateX(-3px);
-        }
-
-        /* =========================
-           INTRO
-        ========================= */
+        /* INTRO */
 
         .intro {
             background: white;
-            padding: 30px;
-            text-align: center;
+            padding: 28px;
             border-radius: 15px;
             margin-bottom: 25px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563eb;
         }
 
         .intro h2 {
-            color: #087f5b;
-            margin-top: 0;
+            color: #2563eb;
+            margin-bottom: 10px;
         }
 
-        /* =========================
-           LESSON
-        ========================= */
+        /* LESSON */
 
         .lesson {
             background: white;
-            padding: 25px;
-            margin-bottom: 25px;
+            padding: 28px;
+            margin: 25px 0;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-top: 5px solid #12b886;
+            border-top: 5px solid #4f46e5;
         }
 
         .lesson h2 {
-            color: #087f5b;
-            margin-top: 0;
-            border-bottom: 2px solid #d8f3dc;
-            padding-bottom: 10px;
+            color: #2563eb;
+            margin-bottom: 15px;
+            font-size: 25px;
         }
 
         .lesson h3 {
-            color: #0b7a55;
+            color: #4f46e5;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
-        /* =========================
-           CARDS
-        ========================= */
-
-        .card {
-            background: #f3fbf8;
-            padding: 18px;
-            margin: 15px 0;
-            border-left: 5px solid #12b886;
-            border-radius: 8px;
+        .lesson p {
+            margin-bottom: 12px;
         }
 
-        .card:hover {
-            background: #e8f8f2;
-        }
+        /* BOXES */
 
-        .card strong {
-            color: #087f5b;
-        }
-
-        /* =========================
-           KEY TERMS
-        ========================= */
-
-        .terms {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .term {
-            background: #e6fcf5;
+        .note-box {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
             padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #20c997;
+            margin: 15px 0;
         }
 
-        .term strong {
-            color: #087f5b;
-        }
-
-        /* =========================
-           REMEMBER BOX
-        ========================= */
-
-        .remember {
-            background: #d3f9d8;
-            border-left: 5px solid #2b8a3e;
-            padding: 18px;
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
             border-radius: 8px;
-            margin-top: 20px;
+            margin: 15px 0;
         }
 
-        .remember strong {
-            color: #2b8a3e;
+        .example {
+            background: #f0fdf4;
+            border-left: 5px solid #22c55e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
         }
 
-        /* =========================
-           LISTS
-        ========================= */
+        /* CODE */
+
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 12px 0;
+        }
+
+        code {
+            background: #111827;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        /* LISTS */
 
         ul,
         ol {
-            padding-left: 25px;
+            margin-left: 25px;
+            margin-bottom: 15px;
         }
 
         li {
-            margin: 8px 0;
+            margin: 6px 0;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* TABLE */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #dbe3f0;
+            padding: 11px;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #263238;
+            background: #1e293b;
             color: white;
             text-align: center;
             padding: 25px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
-        footer p {
-            margin: 5px;
-        }
+        /* MOBILE */
 
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             header h1 {
                 font-size: 28px;
             }
 
+            .lesson {
+                padding: 20px;
+            }
+
             nav {
                 flex-direction: column;
-                align-items: center;
             }
 
             nav a {
-                width: 90%;
+                display: block;
                 text-align: center;
             }
 
-            .container {
-                width: 94%;
-            }
-
-            .terms {
-                grid-template-columns: 1fr;
-            }
-
-            .lesson {
-                padding: 20px;
+            table {
+                font-size: 14px;
             }
 
         }
@@ -272,15 +252,13 @@
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
     <h1>🔬 Science 10 Notes</h1>
 
-    <p>Grade 10 Science Reviewer</p>
+    <p>Term 1 • Weeks 1–10</p>
 
     <nav>
 
@@ -299,574 +277,431 @@
 </header>
 
 
-<main class="container">
+<main>
 
-
-    <!-- BACK TO SUBJECTS -->
-
-    <a href="subjects.html" class="back-button">
-        ← Back to Subjects
+    <a href="resources.html" class="back-button">
+        ← Back to Learning Resources
     </a>
 
 
-    <!-- =========================
-         INTRO
-    ========================= -->
+    <!-- INTRO -->
 
     <div class="intro">
 
-        <h2>🧪 Science 10 Notes</h2>
+        <h2>🔬 Science 10 — Term 1</h2>
 
         <p>
-            A simple and easy-to-review collection of
-            Science 10 notes. Use these notes to review
-            important concepts, terms, and ideas.
+            Short and easy-to-review notes covering
+            <b>chemical reactions, chemical equations,
+            reaction rates, homeostasis, and evolution.</b>
         </p>
 
     </div>
 
 
-    <!-- =========================
-         LESSON 1
-    ========================= -->
+    <!-- WEEK 1 -->
 
     <section class="lesson">
 
-        <h2>🔬 Lesson 1: Introduction to Science</h2>
+        <h2>🧪 Week 1: Chemical Reactions, Acids, Bases, and Salts</h2>
 
-        <div class="card">
+        <p>
+            A <b>chemical reaction</b> occurs when substances
+            change into new substances with different properties.
+        </p>
 
-            <h3>What is Science?</h3>
+        <h3>Acids</h3>
 
-            <p>
-                Science is the systematic study of the natural world
-                through observation, experimentation, measurement,
-                and analysis.
-            </p>
+        <ul>
+            <li>Usually have a sour taste.</li>
+            <li>Have a pH below 7.</li>
+            <li>Examples: vinegar and lemon juice.</li>
+        </ul>
 
-        </div>
+        <h3>Bases</h3>
 
-        <div class="card">
+        <ul>
+            <li>Usually feel slippery.</li>
+            <li>Have a pH above 7.</li>
+            <li>Examples: soap and baking soda.</li>
+        </ul>
 
-            <h3>Scientific Method</h3>
+        <h3>Salts</h3>
 
-            <ol>
+        <p>
+            Salts are ionic compounds that can form from
+            acid-base reactions.
+        </p>
 
-                <li>Ask a question.</li>
-
-                <li>Make an observation.</li>
-
-                <li>Form a hypothesis.</li>
-
-                <li>Conduct an experiment.</li>
-
-                <li>Collect and analyze data.</li>
-
-                <li>Draw a conclusion.</li>
-
-            </ol>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Science uses evidence and logical reasoning
-                to understand how the natural world works.
-            </p>
-
+        <div class="note-box">
+            <b>Remember:</b> Acid → pH below 7 | Neutral → pH 7 | Base → pH above 7
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 2
-    ========================= -->
+    <!-- WEEK 2 -->
 
     <section class="lesson">
 
-        <h2>🧬 Lesson 2: Cells and Their Functions</h2>
+        <h2>⚗️ Week 2: Types of Chemical Reaction</h2>
 
-        <div class="card">
+        <p>
+            Chemical reactions can be classified according
+            to how substances combine or change.
+        </p>
 
-            <h3>Cell</h3>
+        <ul>
+            <li><b>Synthesis</b> – two or more substances combine to form one product.</li>
+            <li><b>Decomposition</b> – one compound breaks into simpler substances.</li>
+            <li><b>Single Replacement</b> – one element replaces another.</li>
+            <li><b>Double Replacement</b> – two compounds exchange ions.</li>
+            <li><b>Combustion</b> – a substance reacts with oxygen and releases energy.</li>
+        </ul>
 
-            <p>
-                The cell is the basic structural and functional
-                unit of living organisms.
-            </p>
-
-        </div>
-
-        <div class="terms">
-
-            <div class="term">
-                <strong>Nucleus</strong>
-                <p>Controls many activities of the cell.</p>
-            </div>
-
-            <div class="term">
-                <strong>Mitochondria</strong>
-                <p>Produces energy for the cell.</p>
-            </div>
-
-            <div class="term">
-                <strong>Cell Membrane</strong>
-                <p>Controls what enters and leaves the cell.</p>
-            </div>
-
-            <div class="term">
-                <strong>Cytoplasm</strong>
-                <p>Jelly-like substance where many cell activities occur.</p>
-            </div>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Cells work together to perform the functions
-                necessary for life.
-            </p>
-
+        <div class="example">
+            <b>Quick clue:</b><br>
+            Synthesis = combine<br>
+            Decomposition = break apart
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 3
-    ========================= -->
+    <!-- WEEK 2.1 -->
 
     <section class="lesson">
 
-        <h2>🧬 Lesson 3: Genetics and Heredity</h2>
+        <h2>🏷️ Week 2.1: Naming Compounds</h2>
 
-        <div class="card">
+        <p>
+            Chemical compounds are named using rules based on
+            the elements or ions they contain.
+        </p>
 
-            <h3>Heredity</h3>
+        <h3>Ionic Compounds</h3>
 
-            <p>
-                Heredity is the passing of characteristics
-                from parents to offspring.
-            </p>
+        <p>
+            Usually contain a metal and a nonmetal.
+            The metal name comes first, followed by the
+            nonmetal with an <b>-ide</b> ending.
+        </p>
 
+        <div class="example">
+            <b>NaCl</b> → Sodium chloride<br>
+            <b>MgO</b> → Magnesium oxide
         </div>
 
-        <div class="terms">
+        <h3>Covalent Compounds</h3>
 
-            <div class="term">
-                <strong>Gene</strong>
-                <p>A unit of heredity that influences a trait.</p>
-            </div>
+        <p>
+            Usually contain nonmetals and use prefixes
+            to show the number of atoms.
+        </p>
 
-            <div class="term">
-                <strong>DNA</strong>
-                <p>Contains genetic information of an organism.</p>
-            </div>
-
-            <div class="term">
-                <strong>Trait</strong>
-                <p>A characteristic of an organism.</p>
-            </div>
-
-            <div class="term">
-                <strong>Allele</strong>
-                <p>A different form of a gene.</p>
-            </div>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Genetic information is passed from parents
-                to their offspring.
-            </p>
-
+        <div class="example">
+            <b>CO₂</b> → Carbon dioxide
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 4
-    ========================= -->
+    <!-- WEEKS 3-5 -->
 
     <section class="lesson">
 
-        <h2>🌱 Lesson 4: Evolution</h2>
+        <h2>⚖️ Weeks 3–5: Chemical Equations</h2>
 
-        <div class="card">
+        <p>
+            A <b>chemical equation</b> represents a chemical
+            reaction using chemical formulas and symbols.
+        </p>
 
-            <h3>Evolution</h3>
+        <h3>Parts of a Chemical Equation</h3>
+
+        <ul>
+            <li><b>Reactants</b> – substances present before the reaction.</li>
+            <li><b>Products</b> – substances formed after the reaction.</li>
+            <li><b>Arrow (→)</b> – shows the direction of the reaction.</li>
+        </ul>
+
+        <h3>Balancing Chemical Equations</h3>
+
+        <p>
+            Equations are balanced by placing <b>coefficients</b>
+            in front of chemical formulas.
+        </p>
+
+        <pre>H₂ + O₂ → H₂O
+
+2H₂ + O₂ → 2H₂O</pre>
+
+        <div class="important">
+
+            <b>Why is balancing important?</b>
 
             <p>
-                Evolution refers to changes in inherited
-                characteristics of populations over generations.
+                It follows the <b>Law of Conservation of Mass</b>:
+                matter is not created or destroyed during a
+                chemical reaction.
             </p>
 
         </div>
 
-        <div class="card">
-
-            <h3>Natural Selection</h3>
-
-            <p>
-                Natural selection is the process in which organisms
-                with characteristics that help them survive and
-                reproduce are more likely to pass those traits
-                to the next generation.
-            </p>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Organisms with advantageous adaptations are
-                more likely to survive and reproduce.
-            </p>
-
+        <div class="note-box">
+            <b>Important:</b> Change coefficients, not subscripts,
+            when balancing equations.
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 5
-    ========================= -->
+    <!-- WEEKS 6-7 -->
 
     <section class="lesson">
 
-        <h2>⚛️ Lesson 5: Matter and Its Properties</h2>
+        <h2>⏱️ Weeks 6–7: How Chemical Reactions Occur</h2>
 
-        <div class="card">
+        <p>
+            Chemical reactions occur when particles collide
+            with enough energy and in the proper orientation.
+        </p>
 
-            <h3>Matter</h3>
+        <h3>Reaction Rate</h3>
 
-            <p>
-                Matter is anything that has mass and occupies space.
-            </p>
+        <p>
+            The <b>rate of reaction</b> is how quickly reactants
+            are converted into products.
+        </p>
 
-        </div>
+        <h3>Factors Affecting Reaction Rate</h3>
 
-        <div class="terms">
+        <ul>
+            <li><b>Temperature</b> – higher temperature usually increases reaction rate.</li>
+            <li><b>Concentration</b> – higher concentration can increase collisions.</li>
+            <li><b>Surface Area</b> – greater surface area can increase reaction rate.</li>
+            <li><b>Catalyst</b> – speeds up a reaction without being consumed.</li>
+            <li><b>Nature of Reactants</b> – different substances react at different rates.</li>
+        </ul>
 
-            <div class="term">
-                <strong>Solid</strong>
-                <p>Has a definite shape and volume.</p>
-            </div>
-
-            <div class="term">
-                <strong>Liquid</strong>
-                <p>Has definite volume but takes the shape of its container.</p>
-            </div>
-
-            <div class="term">
-                <strong>Gas</strong>
-                <p>Has no definite shape or volume.</p>
-            </div>
-
-            <div class="term">
-                <strong>Physical Change</strong>
-                <p>Changes the form or appearance of matter.</p>
-            </div>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                A physical change does not create a completely
-                new substance.
-            </p>
-
+        <div class="note-box">
+            <b>Quick idea:</b>
+            More effective collisions usually mean a faster reaction.
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 6
-    ========================= -->
+    <!-- WEEK 8 -->
 
     <section class="lesson">
 
-        <h2>🧪 Lesson 6: Chemical Reactions</h2>
+        <h2>🏠 Week 8: Homeostasis</h2>
 
-        <div class="card">
+        <p>
+            <b>Homeostasis</b> is the body's ability to maintain
+            a stable internal environment despite changes
+            outside the body.
+        </p>
 
-            <h3>Chemical Reaction</h3>
+        <h3>Examples</h3>
 
-            <p>
-                A chemical reaction occurs when substances
-                interact and form new substances.
-            </p>
+        <ul>
+            <li>Maintaining body temperature.</li>
+            <li>Controlling blood sugar.</li>
+            <li>Maintaining water balance.</li>
+            <li>Regulating blood pressure.</li>
+        </ul>
 
-        </div>
-
-        <div class="card">
-
-            <h3>Common Signs</h3>
-
-            <ul>
-
-                <li>Change in color</li>
-
-                <li>Formation of gas</li>
-
-                <li>Formation of a precipitate</li>
-
-                <li>Change in temperature</li>
-
-                <li>Production of light</li>
-
-            </ul>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Chemical changes produce substances with
-                different properties from the original substances.
-            </p>
-
+        <div class="important">
+            <b>Remember:</b> Homeostasis = maintaining internal balance.
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 7
-    ========================= -->
+    <!-- WEEK 9 -->
 
     <section class="lesson">
 
-        <h2>⚡ Lesson 7: Electricity</h2>
+        <h2>❤️ Week 9: Homeostasis — Maintaining Balance Inside the Human Body</h2>
 
-        <div class="card">
+        <p>
+            The human body uses different organs and systems
+            to keep internal conditions within a normal range.
+        </p>
 
-            <h3>Electric Current</h3>
+        <h3>Examples</h3>
 
-            <p>
-                Electric current is the flow of electric charge
-                through a conductor.
-            </p>
+        <ul>
+            <li><b>Temperature regulation</b> – sweating helps cool the body.</li>
+            <li><b>Blood sugar</b> – hormones help regulate glucose levels.</li>
+            <li><b>Water balance</b> – the kidneys help control water and salts.</li>
+        </ul>
 
-        </div>
-
-        <div class="terms">
-
-            <div class="term">
-                <strong>Voltage</strong>
-                <p>The electrical potential difference that drives current.</p>
-            </div>
-
-            <div class="term">
-                <strong>Current</strong>
-                <p>The flow of electric charge.</p>
-            </div>
-
-            <div class="term">
-                <strong>Resistance</strong>
-                <p>Opposition to the flow of electric current.</p>
-            </div>
-
-            <div class="term">
-                <strong>Conductor</strong>
-                <p>A material that allows electric current to flow easily.</p>
-            </div>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                A complete circuit is needed for electric current
-                to continuously flow.
-            </p>
-
+        <div class="example">
+            <b>Example:</b> When body temperature rises,
+            sweating helps remove heat and return the body
+            toward its normal temperature.
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 8
-    ========================= -->
+    <!-- WEEK 10 -->
 
     <section class="lesson">
 
-        <h2>🌍 Lesson 8: Earth and Its Resources</h2>
+        <h2>🧬 Week 10: Mechanism of Evolution</h2>
 
-        <div class="card">
+        <p>
+            Evolution is the change in inherited characteristics
+            of populations over generations.
+        </p>
 
-            <h3>Natural Resources</h3>
+        <h3>Important Mechanisms</h3>
 
-            <p>
-                Natural resources are materials and substances
-                obtained from nature and used by humans.
-            </p>
+        <ul>
+            <li><b>Natural Selection</b> – organisms with favorable traits are more likely to survive and reproduce.</li>
+            <li><b>Mutation</b> – changes in DNA that can create new variations.</li>
+            <li><b>Gene Flow</b> – movement of genes between populations.</li>
+            <li><b>Genetic Drift</b> – random changes in allele frequencies.</li>
+        </ul>
 
-        </div>
+    </section>
 
-        <div class="card">
 
-            <h3>Examples</h3>
+    <!-- WEEK 10.1 -->
 
-            <ul>
+    <section class="lesson">
 
-                <li>Water</li>
+        <h2>🌱 Week 10.1: Principles of Evolution</h2>
 
-                <li>Soil</li>
+        <p>
+            Evolution is based on variation, heredity,
+            and differences in survival and reproduction.
+        </p>
 
-                <li>Minerals</li>
+        <ul>
+            <li>Individuals in a population have variations.</li>
+            <li>Some variations can be inherited.</li>
+            <li>Organisms compete for limited resources.</li>
+            <li>Individuals with favorable traits may reproduce more successfully.</li>
+            <li>Over many generations, populations can change.</li>
+        </ul>
 
-                <li>Forests</li>
-
-                <li>Fossil fuels</li>
-
-            </ul>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Natural resources should be used responsibly
-                to protect the environment and future generations.
-            </p>
-
+        <div class="note-box">
+            <b>Natural selection:</b>
+            Helpful inherited traits can become more common
+            in a population over generations.
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 9
-    ========================= -->
+    <!-- WEEK 10.2 -->
 
     <section class="lesson">
 
-        <h2>🌦️ Lesson 9: Weather and Climate</h2>
+        <h2>🔎 Week 10.2: Evidence That Supports Evolution</h2>
 
-        <div class="card">
+        <p>
+            Scientists use different types of evidence
+            to understand evolutionary relationships.
+        </p>
 
-            <h3>Weather</h3>
+        <ul>
+            <li><b>Fossils</b> – provide evidence of organisms from the past.</li>
+            <li><b>Comparative Anatomy</b> – compares body structures of organisms.</li>
+            <li><b>Embryology</b> – compares similarities in developing organisms.</li>
+            <li><b>DNA Evidence</b> – similarities in DNA can show common ancestry.</li>
+            <li><b>Biogeography</b> – studies the geographic distribution of organisms.</li>
+        </ul>
 
-            <p>
-                Weather refers to the short-term condition
-                of the atmosphere at a particular place and time.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>Climate</h3>
-
-            <p>
-                Climate refers to the long-term pattern of
-                weather conditions in a particular region.
-            </p>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Weather is short-term, while climate describes
-                long-term patterns.
-            </p>
-
+        <div class="important">
+            <b>Key idea:</b>
+            Multiple lines of evidence support the scientific
+            explanation of evolution.
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 10
-    ========================= -->
+    <!-- QUICK REVIEW -->
 
     <section class="lesson">
 
-        <h2>🌎 Lesson 10: Environmental Issues</h2>
+        <h2>⚡ Science 10 Quick Review</h2>
 
-        <div class="card">
+        <table>
 
-            <h3>Environmental Problems</h3>
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Key Idea</th>
+            </tr>
 
-            <ul>
+            <tr>
+                <td>1</td>
+                <td>Chemical Reactions</td>
+                <td>Acids, bases, salts, and chemical changes</td>
+            </tr>
 
-                <li>Climate change</li>
+            <tr>
+                <td>2</td>
+                <td>Types of Chemical Reaction</td>
+                <td>Synthesis, decomposition, replacement, combustion</td>
+            </tr>
 
-                <li>Air pollution</li>
+            <tr>
+                <td>2.1</td>
+                <td>Naming Compounds</td>
+                <td>Rules for naming ionic and covalent compounds</td>
+            </tr>
 
-                <li>Water pollution</li>
+            <tr>
+                <td>3–5</td>
+                <td>Chemical Equations</td>
+                <td>Reactants, products, and balancing</td>
+            </tr>
 
-                <li>Deforestation</li>
+            <tr>
+                <td>6–7</td>
+                <td>Reaction Rates</td>
+                <td>Factors affecting reaction speed</td>
+            </tr>
 
-                <li>Loss of biodiversity</li>
+            <tr>
+                <td>8</td>
+                <td>Homeostasis</td>
+                <td>Maintaining internal balance</td>
+            </tr>
 
-                <li>Improper waste disposal</li>
+            <tr>
+                <td>9</td>
+                <td>Human Homeostasis</td>
+                <td>Keeping body conditions stable</td>
+            </tr>
 
-            </ul>
+            <tr>
+                <td>10</td>
+                <td>Mechanisms of Evolution</td>
+                <td>How populations change over generations</td>
+            </tr>
 
-        </div>
+            <tr>
+                <td>10.1</td>
+                <td>Principles of Evolution</td>
+                <td>Variation, heredity, and natural selection</td>
+            </tr>
 
-        <div class="card">
+            <tr>
+                <td>10.2</td>
+                <td>Evidence for Evolution</td>
+                <td>Fossils, anatomy, DNA, embryology, biogeography</td>
+            </tr>
 
-            <h3>What Can We Do?</h3>
-
-            <ul>
-
-                <li>Reduce waste.</li>
-
-                <li>Reuse materials.</li>
-
-                <li>Recycle whenever possible.</li>
-
-                <li>Save water and electricity.</li>
-
-                <li>Protect forests and wildlife.</li>
-
-                <li>Keep the environment clean.</li>
-
-            </ul>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Protecting the environment is a shared responsibility.
-                Small actions can contribute to a healthier planet.
-            </p>
-
-        </div>
+        </table>
 
     </section>
 
@@ -874,17 +709,13 @@
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    <p>🔬 Science 10 Notes</p>
+    <p>🔬 Science 10 Notes • Term 1 • Weeks 1–10</p>
 
-    <p>📚 Grade 10 Learning Website</p>
-
-    <p>© 2026 Student Learning Website</p>
+    <p>Keep studying and good luck! 💙</p>
 
 </footer>
 

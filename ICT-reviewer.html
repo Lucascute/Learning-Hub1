@@ -1,13 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ICT 10 Reviewer</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -53,42 +56,24 @@
         }
 
         /* =========================
-           REVIEWER INDEX
+           BACK TO REVIEWERS BUTTON
         ========================= */
 
-        .index {
-            background: white;
-            padding: 28px;
-            border-radius: 18px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        .index h2 {
-            color: #2563eb;
-            margin-bottom: 20px;
-            font-size: 25px;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-
-        .index a {
-            display: block;
-            background: #eaf2ff;
-            color: #2563eb;
+        .back-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
             text-decoration: none;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 11px 20px;
+            border-radius: 9px;
             font-weight: bold;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
             transition: 0.2s;
         }
 
-        .index a:hover {
-            background: #dbeafe;
+        .back-button:hover {
+            background: #1d4ed8;
             transform: translateY(-2px);
         }
 
@@ -103,7 +88,6 @@
             border-radius: 16px;
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #2563eb;
-            scroll-margin-top: 20px;
         }
 
         .lesson h2 {
@@ -158,7 +142,6 @@
             border-radius: 16px;
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #7c3aed;
-            scroll-margin-top: 20px;
         }
 
         .quick-review h2 {
@@ -184,7 +167,6 @@
             border-radius: 16px;
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #f59e0b;
-            scroll-margin-top: 20px;
         }
 
         .study-tips h2 {
@@ -198,25 +180,6 @@
 
         .study-tips li {
             margin-bottom: 8px;
-        }
-
-        /* =========================
-           BACK TO TOP
-        ========================= */
-
-        .top-button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        .top-button:hover {
-            background: #1d4ed8;
         }
 
         /* =========================
@@ -237,13 +200,10 @@
 
         @media (max-width: 800px) {
 
-            .index-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .header h1 {
                 font-size: 35px;
             }
+
         }
 
         @media (max-width: 550px) {
@@ -260,19 +220,6 @@
                 font-size: 30px;
             }
 
-            .index {
-                padding: 20px;
-            }
-
-            .index-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .index a {
-                font-size: 14px;
-                padding: 10px;
-            }
-
             .lesson,
             .quick-review,
             .study-tips {
@@ -282,11 +229,16 @@
             .lesson h2 {
                 font-size: 21px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -305,50 +257,21 @@
 
 <div class="container">
 
+
     <!-- =========================
-         REVIEWER INDEX
+         BACK TO REVIEWERS
     ========================= -->
 
-    <div class="index">
-
-        <h2>📖 Reviewer Index</h2>
-
-        <div class="index-grid">
-
-            <a href="#lesson1">💻 Lesson 1</a>
-
-            <a href="#lesson2">🪑 Lesson 2</a>
-
-            <a href="#lesson3">🌐 Lesson 3</a>
-
-            <a href="#lesson4">📝 Lesson 4</a>
-
-            <a href="#lesson5">📄 Lesson 5</a>
-
-            <a href="#lesson6">🎬 Lesson 6</a>
-
-            <a href="#lesson7">🎨 Lesson 7</a>
-
-            <a href="#lesson8">🎨 Lesson 8</a>
-
-            <a href="#lesson9">📐 Lesson 9</a>
-
-            <a href="#lesson10">🌐 Lesson 10</a>
-
-            <a href="#quick-review">⭐ Quick Review</a>
-
-            <a href="#study-tips">💡 Study Tips</a>
-
-        </div>
-
-    </div>
+    <a href="reviewers.html" class="back-button">
+        ← Back to Reviewers
+    </a>
 
 
     <!-- =========================
          LESSON 1
     ========================= -->
 
-    <div class="lesson" id="lesson1">
+    <div class="lesson">
 
         <h2>💻 Lesson 1: Introduction to Computer Programming</h2>
 
@@ -370,8 +293,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -379,7 +300,7 @@
          LESSON 2
     ========================= -->
 
-    <div class="lesson" id="lesson2">
+    <div class="lesson">
 
         <h2>🪑 Lesson 2: Computer Ergonomics</h2>
 
@@ -388,10 +309,15 @@
         </p>
 
         <ul>
+
             <li>Correct posture</li>
+
             <li>Proper monitor position</li>
+
             <li>Comfortable keyboard position</li>
+
             <li>Regular breaks</li>
+
         </ul>
 
         <div class="remember">
@@ -400,8 +326,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -409,7 +333,7 @@
          LESSON 3
     ========================= -->
 
-    <div class="lesson" id="lesson3">
+    <div class="lesson">
 
         <h2>🌐 Lesson 3: HTML</h2>
 
@@ -418,10 +342,15 @@
         </p>
 
         <ul>
+
             <li><code>&lt;h1&gt;</code> = heading</li>
+
             <li><code>&lt;p&gt;</code> = paragraph</li>
+
             <li><code>&lt;a&gt;</code> = link</li>
+
             <li><code>&lt;img&gt;</code> = image</li>
+
         </ul>
 
         <div class="remember">
@@ -430,8 +359,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -439,7 +366,7 @@
          LESSON 4
     ========================= -->
 
-    <div class="lesson" id="lesson4">
+    <div class="lesson">
 
         <h2>📝 Lesson 4: HTML Editor</h2>
 
@@ -458,8 +385,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -467,16 +392,22 @@
          LESSON 5
     ========================= -->
 
-    <div class="lesson" id="lesson5">
+    <div class="lesson">
 
         <h2>📄 Lesson 5: HTML Headings, Paragraphs and Styles</h2>
 
         <ul>
+
             <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> = headings</li>
+
             <li><code>&lt;p&gt;</code> = paragraph</li>
+
             <li><code>&lt;b&gt;</code> = bold</li>
+
             <li><code>&lt;i&gt;</code> = italic</li>
+
             <li><code>&lt;u&gt;</code> = underline</li>
+
         </ul>
 
         <div class="remember">
@@ -485,8 +416,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -494,7 +423,7 @@
          LESSON 6
     ========================= -->
 
-    <div class="lesson" id="lesson6">
+    <div class="lesson">
 
         <h2>🎬 Lesson 6: Embedding Multimedia</h2>
 
@@ -503,9 +432,13 @@
         </p>
 
         <ul>
+
             <li>Images</li>
+
             <li>Audio</li>
+
             <li>Video</li>
+
         </ul>
 
         <div class="answer">
@@ -518,8 +451,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -527,7 +458,7 @@
          LESSON 7
     ========================= -->
 
-    <div class="lesson" id="lesson7">
+    <div class="lesson">
 
         <h2>🎨 Lesson 7: Basic Webpage Design</h2>
 
@@ -544,8 +475,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -553,7 +482,7 @@
          LESSON 8
     ========================= -->
 
-    <div class="lesson" id="lesson8">
+    <div class="lesson">
 
         <h2>🎨 Lesson 8: CSS</h2>
 
@@ -566,12 +495,19 @@
         </p>
 
         <ul>
+
             <li>Colors</li>
+
             <li>Fonts</li>
+
             <li>Backgrounds</li>
+
             <li>Spacing</li>
+
             <li>Borders</li>
+
             <li>Layout</li>
+
         </ul>
 
         <div class="remember">
@@ -580,8 +516,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -589,7 +523,7 @@
          LESSON 9
     ========================= -->
 
-    <div class="lesson" id="lesson9">
+    <div class="lesson">
 
         <h2>📐 Lesson 9: CSS Styling and Layout</h2>
 
@@ -598,12 +532,19 @@
         </p>
 
         <ul>
+
             <li><code>color</code></li>
+
             <li><code>background-color</code></li>
+
             <li><code>font-size</code></li>
+
             <li><code>margin</code></li>
+
             <li><code>padding</code></li>
+
             <li><code>border</code></li>
+
         </ul>
 
         <div class="remember">
@@ -614,8 +555,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -623,7 +562,7 @@
          LESSON 10
     ========================= -->
 
-    <div class="lesson" id="lesson10">
+    <div class="lesson">
 
         <h2>🌐 Lesson 10: Website Development</h2>
 
@@ -650,8 +589,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -659,7 +596,7 @@
          QUICK REVIEW
     ========================= -->
 
-    <div class="quick-review" id="quick-review">
+    <div class="quick-review">
 
         <h2>⭐ Quick ICT Memory Guide</h2>
 
@@ -685,8 +622,6 @@
 
         </div>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
 
 
@@ -694,29 +629,40 @@
          STUDY TIPS
     ========================= -->
 
-    <div class="study-tips" id="study-tips">
+    <div class="study-tips">
 
         <h2>💡 Study Tips</h2>
 
         <ul>
 
-            <li>Review the meaning of HTML, CSS, and JavaScript.</li>
+            <li>
+                Review the meaning of HTML, CSS, and JavaScript.
+            </li>
 
-            <li>Memorize the basic HTML tags.</li>
+            <li>
+                Memorize the basic HTML tags.
+            </li>
 
-            <li>Remember that HTML provides structure while CSS provides design.</li>
+            <li>
+                Remember that HTML provides structure while CSS provides design.
+            </li>
 
-            <li>Practice identifying common CSS properties.</li>
+            <li>
+                Practice identifying common CSS properties.
+            </li>
 
-            <li>Review the steps in basic website development.</li>
+            <li>
+                Review the steps in basic website development.
+            </li>
 
-            <li>Take short breaks while studying.</li>
+            <li>
+                Take short breaks while studying.
+            </li>
 
         </ul>
 
-        <a href="#top" class="top-button">↑ Back to Top</a>
-
     </div>
+
 
 </div>
 
@@ -735,5 +681,6 @@
 
 
 </body>
+
 </html>
 

@@ -15,11 +15,6 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 20px;
-        }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #eef4ff, #f8faff);
@@ -27,15 +22,13 @@
             line-height: 1.7;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
             text-align: center;
-            padding: 35px 20px 25px;
+            padding: 35px 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
@@ -49,9 +42,7 @@
             opacity: 0.9;
         }
 
-        /* =========================
-           MAIN NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
             margin-top: 22px;
@@ -77,53 +68,7 @@
             color: #2563eb;
         }
 
-        /* =========================
-           LESSON NAVIGATION
-        ========================= */
-
-        .lesson-nav {
-            background: white;
-            padding: 18px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-left: 6px solid #4f46e5;
-        }
-
-        .lesson-nav h3 {
-            color: #2563eb;
-            text-align: center;
-            margin-bottom: 12px;
-        }
-
-        .lesson-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .lesson-links a {
-            text-decoration: none;
-            color: #2563eb;
-            background: #eef4ff;
-            border: 1px solid #c7d2fe;
-            padding: 8px 13px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .lesson-links a:hover {
-            background: #2563eb;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* =========================
-           MAIN
-        ========================= */
+        /* MAIN */
 
         main {
             max-width: 1050px;
@@ -131,9 +76,7 @@
             padding: 0 20px;
         }
 
-        /* =========================
-           BACK BUTTON
-        ========================= */
+        /* BACK BUTTON */
 
         .back-button {
             display: inline-block;
@@ -152,9 +95,7 @@
             transform: translateX(-3px);
         }
 
-        /* =========================
-           INTRO
-        ========================= */
+        /* INTRO */
 
         .intro {
             background: white;
@@ -170,9 +111,7 @@
             margin-bottom: 10px;
         }
 
-        /* =========================
-           LESSON CARD
-        ========================= */
+        /* LESSON */
 
         .lesson {
             background: white;
@@ -181,7 +120,6 @@
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
             border-top: 5px solid #4f46e5;
-            scroll-margin-top: 20px;
         }
 
         .lesson h2 {
@@ -200,9 +138,7 @@
             margin-bottom: 12px;
         }
 
-        /* =========================
-           NOTE BOXES
-        ========================= */
+        /* NOTE BOXES */
 
         .note-box {
             background: #eef4ff;
@@ -228,9 +164,7 @@
             margin: 15px 0;
         }
 
-        /* =========================
-           LISTS
-        ========================= */
+        /* LISTS */
 
         ul,
         ol {
@@ -242,9 +176,22 @@
             margin: 7px 0;
         }
 
-        /* =========================
-           STEAL GRID
-        ========================= */
+        /* CONCEPT CARDS */
+
+        .concept {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 12px 0;
+            border-left: 4px solid #6366f1;
+        }
+
+        .concept h4 {
+            color: #4f46e5;
+            margin-bottom: 5px;
+        }
+
+        /* STEAL GRID */
 
         .steal-grid {
             display: grid;
@@ -266,26 +213,7 @@
             margin-bottom: 5px;
         }
 
-        /* =========================
-           CONCEPT CARDS
-        ========================= */
-
-        .concept {
-            background: #f8fafc;
-            padding: 18px;
-            border-radius: 10px;
-            margin: 12px 0;
-            border-left: 4px solid #6366f1;
-        }
-
-        .concept h4 {
-            color: #4f46e5;
-            margin-bottom: 5px;
-        }
-
-        /* =========================
-           STEPS
-        ========================= */
+        /* STEPS */
 
         .step {
             display: flex;
@@ -306,9 +234,7 @@
             font-weight: bold;
         }
 
-        /* =========================
-           TABLE
-        ========================= */
+        /* TABLE */
 
         table {
             width: 100%;
@@ -332,9 +258,7 @@
             background: #f8fafc;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             background: #1e293b;
@@ -344,9 +268,7 @@
             margin-top: 50px;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -373,19 +295,11 @@
                 text-align: center;
             }
 
-            .lesson-links {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .lesson-links a {
-                text-align: center;
-            }
-
             table {
                 display: block;
                 overflow-x: auto;
             }
+
         }
 
     </style>
@@ -396,9 +310,7 @@
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -433,46 +345,7 @@
     </a>
 
 
-    <!-- =========================
-         LESSON NAVIGATION
-    ========================= -->
-
-    <div class="lesson-nav">
-
-        <h3>📚 English 10 Lessons</h3>
-
-        <div class="lesson-links">
-
-            <a href="#lesson1">Lesson 1</a>
-
-            <a href="#lesson2">Lesson 2</a>
-
-            <a href="#lesson3">Lesson 3</a>
-
-            <a href="#lesson4">Lesson 4</a>
-
-            <a href="#lesson5">Lesson 5</a>
-
-            <a href="#lesson6">Lesson 6</a>
-
-            <a href="#lesson7">Lesson 7</a>
-
-            <a href="#lesson8">Lesson 8</a>
-
-            <a href="#lesson9">Lesson 9</a>
-
-            <a href="#lesson10">Lesson 10</a>
-
-            <a href="#quick-review">⚡ Quick Review</a>
-
-        </div>
-
-    </div>
-
-
-    <!-- =========================
-         INTRO
-    ========================= -->
+    <!-- INTRO -->
 
     <div class="intro">
 
@@ -492,11 +365,9 @@
     </div>
 
 
-    <!-- =========================
-         LESSON 1
-    ========================= -->
+    <!-- LESSON 1 -->
 
-    <section class="lesson" id="lesson1">
+    <section class="lesson">
 
         <h2>🎭 Lesson 1: Structural Context of Drama as a Film</h2>
 
@@ -539,11 +410,9 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 2
-    ========================= -->
+    <!-- LESSON 2 -->
 
-    <section class="lesson" id="lesson2">
+    <section class="lesson">
 
         <h2>📚 Lesson 2: Understanding Literary Context</h2>
 
@@ -599,11 +468,9 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 3
-    ========================= -->
+    <!-- LESSON 3 -->
 
-    <section class="lesson" id="lesson3">
+    <section class="lesson">
 
         <h2>🧠 Lesson 3: Frayer's Method</h2>
 
@@ -642,6 +509,7 @@
         </table>
 
         <div class="example">
+
             <b>Example: Conflict</b>
 
             <p>
@@ -659,16 +527,15 @@
             <p>
                 <b>Non-example:</b> Two characters peacefully agreeing.
             </p>
+
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 4
-    ========================= -->
+    <!-- LESSON 4 -->
 
-    <section class="lesson" id="lesson4">
+    <section class="lesson">
 
         <h2>
             🔎 Lesson 4: Evaluating Literary Texts Through
@@ -702,21 +569,22 @@
         </ol>
 
         <div class="note-box">
+
             <b>Quick idea:</b>
+
             <p>
                 Psychological analysis asks:
                 <b>"What is happening inside the character?"</b>
             </p>
+
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 5
-    ========================= -->
+    <!-- LESSON 5 -->
 
-    <section class="lesson" id="lesson5">
+    <section class="lesson">
 
         <h2>
             🎬 Lesson 5: Conceptualizing and Writing
@@ -770,11 +638,9 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 6
-    ========================= -->
+    <!-- LESSON 6 -->
 
-    <section class="lesson" id="lesson6">
+    <section class="lesson">
 
         <h2>
             ✏️ Lesson 6: Revising, Editing, and Publishing
@@ -818,6 +684,7 @@
         </p>
 
         <div class="important">
+
             <b>Easy way to remember:</b>
 
             <p>
@@ -825,16 +692,15 @@
                 <b>Editing = Correct</b><br>
                 <b>Publishing = Finalize and Present</b>
             </p>
+
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 7
-    ========================= -->
+    <!-- LESSON 7 -->
 
-    <section class="lesson" id="lesson7">
+    <section class="lesson">
 
         <h2>
             🎥 Lesson 7: Basics of Filming and Film Production
@@ -894,11 +760,9 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 8
-    ========================= -->
+    <!-- LESSON 8 -->
 
-    <section class="lesson" id="lesson8">
+    <section class="lesson">
 
         <h2>
             🎥 Lesson 8: Dos and Don'ts in Filming a Short Film
@@ -930,21 +794,22 @@
         </ul>
 
         <div class="note-box">
+
             <b>Remember:</b>
+
             <p>
                 Good preparation makes filming easier and
                 helps produce better-quality scenes.
             </p>
+
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 9
-    ========================= -->
+    <!-- LESSON 9 -->
 
-    <section class="lesson" id="lesson9">
+    <section class="lesson">
 
         <h2>
             👤 Lesson 9: STEAL Format for Characterization
@@ -959,66 +824,82 @@
         <div class="steal-grid">
 
             <div class="steal-card">
+
                 <h4>S — Speech</h4>
+
                 <p>
                     What does the character say?
                     What does the character's way of speaking
                     tell us about them?
                 </p>
+
             </div>
 
             <div class="steal-card">
+
                 <h4>T — Thoughts</h4>
+
                 <p>
                     What does the character think?
                     What do their thoughts reveal about them?
                 </p>
+
             </div>
 
             <div class="steal-card">
+
                 <h4>E — Effect on Others</h4>
+
                 <p>
                     How do other characters react to or respond
                     to this character?
                 </p>
+
             </div>
 
             <div class="steal-card">
+
                 <h4>A — Actions</h4>
+
                 <p>
                     What does the character do?
                     What do their actions reveal?
                 </p>
+
             </div>
 
             <div class="steal-card">
+
                 <h4>L — Looks</h4>
+
                 <p>
                     What does the character look like?
                     Consider appearance, clothing, and physical
                     characteristics.
                 </p>
+
             </div>
 
         </div>
 
         <div class="example">
+
             <b>Quick Example:</b>
+
             <p>
                 If a character constantly helps others,
                 their <b>Actions</b> can show that they are
                 caring or generous.
             </p>
+
         </div>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 10
-    ========================= -->
+    <!-- LESSON 10 -->
 
-    <section class="lesson" id="lesson10">
+    <section class="lesson">
 
         <h2>
             🎞️ Lesson 10: Organic Unity, Binary Opposition,
@@ -1122,93 +1003,10 @@
     </section>
 
 
-    <!-- =========================
-         QUICK REVIEW
-    ========================= -->
-
-    <section class="lesson" id="quick-review">
-
-        <h2>⚡ English 10 Quick Review</h2>
-
-        <table>
-
-            <tr>
-                <th>Lesson</th>
-                <th>Topic</th>
-                <th>Key Idea</th>
-            </tr>
-
-            <tr>
-                <td>1</td>
-                <td>Structural Context of Drama as a Film</td>
-                <td>Structure and elements of drama</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Understanding Literary Context</td>
-                <td>Context helps explain meaning</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Frayer's Method</td>
-                <td>Definition, characteristics, examples, non-examples</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Psychological Context</td>
-                <td>Thoughts, feelings, motivations, behavior</td>
-            </tr>
-
-            <tr>
-                <td>5</td>
-                <td>Writing a Short Film Script</td>
-                <td>Characters, plot, scenes, action, dialogue</td>
-            </tr>
-
-            <tr>
-                <td>6</td>
-                <td>Revising, Editing, Publishing</td>
-                <td>Improve, correct, finalize</td>
-            </tr>
-
-            <tr>
-                <td>7</td>
-                <td>Basics of Filming and Film Production</td>
-                <td>Pre-production, production, post-production</td>
-            </tr>
-
-            <tr>
-                <td>8</td>
-                <td>Dos and Don'ts in Filming</td>
-                <td>Good filming practices</td>
-            </tr>
-
-            <tr>
-                <td>9</td>
-                <td>STEAL Characterization</td>
-                <td>Speech, Thoughts, Effect, Actions, Looks</td>
-            </tr>
-
-            <tr>
-                <td>10</td>
-                <td>Organic Unity, Binary Opposition, Co-text, Collocation</td>
-                <td>How elements and meanings work together</td>
-            </tr>
-
-        </table>
-
-    </section>
-
-
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
 
 <head>
 
@@ -20,16 +20,19 @@
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #fff1f2, #ffe4e6);
             color: #3b2025;
+            line-height: 1.7;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: linear-gradient(135deg, #7f1d1d, #b91c1c);
             color: white;
             text-align: center;
             padding: 45px 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
         header h1 {
@@ -43,7 +46,9 @@
             opacity: 0.9;
         }
 
-        /* CONTAINER */
+        /* =========================
+           CONTAINER
+        ========================= */
 
         .container {
             width: 92%;
@@ -51,13 +56,35 @@
             margin: 35px auto;
         }
 
-        /* INDEX */
+        /* =========================
+           BACK TO STUDY GUIDES
+        ========================= */
+
+        .back {
+            display: inline-block;
+            background: #b91c1c;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #7f1d1d;
+        }
+
+        /* =========================
+           INDEX
+        ========================= */
 
         .index {
             background: white;
             padding: 25px;
             border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             margin-bottom: 30px;
         }
 
@@ -80,14 +107,16 @@
             font-weight: bold;
         }
 
-        /* CARDS */
+        /* =========================
+           CARDS
+        ========================= */
 
         .card {
             background: white;
             padding: 30px;
             margin: 25px 0;
             border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             border-left: 6px solid #b91c1c;
         }
 
@@ -102,7 +131,9 @@
             margin-top: 25px;
         }
 
-        /* GUIDE */
+        /* =========================
+           GUIDE BOX
+        ========================= */
 
         .guide {
             background: #fff7f7;
@@ -117,7 +148,9 @@
             color: #7f1d1d;
         }
 
-        /* IMPORTANT */
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
 
         .important {
             background: #fff1f2;
@@ -128,7 +161,9 @@
             line-height: 1.7;
         }
 
-        /* EXAMPLE */
+        /* =========================
+           EXAMPLE BOX
+        ========================= */
 
         .example {
             background: #fafafa;
@@ -139,7 +174,44 @@
             line-height: 1.7;
         }
 
-        /* TIPS */
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+            background: #fff7f7;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            text-align: center;
+            font-style: italic;
+            color: #7f1d1d;
+            font-size: 18px;
+        }
+
+        /* =========================
+           TOP BUTTON
+        ========================= */
+
+        .top {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 16px;
+            background: #b91c1c;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .top:hover {
+            background: #7f1d1d;
+        }
+
+        /* =========================
+           STUDY TIPS
+        ========================= */
 
         .tips {
             background: linear-gradient(135deg, #fff8e1, #fff3cd);
@@ -147,7 +219,7 @@
             border-radius: 18px;
             margin-top: 30px;
             border-left: 6px solid #d39b00;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
         .tips h2 {
@@ -160,24 +232,22 @@
             line-height: 1.7;
         }
 
-        /* TOP BUTTON */
+        /* =========================
+           LISTS
+        ========================= */
 
-        .top {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 16px;
-            background: #b91c1c;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+        ul,
+        ol {
+            padding-left: 25px;
         }
 
-        .top:hover {
-            background: #7f1d1d;
+        li {
+            margin: 8px 0;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             margin-top: 40px;
@@ -187,16 +257,56 @@
             color: white;
         }
 
-        /* MOBILE */
+        footer p {
+            margin: 6px 0;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
+
+            header {
+                padding: 35px 15px;
+            }
 
             header h1 {
                 font-size: 31px;
             }
 
+            header p {
+                font-size: 15px;
+            }
+
+            .container {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .index {
+                padding: 20px;
+            }
+
             .card {
                 padding: 20px;
+            }
+
+            .card h2 {
+                font-size: 24px;
+            }
+
+            .index-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tips {
+                padding: 20px;
+            }
+
+            .back {
+                width: 100%;
+                text-align: center;
             }
 
         }
@@ -209,7 +319,9 @@
 <body id="top">
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -225,7 +337,18 @@
 <div class="container">
 
 
-    <!-- INDEX -->
+    <!-- =========================
+         BACK BUTTON
+    ========================= -->
+
+    <a href="studyguide.html" class="back">
+        ← Back to Study Guides
+    </a>
+
+
+    <!-- =========================
+         INDEX
+    ========================= -->
 
     <section class="index">
 
@@ -266,7 +389,9 @@
     </section>
 
 
-    <!-- ABOUT THE NOVEL -->
+    <!-- =========================
+         EL FILIBUSTERISMO
+    ========================= -->
 
     <section class="card">
 
@@ -291,6 +416,7 @@
 
         </div>
 
+
         <h3>Mahahalagang Impormasyon</h3>
 
         <ul>
@@ -313,16 +439,21 @@
 
         </ul>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- CHARACTERS -->
+    <!-- =========================
+         CHARACTERS
+    ========================= -->
 
     <section class="card">
 
         <h2>👥 Mahahalagang Tauhan</h2>
+
 
         <div class="guide">
 
@@ -336,6 +467,7 @@
 
         </div>
 
+
         <div class="guide">
 
             <strong>Basilio</strong>
@@ -345,6 +477,7 @@
             </p>
 
         </div>
+
 
         <div class="guide">
 
@@ -357,6 +490,7 @@
 
         </div>
 
+
         <div class="guide">
 
             <strong>Kabesang Tales</strong>
@@ -368,6 +502,7 @@
 
         </div>
 
+
         <div class="guide">
 
             <strong>Juli</strong>
@@ -377,6 +512,7 @@
             </p>
 
         </div>
+
 
         <div class="guide">
 
@@ -389,6 +525,7 @@
 
         </div>
 
+
         <div class="guide">
 
             <strong>Paulita Gomez</strong>
@@ -400,6 +537,7 @@
 
         </div>
 
+
         <div class="guide">
 
             <strong>Juanito Pelaez</strong>
@@ -410,12 +548,17 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- THEMES -->
+    <!-- =========================
+         THEMES
+    ========================= -->
 
     <section class="card">
 
@@ -425,25 +568,42 @@
 
             <ul>
 
-                <li>Pagmamahal sa bayan</li>
+                <li>
+                    Pagmamahal sa bayan
+                </li>
 
-                <li>Paghahangad ng kalayaan</li>
+                <li>
+                    Paghahangad ng kalayaan
+                </li>
 
-                <li>Kawalan ng katarungan</li>
+                <li>
+                    Kawalan ng katarungan
+                </li>
 
-                <li>Pang-aabuso sa kapangyarihan</li>
+                <li>
+                    Pang-aabuso sa kapangyarihan
+                </li>
 
-                <li>Paghihiganti</li>
+                <li>
+                    Paghihiganti
+                </li>
 
-                <li>Edukasyon</li>
+                <li>
+                    Edukasyon
+                </li>
 
-                <li>Korapsyon at katiwalian</li>
+                <li>
+                    Korapsyon at katiwalian
+                </li>
 
-                <li>Pakikibaka para sa pagbabago</li>
+                <li>
+                    Pakikibaka para sa pagbabago
+                </li>
 
             </ul>
 
         </div>
+
 
         <div class="important">
 
@@ -457,12 +617,17 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- EVENTS -->
+    <!-- =========================
+         IMPORTANT EVENTS
+    ========================= -->
 
     <section class="card">
 
@@ -512,16 +677,22 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- SYMBOLISM -->
+    <!-- =========================
+         SYMBOLISM
+    ========================= -->
 
     <section class="card">
 
         <h2>🔎 Mga Simbolismo</h2>
+
 
         <div class="guide">
 
@@ -534,6 +705,7 @@
 
         </div>
 
+
         <div class="guide">
 
             <strong>💰 Kayamanan</strong>
@@ -544,6 +716,7 @@
             </p>
 
         </div>
+
 
         <div class="guide">
 
@@ -556,26 +729,35 @@
 
         </div>
 
+
         <div class="important">
 
             <strong>⭐ Study Tip:</strong>
 
-            Kapag tinanong tungkol sa simbolismo, huwag lamang
-            sabihin kung ano ang bagay. Ipaliwanag kung ano
-            ang kinakatawan o ipinahihiwatig nito sa nobela.
+            <p>
+                Kapag tinanong tungkol sa simbolismo, huwag lamang
+                sabihin kung ano ang bagay. Ipaliwanag kung ano
+                ang kinakatawan o ipinahihiwatig nito sa nobela.
+            </p>
 
         </div>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- LESSON -->
+    <!-- =========================
+         LESSONS
+    ========================= -->
 
     <section class="card">
 
         <h2>📝 Aral ng Nobela</h2>
+
 
         <div class="guide">
 
@@ -593,6 +775,7 @@
 
         </div>
 
+
         <div class="quote">
 
             "Ang pagbabago ay nangangailangan ng
@@ -600,16 +783,22 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- MESSAGE -->
+    <!-- =========================
+         MAIN MESSAGE
+    ========================= -->
 
     <section class="card">
 
         <h2>⭐ Pangunahing Mensahe</h2>
+
 
         <div class="important">
 
@@ -627,56 +816,85 @@
 
         </div>
 
-        <a class="top" href="#top">↑ Bumalik sa Itaas</a>
+
+        <a class="top" href="#top">
+            ↑ Bumalik sa Itaas
+        </a>
 
     </section>
 
 
-    <!-- STUDY TIPS -->
+    <!-- =========================
+         STUDY TIPS
+    ========================= -->
 
     <section class="tips">
 
         <h2>⭐ Filipino Study Tips</h2>
 
+
         <ol>
 
             <li>
+
                 <strong>Alamin ang mga tauhan.</strong>
+
                 Tandaan ang kanilang relasyon, personalidad,
                 at papel sa kuwento.
+
             </li>
 
+
             <li>
+
                 <strong>Understand the symbolism.</strong>
+
                 Alamin kung ano ang kinakatawan ng mahahalagang
                 bagay tulad ng lampara at alahas.
+
             </li>
 
+
             <li>
+
                 <strong>Review the major events.</strong>
+
                 Tandaan ang pagkakasunod-sunod ng mahahalagang
                 pangyayari.
+
             </li>
 
+
             <li>
+
                 <strong>Connect the themes.</strong>
+
                 Iugnay ang mga pangyayari sa mga tema tulad
                 ng katarungan, paghihiganti, edukasyon,
                 at pagmamahal sa bayan.
+
             </li>
 
+
             <li>
+
                 <strong>Know the characters.</strong>
+
                 Huwag lamang kabisaduhin ang pangalan.
                 Alamin kung ano ang kanilang ginawa at
                 kinakatawan sa nobela.
+
             </li>
 
+
             <li>
+
                 <strong>Understand the lesson.</strong>
+
                 Sa mga essay o pagsusulit, ipaliwanag kung
                 paano ipinakita ng nobela ang kahalagahan
                 ng tunay na pagbabago.
+
             </li>
 
         </ol>
@@ -687,7 +905,9 @@
 </div>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 

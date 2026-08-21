@@ -29,7 +29,6 @@
             color: white;
             text-align: center;
             padding: 45px 20px;
-
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
 
@@ -50,6 +49,25 @@
             width: 92%;
             max-width: 1050px;
             margin: 35px auto;
+        }
+
+        /* BACK BUTTON */
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 12px 20px;
+            background: #2563a6;
+            color: white;
+            text-decoration: none;
+            border-radius: 9px;
+            font-weight: bold;
+            transition: 0.25s ease;
+        }
+
+        .back-button:hover {
+            background: #17365d;
+            transform: translateY(-2px);
         }
 
         /* INDEX */
@@ -212,30 +230,6 @@
             line-height: 1.7;
         }
 
-        /* BACK TO TOP */
-
-        .top {
-            display: inline-block;
-
-            margin-top: 15px;
-
-            padding: 10px 16px;
-
-            background: #2563a6;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 8px;
-
-            font-weight: bold;
-        }
-
-        .top:hover {
-            background: #17365d;
-        }
-
         /* FOOTER */
 
         footer {
@@ -262,6 +256,10 @@
                 padding: 20px;
             }
 
+            .back-button {
+                font-size: 14px;
+            }
+
         }
 
     </style>
@@ -269,7 +267,7 @@
 </head>
 
 
-<body id="top">
+<body>
 
 
 <!-- HEADER -->
@@ -286,6 +284,13 @@
 
 
 <div class="container">
+
+
+    <!-- BACK TO STUDY GUIDE -->
+
+    <a class="back-button" href="studyguide.html">
+        ← Back to Study Guide
+    </a>
 
 
     <!-- INTRO -->
@@ -352,21 +357,15 @@
         </div>
 
         <div class="formula">
-
             a / sin A = b / sin B = c / sin C
-
         </div>
 
         <h3>When to Use It</h3>
 
         <ul>
-
             <li>When you know two angles and one side.</li>
-
             <li>When you know two sides and an opposite angle.</li>
-
             <li>When the triangle is not necessarily a right triangle.</li>
-
         </ul>
 
         <div class="important">
@@ -377,10 +376,6 @@
             paired correctly.
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 
@@ -406,13 +401,9 @@
         <h3>Possible Results</h3>
 
         <ul>
-
             <li>No triangle</li>
-
             <li>One triangle</li>
-
             <li>Two possible triangles</li>
-
         </ul>
 
         <div class="important">
@@ -424,10 +415,6 @@
             only one answer.
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 
@@ -451,19 +438,14 @@
         </div>
 
         <div class="formula">
-
             c² = a² + b² − 2ab cos C
-
         </div>
 
         <h3>When to Use It</h3>
 
         <ul>
-
             <li>When you know two sides and the included angle (SAS).</li>
-
             <li>When you know all three sides (SSS).</li>
-
         </ul>
 
         <div class="important">
@@ -474,10 +456,6 @@
             the side represented by c.
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 
@@ -502,15 +480,10 @@
         <h3>Important Rules</h3>
 
         <ul>
-
             <li>North = 000°</li>
-
             <li>East = 090°</li>
-
             <li>South = 180°</li>
-
             <li>West = 270°</li>
-
         </ul>
 
         <div class="important">
@@ -521,10 +494,6 @@
             three digits, such as 045°, 120°, or 315°.
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 
@@ -581,10 +550,6 @@
 
         </div>
 
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
-
     </section>
 
 
@@ -611,13 +576,9 @@
         <ol>
 
             <li>Move everything to one side.</li>
-
             <li>Factor the quadratic if possible.</li>
-
             <li>Find the critical values.</li>
-
             <li>Test intervals.</li>
-
             <li>Choose the interval that satisfies the inequality.</li>
 
         </ol>
@@ -642,10 +603,6 @@
 
         </div>
 
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
-
     </section>
 
 
@@ -667,9 +624,7 @@
         </div>
 
         <div class="formula">
-
             |x| = a → x = a or x = −a
-
         </div>
 
         <div class="example">
@@ -698,10 +653,6 @@
 
         </div>
 
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
-
     </section>
 
 
@@ -723,15 +674,11 @@
         </div>
 
         <div class="formula">
-
             |x| &lt; a → −a &lt; x &lt; a
-
         </div>
 
         <div class="formula">
-
             |x| &gt; a → x &lt; −a or x &gt; a
-
         </div>
 
         <div class="important">
@@ -747,10 +694,6 @@
             "Greater than" → OUTSIDE
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 
@@ -777,11 +720,8 @@
         <ul>
 
             <li>Quartiles</li>
-
             <li>Percentiles</li>
-
             <li>Deciles</li>
-
             <li>Percentile Rank</li>
 
         </ul>
@@ -794,10 +734,6 @@
             before finding measures of position.
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 
@@ -824,15 +760,13 @@
 
             <strong>💡 Example:</strong>
 
-            If your score is at the 80th percentile,
-            you performed as well as or better than
-            approximately 80% of the group.
+            <p>
+                If your score is at the 80th percentile,
+                you performed as well as or better than
+                approximately 80% of the group.
+            </p>
 
         </div>
-
-        <a class="top" href="#top">
-            ↑ Back to Top
-        </a>
 
     </section>
 

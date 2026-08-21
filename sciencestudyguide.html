@@ -2,113 +2,139 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Science 10 Study Guide</title>
+    <title>Science Study Guide | Grade 10</title>
 
     <style>
+
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #eef4ff, #f8faff);
             color: #263238;
             line-height: 1.7;
         }
 
+        /* HEADER */
+
         header {
-            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            background: linear-gradient(135deg, #17365d, #2563a6);
             color: white;
             text-align: center;
-            padding: 35px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 45px 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.15);
         }
 
         header h1 {
-            font-size: 38px;
-            margin-bottom: 8px;
+            margin: 0;
+            font-size: 42px;
         }
 
         header p {
+            margin-top: 10px;
             font-size: 17px;
             opacity: 0.9;
         }
 
-        nav {
-            margin-top: 22px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            background: rgba(255,255,255,0.15);
-            padding: 9px 15px;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            background: white;
-            color: #2563eb;
-        }
+        /* MAIN CONTAINER */
 
         main {
+            width: 92%;
             max-width: 1050px;
             margin: 35px auto;
-            padding: 0 20px;
         }
+
+        /* BACK TO STUDY GUIDE */
 
         .back-button {
             display: inline-block;
+
+            margin-bottom: 25px;
+
+            padding: 11px 18px;
+
+            background: #2563a6;
+
+            color: white;
+
             text-decoration: none;
-            color: #2563eb;
+
+            border-radius: 8px;
+
             font-weight: bold;
-            margin-bottom: 20px;
+
+            transition: 0.3s;
         }
+
+        .back-button:hover {
+            background: #17365d;
+        }
+
+        /* INTRO */
 
         .intro {
             background: white;
-            padding: 28px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-left: 6px solid #2563eb;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            margin-bottom: 30px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            border-left: 6px solid #2563a6;
         }
 
         .intro h2 {
-            color: #2563eb;
-            margin-bottom: 10px;
+            margin-top: 0;
+
+            color: #17365d;
+
+            font-size: 28px;
         }
+
+        /* TOPIC CARDS */
 
         .topic {
             background: white;
-            padding: 25px;
+
+            padding: 30px;
+
             margin: 25px 0;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-top: 5px solid #4f46e5;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            border-left: 6px solid #2563a6;
         }
 
         .topic h2 {
-            color: #2563eb;
-            margin-bottom: 12px;
+            margin-top: 0;
+
+            color: #17365d;
+
+            font-size: 27px;
         }
 
         .topic h3 {
-            color: #4f46e5;
-            margin-top: 18px;
-            margin-bottom: 7px;
+            color: #2563a6;
+
+            margin-top: 25px;
+
+            margin-bottom: 8px;
         }
 
         ul {
@@ -116,102 +142,149 @@
         }
 
         li {
-            margin: 6px 0;
+            margin: 7px 0;
         }
+
+        /* GUIDE BOX */
 
         .box {
-            background: #eef4ff;
-            border-left: 5px solid #2563eb;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
+            background: #f7faff;
+
+            border-left: 5px solid #2563a6;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            margin-top: 18px;
         }
 
+        /* IMPORTANT BOX */
+
         .important {
-            background: #fff7ed;
-            border-left: 5px solid #f97316;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
+            background: #eef6ff;
+
+            border-left: 5px solid #17365d;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            margin-top: 18px;
         }
+
+        /* REVIEW BOX */
 
         .review {
             background: #f0fdf4;
+
             border-left: 5px solid #22c55e;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            margin-top: 18px;
         }
 
+        /* FOOTER */
+
         footer {
-            background: #1e293b;
+            background: #17365d;
+
             color: white;
+
             text-align: center;
-            padding: 25px;
+
+            padding: 30px;
+
             margin-top: 50px;
         }
 
-        @media (max-width: 700px) {
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
 
             header h1 {
-                font-size: 28px;
+                font-size: 31px;
             }
 
-            nav {
-                flex-direction: column;
-            }
-
-            nav a {
-                display: block;
+            main {
+                width: 94%;
             }
 
             .topic {
                 padding: 20px;
             }
+
+            .intro {
+                padding: 20px;
+            }
+
+            .topic h2 {
+                font-size: 23px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
-    <h1>🔬 Science 10 Study Guide</h1>
+    <h1>🔬 Science Study Guide</h1>
 
-    <p>Weeks 1 to 10 • Chemistry, Homeostasis, and Evolution</p>
-
-    <nav>
-        <a href="index.html">🏠 Home</a>
-        <a href="subjects.html">📚 Subjects</a>
-        <a href="resources.html">📖 Learning Resources</a>
-        <a href="studytips.html">💡 Study Tips</a>
-        <a href="contact.html">📩 Contact Us</a>
-    </nav>
+    <p>
+        Grade 10 Science | Study Smart
+    </p>
 
 </header>
 
+
 <main>
 
-    <a href="resources.html" class="back-button">
-        ← Back to Learning Resources
+
+    <!-- BACK BUTTON -->
+
+    <!-- CHANGE studyguide.html IF YOUR MAIN STUDY GUIDE HAS A DIFFERENT FILENAME -->
+
+    <a href="studyguide.html" class="back-button">
+        ← Back to Study Guide
     </a>
 
-    <div class="intro">
 
-        <h2>📘 Science 10 Study Guide</h2>
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <h2>📘 Science Study Guide</h2>
 
         <p>
-            This study guide gives a short review of the main Science 10
-            topics from Week 1 to Week 10.
+            This study guide gives a short review of the main
+            Science 10 topics from Week 1 to Week 10.
         </p>
 
         <div class="review">
-            <b>Study Focus:</b>
-            Understand the important concepts, remember the key terms,
-            and practice applying them to examples.
+
+            <strong>Study Focus:</strong>
+
+            Understand the important concepts, remember the
+            key terms, and practice applying them to examples.
+
         </div>
 
-    </div>
+    </section>
 
 
     <!-- WEEK 1 -->
@@ -221,24 +294,32 @@
         <h2>🧪 Week 1: Chemical Reactions, Acids, Bases, and Salts</h2>
 
         <p>
-            A chemical reaction happens when substances change into
-            new substances with different properties.
+            A chemical reaction happens when substances change
+            into new substances with different properties.
         </p>
 
         <h3>Acids</h3>
 
         <ul>
+
             <li>Usually have a sour taste.</li>
+
             <li>Have a pH below 7.</li>
+
             <li>Examples include vinegar and lemon juice.</li>
+
         </ul>
 
         <h3>Bases</h3>
 
         <ul>
+
             <li>Often feel slippery.</li>
+
             <li>Have a pH above 7.</li>
+
             <li>Examples include soap and baking soda.</li>
+
         </ul>
 
         <h3>Salts</h3>
@@ -249,7 +330,11 @@
         </p>
 
         <div class="box">
-            <b>Remember:</b> Acid + Base → Salt + Water
+
+            <strong>Remember:</strong>
+
+            Acid + Base → Salt + Water
+
         </div>
 
     </section>
@@ -267,11 +352,32 @@
         </p>
 
         <ul>
-            <li><b>Synthesis</b> → substances combine to form a new substance.</li>
-            <li><b>Decomposition</b> → one compound breaks into simpler substances.</li>
-            <li><b>Single Replacement</b> → one element replaces another element.</li>
-            <li><b>Double Replacement</b> → parts of two compounds exchange places.</li>
-            <li><b>Combustion</b> → a substance reacts with oxygen and releases energy.</li>
+
+            <li>
+                <strong>Synthesis</strong> →
+                substances combine to form a new substance.
+            </li>
+
+            <li>
+                <strong>Decomposition</strong> →
+                one compound breaks into simpler substances.
+            </li>
+
+            <li>
+                <strong>Single Replacement</strong> →
+                one element replaces another element.
+            </li>
+
+            <li>
+                <strong>Double Replacement</strong> →
+                parts of two compounds exchange places.
+            </li>
+
+            <li>
+                <strong>Combustion</strong> →
+                a substance reacts with oxygen and releases energy.
+            </li>
+
         </ul>
 
     </section>
@@ -291,65 +397,99 @@
         <h3>Important Ideas</h3>
 
         <ul>
+
             <li>Identify the elements in the compound.</li>
-            <li>Determine whether the compound is ionic or molecular.</li>
-            <li>Use the appropriate naming rules.</li>
-            <li>Remember common prefixes for molecular compounds.</li>
+
+            <li>
+                Determine whether the compound is ionic
+                or molecular.
+            </li>
+
+            <li>
+                Use the appropriate naming rules.
+            </li>
+
+            <li>
+                Remember common prefixes for molecular compounds.
+            </li>
+
         </ul>
 
         <div class="box">
-            <b>Common prefixes:</b>
-            mono, di, tri, tetra, penta, hexa, hepta, octa, nona, deca
+
+            <strong>Common prefixes:</strong>
+
+            mono, di, tri, tetra, penta, hexa, hepta,
+            octa, nona, deca
+
         </div>
 
     </section>
 
 
-    <!-- WEEK 3 TO 5 -->
+    <!-- WEEKS 3 TO 5 -->
 
     <section class="topic">
 
         <h2>⚖️ Weeks 3 to 5: Chemical Equations</h2>
 
         <p>
-            A chemical equation represents a chemical reaction using
-            chemical formulas and symbols.
+            A chemical equation represents a chemical reaction
+            using chemical formulas and symbols.
         </p>
 
         <h3>Parts of an Equation</h3>
 
         <ul>
-            <li><b>Reactants</b> are the substances that start the reaction.</li>
-            <li><b>Products</b> are the substances formed by the reaction.</li>
-            <li>The arrow shows the direction of the reaction.</li>
+
+            <li>
+                <strong>Reactants</strong> are the substances
+                that start the reaction.
+            </li>
+
+            <li>
+                <strong>Products</strong> are the substances
+                formed by the reaction.
+            </li>
+
+            <li>
+                The arrow shows the direction of the reaction.
+            </li>
+
         </ul>
 
         <h3>Balancing Chemical Equations</h3>
 
         <p>
-            A chemical equation is balanced when the number of atoms
-            of each element is the same on both sides.
+            A chemical equation is balanced when the number
+            of atoms of each element is the same on both sides.
         </p>
 
         <div class="important">
-            <b>Why balance equations?</b>
+
+            <strong>Why balance equations?</strong>
 
             <p>
                 Chemical equations must be balanced because of the
                 Law of Conservation of Mass. Matter is not created
                 or destroyed during a chemical reaction.
             </p>
+
         </div>
 
         <div class="box">
-            <b>Tip:</b> Change coefficients to balance an equation.
+
+            <strong>Tip:</strong>
+
+            Change coefficients to balance an equation.
             Do not change the subscripts of chemical formulas.
+
         </div>
 
     </section>
 
 
-    <!-- WEEK 6 TO 7 -->
+    <!-- WEEKS 6 TO 7 -->
 
     <section class="topic">
 
@@ -363,18 +503,39 @@
         <h3>Reaction Rate</h3>
 
         <p>
-            Reaction rate describes how quickly reactants are changed
-            into products.
+            Reaction rate describes how quickly reactants are
+            changed into products.
         </p>
 
         <h3>Factors Affecting Reaction Rate</h3>
 
         <ul>
-            <li><b>Temperature</b> → higher temperature can increase reaction rate.</li>
-            <li><b>Concentration</b> → more particles can cause more collisions.</li>
-            <li><b>Surface Area</b> → greater surface area can increase collisions.</li>
-            <li><b>Catalyst</b> → can speed up a reaction without being consumed.</li>
-            <li><b>Nature of Reactants</b> → different substances react at different rates.</li>
+
+            <li>
+                <strong>Temperature</strong> →
+                higher temperature can increase reaction rate.
+            </li>
+
+            <li>
+                <strong>Concentration</strong> →
+                more particles can cause more collisions.
+            </li>
+
+            <li>
+                <strong>Surface Area</strong> →
+                greater surface area can increase collisions.
+            </li>
+
+            <li>
+                <strong>Catalyst</strong> →
+                can speed up a reaction without being consumed.
+            </li>
+
+            <li>
+                <strong>Nature of Reactants</strong> →
+                different substances react at different rates.
+            </li>
+
         </ul>
 
     </section>
@@ -394,13 +555,21 @@
         <h3>Examples</h3>
 
         <ul>
+
             <li>Maintaining body temperature.</li>
+
             <li>Controlling blood sugar levels.</li>
+
             <li>Maintaining proper water balance.</li>
+
         </ul>
 
         <div class="review">
-            <b>Remember:</b> Homeostasis means maintaining internal balance.
+
+            <strong>Remember:</strong>
+
+            Homeostasis means maintaining internal balance.
+
         </div>
 
     </section>
@@ -420,15 +589,24 @@
         <h3>Examples</h3>
 
         <ul>
+
             <li>Sweating helps cool the body.</li>
+
             <li>Shivering helps produce body heat.</li>
+
             <li>Insulin helps regulate blood glucose.</li>
+
             <li>The kidneys help regulate water and waste.</li>
+
         </ul>
 
         <div class="box">
-            <b>Key Idea:</b> The body continuously responds to
-            changes to keep internal conditions within a suitable range.
+
+            <strong>Key Idea:</strong>
+
+            The body continuously responds to changes to keep
+            internal conditions within a suitable range.
+
         </div>
 
     </section>
@@ -448,11 +626,17 @@
         <h3>Important Mechanisms</h3>
 
         <ul>
+
             <li>Natural selection</li>
+
             <li>Mutation</li>
+
             <li>Genetic variation</li>
+
             <li>Gene flow</li>
+
             <li>Genetic drift</li>
+
         </ul>
 
     </section>
@@ -465,17 +649,37 @@
         <h2>🌱 Week 10.1: Principles of Evolution</h2>
 
         <ul>
-            <li>Populations contain variation.</li>
-            <li>Some variations can be inherited.</li>
-            <li>Organisms compete for limited resources.</li>
-            <li>Individuals with advantageous traits may survive and reproduce more successfully.</li>
-            <li>Over many generations, populations can change.</li>
+
+            <li>
+                Populations contain variation.
+            </li>
+
+            <li>
+                Some variations can be inherited.
+            </li>
+
+            <li>
+                Organisms compete for limited resources.
+            </li>
+
+            <li>
+                Individuals with advantageous traits may survive
+                and reproduce more successfully.
+            </li>
+
+            <li>
+                Over many generations, populations can change.
+            </li>
+
         </ul>
 
         <div class="important">
-            <b>Natural Selection:</b>
+
+            <strong>Natural Selection:</strong>
+
             Organisms with traits that help them survive and reproduce
             are more likely to pass those traits to future generations.
+
         </div>
 
     </section>
@@ -493,17 +697,40 @@
         </p>
 
         <ul>
-            <li><b>Fossils</b> show organisms that lived in the past.</li>
-            <li><b>Comparative Anatomy</b> compares body structures of organisms.</li>
-            <li><b>Embryology</b> compares the development of organisms.</li>
-            <li><b>Biogeography</b> studies the distribution of organisms.</li>
-            <li><b>Molecular Evidence</b> compares DNA and other biological molecules.</li>
+
+            <li>
+                <strong>Fossils</strong> show organisms that lived in the past.
+            </li>
+
+            <li>
+                <strong>Comparative Anatomy</strong>
+                compares body structures of organisms.
+            </li>
+
+            <li>
+                <strong>Embryology</strong>
+                compares the development of organisms.
+            </li>
+
+            <li>
+                <strong>Biogeography</strong>
+                studies the distribution of organisms.
+            </li>
+
+            <li>
+                <strong>Molecular Evidence</strong>
+                compares DNA and other biological molecules.
+            </li>
+
         </ul>
 
         <div class="review">
-            <b>Key Idea:</b>
-            Different lines of evidence support the idea that organisms
-            have changed and diversified over time.
+
+            <strong>Key Idea:</strong>
+
+            Different lines of evidence support the idea that
+            organisms have changed and diversified over time.
+
         </div>
 
     </section>
@@ -516,37 +743,81 @@
         <h2>⭐ Final Science 10 Review</h2>
 
         <ul>
-            <li>Chemical reactions produce new substances.</li>
-            <li>Acids have a pH below 7 and bases have a pH above 7.</li>
-            <li>Chemical reactions have different types.</li>
-            <li>Chemical compounds follow naming rules.</li>
-            <li>Chemical equations must be balanced.</li>
-            <li>Reaction rates are affected by several factors.</li>
-            <li>Homeostasis maintains internal balance.</li>
-            <li>Evolution describes changes in populations over generations.</li>
-            <li>Natural selection is an important mechanism of evolution.</li>
-            <li>Fossils, anatomy, embryology, biogeography, and molecular evidence support evolution.</li>
+
+            <li>
+                Chemical reactions produce new substances.
+            </li>
+
+            <li>
+                Acids have a pH below 7 and bases have a pH above 7.
+            </li>
+
+            <li>
+                Chemical reactions have different types.
+            </li>
+
+            <li>
+                Chemical compounds follow naming rules.
+            </li>
+
+            <li>
+                Chemical equations must be balanced.
+            </li>
+
+            <li>
+                Reaction rates are affected by several factors.
+            </li>
+
+            <li>
+                Homeostasis maintains internal balance.
+            </li>
+
+            <li>
+                Evolution describes changes in populations over generations.
+            </li>
+
+            <li>
+                Natural selection is an important mechanism of evolution.
+            </li>
+
+            <li>
+                Fossils, anatomy, embryology, biogeography,
+                and molecular evidence support evolution.
+            </li>
+
         </ul>
 
         <div class="important">
-            <b>Study Tip:</b>
+
+            <strong>Study Tip:</strong>
+
             Focus on understanding the ideas instead of only memorizing
             definitions. Practice balancing equations and explaining
             concepts in your own words.
+
         </div>
 
     </section>
 
+
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <p>🔬 Science 10 Study Guide</p>
+    <p>
+        🔬 Grade 10 Science Study Guide
+    </p>
 
-    <p>Weeks 1 to 10 • Keep studying and good luck! 📚</p>
+    <p>
+        Study • Understand • Practice • Improve
+    </p>
 
 </footer>
 
+
 </body>
+
 </html>

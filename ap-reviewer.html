@@ -1,577 +1,632 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Araling Panlipunan 10 Reviewer</title>
+    <title>AP 10 Reviewer</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
 
-        html {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #eef4ff, #f8fbff);
-            color: #1f2937;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-
-        /* HEADER */
-
-        .header {
-            background: linear-gradient(135deg, #2563eb, #4f46e5);
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
             color: white;
-            padding: 35px;
-            border-radius: 20px;
             text-align: center;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+            padding: 35px 20px 25px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
         }
 
-        .header p {
-            margin-top: 10px;
+        header p {
+            font-size: 17px;
         }
 
-        /* WEEK NAVIGATION */
-
-        .week-nav {
-            background: white;
-            padding: 15px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
+        nav {
+            margin-top: 22px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-
-            position: sticky;
-            top: 10px;
-            z-index: 10;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .week-nav a {
-            text-decoration: none;
-            background: #2563eb;
+        nav a {
             color: white;
-            padding: 9px 13px;
+            text-decoration: none;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
             border-radius: 8px;
             font-size: 14px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        .week-nav a:hover {
-            background: #1d4ed8;
-        }
-
-        /* LESSON CARDS */
-
-        .lesson {
+        nav a:hover {
             background: white;
-            padding: 22px;
-            margin-bottom: 20px;
-            border-radius: 16px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border-left: 6px solid #2563eb;
-            scroll-margin-top: 100px;
-        }
-
-        .lesson h2 {
             color: #2563eb;
-            margin-top: 0;
         }
 
-        .lesson h3 {
+        main {
+            width: 90%;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        .back {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .intro,
+        .review-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .intro {
+            border-left: 6px solid #2563eb;
+        }
+
+        .intro h2,
+        .review-card h2 {
             color: #1e40af;
+            margin-bottom: 12px;
+        }
+
+        .review-card {
+            border-top: 5px solid #2563eb;
+        }
+
+        .review-card h3 {
+            color: #2563eb;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 6px 0;
         }
 
         .answer {
             background: #eff6ff;
+            border-left: 5px solid #2563eb;
             padding: 14px;
-            border-radius: 10px;
             margin-top: 12px;
+            border-radius: 8px;
         }
 
-        .remember {
-            background: #ecfdf5;
-            border-left: 5px solid #10b981;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 12px;
+        .keyword {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 8px;
         }
 
-        ul {
-            line-height: 1.8;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
         }
 
-        /* FOOTER */
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #1e40af;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
 
         footer {
+            background: #0f172a;
+            color: white;
             text-align: center;
-            color: #64748b;
-            margin-top: 30px;
-            padding: 20px;
+            padding: 25px;
+            margin-top: 50px;
         }
 
-        /* MOBILE */
+        @media (max-width: 700px) {
 
-        @media (max-width: 600px) {
-
-            .container {
-                margin: 15px auto;
-                padding: 12px;
-            }
-
-            .header {
-                padding: 25px 15px;
-            }
-
-            .header h1 {
+            header h1 {
                 font-size: 28px;
             }
 
-            .week-nav {
-                position: static;
+            nav {
+                flex-direction: column;
             }
 
-            .week-nav a {
-                font-size: 13px;
-                padding: 8px 10px;
+            nav a {
+                width: 90%;
+                margin: auto;
+                text-align: center;
             }
 
-            .lesson {
-                padding: 18px;
+            table {
+                display: block;
+                overflow-x: auto;
             }
+
         }
+
     </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-    <!-- HEADER -->
+    <h1>📝 AP 10 Reviewer</h1>
 
-    <div class="header">
-        <h1>🌏 Araling Panlipunan 10 Reviewer</h1>
-        <p>Quick Review • Weeks 1–10</p>
-    </div>
+    <p>First Quarter • Weeks 1–10</p>
 
-
-    <!-- WEEK NAVIGATION -->
-
-    <nav class="week-nav">
-
-        <a href="#week1">Week 1</a>
-        <a href="#week2">Week 2</a>
-        <a href="#week3">Week 3</a>
-        <a href="#week4">Week 4</a>
-        <a href="#week5">Week 5</a>
-        <a href="#week6">Week 6</a>
-        <a href="#week7">Week 7</a>
-        <a href="#week8">Week 8</a>
-        <a href="#week9">Week 9</a>
-        <a href="#week10">Week 10</a>
-
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="subjects.html">📚 Subjects</a>
+        <a href="resources.html">📖 Resources</a>
+        <a href="studytips.html">💡 Study Tips</a>
+        <a href="contact.html">📩 Contact Us</a>
     </nav>
 
+</header>
 
-    <!-- WEEK 1 -->
+<main>
 
-    <div class="lesson" id="week1">
+    <a href="resources.html" class="back">← Back to Resources</a>
 
-        <h2>📚 Week 1 – Ekonomiks</h2>
+    <section class="intro">
 
-        <p>
-            Ang <b>Ekonomiks</b> ay pag-aaral kung paano ginagamit
-            at pinamamahalaan ang limitadong pinagkukunang-yaman
-            upang matugunan ang walang hanggang pangangailangan
-            at kagustuhan ng tao.
-        </p>
-
-        <div class="answer">
-
-            <b>Mahahalagang Konsepto:</b>
-
-            <ul>
-                <li>Kakapusan</li>
-                <li>Pangangailangan</li>
-                <li>Kagustuhan</li>
-                <li>Pinagkukunang-yaman</li>
-                <li>Pagpili</li>
-            </ul>
-
-        </div>
-
-        <div class="remember">
-            ⭐ Tandaan: Limitado ang resources ngunit walang hanggan ang pangangailangan at kagustuhan ng tao.
-        </div>
-
-    </div>
-
-
-    <!-- WEEK 2 -->
-
-    <div class="lesson" id="week2">
-
-        <h2>📊 Week 2 – Kakapusan</h2>
+        <h2>📚 AP 10 First Quarter Reviewer</h2>
 
         <p>
-            Ang <b>kakapusan</b> ay kalagayan kung saan limitado
-            ang pinagkukunang-yaman kumpara sa dami ng pangangailangan
-            at kagustuhan ng tao.
+            Gamitin ang reviewer na ito para mabilis na
+            ma-review ang mahahalagang konsepto mula Week 1
+            hanggang Week 10.
         </p>
 
-        <div class="answer">
+    </section>
 
-            <b>Dahilan ng Kakapusan:</b>
 
-            <ul>
-                <li>Limitadong likas na yaman</li>
-                <li>Pagdami ng populasyon</li>
-                <li>Pagbabago ng pangangailangan</li>
-                <li>Mga kalamidad</li>
-            </ul>
+    <section class="review-card">
+
+        <h2>Week 1 – Kontemporaryong Isyu</h2>
+
+        <div class="keyword">
+            <strong>Kontemporaryong Isyu</strong> =
+            mahalagang usapin o problemang kasalukuyang
+            nararanasan at pinag-uusapan ng lipunan.
+        </div>
+
+        <h3>Mga Katangian</h3>
+
+        <ul>
+            <li>Mahalaga sa kasalukuyang panahon</li>
+            <li>May epekto sa maraming tao</li>
+            <li>May iba't ibang pananaw</li>
+            <li>Nangangailangan ng pagsusuri at solusyon</li>
+        </ul>
+
+        <h3>Mga Uri</h3>
+
+        <ul>
+            <li>Pangkapaligiran</li>
+            <li>Pang-ekonomiya</li>
+            <li>Pampolitika</li>
+            <li>Panglipunan</li>
+            <li>Pangkalusugan</li>
+        </ul>
+
+    </section>
+
+
+    <section class="review-card">
+
+        <h2>Week 2 – Solid Waste</h2>
+
+        <h3>Mga Sanhi</h3>
+
+        <ul>
+            <li>Maling pagtatapon</li>
+            <li>Single-use plastics</li>
+            <li>Kakulangan sa segregation</li>
+            <li>Maling waste management</li>
+        </ul>
+
+        <h3>Mga Epekto</h3>
+
+        <ul>
+            <li>Pagbaha</li>
+            <li>Polusyon</li>
+            <li>Pagkalat ng sakit</li>
+            <li>Pagkasira ng kapaligiran</li>
+        </ul>
+
+        <div class="keyword">
+            <strong>RA 9003</strong> =
+            Ecological Solid Waste Management Act of 2000.
+        </div>
+
+    </section>
+
+
+    <section class="review-card">
+
+        <h2>Week 3 – Likas na Yaman</h2>
+
+        <table>
+
+            <tr>
+                <th>Termino</th>
+                <th>Kahulugan</th>
+            </tr>
+
+            <tr>
+                <td>Deforestation</td>
+                <td>Malawakang pagkakalbo ng kagubatan.</td>
+            </tr>
+
+            <tr>
+                <td>Illegal Logging</td>
+                <td>Ilegal na pagputol ng mga puno.</td>
+            </tr>
+
+            <tr>
+                <td>Mining</td>
+                <td>Pagmimina na maaaring makasira sa lupa at tubig.</td>
+            </tr>
+
+            <tr>
+                <td>Overfishing</td>
+                <td>Labis na pangingisda.</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <section class="review-card">
+
+        <h2>Week 4 – Climate Change</h2>
+
+        <div class="keyword">
+
+            <strong>Climate Change</strong> =
+            pangmatagalang pagbabago sa temperatura
+            at mga pattern ng klima.
 
         </div>
 
-        <div class="remember">
-            ⭐ Kakapusan = Limited resources + Unlimited wants
-        </div>
+        <h3>Mga Sanhi</h3>
 
-    </div>
+        <ul>
+            <li>Fossil fuels</li>
+            <li>Deforestation</li>
+            <li>Industrial activities</li>
+            <li>Greenhouse gases</li>
+        </ul>
 
+        <h3>Mga Epekto</h3>
 
-    <!-- WEEK 3 -->
+        <ul>
+            <li>Mas matinding init</li>
+            <li>Pagtaas ng sea level</li>
+            <li>Mas malalakas na bagyo</li>
+            <li>Pagbabago sa pagkain</li>
+            <li>Panganib sa kalusugan</li>
+        </ul>
 
-    <div class="lesson" id="week3">
-
-        <h2>💰 Week 3 – Pangangailangan at Kagustuhan</h2>
-
-        <p>
-            Ang <b>pangangailangan</b> ay mga bagay na mahalaga
-            upang mabuhay ang isang tao.
-        </p>
-
-        <p>
-            Ang <b>kagustuhan</b> naman ay mga bagay na nais magkaroon
-            ang isang tao ngunit hindi kinakailangan para mabuhay.
-        </p>
-
-        <div class="answer">
-
-            <b>Pangangailangan:</b>
-            Pagkain, tubig, damit, tirahan
-
-            <br><br>
-
-            <b>Kagustuhan:</b>
-            Gadget, mamahaling damit, luxury items
-
-        </div>
-
-        <div class="remember">
-            ⭐ Unahin ang pangangailangan bago ang kagustuhan.
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- WEEK 4 -->
+    <section class="review-card">
 
-    <div class="lesson" id="week4">
+        <h2>Week 5 – DRRM</h2>
 
-        <h2>🏭 Week 4 – Produksiyon</h2>
+        <table>
 
-        <p>
-            Ang <b>produksiyon</b> ay proseso ng paglikha ng mga
-            produkto at serbisyo upang matugunan ang pangangailangan
-            ng mga tao.
-        </p>
+            <tr>
+                <th>Termino</th>
+                <th>Meaning</th>
+            </tr>
 
-        <div class="answer">
+            <tr>
+                <td>Hazard</td>
+                <td>Maaaring magdulot ng pinsala.</td>
+            </tr>
 
-            <b>Salik ng Produksiyon:</b>
+            <tr>
+                <td>Disaster</td>
+                <td>Seryosong pangyayari na nagdudulot ng malaking pinsala.</td>
+            </tr>
 
-            <ul>
-                <li>Lupa</li>
-                <li>Paggawa</li>
-                <li>Kapital</li>
-                <li>Entrepreneur</li>
-            </ul>
+            <tr>
+                <td>Vulnerability</td>
+                <td>Kalagayang nagpapataas ng posibilidad na mapinsala.</td>
+            </tr>
 
-        </div>
+            <tr>
+                <td>Risk</td>
+                <td>Posibilidad ng pinsala o pagkawala.</td>
+            </tr>
 
-        <div class="remember">
-            ⭐ Lupa + Paggawa + Kapital + Entrepreneur = Salik ng Produksiyon
-        </div>
+            <tr>
+                <td>Resilience</td>
+                <td>Kakayahang makabangon pagkatapos ng sakuna.</td>
+            </tr>
 
-    </div>
+        </table>
+
+    </section>
 
 
-    <!-- WEEK 5 -->
+    <section class="review-card">
 
-    <div class="lesson" id="week5">
+        <h2>Week 6 – CBDRM</h2>
 
-        <h2>🛒 Week 5 – Pagkonsumo</h2>
+        <div class="keyword">
 
-        <p>
-            Ang <b>pagkonsumo</b> ay paggamit ng produkto at serbisyo
-            upang matugunan ang pangangailangan at kagustuhan.
-        </p>
-
-        <div class="answer">
-
-            <b>Responsableng Mamimili:</b>
-
-            <ul>
-                <li>Naghahambing ng presyo</li>
-                <li>Sinusuri ang kalidad</li>
-                <li>Binabasa ang label</li>
-                <li>Inaalam ang pangangailangan</li>
-                <li>Iniiwasan ang impulsive buying</li>
-            </ul>
+            <strong>CBDRM</strong> =
+            Community-Based Disaster Risk Management.
 
         </div>
 
-        <div class="remember">
-            ⭐ Maging matalino at responsable sa paggastos.
-        </div>
+        <h3>Layunin</h3>
 
-    </div>
+        <ul>
+            <li>Mabawasan ang pinsala</li>
+            <li>Mapataas ang kahandaan</li>
+            <li>Magamit ang lokal na kaalaman</li>
+            <li>Mapalakas ang pagtutulungan</li>
+        </ul>
 
+        <h3>Top-Down vs Bottom-Up</h3>
 
-    <!-- WEEK 6 -->
+        <ul>
+            <li><strong>Top-Down</strong> – desisyon mula sa awtoridad.</li>
+            <li><strong>Bottom-Up</strong> – aktibong kasali ang komunidad.</li>
+        </ul>
 
-    <div class="lesson" id="week6">
-
-        <h2>🏦 Week 6 – Sistema ng Pananalapi</h2>
-
-        <p>
-            Ang sistema ng pananalapi ay tumutulong sa pag-iimpok,
-            pagpapautang, pamumuhunan, at pagdaloy ng pera sa ekonomiya.
-        </p>
-
-        <div class="answer">
-
-            <b>Halimbawa:</b>
-
-            <ul>
-                <li>Bangko</li>
-                <li>Kooperatiba</li>
-                <li>Insurance companies</li>
-                <li>Iba pang institusyong pinansyal</li>
-            </ul>
-
-        </div>
-
-        <div class="remember">
-            ⭐ Ang mga institusyong pinansyal ay tumutulong sa pagdaloy ng pera sa ekonomiya.
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- WEEK 7 -->
+    <section class="review-card">
 
-    <div class="lesson" id="week7">
+        <h2>Week 7 – Prevention, Mitigation at Preparedness</h2>
 
-        <h2>📈 Week 7 – Pamilihan</h2>
+        <h3>Disaster Prevention and Mitigation</h3>
 
-        <p>
-            Ang <b>pamilihan</b> ay lugar o sistema kung saan
-            nagkakaroon ng ugnayan ang mga mamimili at nagbebenta.
-        </p>
+        <ul>
+            <li>Hazard Assessment</li>
+            <li>Vulnerability Assessment</li>
+            <li>Capacity Assessment</li>
+            <li>Risk Assessment</li>
+        </ul>
 
-        <div class="answer">
+        <h3>Disaster Preparedness</h3>
 
-            <b>Mahahalagang Konsepto:</b>
+        <ul>
+            <li>Evacuation plan</li>
+            <li>Emergency drills</li>
+            <li>Emergency supplies</li>
+            <li>Early warning systems</li>
+            <li>Information dissemination</li>
+        </ul>
 
-            <ul>
-                <li>Demand</li>
-                <li>Supply</li>
-                <li>Presyo</li>
-                <li>Equilibrium</li>
-            </ul>
-
-        </div>
-
-        <div class="remember">
-            ⭐ Demand = kagustuhan at kakayahang bumili.
-            <br>
-            ⭐ Supply = dami ng produktong handang ipagbili.
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- WEEK 8 -->
+    <section class="review-card">
 
-    <div class="lesson" id="week8">
+        <h2>Week 8 – Response, Rehabilitation and Recovery</h2>
 
-        <h2>🌱 Week 8 – Pag-unlad ng Ekonomiya</h2>
+        <h3>Disaster Response</h3>
 
-        <p>
-            Ang pag-unlad ng ekonomiya ay tumutukoy sa pagpapabuti
-            ng kalagayan ng ekonomiya at kalidad ng buhay ng mga tao.
-        </p>
+        <ul>
+            <li>Search and rescue</li>
+            <li>First aid</li>
+            <li>Evacuation</li>
+            <li>Relief distribution</li>
+            <li>Emergency communication</li>
+        </ul>
 
-        <div class="answer">
+        <h3>Rehabilitation and Recovery</h3>
 
-            <b>Mga Palatandaan:</b>
+        <ul>
+            <li>Pag-aayos ng bahay</li>
+            <li>Pag-aayos ng imprastraktura</li>
+            <li>Pagpapanumbalik ng kabuhayan</li>
+            <li>Tulong sa mga naapektuhan</li>
+            <li>Pagpapabuti ng disaster plans</li>
+        </ul>
 
-            <ul>
-                <li>Pagtaas ng kita</li>
-                <li>Pagdami ng trabaho</li>
-                <li>Mas magandang serbisyo</li>
-                <li>Pagbaba ng kahirapan</li>
-                <li>Pag-unlad ng imprastraktura</li>
-            </ul>
+    </section>
+
+
+    <section class="review-card">
+
+        <h2>Week 9 – Globalisasyon</h2>
+
+        <div class="keyword">
+
+            <strong>Globalisasyon</strong> =
+            mas mabilis at mas malawak na ugnayan at
+            interdependence ng mga bansa, ekonomiya,
+            kultura, teknolohiya, at mga tao.
 
         </div>
 
-        <div class="remember">
-            ⭐ Ang tunay na pag-unlad ay dapat maramdaman ng mga mamamayan.
-        </div>
+        <h3>Mga Dimensiyon</h3>
 
-    </div>
+        <ul>
+            <li><strong>Ekonomiko</strong> – kalakalan at investments</li>
+            <li><strong>Teknolohikal</strong> – internet at communication</li>
+            <li><strong>Kultural</strong> – pagkain, musika, fashion, wika</li>
+            <li><strong>Politikal</strong> – ugnayan at kooperasyon ng bansa</li>
+        </ul>
 
+        <h3>MNC, TNC at Outsourcing</h3>
 
-    <!-- WEEK 9 -->
+        <ul>
+            <li>MNC – Multinational Corporation</li>
+            <li>TNC – Transnational Corporation</li>
+            <li>Outsourcing – pagkuha ng serbisyo mula sa ibang kumpanya o lugar</li>
+        </ul>
 
-    <div class="lesson" id="week9">
-
-        <h2>🌍 Week 9 – Globalisasyon</h2>
-
-        <p>
-            Ang <b>globalisasyon</b> ay proseso ng mas mabilis na
-            ugnayan at pakikipagpalitan ng mga bansa sa buong mundo.
-        </p>
-
-        <div class="answer">
-
-            <b>Epekto ng Globalisasyon:</b>
-
-            <ul>
-                <li>Mas mabilis na komunikasyon</li>
-                <li>Paglawak ng kalakalan</li>
-                <li>Pagkakaroon ng bagong teknolohiya</li>
-                <li>Mas maraming oportunidad</li>
-                <li>Mas matinding kompetisyon</li>
-            </ul>
-
-        </div>
-
-        <div class="remember">
-            ⭐ Globalisasyon = Mas malawak na koneksyon ng mga bansa.
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- WEEK 10 -->
+    <section class="review-card">
 
-    <div class="lesson" id="week10">
+        <h2>Week 10 – Epekto ng Globalisasyon</h2>
 
-        <h2>🇵🇭 Week 10 – Ekonomiya ng Pilipinas</h2>
+        <h3>✅ Mabuting Epekto</h3>
 
-        <p>
-            Ang ekonomiya ng Pilipinas ay binubuo ng iba't ibang
-            sektor na tumutulong sa paglikha ng produkto,
-            serbisyo, trabaho, at kita.
-        </p>
+        <ul>
+            <li>Mas maraming trabaho</li>
+            <li>Foreign investments</li>
+            <li>Access sa teknolohiya</li>
+            <li>Mas malawak na pamilihan</li>
+            <li>Pagpapalitan ng kaalaman at kultura</li>
+        </ul>
 
-        <div class="answer">
+        <h3>⚠️ Mga Hamon</h3>
 
-            <b>Mahahalagang Sektor:</b>
+        <ul>
+            <li>Matinding kompetisyon sa trabaho</li>
+            <li>Job insecurity</li>
+            <li>Pagbabago ng lokal na industriya</li>
+            <li>Cultural homogenization</li>
+            <li>Economic inequality</li>
+        </ul>
 
-            <ul>
-                <li>Agrikultura</li>
-                <li>Industriya</li>
-                <li>Serbisyo</li>
-            </ul>
-
-        </div>
-
-        <div class="remember">
-            ⭐ Ang bawat sektor ay may mahalagang papel sa pag-unlad ng ekonomiya ng bansa.
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- QUICK MEMORY GUIDE -->
+    <section class="review-card">
 
-    <div class="lesson">
+        <h2>⚡ Super Quick Review</h2>
 
-        <h2>🧠 Quick AP Memory Guide</h2>
+        <table>
 
-        <div class="answer">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Remember</th>
+            </tr>
 
-            <b>Ekonomiks</b> = Pag-aaral ng paggamit ng limitadong resources
+            <tr>
+                <td>1</td>
+                <td>Kontemporaryong Isyu</td>
+                <td>Mga kasalukuyang usapin</td>
+            </tr>
 
-            <br><br>
+            <tr>
+                <td>2</td>
+                <td>Solid Waste</td>
+                <td>RA 9003</td>
+            </tr>
 
-            <b>Kakapusan</b> = Limitadong resources
+            <tr>
+                <td>3</td>
+                <td>Likas na Yaman</td>
+                <td>Deforestation, mining, overfishing</td>
+            </tr>
 
-            <br><br>
+            <tr>
+                <td>4</td>
+                <td>Climate Change</td>
+                <td>Causes and effects</td>
+            </tr>
 
-            <b>Pangangailangan</b> = Kailangan para mabuhay
+            <tr>
+                <td>5</td>
+                <td>DRRM</td>
+                <td>Hazard, risk, vulnerability, resilience</td>
+            </tr>
 
-            <br><br>
+            <tr>
+                <td>6</td>
+                <td>CBDRM</td>
+                <td>Community participation</td>
+            </tr>
 
-            <b>Kagustuhan</b> = Nais ngunit hindi pangunahing kailangan
+            <tr>
+                <td>7</td>
+                <td>Prevention & Preparedness</td>
+                <td>Prepare before disaster</td>
+            </tr>
 
-            <br><br>
+            <tr>
+                <td>8</td>
+                <td>Response & Recovery</td>
+                <td>Respond and rebuild</td>
+            </tr>
 
-            <b>Produksiyon</b> = Paglikha ng produkto at serbisyo
+            <tr>
+                <td>9</td>
+                <td>Globalisasyon</td>
+                <td>Global connections</td>
+            </tr>
 
-            <br><br>
+            <tr>
+                <td>10</td>
+                <td>Epekto ng Globalisasyon</td>
+                <td>Opportunities and challenges</td>
+            </tr>
 
-            <b>Pagkonsumo</b> = Paggamit ng produkto at serbisyo
+        </table>
 
-            <br><br>
+    </section>
 
-            <b>Demand</b> = Kagustuhan at kakayahang bumili
+</main>
 
-            <br><br>
+<footer>
 
-            <b>Supply</b> = Dami ng produktong handang ipagbili
+    <p>📝 AP 10 Reviewer • First Quarter</p>
 
-            <br><br>
+    <p>Study smart and good luck! 💙</p>
 
-            <b>Globalisasyon</b> = Mas malawak na ugnayan ng mga bansa
-
-        </div>
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-        <p>🌏 Araling Panlipunan 10 Reviewer • Weeks 1–10</p>
-    </footer>
-
-</div>
+</footer>
 
 </body>
 </html>

@@ -38,29 +38,6 @@
             font-size: 17px;
         }
 
-        nav {
-            margin-top: 22px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            background: rgba(255,255,255,0.15);
-            padding: 9px 15px;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            background: white;
-            color: #2563eb;
-        }
-
         main {
             max-width: 1050px;
             margin: 35px auto;
@@ -73,6 +50,16 @@
             color: #2563eb;
             font-weight: bold;
             margin-bottom: 20px;
+            padding: 10px 16px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+
+        .back:hover {
+            background: #2563eb;
+            color: white;
         }
 
         .intro,
@@ -172,18 +159,18 @@
                 font-size: 28px;
             }
 
-            nav {
-                flex-direction: column;
-            }
-
-            nav a {
-                display: block;
-                text-align: center;
-            }
-
             .lesson,
             .intro {
                 padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 8px;
             }
         }
     </style>
@@ -197,19 +184,16 @@
 
     <p>Weeks 1–10 • Chemistry, Chemical Reactions, Homeostasis & Evolution</p>
 
-    <nav>
-        <a href="index.html">🏠 Home</a>
-        <a href="subjects.html">📚 Subjects</a>
-        <a href="resources.html">📖 Learning Resources</a>
-        <a href="studytips.html">💡 Study Tips</a>
-        <a href="contact.html">📩 Contact Us</a>
-    </nav>
-
 </header>
 
 <main>
 
-    <a href="resources.html" class="back">← Back to Resources</a>
+    <!-- BACK TO REVIEWER -->
+
+    <a href="reviewer.html" class="back">← Back to Reviewer</a>
+
+
+    <!-- INTRO -->
 
     <div class="intro">
 
@@ -312,7 +296,7 @@
     </section>
 
 
-    <!-- WEEK 3-5 -->
+    <!-- WEEKS 3–5 -->
 
     <section class="lesson">
 
@@ -364,7 +348,7 @@
     </section>
 
 
-    <!-- WEEK 6-7 -->
+    <!-- WEEKS 6–7 -->
 
     <section class="lesson">
 

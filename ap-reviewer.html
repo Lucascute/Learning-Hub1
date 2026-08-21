@@ -28,7 +28,8 @@
             background: linear-gradient(135deg, #1e3a8a, #2563eb);
             color: white;
             text-align: center;
-            padding: 35px 20px 25px;
+            padding: 40px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
 
         header h1 {
@@ -38,30 +39,6 @@
 
         header p {
             font-size: 17px;
-        }
-
-        nav {
-            margin-top: 22px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            background: rgba(255,255,255,0.15);
-            padding: 9px 15px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: white;
-            color: #2563eb;
         }
 
         main {
@@ -79,6 +56,12 @@
             border-radius: 8px;
             font-weight: bold;
             margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
         }
 
         .intro,
@@ -170,19 +153,14 @@
                 font-size: 28px;
             }
 
-            nav {
-                flex-direction: column;
-            }
-
-            nav a {
-                width: 90%;
-                margin: auto;
-                text-align: center;
-            }
-
             table {
                 display: block;
                 overflow-x: auto;
+            }
+
+            .review-card,
+            .intro {
+                padding: 20px;
             }
 
         }
@@ -199,19 +177,11 @@
 
     <p>First Quarter • Weeks 1–10</p>
 
-    <nav>
-        <a href="index.html">🏠 Home</a>
-        <a href="subjects.html">📚 Subjects</a>
-        <a href="resources.html">📖 Resources</a>
-        <a href="studytips.html">💡 Study Tips</a>
-        <a href="contact.html">📩 Contact Us</a>
-    </nav>
-
 </header>
 
 <main>
 
-    <a href="resources.html" class="back">← Back to Resources</a>
+    <a href="reviewer.html" class="back">← Back to Reviewer</a>
 
     <section class="intro">
 

@@ -2,625 +2,551 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Study Guides | Grade 10</title>
+    <title>Science 10 Study Guide</title>
 
     <style>
-
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #eef3f8, #dfe9f3);
+            background: linear-gradient(135deg, #eef4ff, #f8faff);
             color: #263238;
+            line-height: 1.7;
         }
 
-        /* HEADER */
-
         header {
-            background: linear-gradient(135deg, #17365d, #2563a6);
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
             color: white;
             text-align: center;
-            padding: 45px 20px;
-
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.15);
+            padding: 35px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 42px;
+            font-size: 38px;
+            margin-bottom: 8px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 17px;
             opacity: 0.9;
         }
 
-
-        /* MAIN */
-
-        .container {
-            width: 92%;
-            max-width: 1050px;
-            margin: 35px auto;
+        nav {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-        /* TITLE CARD */
+        nav a:hover {
+            background: white;
+            color: #2563eb;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
         .intro {
             background: white;
-
-            padding: 30px;
-
-            border-radius: 20px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
-
-            margin-bottom: 30px;
-
-            border-left: 6px solid #2563a6;
+            padding: 28px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563eb;
         }
 
         .intro h2 {
-            margin-top: 0;
-            color: #17365d;
-            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 10px;
         }
 
-        .intro p {
-            line-height: 1.7;
-            color: #5f6b75;
-        }
-
-
-        /* SUBJECT GRID */
-
-        .subject-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 20px;
-
-        }
-
-
-        /* SUBJECT CARD */
-
-        .subject-card {
-
-            position: relative;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 18px;
-
-            padding: 23px;
-
-            min-height: 145px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #f1f6fb
-                );
-
-            border: 1px solid #d6e2ed;
-
-            border-radius: 18px;
-
-            text-decoration: none;
-
-            color: #263238;
-
-            box-shadow:
-                0 5px 15px rgba(0,0,0,0.08);
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease;
-
-            overflow: hidden;
-        }
-
-
-        .subject-card:hover {
-
-            transform: translateY(-6px);
-
-            box-shadow:
-                0 12px 30px rgba(0,0,0,0.14);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #e5eff9
-                );
-        }
-
-
-        /* ICON */
-
-        .subject-icon {
-
-            width: 70px;
-            height: 70px;
-
-            flex-shrink: 0;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #17365d,
-                    #2563a6
-                );
-
-            color: white;
-
-            border-radius: 17px;
-
-            font-size: 32px;
-
-            box-shadow:
-                0 6px 15px
-                rgba(23,54,93,0.25);
-
-            transition:
-                transform 0.25s ease;
-        }
-
-
-        .subject-card:hover .subject-icon {
-
-            transform: scale(1.08)
-                       rotate(-3deg);
-
-        }
-
-
-        /* CONTENT */
-
-        .subject-content {
-
-            flex: 1;
-
-        }
-
-
-        .subject-content h3 {
-
-            margin: 0 0 7px;
-
-            color: #17365d;
-
-            font-size: 21px;
-
-        }
-
-
-        .subject-content p {
-
-            margin: 0;
-
-            color: #66727d;
-
-            font-size: 14px;
-
-            line-height: 1.5;
-
-        }
-
-
-        /* ARROW */
-
-        .arrow {
-
-            font-size: 27px;
-
-            font-weight: bold;
-
-            color: #2563a6;
-
-            transition:
-                transform 0.25s ease;
-
-        }
-
-
-        .subject-card:hover .arrow {
-
-            transform:
-                translateX(7px);
-
-        }
-
-
-        /* STUDY TIP */
-
-        .tip {
-
-            margin-top: 30px;
-
+        .topic {
+            background: white;
             padding: 25px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff8e1,
-                    #fff3cd
-                );
-
-            border-left:
-                6px solid #d39b00;
-
-            border-radius: 18px;
-
-            box-shadow:
-                0 8px 25px
-                rgba(0,0,0,0.07);
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            border-top: 5px solid #4f46e5;
         }
 
-
-        .tip h2 {
-
-            margin-top: 0;
-
-            color: #8a6500;
-
+        .topic h2 {
+            color: #2563eb;
+            margin-bottom: 12px;
         }
 
-
-        .tip p {
-
-            line-height: 1.7;
-
-            color: #665a35;
-
+        .topic h3 {
+            color: #4f46e5;
+            margin-top: 18px;
+            margin-bottom: 7px;
         }
 
+        ul {
+            margin-left: 25px;
+        }
 
-        /* FOOTER */
+        li {
+            margin: 6px 0;
+        }
+
+        .box {
+            background: #eef4ff;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .important {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .review {
+            background: #f0fdf4;
+            border-left: 5px solid #22c55e;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
 
         footer {
-
-            margin-top: 40px;
-
-            padding: 30px;
-
-            text-align: center;
-
-            background: #17365d;
-
+            background: #1e293b;
             color: white;
-
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
         }
-
-
-        footer p {
-
-            margin: 6px;
-
-        }
-
-
-        /* MOBILE */
 
         @media (max-width: 700px) {
 
             header h1 {
-
-                font-size: 31px;
-
+                font-size: 28px;
             }
 
-            .subject-grid {
-
-                grid-template-columns: 1fr;
-
+            nav {
+                flex-direction: column;
             }
 
-            .container {
-
-                width: 94%;
-
+            nav a {
+                display: block;
             }
 
-            .subject-card {
-
-                min-height: 125px;
-
+            .topic {
+                padding: 20px;
             }
-
         }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-<!-- HEADER -->
-
 <header>
 
-    <h1>📘 Study Guides</h1>
+    <h1>🔬 Science 10 Study Guide</h1>
 
-    <p>
-        Grade 10 • Choose a subject to start studying
-    </p>
+    <p>Weeks 1 to 10 • Chemistry, Homeostasis, and Evolution</p>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="subjects.html">📚 Subjects</a>
+        <a href="resources.html">📖 Learning Resources</a>
+        <a href="studytips.html">💡 Study Tips</a>
+        <a href="contact.html">📩 Contact Us</a>
+    </nav>
 
 </header>
 
+<main>
 
-<div class="container">
+    <a href="resources.html" class="back-button">
+        ← Back to Learning Resources
+    </a>
 
+    <div class="intro">
 
-    <!-- INTRO -->
-
-    <section class="intro">
-
-        <h2>📚 Choose Your Subject</h2>
+        <h2>📘 Science 10 Study Guide</h2>
 
         <p>
-            Select a subject below to open its individual
-            study guide. Each guide contains important topics,
-            study strategies, and helpful reminders.
+            This study guide gives a short review of the main Science 10
+            topics from Week 1 to Week 10.
         </p>
 
-    </section>
-
-
-    <!-- SUBJECTS -->
-
-    <div class="subject-grid">
-
-
-        <!-- MATHEMATICS -->
-
-        <a
-            href="mathstudyguide.html"
-            class="subject-card"
-        >
-
-            <div class="subject-icon">
-                🧮
-            </div>
-
-            <div class="subject-content">
-
-                <h3>
-                    Mathematics
-                </h3>
-
-                <p>
-                    Formulas, problem-solving strategies,
-                    and important math concepts.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
-
-
-        <!-- ICT -->
-
-        <a
-            href="ictstudyguide.html"
-            class="subject-card"
-        >
-
-            <div class="subject-icon">
-                💻
-            </div>
-
-            <div class="subject-content">
-
-                <h3>
-                    ICT
-                </h3>
-
-                <p>
-                    Computer programming, ergonomics,
-                    and other ICT concepts.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
-
-
-        <!-- SCIENCE -->
-
-        <a
-            href="sciencestudyguide.html"
-            class="subject-card"
-        >
-
-            <div class="subject-icon">
-                🔬
-            </div>
-
-            <div class="subject-content">
-
-                <h3>
-                    Science
-                </h3>
-
-                <p>
-                    Scientific concepts, processes,
-                    terms, and applications.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
-
-
-        <!-- ENGLISH -->
-
-        <a
-            href="englishstudyguide.html"
-            class="subject-card"
-        >
-
-            <div class="subject-icon">
-                📚
-            </div>
-
-            <div class="subject-content">
-
-                <h3>
-                    English
-                </h3>
-
-                <p>
-                    Literary context, film, characterization,
-                    and short-film concepts.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
-
-
-        <!-- AP -->
-
-        <a
-            href="apstudyguide.html"
-            class="subject-card"
-        >
-
-            <div class="subject-icon">
-                🌏
-            </div>
-
-            <div class="subject-content">
-
-                <h3>
-                    Araling Panlipunan
-                </h3>
-
-                <p>
-                    History, geography, economics,
-                    and contemporary issues.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
-
-
-        <!-- FILIPINO -->
-
-        <a
-            href="Filipinostudyguide.html"
-            class="subject-card"
-        >
-
-            <div class="subject-icon">
-                📖
-            </div>
-
-            <div class="subject-content">
-
-                <h3>
-                    Filipino
-                </h3>
-
-                <p>
-                    El Filibusterismo, literary concepts,
-                    characters, themes, and symbols.
-                </p>
-
-            </div>
-
-            <div class="arrow">
-                →
-            </div>
-
-        </a>
-
+        <div class="review">
+            <b>Study Focus:</b>
+            Understand the important concepts, remember the key terms,
+            and practice applying them to examples.
+        </div>
 
     </div>
 
 
-    <!-- STUDY TIP -->
+    <!-- WEEK 1 -->
 
-    <section class="tip">
+    <section class="topic">
 
-        <h2>⭐ Quick Study Tip</h2>
+        <h2>🧪 Week 1: Chemical Reactions, Acids, Bases, and Salts</h2>
 
         <p>
-            Don't try to memorize everything at once.
-            Choose one subject, study the important concepts,
-            test yourself, then move on to the next subject.
+            A chemical reaction happens when substances change into
+            new substances with different properties.
         </p>
+
+        <h3>Acids</h3>
+
+        <ul>
+            <li>Usually have a sour taste.</li>
+            <li>Have a pH below 7.</li>
+            <li>Examples include vinegar and lemon juice.</li>
+        </ul>
+
+        <h3>Bases</h3>
+
+        <ul>
+            <li>Often feel slippery.</li>
+            <li>Have a pH above 7.</li>
+            <li>Examples include soap and baking soda.</li>
+        </ul>
+
+        <h3>Salts</h3>
+
+        <p>
+            Salts are compounds that can form when an acid reacts
+            with a base.
+        </p>
+
+        <div class="box">
+            <b>Remember:</b> Acid + Base → Salt + Water
+        </div>
 
     </section>
 
 
-</div>
+    <!-- WEEK 2 -->
+
+    <section class="topic">
+
+        <h2>⚗️ Week 2: Types of Chemical Reactions</h2>
+
+        <p>
+            Chemical reactions can be classified according to how
+            substances combine or change.
+        </p>
+
+        <ul>
+            <li><b>Synthesis</b> → substances combine to form a new substance.</li>
+            <li><b>Decomposition</b> → one compound breaks into simpler substances.</li>
+            <li><b>Single Replacement</b> → one element replaces another element.</li>
+            <li><b>Double Replacement</b> → parts of two compounds exchange places.</li>
+            <li><b>Combustion</b> → a substance reacts with oxygen and releases energy.</li>
+        </ul>
+
+    </section>
 
 
-<!-- FOOTER -->
+    <!-- WEEK 2.1 -->
+
+    <section class="topic">
+
+        <h2>🧾 Week 2.1: Naming Compounds</h2>
+
+        <p>
+            Chemical compounds are named using rules that identify
+            the elements or ions present.
+        </p>
+
+        <h3>Important Ideas</h3>
+
+        <ul>
+            <li>Identify the elements in the compound.</li>
+            <li>Determine whether the compound is ionic or molecular.</li>
+            <li>Use the appropriate naming rules.</li>
+            <li>Remember common prefixes for molecular compounds.</li>
+        </ul>
+
+        <div class="box">
+            <b>Common prefixes:</b>
+            mono, di, tri, tetra, penta, hexa, hepta, octa, nona, deca
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 3 TO 5 -->
+
+    <section class="topic">
+
+        <h2>⚖️ Weeks 3 to 5: Chemical Equations</h2>
+
+        <p>
+            A chemical equation represents a chemical reaction using
+            chemical formulas and symbols.
+        </p>
+
+        <h3>Parts of an Equation</h3>
+
+        <ul>
+            <li><b>Reactants</b> are the substances that start the reaction.</li>
+            <li><b>Products</b> are the substances formed by the reaction.</li>
+            <li>The arrow shows the direction of the reaction.</li>
+        </ul>
+
+        <h3>Balancing Chemical Equations</h3>
+
+        <p>
+            A chemical equation is balanced when the number of atoms
+            of each element is the same on both sides.
+        </p>
+
+        <div class="important">
+            <b>Why balance equations?</b>
+
+            <p>
+                Chemical equations must be balanced because of the
+                Law of Conservation of Mass. Matter is not created
+                or destroyed during a chemical reaction.
+            </p>
+        </div>
+
+        <div class="box">
+            <b>Tip:</b> Change coefficients to balance an equation.
+            Do not change the subscripts of chemical formulas.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 6 TO 7 -->
+
+    <section class="topic">
+
+        <h2>⏱️ Weeks 6 to 7: How Chemical Reactions Occur</h2>
+
+        <p>
+            Chemical reactions occur when particles collide with
+            enough energy and with the proper orientation.
+        </p>
+
+        <h3>Reaction Rate</h3>
+
+        <p>
+            Reaction rate describes how quickly reactants are changed
+            into products.
+        </p>
+
+        <h3>Factors Affecting Reaction Rate</h3>
+
+        <ul>
+            <li><b>Temperature</b> → higher temperature can increase reaction rate.</li>
+            <li><b>Concentration</b> → more particles can cause more collisions.</li>
+            <li><b>Surface Area</b> → greater surface area can increase collisions.</li>
+            <li><b>Catalyst</b> → can speed up a reaction without being consumed.</li>
+            <li><b>Nature of Reactants</b> → different substances react at different rates.</li>
+        </ul>
+
+    </section>
+
+
+    <!-- WEEK 8 -->
+
+    <section class="topic">
+
+        <h2>🏠 Week 8: Homeostasis</h2>
+
+        <p>
+            Homeostasis is the ability of an organism to maintain
+            stable internal conditions despite changes in the environment.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+            <li>Maintaining body temperature.</li>
+            <li>Controlling blood sugar levels.</li>
+            <li>Maintaining proper water balance.</li>
+        </ul>
+
+        <div class="review">
+            <b>Remember:</b> Homeostasis means maintaining internal balance.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 9 -->
+
+    <section class="topic">
+
+        <h2>❤️ Week 9: Homeostasis in the Human Body</h2>
+
+        <p>
+            The human body uses different systems and mechanisms
+            to keep its internal environment stable.
+        </p>
+
+        <h3>Examples</h3>
+
+        <ul>
+            <li>Sweating helps cool the body.</li>
+            <li>Shivering helps produce body heat.</li>
+            <li>Insulin helps regulate blood glucose.</li>
+            <li>The kidneys help regulate water and waste.</li>
+        </ul>
+
+        <div class="box">
+            <b>Key Idea:</b> The body continuously responds to
+            changes to keep internal conditions within a suitable range.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 10 -->
+
+    <section class="topic">
+
+        <h2>🧬 Week 10: Mechanism of Evolution</h2>
+
+        <p>
+            Evolution is the change in inherited characteristics
+            of populations over generations.
+        </p>
+
+        <h3>Important Mechanisms</h3>
+
+        <ul>
+            <li>Natural selection</li>
+            <li>Mutation</li>
+            <li>Genetic variation</li>
+            <li>Gene flow</li>
+            <li>Genetic drift</li>
+        </ul>
+
+    </section>
+
+
+    <!-- WEEK 10.1 -->
+
+    <section class="topic">
+
+        <h2>🌱 Week 10.1: Principles of Evolution</h2>
+
+        <ul>
+            <li>Populations contain variation.</li>
+            <li>Some variations can be inherited.</li>
+            <li>Organisms compete for limited resources.</li>
+            <li>Individuals with advantageous traits may survive and reproduce more successfully.</li>
+            <li>Over many generations, populations can change.</li>
+        </ul>
+
+        <div class="important">
+            <b>Natural Selection:</b>
+            Organisms with traits that help them survive and reproduce
+            are more likely to pass those traits to future generations.
+        </div>
+
+    </section>
+
+
+    <!-- WEEK 10.2 -->
+
+    <section class="topic">
+
+        <h2>🔎 Week 10.2: Evidence Supporting Evolution</h2>
+
+        <p>
+            Scientists use different types of evidence to support
+            the theory of evolution.
+        </p>
+
+        <ul>
+            <li><b>Fossils</b> show organisms that lived in the past.</li>
+            <li><b>Comparative Anatomy</b> compares body structures of organisms.</li>
+            <li><b>Embryology</b> compares the development of organisms.</li>
+            <li><b>Biogeography</b> studies the distribution of organisms.</li>
+            <li><b>Molecular Evidence</b> compares DNA and other biological molecules.</li>
+        </ul>
+
+        <div class="review">
+            <b>Key Idea:</b>
+            Different lines of evidence support the idea that organisms
+            have changed and diversified over time.
+        </div>
+
+    </section>
+
+
+    <!-- FINAL REVIEW -->
+
+    <section class="topic">
+
+        <h2>⭐ Final Science 10 Review</h2>
+
+        <ul>
+            <li>Chemical reactions produce new substances.</li>
+            <li>Acids have a pH below 7 and bases have a pH above 7.</li>
+            <li>Chemical reactions have different types.</li>
+            <li>Chemical compounds follow naming rules.</li>
+            <li>Chemical equations must be balanced.</li>
+            <li>Reaction rates are affected by several factors.</li>
+            <li>Homeostasis maintains internal balance.</li>
+            <li>Evolution describes changes in populations over generations.</li>
+            <li>Natural selection is an important mechanism of evolution.</li>
+            <li>Fossils, anatomy, embryology, biogeography, and molecular evidence support evolution.</li>
+        </ul>
+
+        <div class="important">
+            <b>Study Tip:</b>
+            Focus on understanding the ideas instead of only memorizing
+            definitions. Practice balancing equations and explaining
+            concepts in your own words.
+        </div>
+
+    </section>
+
+</main>
+
 
 <footer>
 
-    <p>
-        📘 Grade 10 Study Guides
-    </p>
+    <p>🔬 Science 10 Study Guide</p>
 
-    <p>
-        Study Smart • Stay Consistent • Keep Learning
-    </p>
+    <p>Weeks 1 to 10 • Keep studying and good luck! 📚</p>
 
 </footer>
 
-
 </body>
-
 </html>

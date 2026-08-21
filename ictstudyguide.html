@@ -52,37 +52,32 @@
             margin: 35px auto;
         }
 
-        /* INDEX */
+        /* BACK BUTTON */
 
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
-
-            margin-bottom: 30px;
+        .back-button-container {
+            margin-bottom: 25px;
         }
 
-        .index h2 {
-            margin-top: 0;
-            color: #17365d;
-        }
+        .back-button {
+            display: inline-block;
+            padding: 12px 20px;
 
-        .index-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(210px, 1fr));
-            gap: 10px;
-        }
+            background: #2563a6;
+            color: white;
 
-        .index-item {
-            padding: 13px 15px;
-            background: #eaf2f8;
-            color: #17365d;
-            border-radius: 10px;
+            text-decoration: none;
             font-weight: bold;
+
+            border-radius: 9px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+            transition: 0.25s ease;
+        }
+
+        .back-button:hover {
+            background: #17365d;
+            transform: translateY(-2px);
         }
 
         /* CARDS */
@@ -261,6 +256,10 @@
                 padding: 20px;
             }
 
+            .back-button {
+                font-size: 14px;
+            }
+
         }
 
     </style>
@@ -287,57 +286,15 @@
 <div class="container">
 
 
-    <!-- INDEX -->
+    <!-- BACK TO STUDY GUIDE -->
 
-    <section class="index">
+    <div class="back-button-container">
 
-        <h2>📑 ICT Study Guide</h2>
+        <a href="studyguide.html" class="back-button">
+            ← Back to Study Guide
+        </a>
 
-        <div class="index-grid">
-
-            <div class="index-item">
-                💻 Lesson 1 — Introduction to Computer Programming
-            </div>
-
-            <div class="index-item">
-                🪑 Lesson 2 — Computer Ergonomics
-            </div>
-
-            <div class="index-item">
-                ⌨️ Lesson 3 — Programming Basics
-            </div>
-
-            <div class="index-item">
-                🔢 Lesson 4 — Variables and Data
-            </div>
-
-            <div class="index-item">
-                🔀 Lesson 5 — Conditional Statements
-            </div>
-
-            <div class="index-item">
-                🔁 Lesson 6 — Loops
-            </div>
-
-            <div class="index-item">
-                📦 Lesson 7 — Functions
-            </div>
-
-            <div class="index-item">
-                🐞 Lesson 8 — Debugging
-            </div>
-
-            <div class="index-item">
-                🛡️ Lesson 9 — Computer Safety
-            </div>
-
-            <div class="index-item">
-                🌐 Lesson 10 — Responsible ICT Use
-            </div>
-
-        </div>
-
-    </section>
+    </div>
 
 
     <!-- LESSON 1 -->
@@ -388,9 +345,11 @@
 
             <strong>💡 Remember:</strong>
 
-            A computer follows instructions. Programming
-            allows people to give those instructions clearly
-            and logically.
+            <p>
+                A computer follows instructions. Programming
+                allows people to give those instructions clearly
+                and logically.
+            </p>
 
         </div>
 
@@ -563,8 +522,10 @@
 
             <strong>💡 Remember:</strong>
 
-            Variables allow programs to store and work with
-            information.
+            <p>
+                Variables allow programs to store and work with
+                information.
+            </p>
 
         </div>
 
@@ -618,8 +579,10 @@
 
             <strong>💡 Study Tip:</strong>
 
-            Look carefully at the condition before deciding
-            what the program will do.
+            <p>
+                Look carefully at the condition before deciding
+                what the program will do.
+            </p>
 
         </div>
 
@@ -674,8 +637,10 @@
 
             <strong>⚠️ Watch Out:</strong>
 
-            A loop must eventually reach a condition that
-            stops it when using a condition-controlled loop.
+            <p>
+                A loop must eventually reach a condition that
+                stops it when using a condition-controlled loop.
+            </p>
 
         </div>
 
@@ -775,8 +740,10 @@
 
             <strong>💡 Debugging Tip:</strong>
 
-            Read the error message carefully and check the
-            code around the line where the error occurred.
+            <p>
+                Read the error message carefully and check the
+                code around the line where the error occurred.
+            </p>
 
         </div>
 
@@ -827,8 +794,10 @@
 
             <strong>⚠️ Remember:</strong>
 
-            Physical safety and digital safety are both
-            important when using computers.
+            <p>
+                Physical safety and digital safety are both
+                important when using computers.
+            </p>
 
         </div>
 
@@ -880,8 +849,10 @@
 
             <strong>💡 Digital Citizenship:</strong>
 
-            Good digital citizens use technology responsibly
-            and treat other people with respect online.
+            <p>
+                Good digital citizens use technology responsibly
+                and treat other people with respect online.
+            </p>
 
         </div>
 

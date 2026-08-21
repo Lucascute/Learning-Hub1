@@ -13,7 +13,6 @@
 
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -52,37 +51,37 @@
             margin: 35px auto;
         }
 
-        /* INDEX */
+        /* BACK BUTTON */
 
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
-
-            margin-bottom: 30px;
+        .back-button {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 11px 18px;
+            background: #2563a6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
         }
 
-        .index h2 {
+        .back-button:hover {
+            background: #17365d;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563a6;
+        }
+
+        .intro h2 {
             margin-top: 0;
             color: #17365d;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(210px, 1fr));
-            gap: 10px;
-        }
-
-        .index-item {
-            padding: 13px 15px;
-            background: #eaf2f8;
-            color: #17365d;
-            border-radius: 10px;
-            font-weight: bold;
         }
 
         /* CARDS */
@@ -91,12 +90,8 @@
             background: white;
             padding: 30px;
             margin: 25px 0;
-
             border-radius: 18px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
-
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
             border-left: 6px solid #2563a6;
         }
 
@@ -117,10 +112,8 @@
             background: #f7faff;
             padding: 18px;
             margin: 15px 0;
-
             border-left: 5px solid #2563a6;
             border-radius: 10px;
-
             line-height: 1.7;
         }
 
@@ -132,15 +125,10 @@
 
         .important {
             background: #eef6ff;
-
             border-left: 5px solid #17365d;
-
             padding: 16px 18px;
-
             margin: 18px 0;
-
             border-radius: 10px;
-
             line-height: 1.7;
         }
 
@@ -148,58 +136,22 @@
 
         .example {
             background: #f8f8f8;
-
             padding: 18px;
-
             margin: 15px 0;
-
             border-radius: 10px;
-
             border-left: 5px solid #6b8eb5;
-
             line-height: 1.7;
-        }
-
-        /* QUOTE */
-
-        .quote {
-            background: #edf4fb;
-
-            padding: 20px;
-
-            margin: 15px 0;
-
-            border-radius: 10px;
-
-            text-align: center;
-
-            font-style: italic;
-
-            color: #17365d;
-
-            font-size: 18px;
         }
 
         /* TIPS */
 
         .tips {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fff8e1,
-                    #fff3cd
-                );
-
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
             padding: 30px;
-
             border-radius: 18px;
-
             margin-top: 30px;
-
             border-left: 6px solid #d39b00;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
 
         .tips h2 {
@@ -216,13 +168,9 @@
 
         footer {
             margin-top: 40px;
-
             padding: 30px;
-
             text-align: center;
-
             background: #17365d;
-
             color: white;
         }
 
@@ -264,55 +212,24 @@
 <div class="container">
 
 
-    <!-- INDEX -->
+    <!-- BACK TO STUDY GUIDE -->
 
-    <section class="index">
+    <a href="studyguide.html" class="back-button">
+        ← Back to Study Guide
+    </a>
 
-        <h2>📑 English Study Guide</h2>
 
-        <div class="index-grid">
+    <!-- INTRO -->
 
-            <div class="index-item">
-                🎬 Lesson 1 — Structural Context of Drama as a Film
-            </div>
+    <section class="intro">
 
-            <div class="index-item">
-                📖 Lesson 2 — Understanding Literary Context
-            </div>
+        <h2>📘 English Study Guide</h2>
 
-            <div class="index-item">
-                🧠 Lesson 3 — Frayer's Method
-            </div>
-
-            <div class="index-item">
-                🔎 Lesson 4 — Psychological Context of a Drama
-            </div>
-
-            <div class="index-item">
-                ✍️ Lesson 5 — Writing a Short Film Script
-            </div>
-
-            <div class="index-item">
-                📝 Lesson 6 — Revising, Editing and Publishing
-            </div>
-
-            <div class="index-item">
-                🎥 Lesson 7 — Basics of Filming and Film Production
-            </div>
-
-            <div class="index-item">
-                ⚠️ Lesson 8 — Dos and Don'ts in Filming
-            </div>
-
-            <div class="index-item">
-                👤 Lesson 9 — STEAL Format for Characterization
-            </div>
-
-            <div class="index-item">
-                🧩 Lesson 10 — Organic Unity, Binary Opposition, Co-text and Collocation
-            </div>
-
-        </div>
+        <p>
+            This study guide contains the important English lessons
+            for Grade 10. Review each lesson carefully and focus on
+            understanding the concepts and applying them to examples.
+        </p>
 
     </section>
 
@@ -620,8 +537,11 @@
 
             <strong>💡 Remember:</strong>
 
-            Revision = ideas and organization<br>
-            Editing = language and correctness<br>
+            <br>
+            Revision = ideas and organization
+            <br>
+            Editing = language and correctness
+            <br>
             Publishing = final presentation
 
         </div>
@@ -670,6 +590,8 @@
 
             <strong>🎥 Remember:</strong>
 
+            <br><br>
+
             Pre-production → Production → Post-production
 
         </div>
@@ -713,18 +635,9 @@
         <ul>
 
             <li>Don't ignore background noise.</li>
-
-            <li>
-                Don't film without permission when permission
-                is required.
-            </li>
-
+            <li>Don't film without permission when permission is required.</li>
             <li>Don't intentionally damage equipment.</li>
-
-            <li>
-                Don't block important scenes with unnecessary objects.
-            </li>
-
+            <li>Don't block important scenes with unnecessary objects.</li>
             <li>Don't forget to check your recordings.</li>
 
         </ul>
@@ -879,9 +792,12 @@
 
             <br><br>
 
-            Organic Unity → parts work together<br>
-            Binary Opposition → contrasting ideas<br>
-            Co-text → surrounding words<br>
+            Organic Unity → parts work together
+            <br>
+            Binary Opposition → contrasting ideas
+            <br>
+            Co-text → surrounding words
+            <br>
             Collocation → words that commonly go together
 
         </div>
@@ -964,4 +880,3 @@
 </body>
 
 </html>
-

@@ -29,6 +29,7 @@
             color: white;
             text-align: center;
             padding: 45px 20px;
+
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
         }
 
@@ -55,52 +56,27 @@
 
         .back-button {
             display: inline-block;
+
             margin-bottom: 25px;
-            padding: 12px 20px;
+
+            padding: 12px 18px;
+
             background: #2563a6;
+
             color: white;
+
             text-decoration: none;
-            border-radius: 9px;
+
+            border-radius: 8px;
+
             font-weight: bold;
-            transition: 0.25s ease;
+
+            transition: 0.2s;
         }
 
         .back-button:hover {
             background: #17365d;
             transform: translateY(-2px);
-        }
-
-        /* INDEX */
-
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
-
-            margin-bottom: 30px;
-        }
-
-        .index h2 {
-            margin-top: 0;
-            color: #17365d;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(210px, 1fr));
-            gap: 10px;
-        }
-
-        .index-item {
-            padding: 13px 15px;
-            background: #eaf2f8;
-            color: #17365d;
-            border-radius: 10px;
-            font-weight: bold;
         }
 
         /* TOPIC CARDS */
@@ -198,7 +174,7 @@
             line-height: 1.7;
         }
 
-        /* TIPS */
+        /* STUDY TIPS */
 
         .tips {
             background:
@@ -256,10 +232,6 @@
                 padding: 20px;
             }
 
-            .back-button {
-                font-size: 14px;
-            }
-
         }
 
     </style>
@@ -288,54 +260,9 @@
 
     <!-- BACK TO STUDY GUIDE -->
 
-    <a class="back-button" href="studyguide.html">
+    <a class="back-button" href="studyguides.html">
         ← Back to Study Guide
     </a>
-
-
-    <!-- INTRO -->
-
-    <section class="index">
-
-        <h2>📑 Mathematics Guide</h2>
-
-        <div class="index-grid">
-
-            <div class="index-item">
-                📐 Law of Sines
-            </div>
-
-            <div class="index-item">
-                🔺 Ambiguous Case
-            </div>
-
-            <div class="index-item">
-                📏 Law of Cosines
-            </div>
-
-            <div class="index-item">
-                🧭 Bearings
-            </div>
-
-            <div class="index-item">
-                🔄 Transformations
-            </div>
-
-            <div class="index-item">
-                📊 Quadratic Inequalities
-            </div>
-
-            <div class="index-item">
-                ➗ Absolute Value
-            </div>
-
-            <div class="index-item">
-                📈 Measures of Position
-            </div>
-
-        </div>
-
-    </section>
 
 
     <!-- LAW OF SINES -->
@@ -357,23 +284,37 @@
         </div>
 
         <div class="formula">
+
             a / sin A = b / sin B = c / sin C
+
         </div>
 
         <h3>When to Use It</h3>
 
         <ul>
-            <li>When you know two angles and one side.</li>
-            <li>When you know two sides and an opposite angle.</li>
-            <li>When the triangle is not necessarily a right triangle.</li>
+
+            <li>
+                When you know two angles and one side.
+            </li>
+
+            <li>
+                When you know two sides and an opposite angle.
+            </li>
+
+            <li>
+                When the triangle is not necessarily a right triangle.
+            </li>
+
         </ul>
 
         <div class="important">
 
             <strong>💡 Remember:</strong>
 
-            The side and its opposite angle must be
-            paired correctly.
+            <p>
+                The side and its opposite angle must be
+                paired correctly.
+            </p>
 
         </div>
 
@@ -401,18 +342,24 @@
         <h3>Possible Results</h3>
 
         <ul>
+
             <li>No triangle</li>
+
             <li>One triangle</li>
+
             <li>Two possible triangles</li>
+
         </ul>
 
         <div class="important">
 
             <strong>💡 Study Tip:</strong>
 
-            Always check whether the given measurements
-            can form a triangle before assuming there is
-            only one answer.
+            <p>
+                Always check whether the given measurements
+                can form a triangle before assuming there is
+                only one answer.
+            </p>
 
         </div>
 
@@ -438,22 +385,33 @@
         </div>
 
         <div class="formula">
+
             c² = a² + b² − 2ab cos C
+
         </div>
 
         <h3>When to Use It</h3>
 
         <ul>
-            <li>When you know two sides and the included angle (SAS).</li>
-            <li>When you know all three sides (SSS).</li>
+
+            <li>
+                When you know two sides and the included angle (SAS).
+            </li>
+
+            <li>
+                When you know all three sides (SSS).
+            </li>
+
         </ul>
 
         <div class="important">
 
             <strong>💡 Remember:</strong>
 
-            The angle in the formula must be opposite
-            the side represented by c.
+            <p>
+                The angle in the formula must be opposite
+                the side represented by c.
+            </p>
 
         </div>
 
@@ -480,18 +438,25 @@
         <h3>Important Rules</h3>
 
         <ul>
+
             <li>North = 000°</li>
+
             <li>East = 090°</li>
+
             <li>South = 180°</li>
+
             <li>West = 270°</li>
+
         </ul>
 
         <div class="important">
 
             <strong>💡 Remember:</strong>
 
-            Bearings are normally written using
-            three digits, such as 045°, 120°, or 315°.
+            <p>
+                Bearings are normally written using
+                three digits, such as 045°, 120°, or 315°.
+            </p>
 
         </div>
 
@@ -545,8 +510,10 @@
 
             <strong>💡 Study Tip:</strong>
 
-            Practice identifying the transformation
-            before trying to calculate the new coordinates.
+            <p>
+                Practice identifying the transformation
+                before trying to calculate the new coordinates.
+            </p>
 
         </div>
 
@@ -575,11 +542,25 @@
 
         <ol>
 
-            <li>Move everything to one side.</li>
-            <li>Factor the quadratic if possible.</li>
-            <li>Find the critical values.</li>
-            <li>Test intervals.</li>
-            <li>Choose the interval that satisfies the inequality.</li>
+            <li>
+                Move everything to one side.
+            </li>
+
+            <li>
+                Factor the quadratic if possible.
+            </li>
+
+            <li>
+                Find the critical values.
+            </li>
+
+            <li>
+                Test intervals.
+            </li>
+
+            <li>
+                Choose the interval that satisfies the inequality.
+            </li>
 
         </ol>
 
@@ -624,7 +605,9 @@
         </div>
 
         <div class="formula">
+
             |x| = a → x = a or x = −a
+
         </div>
 
         <div class="example">
@@ -649,7 +632,9 @@
 
             <strong>💡 Remember:</strong>
 
-            Absolute value is never negative.
+            <p>
+                Absolute value is never negative.
+            </p>
 
         </div>
 
@@ -674,24 +659,28 @@
         </div>
 
         <div class="formula">
+
             |x| &lt; a → −a &lt; x &lt; a
+
         </div>
 
         <div class="formula">
+
             |x| &gt; a → x &lt; −a or x &gt; a
+
         </div>
 
         <div class="important">
 
             <strong>💡 Easy Way to Remember:</strong>
 
-            <br><br>
+            <p>
+                "Less than" → BETWEEN
+            </p>
 
-            "Less than" → BETWEEN
-
-            <br>
-
-            "Greater than" → OUTSIDE
+            <p>
+                "Greater than" → OUTSIDE
+            </p>
 
         </div>
 
@@ -720,8 +709,11 @@
         <ul>
 
             <li>Quartiles</li>
+
             <li>Percentiles</li>
+
             <li>Deciles</li>
+
             <li>Percentile Rank</li>
 
         </ul>
@@ -730,8 +722,10 @@
 
             <strong>💡 Study Tip:</strong>
 
-            Always arrange the data from smallest to largest
-            before finding measures of position.
+            <p>
+                Always arrange the data from smallest to largest
+                before finding measures of position.
+            </p>
 
         </div>
 

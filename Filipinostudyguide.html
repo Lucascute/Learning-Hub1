@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tl">
+<html lang="en">
 
 <head>
 
@@ -12,7 +12,6 @@
 
         * {
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
@@ -23,9 +22,7 @@
             line-height: 1.7;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
             background: linear-gradient(135deg, #7f1d1d, #b91c1c);
@@ -46,9 +43,7 @@
             opacity: 0.9;
         }
 
-        /* =========================
-           CONTAINER
-        ========================= */
+        /* MAIN CONTAINER */
 
         .container {
             width: 92%;
@@ -56,16 +51,14 @@
             margin: 35px auto;
         }
 
-        /* =========================
-           BACK TO STUDY GUIDES
-        ========================= */
+        /* BACK BUTTON */
 
         .back {
             display: inline-block;
             background: #b91c1c;
             color: white;
             text-decoration: none;
-            padding: 10px 18px;
+            padding: 12px 18px;
             border-radius: 8px;
             font-weight: bold;
             margin-bottom: 25px;
@@ -76,40 +69,7 @@
             background: #7f1d1d;
         }
 
-        /* =========================
-           INDEX
-        ========================= */
-
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            margin-bottom: 30px;
-        }
-
-        .index h2 {
-            margin-top: 0;
-            color: #7f1d1d;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 10px;
-        }
-
-        .index-item {
-            padding: 13px 15px;
-            background: #fff1f2;
-            color: #7f1d1d;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
-        /* =========================
-           CARDS
-        ========================= */
+        /* CARDS */
 
         .card {
             background: white;
@@ -131,9 +91,7 @@
             margin-top: 25px;
         }
 
-        /* =========================
-           GUIDE BOX
-        ========================= */
+        /* GUIDE */
 
         .guide {
             background: #fff7f7;
@@ -148,9 +106,7 @@
             color: #7f1d1d;
         }
 
-        /* =========================
-           IMPORTANT BOX
-        ========================= */
+        /* IMPORTANT */
 
         .important {
             background: #fff1f2;
@@ -161,9 +117,7 @@
             line-height: 1.7;
         }
 
-        /* =========================
-           EXAMPLE BOX
-        ========================= */
+        /* EXAMPLE */
 
         .example {
             background: #fafafa;
@@ -174,9 +128,7 @@
             line-height: 1.7;
         }
 
-        /* =========================
-           QUOTE
-        ========================= */
+        /* QUOTE */
 
         .quote {
             background: #fff7f7;
@@ -189,29 +141,7 @@
             font-size: 18px;
         }
 
-        /* =========================
-           TOP BUTTON
-        ========================= */
-
-        .top {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 16px;
-            background: #b91c1c;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .top:hover {
-            background: #7f1d1d;
-        }
-
-        /* =========================
-           STUDY TIPS
-        ========================= */
+        /* STUDY TIPS */
 
         .tips {
             background: linear-gradient(135deg, #fff8e1, #fff3cd);
@@ -232,22 +162,7 @@
             line-height: 1.7;
         }
 
-        /* =========================
-           LISTS
-        ========================= */
-
-        ul,
-        ol {
-            padding-left: 25px;
-        }
-
-        li {
-            margin: 8px 0;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             margin-top: 40px;
@@ -257,56 +172,20 @@
             color: white;
         }
 
-        footer p {
-            margin: 6px 0;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 600px) {
 
-            header {
-                padding: 35px 15px;
-            }
-
             header h1 {
                 font-size: 31px;
-            }
-
-            header p {
-                font-size: 15px;
-            }
-
-            .container {
-                width: 94%;
-                margin: 25px auto;
-            }
-
-            .index {
-                padding: 20px;
             }
 
             .card {
                 padding: 20px;
             }
 
-            .card h2 {
-                font-size: 24px;
-            }
-
-            .index-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tips {
-                padding: 20px;
-            }
-
-            .back {
-                width: 100%;
-                text-align: center;
+            .container {
+                width: 94%;
             }
 
         }
@@ -316,12 +195,10 @@
 </head>
 
 
-<body id="top">
+<body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -334,64 +211,19 @@
 </header>
 
 
+<!-- MAIN CONTENT -->
+
 <div class="container">
 
 
-    <!-- =========================
-         BACK BUTTON
-    ========================= -->
+    <!-- BACK TO STUDY GUIDES -->
 
     <a href="studyguide.html" class="back">
         ← Back to Study Guides
     </a>
 
 
-    <!-- =========================
-         INDEX
-    ========================= -->
-
-    <section class="index">
-
-        <h2>📑 Filipino Study Guide</h2>
-
-        <div class="index-grid">
-
-            <div class="index-item">
-                📖 El Filibusterismo
-            </div>
-
-            <div class="index-item">
-                👥 Mahahalagang Tauhan
-            </div>
-
-            <div class="index-item">
-                💡 Pangunahing Tema
-            </div>
-
-            <div class="index-item">
-                📌 Mahahalagang Pangyayari
-            </div>
-
-            <div class="index-item">
-                🔎 Mga Simbolismo
-            </div>
-
-            <div class="index-item">
-                📝 Mga Aral ng Nobela
-            </div>
-
-            <div class="index-item">
-                ⭐ Pangunahing Mensahe
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         EL FILIBUSTERISMO
-    ========================= -->
+    <!-- EL FILIBUSTERISMO -->
 
     <section class="card">
 
@@ -399,502 +231,398 @@
 
         <div class="guide">
 
-            <strong>Tungkol sa Nobela</strong>
+            <strong>About the Novel</strong>
 
             <p>
-                Ang <strong>El Filibusterismo</strong> ay ikalawang
-                nobela ni <strong>Dr. Jose Rizal</strong> at
-                karugtong ng <em>Noli Me Tangere</em>.
+                <strong>El Filibusterismo</strong> is the second
+                novel written by <strong>Dr. Jose Rizal</strong>
+                and the sequel to <em>Noli Me Tangere</em>.
             </p>
 
             <p>
-                Tinalakay sa nobela ang iba't ibang suliraning
-                panlipunan tulad ng pang-aabuso sa kapangyarihan,
-                kawalan ng katarungan, korapsyon, at paghahangad
-                ng pagbabago.
+                The novel discusses various social problems such as
+                abuse of power, injustice, corruption, oppression,
+                and the desire for social change.
             </p>
 
         </div>
 
-
-        <h3>Mahahalagang Impormasyon</h3>
+        <h3>Important Information</h3>
 
         <ul>
 
             <li>
-                <strong>May-akda:</strong> Dr. Jose Rizal
+                <strong>Author:</strong> Dr. Jose Rizal
             </li>
 
             <li>
-                <strong>Orihinal na Wika:</strong> Kastila
+                <strong>Original Language:</strong> Spanish
             </li>
 
             <li>
-                <strong>Uri:</strong> Nobela
+                <strong>Genre:</strong> Novel
             </li>
 
             <li>
-                <strong>Karugtong:</strong> Noli Me Tangere
+                <strong>Sequel to:</strong> Noli Me Tangere
             </li>
 
         </ul>
 
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
-
     </section>
 
 
-    <!-- =========================
-         CHARACTERS
-    ========================= -->
+    <!-- CHARACTERS -->
 
     <section class="card">
 
-        <h2>👥 Mahahalagang Tauhan</h2>
-
+        <h2>👥 Important Characters</h2>
 
         <div class="guide">
 
             <strong>Simoun</strong>
 
             <p>
-                Tunay na si Crisostomo Ibarra. Nagbalik siya
-                bilang isang mayamang alahero upang maghiganti
-                at magkaroon ng pagbabago.
+                He is actually Crisostomo Ibarra from
+                <em>Noli Me Tangere</em>. He returns as a wealthy
+                jeweler who seeks revenge and wants to create change.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Basilio</strong>
 
             <p>
-                Dating sakristan na naging mag-aaral ng medisina.
+                A former sacristan who becomes a medical student.
+                He experiences many hardships throughout the novel.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Isagani</strong>
 
             <p>
-                Isang makata at makabayang mag-aaral na naniniwala
-                sa mapayapang pagbabago.
+                A poet and patriotic student who believes in
+                peaceful and meaningful change.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Kabesang Tales</strong>
 
             <p>
-                Isang magsasakang nakaranas ng kawalan ng
-                katarungan dahil sa kanyang lupain.
+                A farmer who experiences injustice because of
+                problems involving his land.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Juli</strong>
 
             <p>
-                Anak ni Kabesang Tales at kasintahan ni Basilio.
+                The daughter of Kabesang Tales and the
+                girlfriend of Basilio.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Padre Florentino</strong>
 
             <p>
-                Paring Pilipino na kumupkop kay Isagani at
-                tumulong kay Simoun sa kanyang huling sandali.
+                A Filipino priest who takes care of Isagani
+                and helps Simoun during his final moments.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Paulita Gomez</strong>
 
             <p>
-                Dating kasintahan ni Isagani na nagpakasal
-                kay Juanito Pelaez.
+                Isagani's former girlfriend who eventually
+                marries Juanito Pelaez.
             </p>
 
         </div>
-
 
         <div class="guide">
 
             <strong>Juanito Pelaez</strong>
 
             <p>
-                Mayamang mag-aaral at karibal ni Isagani.
+                A wealthy student and rival of Isagani.
             </p>
 
         </div>
 
-
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
-
     </section>
 
 
-    <!-- =========================
-         THEMES
-    ========================= -->
+    <!-- THEMES -->
 
     <section class="card">
 
-        <h2>💡 Pangunahing Tema</h2>
+        <h2>💡 Main Themes</h2>
 
         <div class="guide">
 
             <ul>
 
-                <li>
-                    Pagmamahal sa bayan
-                </li>
+                <li>Love for the country</li>
 
-                <li>
-                    Paghahangad ng kalayaan
-                </li>
+                <li>Desire for freedom</li>
 
-                <li>
-                    Kawalan ng katarungan
-                </li>
+                <li>Injustice</li>
 
-                <li>
-                    Pang-aabuso sa kapangyarihan
-                </li>
+                <li>Abuse of power</li>
 
-                <li>
-                    Paghihiganti
-                </li>
+                <li>Revenge</li>
 
-                <li>
-                    Edukasyon
-                </li>
+                <li>Education</li>
 
-                <li>
-                    Korapsyon at katiwalian
-                </li>
+                <li>Corruption</li>
 
-                <li>
-                    Pakikibaka para sa pagbabago
-                </li>
+                <li>Struggle for change</li>
 
             </ul>
 
         </div>
 
-
         <div class="important">
 
-            <strong>💡 Tandaan:</strong>
+            <strong>💡 Remember:</strong>
 
             <p>
-                Maraming suliranin sa nobela ang nagpapakita
-                ng kalagayan ng lipunan at ng pangangailangan
-                para sa makabuluhang pagbabago.
+                Many of the problems presented in the novel
+                reflect the condition of society and the need
+                for meaningful social change.
             </p>
 
         </div>
 
-
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
-
     </section>
 
 
-    <!-- =========================
-         IMPORTANT EVENTS
-    ========================= -->
+    <!-- IMPORTANT EVENTS -->
 
     <section class="card">
 
-        <h2>📌 Mahahalagang Pangyayari</h2>
+        <h2>📌 Important Events</h2>
 
         <div class="guide">
 
             <ol>
 
                 <li>
-                    Nagbalik si Crisostomo Ibarra bilang
-                    <strong>Simoun</strong>, isang mayamang alahero.
+                    Crisostomo Ibarra returns as
+                    <strong>Simoun</strong>, a wealthy jeweler.
                 </li>
 
                 <li>
-                    Tinangka ng mga mag-aaral na magkaroon ng
-                    <strong>Akademya ng Wikang Kastila</strong>.
+                    The students attempt to establish an
+                    <strong>Academy of Spanish</strong>.
                 </li>
 
                 <li>
-                    Naranasan ni <strong>Kabesang Tales</strong>
-                    ang kawalan ng katarungan dahil sa kanyang lupain.
+                    <strong>Kabesang Tales</strong> experiences
+                    injustice involving his land.
                 </li>
 
                 <li>
-                    Gumawa si Simoun ng mga plano upang maghiganti
-                    at pabagsakin ang pamahalaan.
+                    Simoun develops plans to seek revenge
+                    and overthrow the government.
                 </li>
 
                 <li>
-                    Nabigo ang kanyang mga plano at napilitan
-                    siyang tumakas.
+                    His plans fail, forcing him to escape.
                 </li>
 
                 <li>
-                    Humingi ng tulong si Simoun kay
+                    Simoun seeks help from
                     <strong>Padre Florentino</strong>.
                 </li>
 
                 <li>
-                    Sa wakas ng nobela, ipinakita na ang tunay
-                    na pagbabago ay hindi dapat nakabatay lamang
-                    sa paghihiganti at karahasan.
+                    At the end of the novel, it is shown that
+                    true change should not be based only on
+                    revenge and violence.
                 </li>
 
             </ol>
 
         </div>
 
-
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
-
     </section>
 
 
-    <!-- =========================
-         SYMBOLISM
-    ========================= -->
+    <!-- SYMBOLISM -->
 
     <section class="card">
 
-        <h2>🔎 Mga Simbolismo</h2>
-
+        <h2>🔎 Symbolism</h2>
 
         <div class="guide">
 
-            <strong>💡 Lampara</strong>
+            <strong>💡 The Lamp</strong>
 
             <p>
-                Sumasagisag sa plano ni Simoun at sa kanyang
-                paghihiganti.
+                The lamp symbolizes Simoun's plan and
+                his desire for revenge.
             </p>
 
         </div>
 
-
         <div class="guide">
 
-            <strong>💰 Kayamanan</strong>
+            <strong>💰 Wealth</strong>
 
             <p>
-                Nagpapakita ng kapangyarihan at impluwensiya
-                ni Simoun.
+                Wealth represents Simoun's power,
+                influence, and ability to manipulate
+                people and situations.
             </p>
 
         </div>
 
-
         <div class="guide">
 
-            <strong>💎 Alahas</strong>
+            <strong>💎 Jewelry</strong>
 
             <p>
-                Sumasagisag sa yaman, kapangyarihan, at mga
-                lihim na layunin ni Simoun.
+                Jewelry symbolizes wealth, power,
+                influence, and Simoun's hidden intentions.
             </p>
 
         </div>
-
 
         <div class="important">
 
             <strong>⭐ Study Tip:</strong>
 
             <p>
-                Kapag tinanong tungkol sa simbolismo, huwag lamang
-                sabihin kung ano ang bagay. Ipaliwanag kung ano
-                ang kinakatawan o ipinahihiwatig nito sa nobela.
+                When asked about symbolism, do not only identify
+                the object. Explain what the object represents
+                or suggests within the novel.
             </p>
 
         </div>
 
-
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
-
     </section>
 
 
-    <!-- =========================
-         LESSONS
-    ========================= -->
+    <!-- LESSON -->
 
     <section class="card">
 
-        <h2>📝 Aral ng Nobela</h2>
-
+        <h2>📝 Lessons of the Novel</h2>
 
         <div class="guide">
 
             <p>
-                Itinuturo ng <strong>El Filibusterismo</strong>
-                na ang tunay na pagbabago ay hindi dapat
-                nakabatay lamang sa galit at paghihiganti.
+                <strong>El Filibusterismo</strong> teaches that
+                true change should not be based only on anger,
+                revenge, or violence.
             </p>
 
             <p>
-                Mahalaga ang <strong>edukasyon, pagkakaisa,
-                katarungan, at pagmamahal sa bayan</strong>
-                upang makamit ang isang mas mabuting lipunan.
+                <strong>Education, unity, justice, and love
+                for the country</strong> are important in
+                creating a better society.
             </p>
 
         </div>
 
-
         <div class="quote">
 
-            "Ang pagbabago ay nangangailangan ng
-            tamang layunin at tamang paraan."
+            "Change requires the right purpose
+            and the right means."
 
         </div>
-
-
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
 
     </section>
 
 
-    <!-- =========================
-         MAIN MESSAGE
-    ========================= -->
+    <!-- MAIN MESSAGE -->
 
     <section class="card">
 
-        <h2>⭐ Pangunahing Mensahe</h2>
-
+        <h2>⭐ Main Message</h2>
 
         <div class="important">
 
             <strong>
-                Ang pagbabago ay nangangailangan ng tapang,
-                pagkakaisa, edukasyon, at pagmamahal sa bayan.
+                Change requires courage, unity,
+                education, and love for the country.
             </strong>
 
             <p>
-                Ipinapakita ng nobela na ang paghihiganti at
-                karahasan ay maaaring magdulot ng kapahamakan.
-                Ang makabuluhang pagbabago ay nangangailangan
-                ng pananagutan, katarungan, at pagkakaisa.
+                The novel shows that revenge and violence
+                can lead to destruction. Meaningful change
+                requires responsibility, justice, education,
+                and unity.
             </p>
 
         </div>
 
-
-        <a class="top" href="#top">
-            ↑ Bumalik sa Itaas
-        </a>
-
     </section>
 
 
-    <!-- =========================
-         STUDY TIPS
-    ========================= -->
+    <!-- STUDY TIPS -->
 
     <section class="tips">
 
         <h2>⭐ Filipino Study Tips</h2>
 
-
         <ol>
 
             <li>
-
-                <strong>Alamin ang mga tauhan.</strong>
-
-                Tandaan ang kanilang relasyon, personalidad,
-                at papel sa kuwento.
-
-            </li>
-
-
-            <li>
-
-                <strong>Understand the symbolism.</strong>
-
-                Alamin kung ano ang kinakatawan ng mahahalagang
-                bagay tulad ng lampara at alahas.
-
-            </li>
-
-
-            <li>
-
-                <strong>Review the major events.</strong>
-
-                Tandaan ang pagkakasunod-sunod ng mahahalagang
-                pangyayari.
-
-            </li>
-
-
-            <li>
-
-                <strong>Connect the themes.</strong>
-
-                Iugnay ang mga pangyayari sa mga tema tulad
-                ng katarungan, paghihiganti, edukasyon,
-                at pagmamahal sa bayan.
-
-            </li>
-
-
-            <li>
-
                 <strong>Know the characters.</strong>
-
-                Huwag lamang kabisaduhin ang pangalan.
-                Alamin kung ano ang kanilang ginawa at
-                kinakatawan sa nobela.
-
+                Remember their relationships, personalities,
+                motivations, and roles in the story.
             </li>
 
+            <li>
+                <strong>Understand the symbolism.</strong>
+                Know what important objects such as the lamp
+                and jewelry represent.
+            </li>
 
             <li>
+                <strong>Review the major events.</strong>
+                Remember the order and importance of the
+                major events in the novel.
+            </li>
 
+            <li>
+                <strong>Connect the themes.</strong>
+                Connect the events to themes such as justice,
+                revenge, education, freedom, and love for
+                the country.
+            </li>
+
+            <li>
+                <strong>Understand the characters.</strong>
+                Do not simply memorize their names.
+                Understand what they did and what they
+                represent in the novel.
+            </li>
+
+            <li>
                 <strong>Understand the lesson.</strong>
-
-                Sa mga essay o pagsusulit, ipaliwanag kung
-                paano ipinakita ng nobela ang kahalagahan
-                ng tunay na pagbabago.
-
+                When answering essays or exams, explain how
+                the novel presents the importance of meaningful
+                and responsible change.
             </li>
 
         </ol>
@@ -905,9 +633,7 @@
 </div>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -916,7 +642,7 @@
     </p>
 
     <p>
-        Basahin • Unawain • Suriin • Matuto
+        Read • Understand • Analyze • Learn
     </p>
 
 </footer>

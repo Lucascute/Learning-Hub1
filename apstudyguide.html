@@ -1,203 +1,212 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AP Study Guide | Grade 10</title>
+    <title>AP 10 Study Guide</title>
 
     <style>
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #eef3f8, #dfe9f3);
+            background: linear-gradient(135deg, #eef4ff, #f8faff);
             color: #263238;
+            line-height: 1.7;
         }
 
-        /* HEADER */
-
         header {
-            background: linear-gradient(135deg, #17365d, #2563a6);
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
             color: white;
             text-align: center;
-            padding: 45px 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            padding: 35px 20px 25px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 42px;
+            font-size: 38px;
+            margin-bottom: 8px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 17px;
-            opacity: 0.9;
         }
 
-        /* CONTAINER */
-
-        .container {
-            width: 92%;
-            max-width: 1050px;
-            margin: 35px auto;
-        }
-
-        /* INDEX */
-
-        .index {
-            background: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
-
-        .index h2 {
-            margin-top: 0;
-            color: #17365d;
-        }
-
-        .index-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        nav {
+            margin-top: 22px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
         }
 
-        .index-item {
-            padding: 13px 15px;
-            background: #eaf2f8;
-            color: #17365d;
-            border-radius: 10px;
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 9px 15px;
+            border-radius: 8px;
+            font-size: 14px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        /* CARDS */
-
-        .card {
+        nav a:hover {
             background: white;
-            padding: 30px;
-            margin: 25px 0;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-left: 6px solid #2563a6;
+            color: #2563eb;
         }
 
-        .card h2 {
-            margin-top: 0;
-            color: #17365d;
-            font-size: 28px;
+        main {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 0 20px;
         }
 
-        .card h3 {
-            color: #2563a6;
-            margin-top: 25px;
-        }
-
-        /* GUIDE */
-
-        .guide {
-            background: #f7faff;
-            padding: 18px;
-            margin: 15px 0;
-            border-left: 5px solid #2563a6;
-            border-radius: 10px;
-            line-height: 1.7;
-        }
-
-        .guide strong {
-            color: #17365d;
-        }
-
-        /* IMPORTANT */
-
-        .important {
-            background: #eef6ff;
-            border-left: 5px solid #17365d;
-            padding: 16px 18px;
-            margin: 18px 0;
-            border-radius: 10px;
-            line-height: 1.7;
-        }
-
-        /* EXAMPLE */
-
-        .example {
-            background: #f8f8f8;
-            padding: 18px;
-            margin: 15px 0;
-            border-radius: 10px;
-            border-left: 5px solid #6b8eb5;
-            line-height: 1.7;
-        }
-
-        /* TIPS */
-
-        .tips {
-            background: linear-gradient(135deg, #fff8e1, #fff3cd);
-            padding: 30px;
-            border-radius: 18px;
-            margin-top: 30px;
-            border-left: 6px solid #d39b00;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-        }
-
-        .tips h2 {
-            color: #8a6500;
-            margin-top: 0;
-        }
-
-        .tips li {
-            margin: 12px 0;
-            line-height: 1.7;
-        }
-
-        /* TOP BUTTON */
-
-        .top {
+        .back {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 16px;
-            background: #2563a6;
+            background: #2563eb;
             color: white;
             text-decoration: none;
+            padding: 10px 18px;
             border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .intro,
+        .guide-card {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .intro {
+            border-left: 6px solid #2563eb;
+        }
+
+        .intro h2,
+        .guide-card h2 {
+            color: #1e40af;
+            margin-bottom: 12px;
+        }
+
+        .guide-card {
+            border-top: 5px solid #2563eb;
+        }
+
+        .guide-card h3 {
+            color: #2563eb;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .guide-card h4 {
+            color: #334155;
+            margin-top: 15px;
+        }
+
+        ul,
+        ol {
+            margin-left: 25px;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            background: #f8fafc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .number {
+            min-width: 35px;
+            height: 35px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
         }
 
-        .top:hover {
-            background: #17365d;
+        .tip {
+            background: #f0fdf4;
+            border-left: 5px solid #22c55e;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
         }
 
-        /* FOOTER */
+        .warning {
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .day {
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .day h3 {
+            margin-top: 0;
+        }
 
         footer {
-            margin-top: 40px;
-            padding: 30px;
-            text-align: center;
-            background: #17365d;
+            background: #0f172a;
             color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
         }
 
-        /* MOBILE */
-
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
             header h1 {
-                font-size: 31px;
+                font-size: 28px;
             }
 
-            .card {
-                padding: 20px;
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .schedule {
+                grid-template-columns: 1fr;
             }
 
         }
@@ -206,72 +215,101 @@
 
 </head>
 
-
-<body id="top">
-
-
-<!-- HEADER -->
+<body>
 
 <header>
 
-    <h1>🌏 AP Study Guide</h1>
+    <h1>📚 AP 10 Study Guide</h1>
 
-    <p>
-        Araling Panlipunan | Grade 10
-    </p>
+    <p>First Quarter • Weeks 1–10</p>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="subjects.html">📚 Subjects</a>
+        <a href="resources.html">📖 Resources</a>
+        <a href="studytips.html">💡 Study Tips</a>
+        <a href="contact.html">📩 Contact Us</a>
+    </nav>
 
 </header>
 
+<main>
 
-<div class="container">
+    <a href="resources.html" class="back">
+        ← Back to Resources
+    </a>
+
+    <section class="intro">
+
+        <h2>🎯 How to Use This Study Guide</h2>
+
+        <p>
+            Gamitin ang study guide na ito para ma-organize
+            ang iyong review sa AP 10 First Quarter.
+        </p>
+
+        <p>
+            Huwag kabisaduhin lamang ang mga salita.
+            Subukang maintindihan kung paano magkakaugnay
+            ang mga konsepto.
+        </p>
+
+    </section>
 
 
-    <!-- INDEX -->
+    <section class="guide-card">
 
-    <section class="index">
+        <h2>📅 Suggested Study Plan</h2>
 
-        <h2>📑 AP Study Guide</h2>
+        <div class="schedule">
 
-        <div class="index-grid">
-
-            <div class="index-item">
-                🌏 Lesson 1 — Heograpiya
+            <div class="day">
+                <h3>Day 1</h3>
+                <p>
+                    Review Week 1–2:
+                    Kontemporaryong Isyu at Solid Waste.
+                </p>
             </div>
 
-            <div class="index-item">
-                🗺️ Lesson 2 — Lokasyon at Rehiyon
+            <div class="day">
+                <h3>Day 2</h3>
+                <p>
+                    Review Week 3–4:
+                    Likas na Yaman at Climate Change.
+                </p>
             </div>
 
-            <div class="index-item">
-                🌱 Lesson 3 — Likas na Yaman
+            <div class="day">
+                <h3>Day 3</h3>
+                <p>
+                    Review Week 5–6:
+                    DRRM at CBDRM.
+                </p>
             </div>
 
-            <div class="index-item">
-                🏛️ Lesson 4 — Kabihasnan
+            <div class="day">
+                <h3>Day 4</h3>
+                <p>
+                    Review Week 7–8:
+                    Disaster Prevention, Preparedness,
+                    Response, Rehabilitation, at Recovery.
+                </p>
             </div>
 
-            <div class="index-item">
-                🎨 Lesson 5 — Renaissance
+            <div class="day">
+                <h3>Day 5</h3>
+                <p>
+                    Review Week 9–10:
+                    Globalisasyon at mga epekto nito.
+                </p>
             </div>
 
-            <div class="index-item">
-                🏭 Lesson 6 — Rebolusyong Industriyal
-            </div>
-
-            <div class="index-item">
-                💰 Lesson 7 — Ekonomiks
-            </div>
-
-            <div class="index-item">
-                📈 Lesson 8 — Demand at Supply
-            </div>
-
-            <div class="index-item">
-                🌐 Lesson 9 — Globalisasyon
-            </div>
-
-            <div class="index-item">
-                ⚖️ Lesson 10 — Mga Kontemporaryong Isyu
+            <div class="day">
+                <h3>Day 6</h3>
+                <p>
+                    Balikan ang lahat ng keywords
+                    at mahahalagang termino.
+                </p>
             </div>
 
         </div>
@@ -279,647 +317,327 @@
     </section>
 
 
-    <!-- LESSON 1 -->
+    <section class="guide-card">
 
-    <section class="card">
+        <h2>🌎 Part 1 – Kontemporaryong Isyu</h2>
 
-        <h2>🌏 Lesson 1 — Heograpiya</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang Heograpiya?</strong>
-
-            <p>
-                Ang heograpiya ay pag-aaral ng mga lugar,
-                tao, kapaligiran, at ugnayan ng mga ito.
-            </p>
-
-        </div>
-
-        <h3>Limang Tema ng Heograpiya</h3>
-
-        <ul>
-
-            <li>
-                <strong>Lokasyon</strong> – kung saan matatagpuan
-                ang isang lugar.
-            </li>
-
-            <li>
-                <strong>Lugar</strong> – katangiang pisikal at
-                pantao ng isang lugar.
-            </li>
-
-            <li>
-                <strong>Rehiyon</strong> – mga lugar na may
-                magkakatulad na katangian.
-            </li>
-
-            <li>
-                <strong>Movement</strong> – paggalaw ng tao,
-                produkto, ideya, at impormasyon.
-            </li>
-
-            <li>
-                <strong>Interaction</strong> – ugnayan ng tao
-                at kapaligiran.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>💡 Tandaan:</strong>
-
-            Ang heograpiya ay hindi lamang tungkol sa mapa.
-            Kasama rito ang tao, kultura, kapaligiran, at
-            relasyon ng mga ito.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 2 -->
-
-    <section class="card">
-
-        <h2>🗺️ Lesson 2 — Lokasyon at Rehiyon</h2>
-
-        <div class="guide">
-
-            <strong>Lokasyon</strong>
-
-            <p>
-                Tumutukoy sa kinaroroonan ng isang lugar.
-            </p>
-
-        </div>
-
-        <h3>Dalawang Uri ng Lokasyon</h3>
-
-        <ul>
-
-            <li>
-                <strong>Absolute Location</strong> – tiyak na
-                lokasyon gamit ang coordinates tulad ng
-                latitude at longitude.
-            </li>
-
-            <li>
-                <strong>Relative Location</strong> – lokasyon
-                batay sa kaugnayan nito sa ibang lugar.
-            </li>
-
-        </ul>
-
-        <div class="example">
-
-            <strong>Halimbawa:</strong>
-
-            <p>
-                Ang pagsasabing ang isang lugar ay nasa
-                hilaga ng isa pang lugar ay halimbawa ng
-                relative location.
-            </p>
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 3 -->
-
-    <section class="card">
-
-        <h2>🌱 Lesson 3 — Likas na Yaman</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang likas na yaman?</strong>
-
-            <p>
-                Ang likas na yaman ay mga yamang nagmumula
-                sa kalikasan at ginagamit ng tao.
-            </p>
-
-        </div>
-
-        <h3>Mga Uri</h3>
-
-        <ul>
-
-            <li>
-                <strong>Yamang Lupa</strong> – lupa, halaman,
-                kagubatan.
-            </li>
-
-            <li>
-                <strong>Yamang Tubig</strong> – ilog, lawa,
-                dagat, at iba pang anyong tubig.
-            </li>
-
-            <li>
-                <strong>Yamang Mineral</strong> – ginto,
-                tanso, nickel, at iba pa.
-            </li>
-
-            <li>
-                <strong>Yamang Enerhiya</strong> – araw,
-                hangin, tubig, at fossil fuels.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>🌱 Tandaan:</strong>
-
-            Mahalaga ang wastong paggamit at pangangalaga
-            sa likas na yaman upang mapakinabangan ito
-            ng kasalukuyan at susunod na henerasyon.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 4 -->
-
-    <section class="card">
-
-        <h2>🏛️ Lesson 4 — Kabihasnan</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang kabihasnan?</strong>
-
-            <p>
-                Ang kabihasnan ay isang organisadong lipunan
-                na may pamahalaan, ekonomiya, kultura, at
-                sistema ng pamumuhay.
-            </p>
-
-        </div>
-
-        <h3>Katangian ng Kabihasnan</h3>
-
-        <ul>
-
-            <li>Organisadong pamahalaan</li>
-
-            <li>Ekonomiya</li>
-
-            <li>Relihiyon</li>
-
-            <li>Sistema ng pagsusulat</li>
-
-            <li>Mga batas</li>
-
-            <li>Espesyalisasyon ng paggawa</li>
-
-            <li>Pag-unlad ng teknolohiya</li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>💡 Tandaan:</strong>
-
-            Ang kabihasnan ay nabubuo kapag ang isang lipunan
-            ay nagkakaroon ng organisadong sistema at
-            mas kumplikadong pamumuhay.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 5 -->
-
-    <section class="card">
-
-        <h2>🎨 Lesson 5 — Renaissance</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang Renaissance?</strong>
-
-            <p>
-                Ang Renaissance ay panahon ng muling pagsilang
-                ng interes sa sining, agham, kultura, at
-                kaalaman sa Europe.
-            </p>
-
-        </div>
-
-        <h3>Mahahalagang Katangian</h3>
-
-        <ul>
-
-            <li>Pag-unlad ng sining</li>
-
-            <li>Pag-usbong ng humanism</li>
-
-            <li>Pag-unlad ng agham</li>
-
-            <li>Pagpapahalaga sa edukasyon</li>
-
-            <li>Pag-usbong ng mga bagong ideya</li>
-
-        </ul>
-
-        <div class="example">
-
-            <strong>💡 Humanism:</strong>
-
-            <p>
-                Isang pananaw na nagbibigay-diin sa kakayahan,
-                dignidad, at potensyal ng tao.
-            </p>
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 6 -->
-
-    <section class="card">
-
-        <h2>🏭 Lesson 6 — Rebolusyong Industriyal</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang Rebolusyong Industriyal?</strong>
-
-            <p>
-                Ito ay panahon ng malaking pagbabago sa
-                produksyon dahil sa paggamit ng mga makina
-                at mga bagong teknolohiya.
-            </p>
-
-        </div>
-
-        <h3>Mga Epekto</h3>
-
-        <ul>
-
-            <li>Pagdami ng mga pabrika</li>
-
-            <li>Pag-unlad ng transportasyon</li>
-
-            <li>Paglaki ng mga lungsod</li>
-
-            <li>Pagdami ng produksyon</li>
-
-            <li>Pagbabago sa uri ng trabaho</li>
-
-            <li>Pag-usbong ng mga suliranin sa paggawa</li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>💡 Tandaan:</strong>
-
-            Nagdulot ang Rebolusyong Industriyal ng malaking
-            pag-unlad ngunit nagkaroon din ng mga suliraning
-            panlipunan at pangkapaligiran.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 7 -->
-
-    <section class="card">
-
-        <h2>💰 Lesson 7 — Ekonomiks</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang Ekonomiks?</strong>
-
-            <p>
-                Ang ekonomiks ay pag-aaral kung paano ginagamit
-                ang limitadong resources upang matugunan ang
-                pangangailangan at kagustuhan ng tao.
-            </p>
-
-        </div>
-
-        <h3>Mahahalagang Konsepto</h3>
-
-        <ul>
-
-            <li>
-                <strong>Scarcity</strong> – kakulangan ng resources
-                kumpara sa walang hanggang pangangailangan at
-                kagustuhan.
-            </li>
-
-            <li>
-                <strong>Needs</strong> – mga bagay na mahalaga
-                para sa pamumuhay.
-            </li>
-
-            <li>
-                <strong>Wants</strong> – mga bagay na ninanais
-                ngunit hindi pangunahing kailangan.
-            </li>
-
-            <li>
-                <strong>Opportunity Cost</strong> – halaga ng
-                pinakamagandang alternatibong isinuko.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>💡 Study Tip:</strong>
-
-            Kapag may pinili kang isang option at isinuko
-            ang pinakamagandang alternative, iyon ang
-            opportunity cost.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 8 -->
-
-    <section class="card">
-
-        <h2>📈 Lesson 8 — Demand at Supply</h2>
-
-        <div class="guide">
-
-            <strong>Demand</strong>
-
-            <p>
-                Ang demand ay dami ng produkto o serbisyo
-                na nais at kayang bilhin ng mamimili sa
-                isang partikular na presyo at panahon.
-            </p>
-
-        </div>
-
-        <div class="guide">
-
-            <strong>Supply</strong>
-
-            <p>
-                Ang supply ay dami ng produkto o serbisyo
-                na nais at kayang ipagbili ng producer sa
-                isang partikular na presyo at panahon.
-            </p>
-
-        </div>
-
-        <h3>Basic Relationship</h3>
-
-        <ul>
-
-            <li>
-                Karaniwan, kapag tumataas ang presyo,
-                bumababa ang quantity demanded.
-            </li>
-
-            <li>
-                Karaniwan, kapag tumataas ang presyo,
-                tumataas ang quantity supplied.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>⚖️ Equilibrium:</strong>
-
-            Ang equilibrium ay punto kung saan nagkakapantay
-            ang quantity demanded at quantity supplied.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 9 -->
-
-    <section class="card">
-
-        <h2>🌐 Lesson 9 — Globalisasyon</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang globalisasyon?</strong>
-
-            <p>
-                Ang globalisasyon ay proseso ng mas mabilis
-                na ugnayan at palitan ng mga bansa sa mundo.
-            </p>
-
-        </div>
-
-        <h3>Mga Aspeto</h3>
-
-        <ul>
-
-            <li>Ekonomiya</li>
-
-            <li>Teknolohiya</li>
-
-            <li>Kultura</li>
-
-            <li>Komunikasyon</li>
-
-            <li>Kalakalan</li>
-
-        </ul>
-
-        <div class="example">
-
-            <strong>Halimbawa:</strong>
-
-            <p>
-                Dahil sa internet, maaaring makipag-ugnayan
-                agad ang mga tao mula sa iba't ibang bansa.
-            </p>
-
-        </div>
-
-        <div class="important">
-
-            <strong>💡 Tandaan:</strong>
-
-            May positibo at negatibong epekto ang globalisasyon
-            depende sa paraan ng paggamit at pamamahala nito.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- LESSON 10 -->
-
-    <section class="card">
-
-        <h2>⚖️ Lesson 10 — Mga Kontemporaryong Isyu</h2>
-
-        <div class="guide">
-
-            <strong>Ano ang kontemporaryong isyu?</strong>
-
-            <p>
-                Ang kontemporaryong isyu ay isang mahalagang
-                usapin o problema na kasalukuyang nakaaapekto
-                sa lipunan.
-            </p>
-
-        </div>
-
-        <h3>Mga Halimbawa</h3>
-
-        <ul>
-
-            <li>
-                <strong>Climate Change</strong> – pangmatagalang
-                pagbabago sa pattern ng klima.
-            </li>
-
-            <li>
-                <strong>Human Rights</strong> – mga pangunahing
-                karapatan at kalayaan ng bawat tao.
-            </li>
-
-            <li>
-                <strong>Poverty</strong> – kakulangan ng sapat
-                na resources upang matugunan ang pangunahing
-                pangangailangan.
-            </li>
-
-            <li>
-                <strong>Environmental Issues</strong> – mga
-                suliraning nakaaapekto sa kalikasan.
-            </li>
-
-            <li>
-                <strong>Globalization</strong> – lumalawak na
-                ugnayan at interdependence ng mga bansa.
-            </li>
-
-        </ul>
-
-        <div class="important">
-
-            <strong>💡 Study Tip:</strong>
-
-            Kapag sinusuri ang isang kontemporaryong isyu,
-            tingnan ang sanhi, epekto, mga taong apektado,
-            at mga posibleng solusyon.
-
-        </div>
-
-        <a class="top" href="#top">↑ Back to Top</a>
-
-    </section>
-
-
-    <!-- STUDY TIPS -->
-
-    <section class="tips">
-
-        <h2>⭐ AP Study Tips</h2>
+        <h3>Focus Questions</h3>
 
         <ol>
-
-            <li>
-                <strong>Understand the timeline.</strong>
-                Kapag history ang topic, ayusin sa tamang
-                pagkakasunod-sunod ang mga pangyayari.
-            </li>
-
-            <li>
-                <strong>Remember key terms.</strong>
-                Alamin ang meaning ng mga importanteng konsepto,
-                hindi lang ang pangalan nito.
-            </li>
-
-            <li>
-                <strong>Connect cause and effect.</strong>
-                Tanungin ang sarili:
-                "Ano ang dahilan?" at "Ano ang naging epekto?"
-            </li>
-
-            <li>
-                <strong>Compare ideas.</strong>
-                Gumawa ng comparison kapag may dalawang
-                konseptong madaling mapagkamalan.
-            </li>
-
-            <li>
-                <strong>Use examples.</strong>
-                Mas madaling tandaan ang konsepto kapag may
-                konkretong halimbawa.
-            </li>
-
-            <li>
-                <strong>Review maps and locations.</strong>
-                Mahalaga ang lokasyon kapag nag-aaral ng
-                heograpiya at kasaysayan.
-            </li>
-
-            <li>
-                <strong>For current issues, analyze.</strong>
-                Alamin ang sanhi, epekto, at posibleng solusyon
-                sa bawat isyu.
-            </li>
-
+            <li>Ano ang kontemporaryong isyu?</li>
+            <li>Ano ang mga katangian nito?</li>
+            <li>Ano ang iba't ibang uri ng isyu?</li>
+            <li>Bakit mahalaga ang pagsusuri ng isyu?</li>
         </ol>
+
+        <div class="tip">
+
+            <strong>Study Tip:</strong>
+
+            <p>
+                Tandaan ang tatlong mahalagang bagay:
+                <b>Katotohanan, Opinyon, at Pagkiling.</b>
+            </p>
+
+        </div>
 
     </section>
 
 
-</div>
+    <section class="guide-card">
+
+        <h2>♻️ Part 2 – Solid Waste at Likas na Yaman</h2>
+
+        <h3>Dapat Mong Malaman</h3>
+
+        <ul>
+            <li>Mga sanhi ng problema sa solid waste</li>
+            <li>Mga epekto ng maling pagtatapon</li>
+            <li>RA 9003</li>
+            <li>Deforestation</li>
+            <li>Illegal Logging</li>
+            <li>Mining</li>
+            <li>Overfishing</li>
+        </ul>
+
+        <div class="warning">
+
+            <strong>Importanteng Tandaan:</strong>
+
+            <p>
+                Iugnay ang bawat problema sa sanhi at epekto nito.
+                Halimbawa: maling pagtatapon → polusyon → pagbaha.
+            </p>
+
+        </div>
+
+    </section>
 
 
-<!-- FOOTER -->
+    <section class="guide-card">
+
+        <h2>🌡️ Part 3 – Climate Change</h2>
+
+        <h3>Memorize the Main Causes</h3>
+
+        <ul>
+            <li>Fossil fuels</li>
+            <li>Deforestation</li>
+            <li>Industrial activities</li>
+            <li>Greenhouse gases</li>
+        </ul>
+
+        <h3>Memorize the Main Effects</h3>
+
+        <ul>
+            <li>Extreme heat</li>
+            <li>Sea-level rise</li>
+            <li>Stronger storms</li>
+            <li>Food production changes</li>
+            <li>Health risks</li>
+        </ul>
+
+    </section>
+
+
+    <section class="guide-card">
+
+        <h2>🚨 Part 4 – DRRM</h2>
+
+        <h3>Five Important Terms</h3>
+
+        <ol>
+            <li><strong>Hazard</strong> – maaaring magdulot ng pinsala.</li>
+            <li><strong>Disaster</strong> – malaking pinsala sa komunidad.</li>
+            <li><strong>Vulnerability</strong> – posibilidad na mapinsala.</li>
+            <li><strong>Risk</strong> – posibilidad ng pinsala o pagkawala.</li>
+            <li><strong>Resilience</strong> – kakayahang makabangon.</li>
+        </ol>
+
+        <div class="tip">
+
+            <strong>Memory Tip:</strong>
+
+            <p>
+                <b>Hazard → Risk → Disaster</b><br>
+                Ang vulnerability ay nakaaapekto sa posibilidad
+                ng pinsala, habang ang resilience ay tumutulong
+                sa pagbangon.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="guide-card">
+
+        <h2>🤝 Part 5 – CBDRM</h2>
+
+        <h3>Remember the Four Stages</h3>
+
+        <div class="step">
+
+            <div class="number">1</div>
+
+            <p>
+                <strong>Disaster Prevention and Mitigation</strong><br>
+                Maiwasan o mabawasan ang epekto ng hazard.
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="number">2</div>
+
+            <p>
+                <strong>Disaster Preparedness</strong><br>
+                Maghanda bago mangyari ang sakuna.
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="number">3</div>
+
+            <p>
+                <strong>Disaster Response</strong><br>
+                Agarang pagtugon habang at pagkatapos ng sakuna.
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <div class="number">4</div>
+
+            <p>
+                <strong>Disaster Rehabilitation and Recovery</strong><br>
+                Muling pagsasaayos at pagbabalik sa normal na kalagayan.
+            </p>
+
+        </div>
+
+        <h3>Top-Down vs Bottom-Up</h3>
+
+        <ul>
+            <li>
+                <strong>Top-Down</strong> –
+                desisyon mula sa mga awtoridad.
+            </li>
+
+            <li>
+                <strong>Bottom-Up</strong> –
+                aktibong pakikilahok ng komunidad.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <section class="guide-card">
+
+        <h2>🌐 Part 6 – Globalisasyon</h2>
+
+        <h3>Definition</h3>
+
+        <p>
+            Globalisasyon ay proseso ng mas mabilis at mas
+            malawak na ugnayan at interdependence ng mga bansa,
+            ekonomiya, kultura, teknolohiya, at mga tao.
+        </p>
+
+        <h3>Four Dimensions</h3>
+
+        <ol>
+            <li><strong>Ekonomiko</strong></li>
+            <li><strong>Teknolohikal</strong></li>
+            <li><strong>Kultural</strong></li>
+            <li><strong>Politikal</strong></li>
+        </ol>
+
+        <h3>Important Terms</h3>
+
+        <ul>
+            <li><strong>MNC</strong> – Multinational Corporation</li>
+            <li><strong>TNC</strong> – Transnational Corporation</li>
+            <li><strong>Outsourcing</strong> – pagkuha ng serbisyo o gawain mula sa ibang kumpanya o lugar</li>
+        </ul>
+
+    </section>
+
+
+    <section class="guide-card">
+
+        <h2>⚖️ Part 7 – Mabuti at Masamang Epekto ng Globalisasyon</h2>
+
+        <h3>✅ Mabuting Epekto</h3>
+
+        <ul>
+            <li>Mas maraming oportunidad sa trabaho</li>
+            <li>Foreign investments</li>
+            <li>Access sa teknolohiya</li>
+            <li>Mas malawak na pamilihan</li>
+            <li>Pagpapalitan ng kaalaman at kultura</li>
+        </ul>
+
+        <h3>⚠️ Mga Hamon</h3>
+
+        <ul>
+            <li>Matinding kompetisyon sa trabaho</li>
+            <li>Job insecurity</li>
+            <li>Pagbabago ng lokal na industriya</li>
+            <li>Cultural homogenization</li>
+            <li>Economic inequality</li>
+        </ul>
+
+    </section>
+
+
+    <section class="guide-card">
+
+        <h2>🧠 Final Study Checklist</h2>
+
+        <ul>
+
+            <li>
+                <strong>Week 1:</strong>
+                Naiintindihan ko ang konsepto ng kontemporaryong isyu.
+            </li>
+
+            <li>
+                <strong>Week 2:</strong>
+                Alam ko ang sanhi, epekto, at RA 9003.
+            </li>
+
+            <li>
+                <strong>Week 3:</strong>
+                Alam ko ang mga suliranin sa likas na yaman.
+            </li>
+
+            <li>
+                <strong>Week 4:</strong>
+                Kaya kong ipaliwanag ang sanhi at epekto ng climate change.
+            </li>
+
+            <li>
+                <strong>Week 5:</strong>
+                Alam ko ang Hazard, Disaster, Vulnerability, Risk, at Resilience.
+            </li>
+
+            <li>
+                <strong>Week 6:</strong>
+                Naiintindihan ko ang CBDRM at community participation.
+            </li>
+
+            <li>
+                <strong>Week 7:</strong>
+                Alam ko ang Prevention, Mitigation, at Preparedness.
+            </li>
+
+            <li>
+                <strong>Week 8:</strong>
+                Alam ko ang Response, Rehabilitation, at Recovery.
+            </li>
+
+            <li>
+                <strong>Week 9:</strong>
+                Naiintindihan ko ang globalisasyon at apat na dimensiyon nito.
+            </li>
+
+            <li>
+                <strong>Week 10:</strong>
+                Kaya kong ihambing ang mabuti at masamang epekto
+                ng globalisasyon.
+            </li>
+
+        </ul>
+
+        <div class="tip">
+
+            <strong>🎯 Final Tip:</strong>
+
+            <p>
+                Basahin muna ang Notes, gamitin ang Study Guide
+                para maintindihan ang concepts, at pagkatapos ay
+                gamitin ang Reviewer para sa mabilisang review.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
 
 <footer>
 
-    <p>
-        🌏 Grade 10 Araling Panlipunan Study Guide
-    </p>
+    <p>📚 AP 10 Study Guide • First Quarter</p>
 
-    <p>
-        Learn • Understand • Analyze • Remember
-    </p>
+    <p>Study smart and good luck! 💙</p>
 
 </footer>
 
-
 </body>
-
 </html>

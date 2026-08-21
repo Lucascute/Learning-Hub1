@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Araling Panlipunan 10 Notes</title>
+    <title>AP 10 Notes - First Quarter</title>
 
     <style>
 
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #fff8f0;
-            color: #3f2d20;
+            background: linear-gradient(135deg, #eef4ff, #f8faff);
+            color: #263238;
             line-height: 1.7;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
-            background: linear-gradient(135deg, #b45309, #ea580c);
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
             color: white;
             text-align: center;
             padding: 35px 20px 25px;
@@ -35,19 +34,16 @@
         }
 
         header h1 {
-            margin: 0;
             font-size: 38px;
+            margin-bottom: 8px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 17px;
             opacity: 0.9;
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
             margin-top: 22px;
@@ -61,197 +57,160 @@
             text-decoration: none;
             color: white;
             background: rgba(255,255,255,0.15);
-            padding: 10px 17px;
+            padding: 9px 15px;
             border-radius: 8px;
-            font-weight: bold;
-            font-size: 14px;
             transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         nav a:hover {
             background: white;
-            color: #b45309;
-            transform: translateY(-2px);
+            color: #2563eb;
         }
 
-        /* =========================
-           MAIN
-        ========================= */
+        /* MAIN */
 
-        .container {
-            width: 92%;
-            max-width: 1000px;
+        main {
+            max-width: 1050px;
             margin: 35px auto;
+            padding: 0 20px;
         }
 
-        /* =========================
-           BACK BUTTON
-        ========================= */
+        /* BACK BUTTON */
 
         .back-button {
             display: inline-block;
             text-decoration: none;
             color: white;
-            background: #b45309;
+            background: #2563eb;
+            font-weight: bold;
             padding: 10px 18px;
             border-radius: 8px;
-            margin-bottom: 25px;
-            font-weight: bold;
+            margin-bottom: 20px;
             transition: 0.3s;
         }
 
         .back-button:hover {
-            background: #ea580c;
+            background: #1e3a8a;
             transform: translateX(-3px);
         }
 
-        /* =========================
-           INTRO
-        ========================= */
+        /* INTRO */
 
         .intro {
             background: white;
-            padding: 30px;
-            text-align: center;
+            padding: 28px;
             border-radius: 15px;
             margin-bottom: 25px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-left: 6px solid #ea580c;
+            border-left: 6px solid #2563eb;
         }
 
         .intro h2 {
-            color: #b45309;
-            margin-top: 0;
+            color: #2563eb;
+            margin-bottom: 10px;
         }
 
-        /* =========================
-           LESSON
-        ========================= */
+        /* NOTES */
 
         .lesson {
             background: white;
-            padding: 25px;
-            margin-bottom: 25px;
+            padding: 28px;
+            margin: 25px 0;
             border-radius: 15px;
             box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-top: 5px solid #ea580c;
+            border-top: 5px solid #2563eb;
+            scroll-margin-top: 20px;
         }
 
         .lesson h2 {
-            color: #b45309;
-            margin-top: 0;
-            border-bottom: 2px solid #fed7aa;
-            padding-bottom: 10px;
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 25px;
         }
 
         .lesson h3 {
-            color: #c2410c;
-        }
-
-        /* =========================
-           CARDS
-        ========================= */
-
-        .card {
-            background: #fff7ed;
-            padding: 18px;
-            margin: 15px 0;
-            border-left: 5px solid #f97316;
-            border-radius: 8px;
-        }
-
-        .card strong {
-            color: #b45309;
-        }
-
-        /* =========================
-           KEY TERMS
-        ========================= */
-
-        .terms {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .term {
-            background: #ffedd5;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #f97316;
-        }
-
-        .term strong {
-            color: #b45309;
-        }
-
-        /* =========================
-           REMEMBER
-        ========================= */
-
-        .remember {
-            background: #fef3c7;
-            border-left: 5px solid #d97706;
-            padding: 18px;
-            border-radius: 8px;
+            color: #2563eb;
             margin-top: 20px;
+            margin-bottom: 8px;
         }
 
-        .remember strong {
-            color: #b45309;
+        .lesson h4 {
+            color: #334155;
+            margin-top: 15px;
+            margin-bottom: 5px;
         }
 
-        /* =========================
-           LISTS
-        ========================= */
+        .lesson p {
+            margin-bottom: 12px;
+        }
 
         ul,
         ol {
-            padding-left: 25px;
+            margin-left: 25px;
+            margin-bottom: 15px;
         }
 
         li {
-            margin: 8px 0;
+            margin: 7px 0;
         }
 
-        /* =========================
-           QUICK REVIEW
-        ========================= */
+        /* BOXES */
 
-        .quick-review {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-            border-top: 5px solid #b45309;
+        .definition {
+            background: #fef3c7;
+            border-left: 5px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
         }
 
-        .quick-review h2 {
-            color: #b45309;
+        .important {
+            background: #dbeafe;
+            border-left: 5px solid #2563eb;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* TABLE */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #1e40af;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #3f2d20;
+            background: #0f172a;
             color: white;
             text-align: center;
             padding: 25px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
-        footer p {
-            margin: 5px;
-        }
+        /* MOBILE */
 
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             header h1 {
                 font-size: 28px;
@@ -259,24 +218,22 @@
 
             nav {
                 flex-direction: column;
-                align-items: center;
             }
 
             nav a {
+                display: block;
                 width: 90%;
+                margin: auto;
                 text-align: center;
-            }
-
-            .container {
-                width: 94%;
-            }
-
-            .terms {
-                grid-template-columns: 1fr;
             }
 
             .lesson {
                 padding: 20px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
             }
 
         }
@@ -285,132 +242,95 @@
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
-    <h1>📚 Araling Panlipunan 10 Notes</h1>
+    <h1>📘 Araling Panlipunan 10</h1>
 
-    <p>Grade 10 • Lessons 1–10</p>
-
-
-    <!-- NAVIGATION -->
+    <p>Unang Markahan / Term 1 Notes</p>
 
     <nav>
-
         <a href="index.html">🏠 Home</a>
-
         <a href="subjects.html">📚 Subjects</a>
-
-        <a href="resources.html">📖 Learning Resources</a>
-
+        <a href="resources.html">📖 Resources</a>
         <a href="studytips.html">💡 Study Tips</a>
-
         <a href="contact.html">📩 Contact Us</a>
-
     </nav>
 
 </header>
 
-
-<main class="container">
-
-
-    <!-- BACK TO SUBJECTS -->
+<main>
 
     <a href="subjects.html" class="back-button">
         ← Back to Subjects
     </a>
 
-
-    <!-- =========================
-         INTRO
-    ========================= -->
-
     <div class="intro">
 
-        <h2>🇵🇭 Araling Panlipunan 10 Notes</h2>
+        <h2>📖 AP 10 — First Quarter Notes</h2>
 
         <p>
-            Welcome to your Araling Panlipunan 10 notes.
-            These notes contain important concepts,
-            terms, explanations, and key points for
-            Lessons 1–10.
+            Ang notes na ito ay sumasaklaw sa Weeks 1–10 ng
+            Araling Panlipunan 10.
         </p>
 
         <p>
-            Use these notes to understand the lessons
-            and prepare for quizzes, activities, and exams.
+            Kabilang sa mga pangunahing paksa ang
+            kontemporaryong isyu, solid waste, likas na yaman,
+            climate change, disaster risk reduction and management,
+            CBDRM, at globalisasyon.
         </p>
 
     </div>
 
 
-    <!-- =========================
-         LESSON 1
-    ========================= -->
+    <!-- WEEK 1 -->
 
-    <section class="lesson">
+    <section class="lesson" id="week1">
 
-        <h2>📖 Lesson 1: Introduction</h2>
+        <h2>Week 1 – Konsepto ng Kontemporaryong Isyu</h2>
 
-        <div class="card">
+        <h3>Ano ang Kontemporaryong Isyu?</h3>
 
-            <h3>Important Concept</h3>
+        <div class="definition">
+
+            <strong>Kahulugan:</strong>
 
             <p>
-                Add your Lesson 1 Araling Panlipunan notes here.
-                Include the definitions, important people,
-                events, concepts, and examples discussed in class.
+                Ang kontemporaryong isyu ay mga mahalagang usapin
+                o problemang kasalukuyang nararanasan at
+                pinag-uusapan ng lipunan.
             </p>
 
         </div>
 
-        <div class="remember">
+        <h3>Mga Katangian</h3>
 
-            <strong>⭐ Remember:</strong>
+        <ul>
+            <li>Nangyayari o mahalaga sa kasalukuyang panahon.</li>
+            <li>May epekto sa maraming tao.</li>
+            <li>Maaaring magkaroon ng iba't ibang pananaw.</li>
+            <li>Nangangailangan ng pagsusuri at solusyon.</li>
+        </ul>
 
-            <p>
-                Review the important terms and main ideas
-                from Lesson 1.
-            </p>
+        <h3>Mga Uri ng Kontemporaryong Isyu</h3>
 
-        </div>
+        <ul>
+            <li>Pangkapaligiran</li>
+            <li>Pang-ekonomiya</li>
+            <li>Pampolitika</li>
+            <li>Panglipunan</li>
+            <li>Pangkalusugan</li>
+        </ul>
 
-    </section>
+        <div class="important">
 
-
-    <!-- =========================
-         LESSON 2
-    ========================= -->
-
-    <section class="lesson">
-
-        <h2>📚 Lesson 2</h2>
-
-        <div class="card">
-
-            <h3>Important Concept</h3>
+            <strong>Tandaan:</strong>
 
             <p>
-                Add your Lesson 2 notes here.
-            </p>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Focus on the important terms, people,
-                events, and ideas.
+                Sa pagsusuri ng isyu, mahalagang malaman ang
+                pagkakaiba ng katotohanan, opinyon, at pagkiling.
             </p>
 
         </div>
@@ -418,63 +338,45 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 3
-    ========================= -->
+    <!-- WEEK 2 -->
 
-    <section class="lesson">
+    <section class="lesson" id="week2">
 
-        <h2>🌏 Lesson 3</h2>
+        <h2>Week 2 – Suliranin sa Solid Waste</h2>
 
-        <div class="card">
+        <h3>Solid Waste Management</h3>
 
-            <h3>Important Concept</h3>
+        <p>
+            Ang solid waste ay mga basurang nagmumula sa tahanan,
+            negosyo, paaralan, industriya, at iba pang gawain ng tao.
+        </p>
 
-            <p>
-                Add your Lesson 3 notes here.
-            </p>
+        <h3>Mga Sanhi ng Problema sa Basura</h3>
 
-        </div>
+        <ul>
+            <li>Maling pagtatapon ng basura</li>
+            <li>Sobrang paggamit ng single-use plastics</li>
+            <li>Kakulangan sa waste segregation</li>
+            <li>Hindi wastong pamamahala ng basura</li>
+        </ul>
 
-        <div class="remember">
+        <h3>Mga Epekto</h3>
 
-            <strong>⭐ Remember:</strong>
+        <ul>
+            <li>Pagbaha</li>
+            <li>Polusyon sa lupa at tubig</li>
+            <li>Pagkalat ng sakit</li>
+            <li>Pagkasira ng kapaligiran</li>
+        </ul>
 
-            <p>
-                Identify the main idea and important
-                details of the lesson.
-            </p>
+        <div class="important">
 
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         LESSON 4
-    ========================= -->
-
-    <section class="lesson">
-
-        <h2>🏛️ Lesson 4</h2>
-
-        <div class="card">
-
-            <h3>Important Concept</h3>
+            <strong>RA 9003:</strong>
 
             <p>
-                Add your Lesson 4 notes here.
-            </p>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Review the important concepts discussed
-                in this lesson.
+                Ecological Solid Waste Management Act of 2000.
+                Itinataguyod nito ang wastong segregation,
+                collection, recycling, at disposal ng solid waste.
             </p>
 
         </div>
@@ -482,62 +384,54 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 5
-    ========================= -->
+    <!-- WEEK 3 -->
 
-    <section class="lesson">
+    <section class="lesson" id="week3">
 
-        <h2>📜 Lesson 5</h2>
+        <h2>Week 3 – Pagkasira ng Likas na Yaman</h2>
 
-        <div class="card">
+        <h3>Mga Suliranin sa Likas na Yaman</h3>
 
-            <h3>Important Concept</h3>
+        <ul>
+            <li>
+                <strong>Deforestation</strong> –
+                malawakang pagkakalbo ng kagubatan.
+            </li>
 
-            <p>
-                Add your Lesson 5 notes here.
-            </p>
+            <li>
+                <strong>Illegal Logging</strong> –
+                ilegal na pagputol ng mga puno.
+            </li>
 
-        </div>
+            <li>
+                <strong>Mining</strong> –
+                pagmimina na maaaring makasira sa lupa at tubig.
+            </li>
 
-        <div class="remember">
+            <li>
+                <strong>Overfishing</strong> –
+                labis na pangingisda.
+            </li>
+        </ul>
 
-            <strong>⭐ Remember:</strong>
+        <h3>Epekto</h3>
 
-            <p>
-                Remember the key terms and important
-                information from this lesson.
-            </p>
+        <ul>
+            <li>Pagguho ng lupa</li>
+            <li>Pagbaha</li>
+            <li>Pagkawala ng biodiversity</li>
+            <li>Pagbaba ng kita ng mga mangingisda at magsasaka</li>
+            <li>Pagkasira ng tirahan ng mga hayop</li>
+        </ul>
 
-        </div>
+        <div class="important">
 
-    </section>
-
-
-    <!-- =========================
-         LESSON 6
-    ========================= -->
-
-    <section class="lesson">
-
-        <h2>🌐 Lesson 6</h2>
-
-        <div class="card">
-
-            <h3>Important Concept</h3>
-
-            <p>
-                Add your Lesson 6 notes here.
-            </p>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
+            <strong>Tandaan:</strong>
 
             <p>
-                Review the main concepts and examples.
+                Mahalaga ang likas na yaman dahil nagbibigay ito
+                ng pagkain, trabaho, materyales, at iba pang
+                pangangailangan ng tao.
             </p>
 
         </div>
@@ -545,62 +439,51 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 7
-    ========================= -->
+    <!-- WEEK 4 -->
 
-    <section class="lesson">
+    <section class="lesson" id="week4">
 
-        <h2>🏛️ Lesson 7</h2>
+        <h2>Week 4 – Climate Change</h2>
 
-        <div class="card">
+        <h3>Pagbabago ng Klima</h3>
 
-            <h3>Important Concept</h3>
+        <div class="definition">
+
+            <strong>Climate Change</strong>
 
             <p>
-                Add your Lesson 7 notes here.
+                Pangmatagalang pagbabago sa temperatura at
+                mga pattern ng klima.
             </p>
 
         </div>
 
-        <div class="remember">
+        <h3>Mga Sanhi</h3>
 
-            <strong>⭐ Remember:</strong>
+        <ul>
+            <li>Pagsusunog ng fossil fuels</li>
+            <li>Deforestation</li>
+            <li>Industrial activities</li>
+            <li>Pagdami ng greenhouse gases</li>
+        </ul>
 
-            <p>
-                Focus on the major events and concepts.
-            </p>
+        <h3>Epekto</h3>
 
-        </div>
+        <ul>
+            <li>Mas matinding init</li>
+            <li>Pagtaas ng sea level</li>
+            <li>Mas malalakas na bagyo</li>
+            <li>Pagbabago sa produksyon ng pagkain</li>
+            <li>Mga panganib sa kalusugan</li>
+        </ul>
 
-    </section>
+        <div class="important">
 
-
-    <!-- =========================
-         LESSON 8
-    ========================= -->
-
-    <section class="lesson">
-
-        <h2>🌎 Lesson 8</h2>
-
-        <div class="card">
-
-            <h3>Important Concept</h3>
+            <strong>Greenhouse Gases:</strong>
 
             <p>
-                Add your Lesson 8 notes here.
-            </p>
-
-        </div>
-
-        <div class="remember">
-
-            <strong>⭐ Remember:</strong>
-
-            <p>
-                Make sure you understand the important
-                terms and their meanings.
+                Mga gas tulad ng carbon dioxide at methane na
+                nakatutulong sa pagpapanatili ng init sa atmosphere.
             </p>
 
         </div>
@@ -608,118 +491,300 @@
     </section>
 
 
-    <!-- =========================
-         LESSON 9
-    ========================= -->
+    <!-- WEEK 5 -->
 
-    <section class="lesson">
+    <section class="lesson" id="week5">
 
-        <h2>📖 Lesson 9</h2>
+        <h2>Week 5 – Disaster Risk Reduction and Management</h2>
 
-        <div class="card">
+        <h3>Mahahalagang Termino</h3>
 
-            <h3>Important Concept</h3>
+        <table>
 
-            <p>
-                Add your Lesson 9 notes here.
-            </p>
+            <tr>
+                <th>Termino</th>
+                <th>Kahulugan</th>
+            </tr>
 
-        </div>
+            <tr>
+                <td>Hazard</td>
+                <td>
+                    Anumang pangyayari o kondisyon na maaaring
+                    magdulot ng pinsala.
+                </td>
+            </tr>
 
-        <div class="remember">
+            <tr>
+                <td>Disaster</td>
+                <td>
+                    Seryosong pangyayari na nagdudulot ng malaking
+                    pinsala sa komunidad.
+                </td>
+            </tr>
 
-            <strong>⭐ Remember:</strong>
+            <tr>
+                <td>Vulnerability</td>
+                <td>
+                    Kalagayan na nagpapataas ng posibilidad na mapinsala.
+                </td>
+            </tr>
 
-            <p>
-                Review the key information before moving
-                to the next lesson.
-            </p>
+            <tr>
+                <td>Risk</td>
+                <td>
+                    Posibilidad ng pagkakaroon ng pinsala o pagkawala.
+                </td>
+            </tr>
 
-        </div>
+            <tr>
+                <td>Resilience</td>
+                <td>
+                    Kakayahan ng komunidad na makabangon
+                    pagkatapos ng sakuna.
+                </td>
+            </tr>
+
+        </table>
+
+        <h3>Mga Uri ng Hazard</h3>
+
+        <ul>
+            <li>
+                <strong>Natural Hazard</strong> –
+                lindol, bagyo, baha, landslide
+            </li>
+
+            <li>
+                <strong>Human-Induced Hazard</strong> –
+                polusyon, sunog, aksidente, chemical spills
+            </li>
+        </ul>
 
     </section>
 
 
-    <!-- =========================
-         LESSON 10
-    ========================= -->
+    <!-- WEEK 6 -->
 
-    <section class="lesson">
+    <section class="lesson" id="week6">
 
-        <h2>🇵🇭 Lesson 10</h2>
+        <h2>Week 6 – Community-Based Disaster Risk Management</h2>
 
-        <div class="card">
+        <h3>CBDRM</h3>
 
-            <h3>Important Concept</h3>
+        <div class="definition">
+
+            <strong>
+                Community-Based Disaster Risk Management (CBDRM)
+            </strong>
 
             <p>
-                Add your Lesson 10 notes here.
+                Isang approach kung saan aktibong nakikilahok
+                ang komunidad sa pagpaplano at pagbabawas ng
+                disaster risk.
             </p>
 
         </div>
 
-        <div class="remember">
+        <h3>Layunin</h3>
 
-            <strong>⭐ Remember:</strong>
+        <ul>
+            <li>Mabawasan ang pinsala ng kalamidad.</li>
+            <li>Mapataas ang kahandaan ng komunidad.</li>
+            <li>Magamit ang lokal na kaalaman at kakayahan.</li>
+            <li>Mapalakas ang pagtutulungan.</li>
+        </ul>
 
-            <p>
-                Review all the important concepts from
-                Lessons 1–10.
-            </p>
+        <h3>Top-Down vs Bottom-Up</h3>
 
-        </div>
+        <table>
+
+            <tr>
+                <th>Top-Down</th>
+                <th>Bottom-Up</th>
+            </tr>
+
+            <tr>
+                <td>
+                    Desisyon ay karaniwang nagmumula
+                    sa mga awtoridad.
+                </td>
+
+                <td>
+                    Aktibong kasali ang komunidad
+                    sa pagpaplano.
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mas sentralisado.</td>
+                <td>Mas participatory.</td>
+            </tr>
+
+        </table>
 
     </section>
 
 
-    <!-- =========================
-         QUICK REVIEW
-    ========================= -->
+    <!-- WEEK 7 -->
 
-    <section class="quick-review">
+    <section class="lesson" id="week7">
 
-        <h2>🧠 AP 10 Quick Review</h2>
+        <h2>Week 7 – Unang at Ikalawang Yugto ng CBDRM</h2>
+
+        <h3>1. Disaster Prevention and Mitigation</h3>
+
+        <p>
+            Layunin nitong maiwasan o mabawasan ang epekto
+            ng mga hazard.
+        </p>
+
+        <h4>Assessment</h4>
+
+        <ul>
+            <li>Hazard Assessment</li>
+            <li>Vulnerability Assessment</li>
+            <li>Capacity Assessment</li>
+            <li>Risk Assessment</li>
+        </ul>
+
+        <h3>2. Disaster Preparedness</h3>
+
+        <p>
+            Ito ay paghahanda bago mangyari ang isang sakuna.
+        </p>
+
+        <ul>
+            <li>Pagbuo ng evacuation plan</li>
+            <li>Emergency drills</li>
+            <li>Pag-iimbak ng emergency supplies</li>
+            <li>Early warning systems</li>
+            <li>Pagbibigay ng impormasyon sa komunidad</li>
+        </ul>
+
+    </section>
+
+
+    <!-- WEEK 8 -->
+
+    <section class="lesson" id="week8">
+
+        <h2>Week 8 – Ikatlo at Ikaapat na Yugto ng CBDRM</h2>
+
+        <h3>3. Disaster Response</h3>
+
+        <p>
+            Ito ang agarang pagtugon habang at pagkatapos
+            ng isang sakuna.
+        </p>
+
+        <h4>Halimbawa</h4>
+
+        <ul>
+            <li>Search and rescue</li>
+            <li>First aid</li>
+            <li>Evacuation</li>
+            <li>Relief distribution</li>
+            <li>Emergency communication</li>
+        </ul>
+
+        <div class="important">
+
+            <strong>Needs, Damage, and Loss Assessment</strong>
+
+            <p>
+                Pagsusuri sa pangangailangan, pinsala, at pagkawala
+                pagkatapos ng sakuna.
+            </p>
+
+        </div>
+
+        <h3>4. Disaster Rehabilitation and Recovery</h3>
+
+        <p>
+            Tumutukoy ito sa proseso ng muling pagsasaayos at
+            pagbabalik sa normal na kalagayan ng komunidad.
+        </p>
+
+        <ul>
+            <li>Pag-aayos ng bahay at imprastraktura</li>
+            <li>Pagpapanumbalik ng kabuhayan</li>
+            <li>Pagbibigay ng tulong sa mga naapektuhan</li>
+            <li>Pagpapabuti ng disaster plans</li>
+        </ul>
+
+    </section>
+
+
+    <!-- WEEK 9 -->
+
+    <section class="lesson" id="week9">
+
+        <h2>Week 9 – Konsepto at Dimensiyon ng Globalisasyon</h2>
+
+        <h3>Ano ang Globalisasyon?</h3>
+
+        <div class="definition">
+
+            <strong>Globalisasyon</strong>
+
+            <p>
+                Proseso ng mas mabilis at mas malawak na ugnayan
+                at interdependence ng mga bansa, ekonomiya,
+                kultura, teknolohiya, at mga tao.
+            </p>
+
+        </div>
+
+        <h3>Mga Dimensiyon ng Globalisasyon</h3>
 
         <ul>
 
             <li>
-                <b>Lesson 1</b> → Review the main concepts
+                <strong>Ekonomiko</strong> –
+                kalakalan, investments, MNCs, TNCs,
+                at outsourcing.
             </li>
 
             <li>
-                <b>Lesson 2</b> → Review important terms
+                <strong>Teknolohikal</strong> –
+                internet, social media, communication,
+                at modernong teknolohiya.
             </li>
 
             <li>
-                <b>Lesson 3</b> → Review key ideas
+                <strong>Kultural</strong> –
+                pagpapalitan ng pagkain, musika,
+                fashion, wika, at tradisyon.
             </li>
 
             <li>
-                <b>Lesson 4</b> → Review important information
+                <strong>Politikal</strong> –
+                ugnayan at kooperasyon ng iba't ibang bansa.
+            </li>
+
+        </ul>
+
+        <h3>MNC at TNC</h3>
+
+        <ul>
+
+            <li>
+                <strong>MNC</strong> –
+                Multinational Corporation; kumpanyang may
+                operasyon sa iba't ibang bansa.
             </li>
 
             <li>
-                <b>Lesson 5</b> → Review major concepts
+                <strong>TNC</strong> –
+                Transnational Corporation; kumpanyang
+                nagpapatakbo ng negosyo sa maraming bansa
+                na may mas pandaigdigang operasyon.
             </li>
 
             <li>
-                <b>Lesson 6</b> → Review key terms
-            </li>
-
-            <li>
-                <b>Lesson 7</b> → Review important events
-            </li>
-
-            <li>
-                <b>Lesson 8</b> → Review important concepts
-            </li>
-
-            <li>
-                <b>Lesson 9</b> → Review key information
-            </li>
-
-            <li>
-                <b>Lesson 10</b> → Review Lessons 1–10
+                <strong>Outsourcing</strong> –
+                pagkuha ng serbisyo o gawain mula sa ibang
+                kumpanya o lugar.
             </li>
 
         </ul>
@@ -727,24 +792,55 @@
     </section>
 
 
+    <!-- WEEK 10 -->
+
+    <section class="lesson" id="week10">
+
+        <h2>Week 10 – Epekto at Hamon ng Globalisasyon</h2>
+
+        <h3>Mabuting Epekto</h3>
+
+        <ul>
+            <li>Mas maraming oportunidad sa trabaho.</li>
+            <li>Pagpasok ng foreign investments.</li>
+            <li>Mas mabilis na access sa teknolohiya.</li>
+            <li>Mas malawak na pamilihan.</li>
+            <li>Pagpapalitan ng kaalaman at kultura.</li>
+        </ul>
+
+        <h3>Masamang Epekto / Hamon</h3>
+
+        <ul>
+            <li>Matinding kompetisyon sa trabaho.</li>
+            <li>Posibleng job insecurity.</li>
+            <li>Pagkawala o pagbabago ng ilang lokal na industriya.</li>
+            <li>Cultural homogenization.</li>
+            <li>Pagtaas ng economic inequality sa ilang sitwasyon.</li>
+        </ul>
+
+        <div class="important">
+
+            <strong>Tandaan:</strong>
+
+            <p>
+                Ang globalisasyon ay may parehong oportunidad
+                at hamon. Mahalaga ang kakayahang makibagay,
+                matuto, at maging mapanuri.
+            </p>
+
+        </div>
+
+    </section>
+
 </main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
-    <p>📚 Araling Panlipunan 10 Notes</p>
+    <p>📘 Araling Panlipunan 10 • First Quarter Notes</p>
 
-    <p>🇵🇭 Grade 10 Learning Website</p>
-
-    <p>© 2026 Student Learning Website</p>
+    <p>Keep studying and good luck! 💙</p>
 
 </footer>
 
-
 </body>
-
 </html>
